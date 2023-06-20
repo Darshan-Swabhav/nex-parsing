@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -e
+
+SCRIPT=$(readlink -f "$0")
+SCRIPTPATH=$(dirname "$SCRIPT")
+cd $SCRIPTPATH/../terraform/$ENVIRONMENT/
+terraform init
+terraform validate
+terraform apply -target=module.backend -auto-approve -var "backend_container_image=gcr.io/$PROJECT_ID/backend-api:$ENVIRONMENT" -var "openapi_file_path=/workspace/apiDocs/api.yaml"
+terraform output > /workspace/terraform_output

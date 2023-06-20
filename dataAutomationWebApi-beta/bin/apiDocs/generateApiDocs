@@ -1,0 +1,37 @@
+#!/usr/bin/env node
+const swaggerJsDocs = require('swagger-jsdoc');
+const util = require('util');
+const yamlWriter = require('write-yaml');
+const swaggerOption = require('../../app/config/swagger');
+const settingsConfig = require('../../app/config/settings/settings-config');
+
+const schemes = ['http', 'https'];
+const backendAddress = process.env.CLOUD_RUN_ADDRESS || 'localhost:20100';
+
+async function getSpec() {
+  console.log(util.inspect(settingsConfig, { depth: 3 }));
+  const spec = await swaggerJsDocs(swaggerOption);
+  spec.schemes = schemes;
+  spec['x-google-backend'] = {
+    address: backendAddress,
+  };
+  spec.securityDefinitions = {
+    auth0_jwk: {
+      authorizationUrl: '',
+      flow: 'implicit',
+      type: 'oauth2',
+      'x-google-issuer': settingsConfig.settings.jwtIssuer,
+      'x-google-jwks_uri': settingsConfig.settings.jwtURI,
+      'x-google-audiences': settingsConfig.settings.jwtAudience,
+    },
+  };
+  return spec;
+}
+
+async function main() {
+  const spec = await getSpec();
+  const result = yamlWriter.sync('apiDocs/api.yaml', spec);
+  return result;
+}
+
+main();

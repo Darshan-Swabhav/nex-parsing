@@ -1,0 +1,1 @@
+gcloud api-gateway gateways update backend-gw  --location us-central1 --api-config backend-api-config-$BUILD_ID --api backend-api-gw

@@ -1,0 +1,4333 @@
+========================================================================================
+Agent : Task List 
+========================================================================================
+Request URL: https://beta.da.rightleads.io/api/v1/projects/141d09b6-5024-4ca6-b60d-c72775c6f5b8/tasks?pageNo=0&pageSize=10&filter=%7B%22status%22:[%22Completed%22]%7D
+
+Method: GET
+* Query Param
+    pageNo: 0
+    pageSize: 10
+    filter: {"status":["Completed"]}
+Response:
+{
+    counts: [
+      { status: "Total", count: 20 },
+      { status: "Completed", count: 20 },
+      { status: "Overdue", count: 0 },
+      { status: "Upcoming", count: 0 },
+    ],
+    docs: [
+      {
+        id: "bf71d8c0-7de5-4b24-9d68-a1a705cba119",
+        description: null,
+        dueDate: "2021-11-22T16:18:55.751Z",
+        status: "Completed",
+        priority: "Standard",
+        completedDate: "2021-11-23T14:05:12.321Z",
+        createdAt: "2021-11-22T16:18:56.112Z",
+        updatedAt: "2021-11-23T14:11:41.812Z",
+        TaskType: { id: "01", type: "Contact Build (Named Account)" },
+        Project: {
+          id: "141d09b6-5024-4ca6-b60d-c72775c6f5b8",
+          name: "Compliance Flow Sanity",
+        },
+        Accounts: [
+          {
+            id: "f0468ee8-ffce-4487-bd73-38d2434c2f56",
+            name: "1000 Corks",
+            addressHQ: {
+              address1HQ: "10 Belmont street",
+              zipHQ: "728 364",
+              cityHQ: "Tallinn",
+              stateHQ: "CA",
+              countryHQ: "EST",
+            },
+            phoneHQ: null,
+            website: "http://www.rockyourpaper.org",
+            linkedInUrl: null,
+            industry: null,
+            revenue_M_B_K: "100k-500k",
+            employeeSizeLI: null,
+            employeeSizeZ_plus: null,
+            employeeSourceZ_plus: null,
+            employeeSizeFinalBucket: null,
+            employeeSize_others: null,
+            email: null,
+            source: null,
+            disposition: "Contact Built",
+            TaskLink: { disposition: "Already in CRM - Suppression" },
+          },
+        ],
+        Contacts: [],
+        User: {
+          id: "auth0|6135a22714f3a0006acbe0a8",
+          firstName: "beta.agent1",
+          lastName: "",
+          userName: "beta.agent1@nexsales.com",
+        },
+      },
+    ],
+    totalCount: 20,
+  };
+
+========================================================================================
+agent : Workspace loading (17 request) 
+========================================================================================
+1) Task Details  2x
+Request URL: https://beta.da.rightleads.io/api/v1/projects/141d09b6-5024-4ca6-b60d-c72775c6f5b8/tasks/bf71d8c0-7de5-4b24-9d68-a1a705cba119
+Method: GET
+* Query Param
+Response:
+[{
+    "id": "bf71d8c0-7de5-4b24-9d68-a1a705cba119",
+    "description": null,
+    "dueDate": "2021-11-22T16:18:55.751Z",
+    "status": "Completed",
+    "priority": "Standard",
+    "completedDate": "2021-11-23T14:05:12.321Z",
+    "createdAt": "2021-11-22T16:18:56.112Z",
+    "updatedAt": "2021-11-23T14:11:41.812Z",
+    "TaskType": {
+        "id": "01",
+        "type": "Contact Build (Named Account)"
+    },
+    "Project": {
+        "id": "141d09b6-5024-4ca6-b60d-c72775c6f5b8",
+        "name": "Compliance Flow Sanity"
+    },
+    "Accounts": [{
+        "id": "f0468ee8-ffce-4487-bd73-38d2434c2f56",
+        "name": "1000 Corks",
+        "addressHQ": {
+            "address1HQ": "10 Belmont street",
+            "zipHQ": "728 364",
+            "cityHQ": "Tallinn",
+            "stateHQ": "CA",
+            "countryHQ": "EST"
+        },
+        "phoneHQ": null,
+        "website": "http://www.rockyourpaper.org",
+        "linkedInUrl": null,
+        "industry": null,
+        "revenue_M_B_K": "100k-500k",
+        "employeeSizeLI": null,
+        "employeeSizeZ_plus": null,
+        "employeeSourceZ_plus": null,
+        "employeeSizeFinalBucket": null,
+        "employeeSize_others": null,
+        "email": null,
+        "source": null,
+        "disposition": "Contact Built",
+        "TaskLink": {
+            "TaskId": "bf71d8c0-7de5-4b24-9d68-a1a705cba119",
+            "ObjectId": "f0468ee8-ffce-4487-bd73-38d2434c2f56",
+            "objectType": "account",
+            "disposition": "Already in CRM - Suppression",
+            "comments": null,
+            "researchStatus": null,
+            "linkType": "input",
+            "createdAt": "2021-11-22T16:18:56.117Z",
+            "updatedAt": "2021-11-23T14:07:32.834Z",
+            "createdBy": "auth0|6135a3b49bb72d007097ee10",
+            "updatedBy": "auth0|6135a22714f3a0006acbe0a8",
+            "UserId": "auth0|6135a22714f3a0006acbe0a8"
+        }
+    }],
+    "Contacts": [{
+        "id": "34bd85c4-be0a-4aab-afcb-0b7745f9ea53",
+        "researchStatus": "QA",
+        "prefix": null,
+        "firstName": "Test",
+        "middleName": null,
+        "lastName": "Sss",
+        "jobTitle": null,
+        "jobLevel": null,
+        "jobDepartment": null,
+        "nsId": null,
+        "directPhone": null,
+        "email": "dgibson@centier.com",
+        "zb": "valid",
+        "gmailStatus": null,
+        "source": null,
+        "linkedInUrl": null,
+        "screenshot": null,
+        "disposition": "Contact Built",
+        "TaskLink": {
+            "TaskId": "bf71d8c0-7de5-4b24-9d68-a1a705cba119",
+            "ObjectId": "34bd85c4-be0a-4aab-afcb-0b7745f9ea53",
+            "objectType": "contact",
+            "disposition": "Contact Built",
+            "comments": null,
+            "researchStatus": "QA",
+            "linkType": "output",
+            "createdAt": "2021-11-23T14:11:41.800Z",
+            "updatedAt": "2021-11-23T14:11:41.800Z",
+            "createdBy": "auth0|6135a22714f3a0006acbe0a8",
+            "updatedBy": "auth0|6135a22714f3a0006acbe0a8",
+            "UserId": "auth0|6135a22714f3a0006acbe0a8"
+        }
+    }, {
+        "id": "660effd0-f46e-404b-b82d-56158062dbf8",
+        "researchStatus": "NQ",
+        "prefix": null,
+        "firstName": "Amery",
+        "middleName": null,
+        "lastName": "Rivera",
+        "jobTitle": "Director Business Development",
+        "jobLevel": "Director",
+        "jobDepartment": "Sales",
+        "nsId": null,
+        "directPhone": null,
+        "email": "at@tincidunt.ca",
+        "zb": null,
+        "gmailStatus": null,
+        "source": null,
+        "linkedInUrl": null,
+        "screenshot": null,
+        "disposition": "Incorrect Contact",
+        "TaskLink": {
+            "TaskId": "bf71d8c0-7de5-4b24-9d68-a1a705cba119",
+            "ObjectId": "660effd0-f46e-404b-b82d-56158062dbf8",
+            "objectType": "contact",
+            "disposition": "Incorrect Contact",
+            "comments": null,
+            "researchStatus": "NQ",
+            "linkType": "output",
+            "createdAt": "2021-11-23T14:04:57.574Z",
+            "updatedAt": "2021-11-23T14:05:38.075Z",
+            "createdBy": "auth0|6135a22714f3a0006acbe0a8",
+            "updatedBy": "auth0|6135a22714f3a0006acbe0a8",
+            "UserId": "auth0|6135a22714f3a0006acbe0a8"
+        }
+    }],
+    "User": {
+        "id": "auth0|6135a22714f3a0006acbe0a8",
+        "firstName": "beta.agent1",
+        "lastName": "",
+        "userName": "beta.agent1@nexsales.com"
+    }
+}]
+
+2) Task CountOnly
+Request URL: https://beta.da.rightleads.io/api/v1/projects/141d09b6-5024-4ca6-b60d-c72775c6f5b8/tasks?countOnly=true
+Method: GET 
+* Query Param
+    countOnly: true
+Response: [{"status":"Total","count":20},{"status":"Completed","count":20},{"status":"Overdue","count":0},{"status":"Upcoming","count":0}]
+
+3)Dispositions: 
+Request URL: https://beta.da.rightleads.io/api/v1/dispositions
+Method: GET
+* Query Param
+Response:
+  [{
+      "id": "01",
+      "dispositionType": "Contact Built",
+      "dispositionLevel": "Contact/Account",
+      "dispositionCategory": "Positive"
+  }, {
+      "id": "02",
+      "dispositionType": "Already in CRM - Suppression",
+      "dispositionLevel": "Contact/Account",
+      "dispositionCategory": "Negative"
+  }, {
+      "id": "03",
+      "dispositionType": "Contact Found: Email Bad",
+      "dispositionLevel": "Contact/Account",
+      "dispositionCategory": "Negative"
+  }, {
+      "id": "04",
+      "dispositionType": "Acquired/Merged/Subsidiary/Bankrupt/Shut Down",
+      "dispositionLevel": "Account",
+      "dispositionCategory": "Negative"
+  }, {
+      "id": "05",
+      "dispositionType": "Required Title Not Found",
+      "dispositionLevel": "Account",
+      "dispositionCategory": "Negative"
+  }, {
+      "id": "06",
+      "dispositionType": "Outside Geography (Country)",
+      "dispositionLevel": "Account",
+      "dispositionCategory": "Negative"
+  }, {
+      "id": "07",
+      "dispositionType": "C-Level Title Available",
+      "dispositionLevel": "Contact/Account",
+      "dispositionCategory": "Negative"
+  }, {
+      "id": "09",
+      "dispositionType": "VP Level Title Available",
+      "dispositionLevel": "Contact/Account",
+      "dispositionCategory": "Negative"
+  }, {
+      "id": "10",
+      "dispositionType": "Manager Level Title Available",
+      "dispositionLevel": "Contact/Account",
+      "dispositionCategory": "Negative"
+  }, {
+      "id": "11",
+      "dispositionType": "Generic Title Available",
+      "dispositionLevel": "Contact/Account",
+      "dispositionCategory": "Negative"
+  }, {
+      "id": "12",
+      "dispositionType": "Website Not Found",
+      "dispositionLevel": "Account",
+      "dispositionCategory": "Negative"
+  }, {
+      "id": "13",
+      "dispositionType": "Duplicate Contact",
+      "dispositionLevel": "Contact",
+      "dispositionCategory": "Negative"
+  }, {
+      "id": "14",
+      "dispositionType": "Incorrect Account",
+      "dispositionLevel": "Account",
+      "dispositionCategory": "Negative"
+  }, {
+      "id": "15",
+      "dispositionType": "Incorrect Contact",
+      "dispositionLevel": "Contact",
+      "dispositionCategory": "Negative"
+  }, {
+      "id": "16",
+      "dispositionType": "No Longer",
+      "dispositionLevel": "Contact/Account",
+      "dispositionCategory": "Negative"
+  }, {
+      "id": "08",
+      "dispositionType": "Staff Level Title Available",
+      "dispositionLevel": "Contact/Account",
+      "dispositionCategory": "Negative"
+  }, {
+      "id": "17",
+      "dispositionType": "Director Level Title Available",
+      "dispositionLevel": "Contact/Account",
+      "dispositionCategory": "Negative"
+  }]
+
+4) Industry
+Request URL:  https://beta.da.rightleads.io/api/v1/industry
+Method: GET
+* Query Param
+Response:
+["IT", "IT Security", "Finance", "Marketing", "Operations", "HR", "Sales", "After Sales Service / Support", "Contact Center", "Executive", "Administration", "Regulatory / Corporate Compliance", "Legal", "Engineering", "Trading", "Agriculture", "Business Services", "Construction", "Consumer Services", "Education", "Energy, Utilities & Waste", "Government", "Healthcare Services", "Hospitality", "Hospitals & Physicians Clinics", "Insurance", "Law Firms & Legal Services", "Manufacturing", "Media & Internet", "Minerals & Mining", "Organizations", "Real Estate", "Retail", "Software", "Telecommunications", "Transportation"]
+
+5) segmentTechnology
+Request URL:  https://beta.da.rightleads.io/api/v1/segmentTechnology
+Method: 
+* Query Param
+Response:["Salesforce","Hadoop","LinkedIn","HubSpot","Oracle","Zoho","SAP"]
+
+6) ContactList(2x)
+Request URL: https://beta.da.rightleads.io/api/v1/projects/141d09b6-5024-4ca6-b60d-c72775c6f5b8/accounts/f0468ee8-ffce-4487-bd73-38d2434c2f56/contacts?pageSize=100
+Method: GET
+* Query Param
+    pageSize: 100
+Response:
+{
+    totalCount: 1,
+    docs: [
+      {
+        id: "34bd85c4-be0a-4aab-afcb-0b7745f9ea53",
+        researchStatus: "QA",
+        callingStatus: null,
+        complianceStatus: null,
+        deliveryStatus: null,
+        prefix: null,
+        firstName: "Test",
+        middleName: null,
+        lastName: "Sss",
+        address: {
+          street1: null,
+          street2: null,
+          city: null,
+          state: null,
+          country: null,
+          zipCode: null,
+        },
+        email: "dgibson@centier.com",
+        genericEmail: null,
+        phone: null,
+        directPhone: null,
+        jobTitle: null,
+        jobLevel: null,
+        jobDepartment: null,
+        nsId: null,
+        zoomInfoContactId: null,
+        linkedInUrl: null,
+        screenshot: null,
+        handles: null,
+        website: null,
+        comments: null,
+        source: null,
+        stage: "Review",
+        functions: null,
+        disposition: "Contact Built",
+        zb: "valid",
+        zbDateAndTime: "2021-11-23T14:30:35.299Z",
+        gmailStatus: null,
+        complianceComments: null,
+        previous_complianceComments: null,
+        gmailStatusDateAndTime: null,
+        mailTesterStatus: null,
+        emailDedupeKey: "testssscentiercom",
+        phoneDedupeKey: null,
+        companyDedupeKey: "testsss1000corks",
+        phoneExtension: null,
+        label: "inclusion",
+        duplicateOf: null,
+        custom1: null,
+        custom2: null,
+        custom3: null,
+        custom4: null,
+        custom5: null,
+        custom6: null,
+        custom7: null,
+        custom8: null,
+        custom9: null,
+        custom10: null,
+        custom11: null,
+        custom12: null,
+        custom13: null,
+        custom14: null,
+        custom15: null,
+        previous_researchStatus: "QA",
+        previous_callingStatus: null,
+        previous_complianceStatus: null,
+        previous_deliveryStatus: null,
+        previous_prefix: null,
+        previous_firstName: "Test",
+        previous_middleName: null,
+        previous_lastName: "Sss",
+        previous_address: {
+          street1: null,
+          street2: null,
+          city: null,
+          state: null,
+          country: null,
+          zipCode: null,
+        },
+        previous_email: null,
+        previous_genericEmail: null,
+        previous_phone: null,
+        previous_directPhone: null,
+        previous_jobTitle: null,
+        previous_jobLevel: null,
+        previous_jobDepartment: null,
+        previous_nsId: null,
+        previous_zoomInfoContactId: null,
+        previous_linkedInUrl: null,
+        previous_screenshot: null,
+        previous_handles: null,
+        previous_website: null,
+        previous_comments: null,
+        previous_source: null,
+        previous_stage: "Pending",
+        previous_functions: null,
+        previous_disposition: "Contact Built",
+        previous_zb: null,
+        previous_zbDateAndTime: null,
+        previous_gmailStatus: null,
+        previous_gmailStatusDateAndTime: null,
+        previous_mailTesterStatus: null,
+        previous_emailDedupeKey: null,
+        previous_phoneDedupeKey: null,
+        previous_companyDedupeKey: "testsss1000corks",
+        previous_phoneExtension: null,
+        previous_label: "inclusion",
+        previous_custom1: null,
+        previous_custom2: null,
+        previous_custom3: null,
+        previous_custom4: null,
+        previous_custom5: null,
+        previous_custom6: null,
+        previous_custom7: null,
+        previous_custom8: null,
+        previous_custom9: null,
+        previous_custom10: null,
+        previous_custom11: null,
+        previous_custom12: null,
+        previous_custom13: null,
+        previous_custom14: null,
+        previous_custom15: null,
+        createdAt: "2021-11-23T14:11:41.781Z",
+        updatedAt: "2021-11-23T14:31:14.758Z",
+        AccountId: "f0468ee8-ffce-4487-bd73-38d2434c2f56",
+        createdBy: "auth0|6135a22714f3a0006acbe0a8",
+        updatedBy: "auth0|6135a22714f3a0006acbe0a8",
+        contactCreator: {
+          userName: "beta.agent1@nexsales.com",
+          firstName: "beta.agent1",
+          lastName: "",
+        },
+        contactUpdater: {
+          userName: "beta.agent1@nexsales.com",
+          firstName: "beta.agent1",
+          lastName: "",
+        },
+        Account: {
+          id: "f0468ee8-ffce-4487-bd73-38d2434c2f56",
+          name: "1000 Corks",
+          researchStatus: null,
+          callingStatus: null,
+          complianceStatus: null,
+          deliveryStatus: null,
+          stage: "Pending",
+          complianceComments: null,
+          zoomInfoName: null,
+          domain: "rockyourpaper.org",
+          emailDomain: null,
+          website: "http://www.rockyourpaper.org",
+          description: null,
+          segment_technology: null,
+          nsId: null,
+          zoomInfoContactId: null,
+          sicCode: null,
+          naicsCode: null,
+          sicDescription: null,
+          naicsDescription: null,
+          source: null,
+          employeeSourceLI: null,
+          employeeSourceZ_plus: null,
+          phoneHQ: null,
+          email: null,
+          industry: null,
+          subIndustry: null,
+          locationLI: null,
+          addressHQ: {
+            address1HQ: "10 Belmont street",
+            zipHQ: "728 364",
+            cityHQ: "Tallinn",
+            stateHQ: "CA",
+            countryHQ: "EST",
+          },
+          linkedInUrl: null,
+          revenue: null,
+          revenue_M_B_K: "100k-500k",
+          employeeSize: "50-100",
+          employeeSizeLI: null,
+          employeeSizeZ_plus: null,
+          employeeSizeFinalBucket: null,
+          employeeSize_others: null,
+          employeeRangeLI: null,
+          disposition: "Contact Built",
+          comments: null,
+          upperRevenue: null,
+          lowerRevenue: null,
+          upperEmployeeSize: null,
+          lowerEmployeeSize: null,
+          scrubbedName: "1000corks",
+          aliasName: null,
+          tokens: "1000|corks",
+          label: "inclusion",
+          duplicateOf: null,
+          custom1: null,
+          custom2: null,
+          custom3: null,
+          custom4: null,
+          custom5: null,
+          custom6: null,
+          custom7: null,
+          custom8: null,
+          custom9: null,
+          custom10: null,
+          custom11: null,
+          custom12: null,
+          custom13: null,
+          custom14: null,
+          custom15: null,
+          createdAt: "2021-11-22T16:03:19.709Z",
+          updatedAt: "2021-11-23T14:05:12.299Z",
+          ProjectId: "141d09b6-5024-4ca6-b60d-c72775c6f5b8",
+          createdBy: "auth0|6135a3b49bb72d007097ee10",
+          updatedBy: "auth0|6135a22714f3a0006acbe0a8",
+          accountCreator: {
+            userName: "beta.pmgr2@nexsales.com",
+            firstName: "beta.pmgr2",
+            lastName: "",
+          },
+          accountUpdater: {
+            userName: "beta.agent1@nexsales.com",
+            firstName: "beta.agent1",
+            lastName: "",
+          },
+        },
+      },
+    ],
+  };
+
+7) Account Details
+Request URL:https://beta.da.rightleads.io/api/v1/project/141d09b6-5024-4ca6-b60d-c72775c6f5b8/accounts/f0468ee8-ffce-4487-bd73-38d2434c2f56 
+Method: GET
+* Query Param
+Response: {
+    "id": "f0468ee8-ffce-4487-bd73-38d2434c2f56",
+    "name": "1000 Corks",
+    "researchStatus": null,
+    "callingStatus": null,
+    "complianceStatus": null,
+    "deliveryStatus": null,
+    "stage": null,
+    "complianceComments": null,
+    "zoomInfoName": null,
+    "domain": "rockyourpaper.org",
+    "emailDomain": null,
+    "website": "http://www.rockyourpaper.org",
+    "description": null,
+    "segment_technology": null,
+    "nsId": null,
+    "zoomInfoContactId": null,
+    "sicCode": null,
+    "naicsCode": null,
+    "sicDescription": null,
+    "naicsDescription": null,
+    "source": null,
+    "employeeSourceLI": null,
+    "employeeSourceZ_plus": null,
+    "phoneHQ": null,
+    "email": null,
+    "industry": null,
+    "subIndustry": null,
+    "locationLI": null,
+    "addressHQ": {
+        "address1HQ": "10 Belmont street",
+        "zipHQ": "728 364",
+        "cityHQ": "Tallinn",
+        "stateHQ": "CA",
+        "countryHQ": "EST"
+    },
+    "linkedInUrl": null,
+    "revenue": null,
+    "revenue_M_B_K": "100k-500k",
+    "employeeSize": "50-100",
+    "employeeSizeLI": null,
+    "employeeSizeZ_plus": null,
+    "employeeSizeFinalBucket": null,
+    "employeeSize_others": null,
+    "employeeRangeLI": null,
+    "disposition": "Contact Built",
+    "comments": null,
+    "upperRevenue": null,
+    "lowerRevenue": null,
+    "upperEmployeeSize": null,
+    "lowerEmployeeSize": null,
+    "scrubbedName": "1000corks",
+    "aliasName": null,
+    "tokens": "1000|corks",
+    "label": "inclusion",
+    "duplicateOf": null,
+    "custom1": null,
+    "custom2": null,
+    "custom3": null,
+    "custom4": null,
+    "custom5": null,
+    "custom6": null,
+    "custom7": null,
+    "custom8": null,
+    "custom9": null,
+    "custom10": null,
+    "custom11": null,
+    "custom12": null,
+    "custom13": null,
+    "custom14": null,
+    "custom15": null,
+    "createdAt": "2021-11-22T16:03:19.709Z",
+    "updatedAt": "2021-11-23T14:05:12.299Z",
+    "ProjectId": "141d09b6-5024-4ca6-b60d-c72775c6f5b8",
+    "createdBy": "auth0|6135a3b49bb72d007097ee10",
+    "updatedBy": "auth0|6135a22714f3a0006acbe0a8"
+}
+
+8) Specs
+Request URL: https://beta.da.rightleads.io/api/v1/project/141d09b6-5024-4ca6-b60d-c72775c6f5b8/specs/
+Method: GET
+* Query Param
+Response: [{"id":"be1b79ff-8fe7-4957-8fc7-dd9c86dcb91d","name":"Gold Spec","values":{"job_level":["CXO","Director","VP","Manager"],"job_department":["Engineering & Technical","Finance","Human Resources"],"company_revenue":["0-1M","1M-10M","10M-50M"],"industry":["IT Security","IT","Finance","Marketing","Operations","HR"],"sub_industry":["Data Loss Prevention","Data Security","Cyber/Web Security","IT Compliance","IT Audit","IT Governance","IT Risk","Network Security"],"geography":["US"],"employee_count":["10-50","50-200","200-500"],"job_function":["Bioengineering","Biometrics","Business Intelligence","Chemical Engineering"],"job_title":["manager"],"contacts_per_account":[],"note":"<p class=\"ql-align-justify\"><strong>Morbi in interdum quam.</strong> Praesent nec quam neque. Mauris mattis ac leo non luctus. Etiam elit ipsum, molestie sit amet porta id, suscipit sed leo. Nulla sollicitudin auctor magna nec ultrices. Morbi nunc neque, sagittis a nulla vitae, dapibus suscipit ante. Nam urna augue, eleifend non orci eu, ornare volutpat nulla. Vestibulum egestas mauris sit amet nulla scelerisque porta.</p><p class=\"ql-align-justify\">Etiam lacinia tincidunt turpis ut molestie. Phasellus vitae rhoncus ligula, at mattis elit. Quisque accumsan nunc a efficitur fringilla. <em>Fusce lorem massa, semper vitae mi ac, congue hendrerit sapien. Nullam eu ultricies lectus</em>. Duis venenatis velit velit, eu lobortis arcu hendrerit quis. Aliquam erat volutpat. In finibus massa vel justo placerat tempus. Curabitur facilisis sagittis libero, et faucibus metus vulputate eu. Praesent faucibus, elit eu scelerisque lobortis, nisl orci congue urna, faucibus feugiat neque mauris quis quam. Integer nec felis consequat, vulputate risus in, tincidunt lorem. In rhoncus lacus vitae ipsum tempor lobortis. Etiam ligula lorem, varius non enim eu, ultricies scelerisque magna. Sed nec tortor imperdiet, pellentesque justo ut, pellentesque purus.</p>"},"comments":null,"createdAt":"2021-11-22T04:51:22.685Z","updatedAt":"2021-11-22T04:51:22.685Z","ProjectId":"33caaa62-cea2-4144-bea8-81f75c271582","createdBy":"auth0|6135a3b49bb72d007097ee10","updatedBy":"auth0|6135a3b49bb72d007097ee10"}]
+
+9) Task Live Count
+Request URL:  https://beta.da.rightleads.io/api/v1/tasks/tasksLiveCounts?filter=%7B%22updatedAt%22:[%2211%2F29%2F2021%22,%2211%2F29%2F2021%22]%7D&projectId=141d09b6-5024-4ca6-b60d-c72775c6f5b8&accountId=f0468ee8-ffce-4487-bd73-38d2434c2f56&countsToCalculate[]=contacts&countsToCalculate[]=accounts
+Method: GET
+* Query Param
+filter: {"updatedAt":["11/29/2021","11/29/2021"]}
+projectId: 141d09b6-5024-4ca6-b60d-c72775c6f5b8
+accountId: f0468ee8-ffce-4487-bd73-38d2434c2f56
+countsToCalculate[]: contacts
+countsToCalculate[]: accounts
+Response:{"positiveDisposedContactsCounts":0,"positiveDisposedContactsOverallCounts":2,"disposedAccountCounts":0,"disposedAccountOverallCounts":20,"negativeDisposedAccountCounts":0,"negativeDisposedAccountOverallCounts":16,"positiveDisposedContactsCountsOfAnAccount":1}
+
+10)Setting
+Request URL:  https://beta.da.rightleads.io/api/v1/project/141d09b6-5024-4ca6-b60d-c72775c6f5b8/setting 
+Method: GET
+* Query Param
+Response:{"id":"474e5367-184c-431c-bcb4-cb616cd220fe","target":null,"deliveryFileMapping":null,"contactsPerAccount":null,"clientPoc":null,"priority":"Medium","status":"Yet to Start","createdAt":"2021-11-22T15:59:55.884Z","updatedAt":"2021-11-22T15:59:55.913Z","ProjectId":"141d09b6-5024-4ca6-b60d-c72775c6f5b8","createdBy":"auth0|6135a3b49bb72d007097ee10","updatedBy":"auth0|6135a3b49bb72d007097ee10"}
+
+11)Request URL:  https://beta.da.rightleads.io/api/v1/projects/141d09b6-5024-4ca6-b60d-c72775c6f5b8/tasks/bf71d8c0-7de5-4b24-9d68-a1a705cba119
+Method: GET
+* Query Param
+Response: [{
+    "id": "bf71d8c0-7de5-4b24-9d68-a1a705cba119",
+    "description": null,
+    "dueDate": "2021-11-22T16:18:55.751Z",
+    "status": "Completed",
+    "priority": "Standard",
+    "completedDate": "2021-11-23T14:05:12.321Z",
+    "createdAt": "2021-11-22T16:18:56.112Z",
+    "updatedAt": "2021-11-23T14:11:41.812Z",
+    "TaskType": {
+        "id": "01",
+        "type": "Contact Build (Named Account)"
+    },
+    "Project": {
+        "id": "141d09b6-5024-4ca6-b60d-c72775c6f5b8",
+        "name": "Compliance Flow Sanity"
+    },
+    "Accounts": [{
+        "id": "f0468ee8-ffce-4487-bd73-38d2434c2f56",
+        "name": "1000 Corks",
+        "addressHQ": {
+            "address1HQ": "10 Belmont street",
+            "zipHQ": "728 364",
+            "cityHQ": "Tallinn",
+            "stateHQ": "CA",
+            "countryHQ": "EST"
+        },
+        "phoneHQ": null,
+        "website": "http://www.rockyourpaper.org",
+        "linkedInUrl": null,
+        "industry": null,
+        "revenue_M_B_K": "100k-500k",
+        "employeeSizeLI": null,
+        "employeeSizeZ_plus": null,
+        "employeeSourceZ_plus": null,
+        "employeeSizeFinalBucket": null,
+        "employeeSize_others": null,
+        "email": null,
+        "source": null,
+        "disposition": "Contact Built",
+        "TaskLink": {
+            "TaskId": "bf71d8c0-7de5-4b24-9d68-a1a705cba119",
+            "ObjectId": "f0468ee8-ffce-4487-bd73-38d2434c2f56",
+            "objectType": "account",
+            "disposition": "Already in CRM - Suppression",
+            "comments": null,
+            "researchStatus": null,
+            "linkType": "input",
+            "createdAt": "2021-11-22T16:18:56.117Z",
+            "updatedAt": "2021-11-23T14:07:32.834Z",
+            "createdBy": "auth0|6135a3b49bb72d007097ee10",
+            "updatedBy": "auth0|6135a22714f3a0006acbe0a8",
+            "UserId": "auth0|6135a22714f3a0006acbe0a8"
+        }
+    }],
+    "Contacts": [{
+        "id": "34bd85c4-be0a-4aab-afcb-0b7745f9ea53",
+        "researchStatus": "QA",
+        "prefix": null,
+        "firstName": "Test",
+        "middleName": null,
+        "lastName": "Sss",
+        "jobTitle": null,
+        "jobLevel": null,
+        "jobDepartment": null,
+        "nsId": null,
+        "directPhone": null,
+        "email": "dgibson@centier.com",
+        "zb": "valid",
+        "gmailStatus": null,
+        "source": null,
+        "linkedInUrl": null,
+        "screenshot": null,
+        "disposition": "Contact Built",
+        "TaskLink": {
+            "TaskId": "bf71d8c0-7de5-4b24-9d68-a1a705cba119",
+            "ObjectId": "34bd85c4-be0a-4aab-afcb-0b7745f9ea53",
+            "objectType": "contact",
+            "disposition": "Contact Built",
+            "comments": null,
+            "researchStatus": "QA",
+            "linkType": "output",
+            "createdAt": "2021-11-23T14:11:41.800Z",
+            "updatedAt": "2021-11-23T14:11:41.800Z",
+            "createdBy": "auth0|6135a22714f3a0006acbe0a8",
+            "updatedBy": "auth0|6135a22714f3a0006acbe0a8",
+            "UserId": "auth0|6135a22714f3a0006acbe0a8"
+        }
+    }, {
+        "id": "660effd0-f46e-404b-b82d-56158062dbf8",
+        "researchStatus": "NQ",
+        "prefix": null,
+        "firstName": "Amery",
+        "middleName": null,
+        "lastName": "Rivera",
+        "jobTitle": "Director Business Development",
+        "jobLevel": "Director",
+        "jobDepartment": "Sales",
+        "nsId": null,
+        "directPhone": null,
+        "email": "at@tincidunt.ca",
+        "zb": null,
+        "gmailStatus": null,
+        "source": null,
+        "linkedInUrl": null,
+        "screenshot": null,
+        "disposition": "Incorrect Contact",
+        "TaskLink": {
+            "TaskId": "bf71d8c0-7de5-4b24-9d68-a1a705cba119",
+            "ObjectId": "660effd0-f46e-404b-b82d-56158062dbf8",
+            "objectType": "contact",
+            "disposition": "Incorrect Contact",
+            "comments": null,
+            "researchStatus": "NQ",
+            "linkType": "output",
+            "createdAt": "2021-11-23T14:04:57.574Z",
+            "updatedAt": "2021-11-23T14:05:38.075Z",
+            "createdBy": "auth0|6135a22714f3a0006acbe0a8",
+            "updatedBy": "auth0|6135a22714f3a0006acbe0a8",
+            "UserId": "auth0|6135a22714f3a0006acbe0a8"
+        }
+    }],
+    "User": {
+        "id": "auth0|6135a22714f3a0006acbe0a8",
+        "firstName": "beta.agent1",
+        "lastName": "",
+        "userName": "beta.agent1@nexsales.com"
+    }
+}]
+
+12)JobLevel(2x)
+Request URL: https://beta.da.rightleads.io/api/v1/jobLevel
+Method: GET
+* Query Param
+Response:["CXO","VP","Director","Manager","Architect","Staff","Others"]
+
+13)JobDepartment(2x)
+Request URL: https://beta.da.rightleads.io/api/v1/jobDepartment
+Method: GET
+* Query Param
+Response:["C-Suite","Engineering & Technical","Finance","Human Resources","Legal","Marketing","Medical & Health","Operations","Information Technology","IT Security","Sales","After Sales Service/Support","Contact Center","Executive","Administration","Regulatory/Corporate Compliance","Engineering","Trading"]
+
+========================================================================================
+Create New Contact
+========================================================================================
+1)disposition 
+Request URL: https://beta.da.rightleads.io/api/v1/dispositions
+Method: GET
+* Query Param
+Response:
+[{
+    "id": "01",
+    "dispositionType": "Contact Built",
+    "dispositionLevel": "Contact/Account",
+    "dispositionCategory": "Positive"
+}, {
+    "id": "02",
+    "dispositionType": "Already in CRM - Suppression",
+    "dispositionLevel": "Contact/Account",
+    "dispositionCategory": "Negative"
+}, {
+    "id": "03",
+    "dispositionType": "Contact Found: Email Bad",
+    "dispositionLevel": "Contact/Account",
+    "dispositionCategory": "Negative"
+}, {
+    "id": "04",
+    "dispositionType": "Acquired/Merged/Subsidiary/Bankrupt/Shut Down",
+    "dispositionLevel": "Account",
+    "dispositionCategory": "Negative"
+}, {
+    "id": "05",
+    "dispositionType": "Required Title Not Found",
+    "dispositionLevel": "Account",
+    "dispositionCategory": "Negative"
+}, {
+    "id": "06",
+    "dispositionType": "Outside Geography (Country)",
+    "dispositionLevel": "Account",
+    "dispositionCategory": "Negative"
+}, {
+    "id": "07",
+    "dispositionType": "C-Level Title Available",
+    "dispositionLevel": "Contact/Account",
+    "dispositionCategory": "Negative"
+}, {
+    "id": "09",
+    "dispositionType": "VP Level Title Available",
+    "dispositionLevel": "Contact/Account",
+    "dispositionCategory": "Negative"
+}, {
+    "id": "10",
+    "dispositionType": "Manager Level Title Available",
+    "dispositionLevel": "Contact/Account",
+    "dispositionCategory": "Negative"
+}, {
+    "id": "11",
+    "dispositionType": "Generic Title Available",
+    "dispositionLevel": "Contact/Account",
+    "dispositionCategory": "Negative"
+}, {
+    "id": "12",
+    "dispositionType": "Website Not Found",
+    "dispositionLevel": "Account",
+    "dispositionCategory": "Negative"
+}, {
+    "id": "13",
+    "dispositionType": "Duplicate Contact",
+    "dispositionLevel": "Contact",
+    "dispositionCategory": "Negative"
+}, {
+    "id": "14",
+    "dispositionType": "Incorrect Account",
+    "dispositionLevel": "Account",
+    "dispositionCategory": "Negative"
+}, {
+    "id": "15",
+    "dispositionType": "Incorrect Contact",
+    "dispositionLevel": "Contact",
+    "dispositionCategory": "Negative"
+}, {
+    "id": "16",
+    "dispositionType": "No Longer",
+    "dispositionLevel": "Contact/Account",
+    "dispositionCategory": "Negative"
+}, {
+    "id": "08",
+    "dispositionType": "Staff Level Title Available",
+    "dispositionLevel": "Contact/Account",
+    "dispositionCategory": "Negative"
+}, {
+    "id": "17",
+    "dispositionType": "Director Level Title Available",
+    "dispositionLevel": "Contact/Account",
+    "dispositionCategory": "Negative"
+}]
+
+2) ZeroBouce 
+Request URL: https://beta.da.rightleads.io/api/v1/integrations/zb?taskId=bf71d8c0-7de5-4b24-9d68-a1a705cba119&emailId=adam%40yahoo.com
+Method: GET
+* Query Param
+taskId: bf71d8c0-7de5-4b24-9d68-a1a705cba119
+emailId: adam@yahoo.com
+Response:{"address":"adam@yahoo.com","status":"invalid","sub_status":"mailbox_not_found","free_email":true,"processed_at":"2021-11-29T11:00:10.502Z"}
+
+3)JobFunctions
+Request URL: https://beta.da.rightleads.io/api/v1/jobFunction?departments[]=Sales
+Method: GET
+* Query Param
+    departments[]: Sales
+Response:
+["Account Management","Business Development","Channel Sales / Partner Alliances","Retail Sales","Sales Enablement","Sales Operations","Sales Strategy","Generic Sales","Inside Sales"]
+
+========================================================================================
+Check Contact
+========================================================================================
+1) Check suppression
+Request URL: https://beta.da.rightleads.io/api/v1/projects/141d09b6-5024-4ca6-b60d-c72775c6f5b8/contacts/check?checkSuppression=true&checkDuplicate=true
+Method: POST
+* Query Param
+address: {street1: "32nd Avenue", street2: null, city: "Queens", state: "NY", country: "United States",…}
+city: "Queens"
+country: "United States"
+state: "NY"
+street1: "32nd Avenue"
+street2: null
+zipCode: "11106"
+companyName: "1000 Corks"
+email: "adam@yahoo.com"
+firstName: "Adam"
+gmailStatus: "Passed"
+jobDepartment: null
+jobLevel: "VP"
+jobTitle: null
+lastName: "James"
+mailTesterStatus: "invalid"
+phone: null
+previous_address: {street1: null, street2: null, city: null, state: null, country: null, zipCode: null}
+zb: "invalid"
+zbDateAndTime: "2021-11-29T11:00:10.502Z"
+Response:{"isDuplicate":false,"duplicateMatchCase":"NONE","duplicateWith":null,"isSuppressed":false,"suppressionMatchCase":"NONE","suppressedWith":null}
+
+Payload :
+
+contact: {
+    id: "0ef48b00-412a-49bd-87c4-4f9c6946c675",
+    researchStatus: "QF",
+    callingStatus: null,
+    …
+}
+Account: {
+    id: "2bb67536-954a-4695-baa9-09ac513fa7e5",
+    name: "Dui Nec Tempus LLC",
+    researchStatus: null,
+    …
+}
+ProjectId: "33caaa62-cea2-4144-bea8-81f75c271582"
+accountCreator: {
+    userName: "beta.pmgr2@nexsales.com",
+    firstName: "Beta.Pmgr2",
+    lastName: null
+}
+firstName: "Beta.Pmgr2"
+lastName: null
+userName: "beta.pmgr2@nexsales.com"
+accountUpdater: {
+    userName: "beta.agent1@nexsales.com",
+    firstName: "Beta.Agent1",
+    lastName: null
+}
+firstName: "Beta.Agent1"
+lastName: null
+userName: "beta.agent1@nexsales.com"
+addressHQ: {
+    cityHQ: "Limón (Puerto Limón)",
+    stateHQ: "L",
+    countryHQ: "Zimbabwe"
+}
+cityHQ: "Limón (Puerto Limón)"
+countryHQ: "Zimbabwe"
+stateHQ: "L"
+aliasName: null
+callingStatus: null
+comments: null
+complianceComments: null
+complianceStatus: null
+createdAt: "2021-11-22T05:02:12.958Z"
+createdBy: "auth0|6135a3b49bb72d007097ee10"
+custom1: null
+custom2: null
+custom3: null
+custom4: null
+custom5: null
+custom6: null
+custom7: null
+custom8: null
+custom9: null
+custom10: null
+custom11: null
+custom12: null
+custom13: null
+custom14: null
+custom15: null
+deliveryStatus: null
+description: null
+disposition: "Contact Built"
+domain: "duinectempusllc.com"
+duplicateOf: null
+email: null
+emailDomain: "duinectempusllc.com"
+employeeRangeLI: null
+employeeSize: "[30,70]"
+employeeSizeFinalBucket: null
+employeeSizeLI: null
+employeeSizeZ_plus: null
+employeeSize_others: null
+employeeSourceLI: null
+employeeSourceZ_plus: null
+id: "2bb67536-954a-4695-baa9-09ac513fa7e5"
+industry: null
+label: "inclusion"
+linkedInUrl: null
+locationLI: null
+lowerEmployeeSize: null
+lowerRevenue: null
+naicsCode: null
+naicsDescription: null
+name: "Dui Nec Tempus LLC"
+nsId: null
+phoneHQ: "(458) 134-6421"
+researchStatus: null
+revenue: "[10000,60000]"
+revenue_M_B_K: null
+scrubbedName: "duinectempus"
+segment_technology: null
+sicCode: null
+sicDescription: null
+source: null
+stage: "Pending"
+subIndustry: null
+tokens: "dui|nec|tempus|llc"
+updatedAt: "2021-11-22T15:31:59.890Z"
+updatedBy: "auth0|6135a22714f3a0006acbe0a8"
+upperEmployeeSize: null
+upperRevenue: null
+website: "www.duinectempusllc.com"
+zoomInfoContactId: null
+zoomInfoName: null
+AccountId: "2bb67536-954a-4695-baa9-09ac513fa7e5"
+TaskLink: {
+    TaskId: "abcaaea5-c6d4-4b7c-b22e-bf5b4ea1e72e",
+    ObjectId: "0ef48b00-412a-49bd-87c4-4f9c6946c675",
+    …
+}
+address: {
+    street1: null,
+    street2: null,
+    city: null,
+    state: null,
+    country: null,
+    zipCode: null
+}
+callingStatus: null
+comments: null
+companyDedupeKey: "mikehussyduinectempus"
+companyName: "Dui Nec Tempus LLC"
+complianceComments: null
+complianceStatus: null
+contactCreator: {
+    userName: "beta.agent1@nexsales.com",
+    firstName: "Beta.Agent1",
+    lastName: null
+}
+contactUpdater: {
+    userName: "beta.agent1@nexsales.com",
+    firstName: "Beta.Agent1",
+    lastName: null
+}
+createdAt: "2021-11-24T15:11:10.508Z"
+createdBy: "auth0|6135a22714f3a0006acbe0a8"
+custom1: null
+custom2: null
+custom3: null
+custom4: null
+custom5: null
+custom6: null
+custom7: null
+custom8: null
+custom9: null
+custom10: null
+custom11: null
+custom12: null
+custom13: null
+custom14: null
+custom15: null
+deliveryStatus: null
+directPhone: "(201) 555-0123"
+disposition: "Contact Built"
+duplicateOf: null
+email: null
+emailDedupeKey: null
+firstName: "Mike"
+functions: null
+genericEmail: null
+gmailStatus: null
+gmailStatusDateAndTime: null
+handles: null
+id: "0ef48b00-412a-49bd-87c4-4f9c6946c675"
+jobDepartment: null
+jobLevel: null
+jobTitle: null
+label: "inclusion"
+lastName: "Hussy"
+linkedInUrl: null
+mailTesterStatus: null
+middleName: null
+nsId: null
+phone: "(201) 555-0124"
+phoneDedupeKey: "mikehussy12015550124"
+phoneExtension: null
+prefix: null
+previous_address: {
+    street1: null,
+    street2: null,
+    city: null,
+    state: null,
+    country: null,
+    zipCode: null
+}
+previous_callingStatus: null
+previous_comments: null
+previous_companyDedupeKey: "mikehussyduinectempus"
+previous_complianceComments: null
+previous_complianceStatus: null
+previous_custom1: null
+previous_custom2: null
+previous_custom3: null
+previous_custom4: null
+previous_custom5: null
+previous_custom6: null
+previous_custom7: null
+previous_custom8: null
+previous_custom9: null
+previous_custom10: null
+previous_custom11: null
+previous_custom12: null
+previous_custom13: null
+previous_custom14: null
+previous_custom15: null
+previous_deliveryStatus: null
+previous_directPhone: "+12015550123"
+previous_disposition: null
+previous_email: null
+previous_emailDedupeKey: null
+previous_firstName: "Mike"
+previous_functions: null
+previous_genericEmail: null
+previous_gmailStatus: null
+previous_gmailStatusDateAndTime: null
+previous_handles: null
+previous_jobDepartment: null
+previous_jobLevel: null
+previous_jobTitle: null
+previous_label: "inclusion"
+previous_lastName: "Hussy"
+previous_linkedInUrl: null
+previous_mailTesterStatus: null
+previous_middleName: null
+previous_nsId: null
+previous_phone: "+12015550124"
+previous_phoneDedupeKey: "mikehussy12015550124"
+previous_phoneExtension: null
+previous_prefix: null
+previous_researchStatus: "Pending"
+previous_screenshot: null
+previous_source: null
+previous_stage: "Pending"
+previous_website: null
+previous_zb: null
+previous_zbDateAndTime: null
+previous_zoomInfoContactId: null
+researchStatus: "QF"
+screenshot: null
+source: null
+stage: "Review"
+updatedAt: "2021-11-24T15:11:16.561Z"
+updatedBy: "auth0|6135a22714f3a0006acbe0a8"
+website: null
+zb: null
+zbDateAndTime: null
+zoomInfoContactId: null
+
+========================================================================================
+Save Contact
+========================================================================================
+Request URL:https://beta.da.rightleads.io/api/v1/projects/141d09b6-5024-4ca6-b60d-c72775c6f5b8/accounts/f0468ee8-ffce-4487-bd73-38d2434c2f56/contacts 
+Method: POST
+* Query Param
+contact: {,…}
+address: {street1: "32nd Avenue", street2: null, city: "Queens", state: "NY", country: "United States",…}
+companyName: "1000 Corks"
+email: "adam@yahoo.com"
+firstName: "Adam"
+gmailStatus: "Passed"
+jobDepartment: null
+jobLevel: "VP"
+jobTitle: null
+label: "inclusion"
+lastName: "James"
+mailTesterStatus: "invalid"
+phone: null
+previous_address: {street1: null, street2: null, city: null, state: null, country: null, zipCode: null}
+zb: "invalid"
+zbDateAndTime: "2021-11-29T11:00:10.502Z"
+disposeContact: false
+Response: {"contactId":"1ce08b5e-522c-4517-9a99-11291e8646b3"}
+
+Payload : 
+
+contact: {
+    id: "0ef48b00-412a-49bd-87c4-4f9c6946c675",
+    researchStatus: "QF",
+    callingStatus: null,
+    …
+}
+Account: {
+    id: "2bb67536-954a-4695-baa9-09ac513fa7e5",
+    name: "Dui Nec Tempus LLC",
+    researchStatus: null,
+    …
+}
+ProjectId: "33caaa62-cea2-4144-bea8-81f75c271582"
+accountCreator: {
+    userName: "beta.pmgr2@nexsales.com",
+    firstName: "Beta.Pmgr2",
+    lastName: null
+}
+firstName: "Beta.Pmgr2"
+lastName: null
+userName: "beta.pmgr2@nexsales.com"
+accountUpdater: {
+    userName: "beta.agent1@nexsales.com",
+    firstName: "Beta.Agent1",
+    lastName: null
+}
+firstName: "Beta.Agent1"
+lastName: null
+userName: "beta.agent1@nexsales.com"
+addressHQ: {
+    cityHQ: "Limón (Puerto Limón)",
+    stateHQ: "L",
+    countryHQ: "Zimbabwe"
+}
+cityHQ: "Limón (Puerto Limón)"
+countryHQ: "Zimbabwe"
+stateHQ: "L"
+aliasName: null
+callingStatus: null
+comments: null
+complianceComments: null
+complianceStatus: null
+createdAt: "2021-11-22T05:02:12.958Z"
+createdBy: "auth0|6135a3b49bb72d007097ee10"
+custom1: null
+custom2: null
+custom3: null
+custom4: null
+custom5: null
+custom6: null
+custom7: null
+custom8: null
+custom9: null
+custom10: null
+custom11: null
+custom12: null
+custom13: null
+custom14: null
+custom15: null
+deliveryStatus: null
+description: null
+disposition: "Contact Built"
+domain: "duinectempusllc.com"
+duplicateOf: null
+email: null
+emailDomain: "duinectempusllc.com"
+employeeRangeLI: null
+employeeSize: "[30,70]"
+employeeSizeFinalBucket: null
+employeeSizeLI: null
+employeeSizeZ_plus: null
+employeeSize_others: null
+employeeSourceLI: null
+employeeSourceZ_plus: null
+id: "2bb67536-954a-4695-baa9-09ac513fa7e5"
+industry: null
+label: "inclusion"
+linkedInUrl: null
+locationLI: null
+lowerEmployeeSize: null
+lowerRevenue: null
+naicsCode: null
+naicsDescription: null
+name: "Dui Nec Tempus LLC"
+nsId: null
+phoneHQ: "(458) 134-6421"
+researchStatus: null
+revenue: "[10000,60000]"
+revenue_M_B_K: null
+scrubbedName: "duinectempus"
+segment_technology: null
+sicCode: null
+sicDescription: null
+source: null
+stage: "Pending"
+subIndustry: null
+tokens: "dui|nec|tempus|llc"
+updatedAt: "2021-11-22T15:31:59.890Z"
+updatedBy: "auth0|6135a22714f3a0006acbe0a8"
+upperEmployeeSize: null
+upperRevenue: null
+website: "www.duinectempusllc.com"
+zoomInfoContactId: null
+zoomInfoName: null
+AccountId: "2bb67536-954a-4695-baa9-09ac513fa7e5"
+TaskLink: {
+    TaskId: "abcaaea5-c6d4-4b7c-b22e-bf5b4ea1e72e",
+    ObjectId: "0ef48b00-412a-49bd-87c4-4f9c6946c675",
+    …
+}
+address: {
+    street1: null,
+    street2: null,
+    city: null,
+    state: null,
+    country: null,
+    zipCode: null
+}
+callingStatus: null
+comments: null
+companyDedupeKey: "mikehussyduinectempus"
+complianceComments: null
+complianceStatus: null
+contactCreator: {
+    userName: "beta.agent1@nexsales.com",
+    firstName: "Beta.Agent1",
+    lastName: null
+}
+firstName: "Beta.Agent1"
+lastName: null
+userName: "beta.agent1@nexsales.com"
+contactUpdater: {
+    userName: "beta.agent1@nexsales.com",
+    firstName: "Beta.Agent1",
+    lastName: null
+}
+firstName: "Beta.Agent1"
+lastName: null
+userName: "beta.agent1@nexsales.com"
+createdAt: "2021-11-24T15:11:10.508Z"
+createdBy: "auth0|6135a22714f3a0006acbe0a8"
+custom1: null
+custom2: null
+custom3: null
+custom4: null
+custom5: null
+custom6: null
+custom7: null
+custom8: null
+custom9: null
+custom10: null
+custom11: null
+custom12: null
+custom13: null
+custom14: null
+custom15: null
+deliveryStatus: null
+directPhone: "+12015550123"
+disposition: "Contact Built"
+duplicateOf: null
+email: null
+emailDedupeKey: null
+firstName: "Mike"
+functions: null
+genericEmail: null
+gmailStatus: null
+gmailStatusDateAndTime: null
+handles: null
+id: "0ef48b00-412a-49bd-87c4-4f9c6946c675"
+jobDepartment: null
+jobLevel: null
+jobTitle: null
+label: "inclusion"
+lastName: "Hussy"
+linkedInUrl: null
+mailTesterStatus: null
+middleName: null
+nsId: null
+phone: "+12015550124"
+phoneDedupeKey: "mikehussy12015550124"
+phoneExtension: null
+prefix: null
+previous_address: {
+    street1: null,
+    street2: null,
+    city: null,
+    state: null,
+    country: null,
+    zipCode: null
+}
+previous_callingStatus: null
+previous_comments: null
+previous_companyDedupeKey: "mikehussyduinectempus"
+previous_complianceComments: null
+previous_complianceStatus: null
+previous_custom1: null
+previous_custom2: null
+previous_custom3: null
+previous_custom4: null
+previous_custom5: null
+previous_custom6: null
+previous_custom7: null
+previous_custom8: null
+previous_custom9: null
+previous_custom10: null
+previous_custom11: null
+previous_custom12: null
+previous_custom13: null
+previous_custom14: null
+previous_custom15: null
+previous_deliveryStatus: null
+previous_directPhone: "+12015550123"
+previous_disposition: null
+previous_email: null
+previous_emailDedupeKey: null
+previous_firstName: "Mike"
+previous_functions: null
+previous_genericEmail: null
+previous_gmailStatus: null
+previous_gmailStatusDateAndTime: null
+previous_handles: null
+previous_jobDepartment: null
+previous_jobLevel: null
+previous_jobTitle: null
+previous_label: "inclusion"
+previous_lastName: "Hussy"
+previous_linkedInUrl: null
+previous_mailTesterStatus: null
+previous_middleName: null
+previous_nsId: null
+previous_phone: "+12015550124"
+previous_phoneDedupeKey: "mikehussy12015550124"
+previous_phoneExtension: null
+previous_prefix: null
+previous_researchStatus: "Pending"
+previous_screenshot: null
+previous_source: null
+previous_stage: "Pending"
+previous_website: null
+previous_zb: null
+previous_zbDateAndTime: null
+previous_zoomInfoContactId: null
+researchStatus: "QF"
+screenshot: null
+source: null
+stage: "Review"
+updatedAt: "2021-11-24T15:11:16.561Z"
+updatedBy: "auth0|6135a22714f3a0006acbe0a8"
+website: null
+zb: null
+zbDateAndTime: null
+zoomInfoContactId: null
+disposeContact: false
+
+2)
+Request URL: https://beta.da.rightleads.io/api/v1/projects/141d09b6-5024-4ca6-b60d-c72775c6f5b8/tasks/bf71d8c0-7de5-4b24-9d68-a1a705cba119
+Method: GET 
+* Query Param
+Response: [{
+    "id": "bf71d8c0-7de5-4b24-9d68-a1a705cba119",
+    "description": null,
+    "dueDate": "2021-11-22T16:18:55.751Z",
+    "status": "Completed",
+    "priority": "Standard",
+    "completedDate": "2021-11-23T14:05:12.321Z",
+    "createdAt": "2021-11-22T16:18:56.112Z",
+    "updatedAt": "2021-11-23T14:11:41.812Z",
+    "TaskType": {
+        "id": "01",
+        "type": "Contact Build (Named Account)"
+    },
+    "Project": {
+        "id": "141d09b6-5024-4ca6-b60d-c72775c6f5b8",
+        "name": "Compliance Flow Sanity"
+    },
+    "Accounts": [{
+        "id": "f0468ee8-ffce-4487-bd73-38d2434c2f56",
+        "name": "1000 Corks",
+        "addressHQ": {
+            "address1HQ": "10 Belmont street",
+            "zipHQ": "728 364",
+            "cityHQ": "Tallinn",
+            "stateHQ": "CA",
+            "countryHQ": "EST"
+        },
+        "phoneHQ": null,
+        "website": "http://www.rockyourpaper.org",
+        "linkedInUrl": null,
+        "industry": null,
+        "revenue_M_B_K": "100k-500k",
+        "employeeSizeLI": null,
+        "employeeSizeZ_plus": null,
+        "employeeSourceZ_plus": null,
+        "employeeSizeFinalBucket": null,
+        "employeeSize_others": null,
+        "email": null,
+        "source": null,
+        "disposition": "Contact Built",
+        "TaskLink": {
+            "TaskId": "bf71d8c0-7de5-4b24-9d68-a1a705cba119",
+            "ObjectId": "f0468ee8-ffce-4487-bd73-38d2434c2f56",
+            "objectType": "account",
+            "disposition": "Already in CRM - Suppression",
+            "comments": null,
+            "researchStatus": null,
+            "linkType": "input",
+            "createdAt": "2021-11-22T16:18:56.117Z",
+            "updatedAt": "2021-11-23T14:07:32.834Z",
+            "createdBy": "auth0|6135a3b49bb72d007097ee10",
+            "updatedBy": "auth0|6135a22714f3a0006acbe0a8",
+            "UserId": "auth0|6135a22714f3a0006acbe0a8"
+        }
+    }],
+    "Contacts": [{
+        "id": "34bd85c4-be0a-4aab-afcb-0b7745f9ea53",
+        "researchStatus": "QA",
+        "prefix": null,
+        "firstName": "Test",
+        "middleName": null,
+        "lastName": "Sss",
+        "jobTitle": null,
+        "jobLevel": null,
+        "jobDepartment": null,
+        "nsId": null,
+        "directPhone": null,
+        "email": "dgibson@centier.com",
+        "zb": "valid",
+        "gmailStatus": null,
+        "source": null,
+        "linkedInUrl": null,
+        "screenshot": null,
+        "disposition": "Contact Built",
+        "TaskLink": {
+            "TaskId": "bf71d8c0-7de5-4b24-9d68-a1a705cba119",
+            "ObjectId": "34bd85c4-be0a-4aab-afcb-0b7745f9ea53",
+            "objectType": "contact",
+            "disposition": "Contact Built",
+            "comments": null,
+            "researchStatus": "QA",
+            "linkType": "output",
+            "createdAt": "2021-11-23T14:11:41.800Z",
+            "updatedAt": "2021-11-23T14:11:41.800Z",
+            "createdBy": "auth0|6135a22714f3a0006acbe0a8",
+            "updatedBy": "auth0|6135a22714f3a0006acbe0a8",
+            "UserId": "auth0|6135a22714f3a0006acbe0a8"
+        }
+    }, {
+        "id": "660effd0-f46e-404b-b82d-56158062dbf8",
+        "researchStatus": "NQ",
+        "prefix": null,
+        "firstName": "Amery",
+        "middleName": null,
+        "lastName": "Rivera",
+        "jobTitle": "Director Business Development",
+        "jobLevel": "Director",
+        "jobDepartment": "Sales",
+        "nsId": null,
+        "directPhone": null,
+        "email": "at@tincidunt.ca",
+        "zb": null,
+        "gmailStatus": null,
+        "source": null,
+        "linkedInUrl": null,
+        "screenshot": null,
+        "disposition": "Incorrect Contact",
+        "TaskLink": {
+            "TaskId": "bf71d8c0-7de5-4b24-9d68-a1a705cba119",
+            "ObjectId": "660effd0-f46e-404b-b82d-56158062dbf8",
+            "objectType": "contact",
+            "disposition": "Incorrect Contact",
+            "comments": null,
+            "researchStatus": "NQ",
+            "linkType": "output",
+            "createdAt": "2021-11-23T14:04:57.574Z",
+            "updatedAt": "2021-11-23T14:05:38.075Z",
+            "createdBy": "auth0|6135a22714f3a0006acbe0a8",
+            "updatedBy": "auth0|6135a22714f3a0006acbe0a8",
+            "UserId": "auth0|6135a22714f3a0006acbe0a8"
+        }
+    }],
+    "User": {
+        "id": "auth0|6135a22714f3a0006acbe0a8",
+        "firstName": "beta.agent1",
+        "lastName": "",
+        "userName": "beta.agent1@nexsales.com"
+    }
+}]
+
+3)
+Request URL: https://beta.da.rightleads.io/api/v1/projects/141d09b6-5024-4ca6-b60d-c72775c6f5b8/accounts/f0468ee8-ffce-4487-bd73-38d2434c2f56/contacts/1ce08b5e-522c-4517-9a99-11291e8646b3
+Method: GET
+* Query Param
+Response:
+{
+    "id": "1ce08b5e-522c-4517-9a99-11291e8646b3",
+    "researchStatus": "Pending",
+    "callingStatus": null,
+    "complianceStatus": null,
+    "deliveryStatus": null,
+    "prefix": null,
+    "firstName": "Adam",
+    "middleName": null,
+    "lastName": "James",
+    "address": {
+        "street1": "32nd Avenue",
+        "street2": null,
+        "city": "Queens",
+        "state": "NY",
+        "country": "United States",
+        "zipCode": "11106"
+    },
+    "email": "adam@yahoo.com",
+    "genericEmail": null,
+    "phone": null,
+    "directPhone": null,
+    "jobTitle": null,
+    "jobLevel": "VP",
+    "jobDepartment": null,
+    "nsId": null,
+    "zoomInfoContactId": null,
+    "linkedInUrl": null,
+    "screenshot": null,
+    "handles": null,
+    "website": null,
+    "comments": null,
+    "source": null,
+    "stage": "Pending",
+    "functions": null,
+    "disposition": null,
+    "zb": "invalid",
+    "zbDateAndTime": "2021-11-29T11:00:10.502Z",
+    "gmailStatus": "Passed",
+    "complianceComments": null,
+    "previous_complianceComments": null,
+    "gmailStatusDateAndTime": null,
+    "mailTesterStatus": "invalid",
+    "emailDedupeKey": "adamjamesyahoocom",
+    "phoneDedupeKey": null,
+    "companyDedupeKey": "adamjames1000corks",
+    "phoneExtension": null,
+    "label": "inclusion",
+    "duplicateOf": null,
+    "custom1": null,
+    "custom2": null,
+    "custom3": null,
+    "custom4": null,
+    "custom5": null,
+    "custom6": null,
+    "custom7": null,
+    "custom8": null,
+    "custom9": null,
+    "custom10": null,
+    "custom11": null,
+    "custom12": null,
+    "custom13": null,
+    "custom14": null,
+    "custom15": null,
+    "previous_researchStatus": "Pending",
+    "previous_callingStatus": null,
+    "previous_complianceStatus": null,
+    "previous_deliveryStatus": null,
+    "previous_prefix": null,
+    "previous_firstName": "Adam",
+    "previous_middleName": null,
+    "previous_lastName": "James",
+    "previous_address": {
+        "street1": "32nd Avenue",
+        "street2": null,
+        "city": "Queens",
+        "state": "NY",
+        "country": "United States",
+        "zipCode": "11106"
+    },
+    "previous_email": "adam@yahoo.com",
+    "previous_genericEmail": null,
+    "previous_phone": null,
+    "previous_directPhone": null,
+    "previous_jobTitle": null,
+    "previous_jobLevel": "VP",
+    "previous_jobDepartment": null,
+    "previous_nsId": null,
+    "previous_zoomInfoContactId": null,
+    "previous_linkedInUrl": null,
+    "previous_screenshot": null,
+    "previous_handles": null,
+    "previous_website": null,
+    "previous_comments": null,
+    "previous_source": null,
+    "previous_stage": "Pending",
+    "previous_functions": null,
+    "previous_disposition": null,
+    "previous_zb": "invalid",
+    "previous_zbDateAndTime": "2021-11-29T11:00:10.502Z",
+    "previous_gmailStatus": "Passed",
+    "previous_gmailStatusDateAndTime": null,
+    "previous_mailTesterStatus": "invalid",
+    "previous_emailDedupeKey": "adamjamesyahoocom",
+    "previous_phoneDedupeKey": null,
+    "previous_companyDedupeKey": "adamjames1000corks",
+    "previous_phoneExtension": null,
+    "previous_label": "inclusion",
+    "previous_custom1": null,
+    "previous_custom2": null,
+    "previous_custom3": null,
+    "previous_custom4": null,
+    "previous_custom5": null,
+    "previous_custom6": null,
+    "previous_custom7": null,
+    "previous_custom8": null,
+    "previous_custom9": null,
+    "previous_custom10": null,
+    "previous_custom11": null,
+    "previous_custom12": null,
+    "previous_custom13": null,
+    "previous_custom14": null,
+    "previous_custom15": null,
+    "createdAt": "2021-11-29T11:05:51.483Z",
+    "updatedAt": "2021-11-29T11:05:51.483Z",
+    "AccountId": "f0468ee8-ffce-4487-bd73-38d2434c2f56",
+    "createdBy": "auth0|6135a22714f3a0006acbe0a8",
+    "updatedBy": "auth0|6135a22714f3a0006acbe0a8",
+    "Account": {
+        "id": "f0468ee8-ffce-4487-bd73-38d2434c2f56",
+        "name": "1000 Corks",
+        "researchStatus": null,
+        "callingStatus": null,
+        "complianceStatus": null,
+        "deliveryStatus": null,
+        "stage": "Pending",
+        "complianceComments": null,
+        "zoomInfoName": null,
+        "domain": "rockyourpaper.org",
+        "emailDomain": null,
+        "website": "http://www.rockyourpaper.org",
+        "description": null,
+        "segment_technology": null,
+        "nsId": null,
+        "zoomInfoContactId": null,
+        "sicCode": null,
+        "naicsCode": null,
+        "sicDescription": null,
+        "naicsDescription": null,
+        "source": null,
+        "employeeSourceLI": null,
+        "employeeSourceZ_plus": null,
+        "phoneHQ": null,
+        "email": null,
+        "industry": null,
+        "subIndustry": null,
+        "locationLI": null,
+        "addressHQ": {
+            "address1HQ": "10 Belmont street",
+            "zipHQ": "728 364",
+            "cityHQ": "Tallinn",
+            "stateHQ": "CA",
+            "countryHQ": "EST"
+        },
+        "linkedInUrl": null,
+        "revenue": null,
+        "revenue_M_B_K": "100k-500k",
+        "employeeSize": "50-100",
+        "employeeSizeLI": null,
+        "employeeSizeZ_plus": null,
+        "employeeSizeFinalBucket": null,
+        "employeeSize_others": null,
+        "employeeRangeLI": null,
+        "disposition": "Contact Built",
+        "comments": null,
+        "upperRevenue": null,
+        "lowerRevenue": null,
+        "upperEmployeeSize": null,
+        "lowerEmployeeSize": null,
+        "scrubbedName": "1000corks",
+        "aliasName": null,
+        "tokens": "1000|corks",
+        "label": "inclusion",
+        "duplicateOf": null,
+        "custom1": null,
+        "custom2": null,
+        "custom3": null,
+        "custom4": null,
+        "custom5": null,
+        "custom6": null,
+        "custom7": null,
+        "custom8": null,
+        "custom9": null,
+        "custom10": null,
+        "custom11": null,
+        "custom12": null,
+        "custom13": null,
+        "custom14": null,
+        "custom15": null,
+        "createdAt": "2021-11-22T16:03:19.709Z",
+        "updatedAt": "2021-11-23T14:05:12.299Z",
+        "ProjectId": "141d09b6-5024-4ca6-b60d-c72775c6f5b8",
+        "createdBy": "auth0|6135a3b49bb72d007097ee10",
+        "updatedBy": "auth0|6135a22714f3a0006acbe0a8"
+    }
+}
+
+4) ContactList :
+Request URL: https://beta.da.rightleads.io/api/v1/projects/141d09b6-5024-4ca6-b60d-c72775c6f5b8/accounts/f0468ee8-ffce-4487-bd73-38d2434c2f56/contacts?pageSize=100
+Method: GET
+* Query Param
+pageSize: 100
+Response:
+{
+    "totalCount": 3,
+    "docs": [{
+        "id": "1ce08b5e-522c-4517-9a99-11291e8646b3",
+        "researchStatus": "Pending",
+        "callingStatus": null,
+        "complianceStatus": null,
+        "deliveryStatus": null,
+        "prefix": null,
+        "firstName": "Adam",
+        "middleName": null,
+        "lastName": "James",
+        "address": {
+            "street1": "32nd Avenue",
+            "street2": null,
+            "city": "Queens",
+            "state": "NY",
+            "country": "United States",
+            "zipCode": "11106"
+        },
+        "email": "adam@yahoo.com",
+        "genericEmail": null,
+        "phone": null,
+        "directPhone": null,
+        "jobTitle": null,
+        "jobLevel": "VP",
+        "jobDepartment": null,
+        "nsId": null,
+        "zoomInfoContactId": null,
+        "linkedInUrl": null,
+        "screenshot": null,
+        "handles": null,
+        "website": null,
+        "comments": null,
+        "source": null,
+        "stage": "Pending",
+        "functions": null,
+        "disposition": null,
+        "zb": "invalid",
+        "zbDateAndTime": "2021-11-29T11:00:10.502Z",
+        "gmailStatus": "Passed",
+        "complianceComments": null,
+        "previous_complianceComments": null,
+        "gmailStatusDateAndTime": null,
+        "mailTesterStatus": "invalid",
+        "emailDedupeKey": "adamjamesyahoocom",
+        "phoneDedupeKey": null,
+        "companyDedupeKey": "adamjames1000corks",
+        "phoneExtension": null,
+        "label": "inclusion",
+        "duplicateOf": null,
+        "custom1": null,
+        "custom2": null,
+        "custom3": null,
+        "custom4": null,
+        "custom5": null,
+        "custom6": null,
+        "custom7": null,
+        "custom8": null,
+        "custom9": null,
+        "custom10": null,
+        "custom11": null,
+        "custom12": null,
+        "custom13": null,
+        "custom14": null,
+        "custom15": null,
+        "previous_researchStatus": "Pending",
+        "previous_callingStatus": null,
+        "previous_complianceStatus": null,
+        "previous_deliveryStatus": null,
+        "previous_prefix": null,
+        "previous_firstName": "Adam",
+        "previous_middleName": null,
+        "previous_lastName": "James",
+        "previous_address": {
+            "street1": "32nd Avenue",
+            "street2": null,
+            "city": "Queens",
+            "state": "NY",
+            "country": "United States",
+            "zipCode": "11106"
+        },
+        "previous_email": "adam@yahoo.com",
+        "previous_genericEmail": null,
+        "previous_phone": null,
+        "previous_directPhone": null,
+        "previous_jobTitle": null,
+        "previous_jobLevel": "VP",
+        "previous_jobDepartment": null,
+        "previous_nsId": null,
+        "previous_zoomInfoContactId": null,
+        "previous_linkedInUrl": null,
+        "previous_screenshot": null,
+        "previous_handles": null,
+        "previous_website": null,
+        "previous_comments": null,
+        "previous_source": null,
+        "previous_stage": "Pending",
+        "previous_functions": null,
+        "previous_disposition": null,
+        "previous_zb": "invalid",
+        "previous_zbDateAndTime": "2021-11-29T11:00:10.502Z",
+        "previous_gmailStatus": "Passed",
+        "previous_gmailStatusDateAndTime": null,
+        "previous_mailTesterStatus": "invalid",
+        "previous_emailDedupeKey": "adamjamesyahoocom",
+        "previous_phoneDedupeKey": null,
+        "previous_companyDedupeKey": "adamjames1000corks",
+        "previous_phoneExtension": null,
+        "previous_label": "inclusion",
+        "previous_custom1": null,
+        "previous_custom2": null,
+        "previous_custom3": null,
+        "previous_custom4": null,
+        "previous_custom5": null,
+        "previous_custom6": null,
+        "previous_custom7": null,
+        "previous_custom8": null,
+        "previous_custom9": null,
+        "previous_custom10": null,
+        "previous_custom11": null,
+        "previous_custom12": null,
+        "previous_custom13": null,
+        "previous_custom14": null,
+        "previous_custom15": null,
+        "createdAt": "2021-11-29T11:05:51.483Z",
+        "updatedAt": "2021-11-29T11:05:51.483Z",
+        "AccountId": "f0468ee8-ffce-4487-bd73-38d2434c2f56",
+        "createdBy": "auth0|6135a22714f3a0006acbe0a8",
+        "updatedBy": "auth0|6135a22714f3a0006acbe0a8",
+        "contactCreator": {
+            "userName": "beta.agent1@nexsales.com",
+            "firstName": "beta.agent1",
+            "lastName": ""
+        },
+        "contactUpdater": {
+            "userName": "beta.agent1@nexsales.com",
+            "firstName": "beta.agent1",
+            "lastName": ""
+        },
+        "Account": {
+            "id": "f0468ee8-ffce-4487-bd73-38d2434c2f56",
+            "name": "1000 Corks",
+            "researchStatus": null,
+            "callingStatus": null,
+            "complianceStatus": null,
+            "deliveryStatus": null,
+            "stage": "Pending",
+            "complianceComments": null,
+            "zoomInfoName": null,
+            "domain": "rockyourpaper.org",
+            "emailDomain": null,
+            "website": "http://www.rockyourpaper.org",
+            "description": null,
+            "segment_technology": null,
+            "nsId": null,
+            "zoomInfoContactId": null,
+            "sicCode": null,
+            "naicsCode": null,
+            "sicDescription": null,
+            "naicsDescription": null,
+            "source": null,
+            "employeeSourceLI": null,
+            "employeeSourceZ_plus": null,
+            "phoneHQ": null,
+            "email": null,
+            "industry": null,
+            "subIndustry": null,
+            "locationLI": null,
+            "addressHQ": {
+                "address1HQ": "10 Belmont street",
+                "zipHQ": "728 364",
+                "cityHQ": "Tallinn",
+                "stateHQ": "CA",
+                "countryHQ": "EST"
+            },
+            "linkedInUrl": null,
+            "revenue": null,
+            "revenue_M_B_K": "100k-500k",
+            "employeeSize": "50-100",
+            "employeeSizeLI": null,
+            "employeeSizeZ_plus": null,
+            "employeeSizeFinalBucket": null,
+            "employeeSize_others": null,
+            "employeeRangeLI": null,
+            "disposition": "Contact Built",
+            "comments": null,
+            "upperRevenue": null,
+            "lowerRevenue": null,
+            "upperEmployeeSize": null,
+            "lowerEmployeeSize": null,
+            "scrubbedName": "1000corks",
+            "aliasName": null,
+            "tokens": "1000|corks",
+            "label": "inclusion",
+            "duplicateOf": null,
+            "custom1": null,
+            "custom2": null,
+            "custom3": null,
+            "custom4": null,
+            "custom5": null,
+            "custom6": null,
+            "custom7": null,
+            "custom8": null,
+            "custom9": null,
+            "custom10": null,
+            "custom11": null,
+            "custom12": null,
+            "custom13": null,
+            "custom14": null,
+            "custom15": null,
+            "createdAt": "2021-11-22T16:03:19.709Z",
+            "updatedAt": "2021-11-23T14:05:12.299Z",
+            "ProjectId": "141d09b6-5024-4ca6-b60d-c72775c6f5b8",
+            "createdBy": "auth0|6135a3b49bb72d007097ee10",
+            "updatedBy": "auth0|6135a22714f3a0006acbe0a8",
+            "accountCreator": {
+                "userName": "beta.pmgr2@nexsales.com",
+                "firstName": "beta.pmgr2",
+                "lastName": ""
+            },
+            "accountUpdater": {
+                "userName": "beta.agent1@nexsales.com",
+                "firstName": "beta.agent1",
+                "lastName": ""
+            }
+        }
+    }, {
+        "id": "34bd85c4-be0a-4aab-afcb-0b7745f9ea53",
+        "researchStatus": "QA",
+        "callingStatus": null,
+        "complianceStatus": null,
+        "deliveryStatus": null,
+        "prefix": null,
+        "firstName": "Test",
+        "middleName": null,
+        "lastName": "Sss",
+        "address": {
+            "street1": null,
+            "street2": null,
+            "city": null,
+            "state": null,
+            "country": null,
+            "zipCode": null
+        },
+        "email": "dgibson@centier.com",
+        "genericEmail": null,
+        "phone": null,
+        "directPhone": null,
+        "jobTitle": null,
+        "jobLevel": null,
+        "jobDepartment": null,
+        "nsId": null,
+        "zoomInfoContactId": null,
+        "linkedInUrl": null,
+        "screenshot": null,
+        "handles": null,
+        "website": null,
+        "comments": null,
+        "source": null,
+        "stage": "Review",
+        "functions": null,
+        "disposition": "Contact Built",
+        "zb": "valid",
+        "zbDateAndTime": "2021-11-23T14:30:35.299Z",
+        "gmailStatus": null,
+        "complianceComments": null,
+        "previous_complianceComments": null,
+        "gmailStatusDateAndTime": null,
+        "mailTesterStatus": null,
+        "emailDedupeKey": "testssscentiercom",
+        "phoneDedupeKey": null,
+        "companyDedupeKey": "testsss1000corks",
+        "phoneExtension": null,
+        "label": "inclusion",
+        "duplicateOf": null,
+        "custom1": null,
+        "custom2": null,
+        "custom3": null,
+        "custom4": null,
+        "custom5": null,
+        "custom6": null,
+        "custom7": null,
+        "custom8": null,
+        "custom9": null,
+        "custom10": null,
+        "custom11": null,
+        "custom12": null,
+        "custom13": null,
+        "custom14": null,
+        "custom15": null,
+        "previous_researchStatus": "QA",
+        "previous_callingStatus": null,
+        "previous_complianceStatus": null,
+        "previous_deliveryStatus": null,
+        "previous_prefix": null,
+        "previous_firstName": "Test",
+        "previous_middleName": null,
+        "previous_lastName": "Sss",
+        "previous_address": {
+            "street1": null,
+            "street2": null,
+            "city": null,
+            "state": null,
+            "country": null,
+            "zipCode": null
+        },
+        "previous_email": null,
+        "previous_genericEmail": null,
+        "previous_phone": null,
+        "previous_directPhone": null,
+        "previous_jobTitle": null,
+        "previous_jobLevel": null,
+        "previous_jobDepartment": null,
+        "previous_nsId": null,
+        "previous_zoomInfoContactId": null,
+        "previous_linkedInUrl": null,
+        "previous_screenshot": null,
+        "previous_handles": null,
+        "previous_website": null,
+        "previous_comments": null,
+        "previous_source": null,
+        "previous_stage": "Pending",
+        "previous_functions": null,
+        "previous_disposition": "Contact Built",
+        "previous_zb": null,
+        "previous_zbDateAndTime": null,
+        "previous_gmailStatus": null,
+        "previous_gmailStatusDateAndTime": null,
+        "previous_mailTesterStatus": null,
+        "previous_emailDedupeKey": null,
+        "previous_phoneDedupeKey": null,
+        "previous_companyDedupeKey": "testsss1000corks",
+        "previous_phoneExtension": null,
+        "previous_label": "inclusion",
+        "previous_custom1": null,
+        "previous_custom2": null,
+        "previous_custom3": null,
+        "previous_custom4": null,
+        "previous_custom5": null,
+        "previous_custom6": null,
+        "previous_custom7": null,
+        "previous_custom8": null,
+        "previous_custom9": null,
+        "previous_custom10": null,
+        "previous_custom11": null,
+        "previous_custom12": null,
+        "previous_custom13": null,
+        "previous_custom14": null,
+        "previous_custom15": null,
+        "createdAt": "2021-11-23T14:11:41.781Z",
+        "updatedAt": "2021-11-23T14:31:14.758Z",
+        "AccountId": "f0468ee8-ffce-4487-bd73-38d2434c2f56",
+        "createdBy": "auth0|6135a22714f3a0006acbe0a8",
+        "updatedBy": "auth0|6135a22714f3a0006acbe0a8",
+        "contactCreator": {
+            "userName": "beta.agent1@nexsales.com",
+            "firstName": "beta.agent1",
+            "lastName": ""
+        },
+        "contactUpdater": {
+            "userName": "beta.agent1@nexsales.com",
+            "firstName": "beta.agent1",
+            "lastName": ""
+        },
+        "Account": {
+            "id": "f0468ee8-ffce-4487-bd73-38d2434c2f56",
+            "name": "1000 Corks",
+            "researchStatus": null,
+            "callingStatus": null,
+            "complianceStatus": null,
+            "deliveryStatus": null,
+            "stage": "Pending",
+            "complianceComments": null,
+            "zoomInfoName": null,
+            "domain": "rockyourpaper.org",
+            "emailDomain": null,
+            "website": "http://www.rockyourpaper.org",
+            "description": null,
+            "segment_technology": null,
+            "nsId": null,
+            "zoomInfoContactId": null,
+            "sicCode": null,
+            "naicsCode": null,
+            "sicDescription": null,
+            "naicsDescription": null,
+            "source": null,
+            "employeeSourceLI": null,
+            "employeeSourceZ_plus": null,
+            "phoneHQ": null,
+            "email": null,
+            "industry": null,
+            "subIndustry": null,
+            "locationLI": null,
+            "addressHQ": {
+                "address1HQ": "10 Belmont street",
+                "zipHQ": "728 364",
+                "cityHQ": "Tallinn",
+                "stateHQ": "CA",
+                "countryHQ": "EST"
+            },
+            "linkedInUrl": null,
+            "revenue": null,
+            "revenue_M_B_K": "100k-500k",
+            "employeeSize": "50-100",
+            "employeeSizeLI": null,
+            "employeeSizeZ_plus": null,
+            "employeeSizeFinalBucket": null,
+            "employeeSize_others": null,
+            "employeeRangeLI": null,
+            "disposition": "Contact Built",
+            "comments": null,
+            "upperRevenue": null,
+            "lowerRevenue": null,
+            "upperEmployeeSize": null,
+            "lowerEmployeeSize": null,
+            "scrubbedName": "1000corks",
+            "aliasName": null,
+            "tokens": "1000|corks",
+            "label": "inclusion",
+            "duplicateOf": null,
+            "custom1": null,
+            "custom2": null,
+            "custom3": null,
+            "custom4": null,
+            "custom5": null,
+            "custom6": null,
+            "custom7": null,
+            "custom8": null,
+            "custom9": null,
+            "custom10": null,
+            "custom11": null,
+            "custom12": null,
+            "custom13": null,
+            "custom14": null,
+            "custom15": null,
+            "createdAt": "2021-11-22T16:03:19.709Z",
+            "updatedAt": "2021-11-23T14:05:12.299Z",
+            "ProjectId": "141d09b6-5024-4ca6-b60d-c72775c6f5b8",
+            "createdBy": "auth0|6135a3b49bb72d007097ee10",
+            "updatedBy": "auth0|6135a22714f3a0006acbe0a8",
+            "accountCreator": {
+                "userName": "beta.pmgr2@nexsales.com",
+                "firstName": "beta.pmgr2",
+                "lastName": ""
+            },
+            "accountUpdater": {
+                "userName": "beta.agent1@nexsales.com",
+                "firstName": "beta.agent1",
+                "lastName": ""
+            }
+        }
+    }, {
+        "id": "660effd0-f46e-404b-b82d-56158062dbf8",
+        "researchStatus": "NQ",
+        "callingStatus": "callingStatus",
+        "complianceStatus": null,
+        "deliveryStatus": null,
+        "prefix": null,
+        "firstName": "Amery",
+        "middleName": null,
+        "lastName": "Rivera",
+        "address": {
+            "city": "Tallinn",
+            "state": "CA",
+            "country": "EST"
+        },
+        "email": "at@tincidunt.ca",
+        "genericEmail": null,
+        "phone": "+15038300708",
+        "directPhone": null,
+        "jobTitle": "Director Business Development",
+        "jobLevel": "Director",
+        "jobDepartment": "Sales",
+        "nsId": null,
+        "zoomInfoContactId": null,
+        "linkedInUrl": null,
+        "screenshot": null,
+        "handles": null,
+        "website": null,
+        "comments": null,
+        "source": null,
+        "stage": "Review",
+        "functions": null,
+        "disposition": "Incorrect Contact",
+        "zb": null,
+        "zbDateAndTime": null,
+        "gmailStatus": null,
+        "complianceComments": null,
+        "previous_complianceComments": null,
+        "gmailStatusDateAndTime": null,
+        "mailTesterStatus": null,
+        "emailDedupeKey": "ameryriveratinciduntca",
+        "phoneDedupeKey": "ameryrivera15038300708",
+        "companyDedupeKey": "ameryrivera1000corks",
+        "phoneExtension": null,
+        "label": "inclusion",
+        "duplicateOf": null,
+        "custom1": null,
+        "custom2": null,
+        "custom3": null,
+        "custom4": null,
+        "custom5": null,
+        "custom6": null,
+        "custom7": null,
+        "custom8": null,
+        "custom9": null,
+        "custom10": null,
+        "custom11": null,
+        "custom12": null,
+        "custom13": null,
+        "custom14": null,
+        "custom15": null,
+        "previous_researchStatus": "researchStatus",
+        "previous_callingStatus": "callingStatus",
+        "previous_complianceStatus": null,
+        "previous_deliveryStatus": null,
+        "previous_prefix": null,
+        "previous_firstName": "Amery",
+        "previous_middleName": null,
+        "previous_lastName": "Rivera",
+        "previous_address": {
+            "city": "Tallinn",
+            "state": "CA",
+            "country": "EST"
+        },
+        "previous_email": "at@tincidunt.ca",
+        "previous_genericEmail": null,
+        "previous_phone": "(503) 830-0708",
+        "previous_directPhone": null,
+        "previous_jobTitle": "Director Business Development",
+        "previous_jobLevel": "Director",
+        "previous_jobDepartment": "Sales",
+        "previous_nsId": null,
+        "previous_zoomInfoContactId": null,
+        "previous_linkedInUrl": null,
+        "previous_screenshot": null,
+        "previous_handles": null,
+        "previous_website": null,
+        "previous_comments": null,
+        "previous_source": null,
+        "previous_stage": "Pending",
+        "previous_functions": null,
+        "previous_disposition": null,
+        "previous_zb": null,
+        "previous_zbDateAndTime": null,
+        "previous_gmailStatus": null,
+        "previous_gmailStatusDateAndTime": null,
+        "previous_mailTesterStatus": null,
+        "previous_emailDedupeKey": "ameryriveratinciduntca",
+        "previous_phoneDedupeKey": "ameryrivera5038300708",
+        "previous_companyDedupeKey": "ameryrivera1000corks",
+        "previous_phoneExtension": null,
+        "previous_label": "inclusion",
+        "previous_custom1": null,
+        "previous_custom2": null,
+        "previous_custom3": null,
+        "previous_custom4": null,
+        "previous_custom5": null,
+        "previous_custom6": null,
+        "previous_custom7": null,
+        "previous_custom8": null,
+        "previous_custom9": null,
+        "previous_custom10": null,
+        "previous_custom11": null,
+        "previous_custom12": null,
+        "previous_custom13": null,
+        "previous_custom14": null,
+        "previous_custom15": null,
+        "createdAt": "2021-11-22T16:03:19.755Z",
+        "updatedAt": "2021-11-23T14:05:38.060Z",
+        "AccountId": "f0468ee8-ffce-4487-bd73-38d2434c2f56",
+        "createdBy": "auth0|6135a3b49bb72d007097ee10",
+        "updatedBy": "auth0|6135a22714f3a0006acbe0a8",
+        "contactCreator": {
+            "userName": "beta.pmgr2@nexsales.com",
+            "firstName": "beta.pmgr2",
+            "lastName": ""
+        },
+        "contactUpdater": {
+            "userName": "beta.agent1@nexsales.com",
+            "firstName": "beta.agent1",
+            "lastName": ""
+        },
+        "Account": {
+            "id": "f0468ee8-ffce-4487-bd73-38d2434c2f56",
+            "name": "1000 Corks",
+            "researchStatus": null,
+            "callingStatus": null,
+            "complianceStatus": null,
+            "deliveryStatus": null,
+            "stage": "Pending",
+            "complianceComments": null,
+            "zoomInfoName": null,
+            "domain": "rockyourpaper.org",
+            "emailDomain": null,
+            "website": "http://www.rockyourpaper.org",
+            "description": null,
+            "segment_technology": null,
+            "nsId": null,
+            "zoomInfoContactId": null,
+            "sicCode": null,
+            "naicsCode": null,
+            "sicDescription": null,
+            "naicsDescription": null,
+            "source": null,
+            "employeeSourceLI": null,
+            "employeeSourceZ_plus": null,
+            "phoneHQ": null,
+            "email": null,
+            "industry": null,
+            "subIndustry": null,
+            "locationLI": null,
+            "addressHQ": {
+                "address1HQ": "10 Belmont street",
+                "zipHQ": "728 364",
+                "cityHQ": "Tallinn",
+                "stateHQ": "CA",
+                "countryHQ": "EST"
+            },
+            "linkedInUrl": null,
+            "revenue": null,
+            "revenue_M_B_K": "100k-500k",
+            "employeeSize": "50-100",
+            "employeeSizeLI": null,
+            "employeeSizeZ_plus": null,
+            "employeeSizeFinalBucket": null,
+            "employeeSize_others": null,
+            "employeeRangeLI": null,
+            "disposition": "Contact Built",
+            "comments": null,
+            "upperRevenue": null,
+            "lowerRevenue": null,
+            "upperEmployeeSize": null,
+            "lowerEmployeeSize": null,
+            "scrubbedName": "1000corks",
+            "aliasName": null,
+            "tokens": "1000|corks",
+            "label": "inclusion",
+            "duplicateOf": null,
+            "custom1": null,
+            "custom2": null,
+            "custom3": null,
+            "custom4": null,
+            "custom5": null,
+            "custom6": null,
+            "custom7": null,
+            "custom8": null,
+            "custom9": null,
+            "custom10": null,
+            "custom11": null,
+            "custom12": null,
+            "custom13": null,
+            "custom14": null,
+            "custom15": null,
+            "createdAt": "2021-11-22T16:03:19.709Z",
+            "updatedAt": "2021-11-23T14:05:12.299Z",
+            "ProjectId": "141d09b6-5024-4ca6-b60d-c72775c6f5b8",
+            "createdBy": "auth0|6135a3b49bb72d007097ee10",
+            "updatedBy": "auth0|6135a22714f3a0006acbe0a8",
+            "accountCreator": {
+                "userName": "beta.pmgr2@nexsales.com",
+                "firstName": "beta.pmgr2",
+                "lastName": ""
+            },
+            "accountUpdater": {
+                "userName": "beta.agent1@nexsales.com",
+                "firstName": "beta.agent1",
+                "lastName": ""
+            }
+        }
+    }]
+}
+
+
+========================================================================================
+Dispose Contact (6 requests)
+========================================================================================
+1) contacts
+Request URL: https://beta.da.rightleads.io/api/v1/projects/141d09b6-5024-4ca6-b60d-c72775c6f5b8/accounts/f0468ee8-ffce-4487-bd73-38d2434c2f56/contacts
+Method: POST
+* Query Param
+Response:{"contactId":"1ce08b5e-522c-4517-9a99-11291e8646b3","disposeContactResult":{"disposed":true}}
+
+payload : 
+contact: {id: "0ef48b00-412a-49bd-87c4-4f9c6946c675", researchStatus: "QF", callingStatus: null,…}
+Account: {id: "2bb67536-954a-4695-baa9-09ac513fa7e5", name: "Dui Nec Tempus LLC", researchStatus: null,…}
+ProjectId: "33caaa62-cea2-4144-bea8-81f75c271582"
+accountCreator: {userName: "beta.pmgr2@nexsales.com", firstName: "Beta.Pmgr2", lastName: null}
+firstName: "Beta.Pmgr2"
+lastName: null
+userName: "beta.pmgr2@nexsales.com"
+accountUpdater: {userName: "beta.agent1@nexsales.com", firstName: "Beta.Agent1", lastName: null}
+firstName: "Beta.Agent1"
+lastName: null
+userName: "beta.agent1@nexsales.com"
+addressHQ: {cityHQ: "Limón (Puerto Limón)", stateHQ: "L", countryHQ: "Zimbabwe"}
+cityHQ: "Limón (Puerto Limón)"
+countryHQ: "Zimbabwe"
+stateHQ: "L"
+aliasName: null
+callingStatus: null
+comments: null
+complianceComments: null
+complianceStatus: null
+createdAt: "2021-11-22T05:02:12.958Z"
+createdBy: "auth0|6135a3b49bb72d007097ee10"
+custom1: null
+custom2: null
+custom3: null
+custom4: null
+custom5: null
+custom6: null
+custom7: null
+custom8: null
+custom9: null
+custom10: null
+custom11: null
+custom12: null
+custom13: null
+custom14: null
+custom15: null
+deliveryStatus: null
+description: null
+disposition: "Contact Built"
+domain: "duinectempusllc.com"
+duplicateOf: null
+email: null
+emailDomain: "duinectempusllc.com"
+employeeRangeLI: null
+employeeSize: "[30,70]"
+employeeSizeFinalBucket: null
+employeeSizeLI: null
+employeeSizeZ_plus: null
+employeeSize_others: null
+employeeSourceLI: null
+employeeSourceZ_plus: null
+id: "2bb67536-954a-4695-baa9-09ac513fa7e5"
+industry: null
+label: "inclusion"
+linkedInUrl: null
+locationLI: null
+lowerEmployeeSize: null
+lowerRevenue: null
+naicsCode: null
+naicsDescription: null
+name: "Dui Nec Tempus LLC"
+nsId: null
+phoneHQ: "(458) 134-6421"
+researchStatus: null
+revenue: "[10000,60000]"
+revenue_M_B_K: null
+scrubbedName: "duinectempus"
+segment_technology: null
+sicCode: null
+sicDescription: null
+source: null
+stage: "Pending"
+subIndustry: null
+tokens: "dui|nec|tempus|llc"
+updatedAt: "2021-11-22T15:31:59.890Z"
+updatedBy: "auth0|6135a22714f3a0006acbe0a8"
+upperEmployeeSize: null
+upperRevenue: null
+website: "www.duinectempusllc.com"
+zoomInfoContactId: null
+zoomInfoName: null
+AccountId: "2bb67536-954a-4695-baa9-09ac513fa7e5"
+TaskLink: {TaskId: "abcaaea5-c6d4-4b7c-b22e-bf5b4ea1e72e", ObjectId: "0ef48b00-412a-49bd-87c4-4f9c6946c675",…}
+ObjectId: "0ef48b00-412a-49bd-87c4-4f9c6946c675"
+TaskId: "abcaaea5-c6d4-4b7c-b22e-bf5b4ea1e72e"
+UserId: "auth0|6135a22714f3a0006acbe0a8"
+comments: null
+createdAt: "2021-11-24T15:11:16.540Z"
+createdBy: "auth0|6135a22714f3a0006acbe0a8"
+disposition: "Contact Built"
+linkType: "output"
+objectType: "contact"
+researchStatus: "QF"
+updatedAt: "2021-11-24T15:11:16.540Z"
+updatedBy: "auth0|6135a22714f3a0006acbe0a8"
+address: {street1: null, street2: null, city: null, state: null, country: null, zipCode: null}
+city: null
+country: null
+state: null
+street1: null
+street2: null
+zipCode: null
+callingStatus: null
+comments: ""
+companyDedupeKey: "mikehussyduinectempus"
+complianceComments: null
+complianceStatus: null
+contactCreator: {userName: "beta.agent1@nexsales.com", firstName: "Beta.Agent1", lastName: null}
+firstName: "Beta.Agent1"
+lastName: null
+userName: "beta.agent1@nexsales.com"
+contactUpdater: {userName: "beta.agent1@nexsales.com", firstName: "Beta.Agent1", lastName: null}
+firstName: "Beta.Agent1"
+lastName: null
+userName: "beta.agent1@nexsales.com"
+createdAt: "2021-11-24T15:11:10.508Z"
+createdBy: "auth0|6135a22714f3a0006acbe0a8"
+custom1: null
+custom2: null
+custom3: null
+custom4: null
+custom5: null
+custom6: null
+custom7: null
+custom8: null
+custom9: null
+custom10: null
+custom11: null
+custom12: null
+custom13: null
+custom14: null
+custom15: null
+deliveryStatus: null
+directPhone: "+12015550123"
+disposition: "Contact Built"
+duplicateOf: null
+email: null
+emailDedupeKey: null
+firstName: "Mike"
+functions: null
+genericEmail: null
+gmailStatus: null
+gmailStatusDateAndTime: null
+handles: null
+id: "0ef48b00-412a-49bd-87c4-4f9c6946c675"
+jobDepartment: null
+jobLevel: null
+jobTitle: null
+label: "inclusion"
+lastName: "Hussy"
+linkedInUrl: null
+mailTesterStatus: null
+middleName: null
+nsId: null
+phone: "+12015550124"
+phoneDedupeKey: "mikehussy12015550124"
+phoneExtension: null
+prefix: null
+previous_address: {street1: null, street2: null, city: null, state: null, country: null, zipCode: null}
+previous_callingStatus: null
+previous_comments: null
+previous_companyDedupeKey: "mikehussyduinectempus"
+previous_complianceComments: null
+previous_complianceStatus: null
+previous_custom1: null
+previous_custom2: null
+previous_custom3: null
+previous_custom4: null
+previous_custom5: null
+previous_custom6: null
+previous_custom7: null
+previous_custom8: null
+previous_custom9: null
+previous_custom10: null
+previous_custom11: null
+previous_custom12: null
+previous_custom13: null
+previous_custom14: null
+previous_custom15: null
+previous_deliveryStatus: null
+previous_directPhone: "+12015550123"
+previous_disposition: null
+previous_email: null
+previous_emailDedupeKey: null
+previous_firstName: "Mike"
+previous_functions: null
+previous_genericEmail: null
+previous_gmailStatus: null
+previous_gmailStatusDateAndTime: null
+previous_handles: null
+previous_jobDepartment: null
+previous_jobLevel: null
+previous_jobTitle: null
+previous_label: "inclusion"
+previous_lastName: "Hussy"
+previous_linkedInUrl: null
+previous_mailTesterStatus: null
+previous_middleName: null
+previous_nsId: null
+previous_phone: "+12015550124"
+previous_phoneDedupeKey: "mikehussy12015550124"
+previous_phoneExtension: null
+previous_prefix: null
+previous_researchStatus: "Pending"
+previous_screenshot: null
+previous_source: null
+previous_stage: "Pending"
+previous_website: null
+previous_zb: null
+previous_zbDateAndTime: null
+previous_zoomInfoContactId: null
+researchStatus: "QF"
+screenshot: null
+source: null
+stage: "Review"
+updatedAt: "2021-12-01T07:15:17.851Z"
+updatedBy: "auth0|6135a22714f3a0006acbe0a8"
+website: null
+zb: null
+zbDateAndTime: null
+zoomInfoContactId: null
+disposeContact: true
+taskLink: {TaskId: "abcaaea5-c6d4-4b7c-b22e-bf5b4ea1e72e", disposition: "Contact Built", comments: "",…}
+TaskId: "abcaaea5-c6d4-4b7c-b22e-bf5b4ea1e72e"
+comments: ""
+disposition: "Contact Built"
+researchStatus: "QF"
+
+2)
+Request URL: https://beta.da.rightleads.io/api/v1/projects/141d09b6-5024-4ca6-b60d-c72775c6f5b8/tasks/bf71d8c0-7de5-4b24-9d68-a1a705cba119
+Method: GET
+* Query Param
+Response: [{
+    "id": "bf71d8c0-7de5-4b24-9d68-a1a705cba119",
+    "description": null,
+    "dueDate": "2021-11-22T16:18:55.751Z",
+    "status": "Completed",
+    "priority": "Standard",
+    "completedDate": "2021-11-23T14:05:12.321Z",
+    "createdAt": "2021-11-22T16:18:56.112Z",
+    "updatedAt": "2021-11-29T11:10:49.930Z",
+    "TaskType": {
+        "id": "01",
+        "type": "Contact Build (Named Account)"
+    },
+    "Project": {
+        "id": "141d09b6-5024-4ca6-b60d-c72775c6f5b8",
+        "name": "Compliance Flow Sanity"
+    },
+    "Accounts": [{
+        "id": "f0468ee8-ffce-4487-bd73-38d2434c2f56",
+        "name": "1000 Corks",
+        "addressHQ": {
+            "address1HQ": "10 Belmont street",
+            "zipHQ": "728 364",
+            "cityHQ": "Tallinn",
+            "stateHQ": "CA",
+            "countryHQ": "EST"
+        },
+        "phoneHQ": null,
+        "website": "http://www.rockyourpaper.org",
+        "linkedInUrl": null,
+        "industry": null,
+        "revenue_M_B_K": "100k-500k",
+        "employeeSizeLI": null,
+        "employeeSizeZ_plus": null,
+        "employeeSourceZ_plus": null,
+        "employeeSizeFinalBucket": null,
+        "employeeSize_others": null,
+        "email": null,
+        "source": null,
+        "disposition": "Contact Built",
+        "TaskLink": {
+            "TaskId": "bf71d8c0-7de5-4b24-9d68-a1a705cba119",
+            "ObjectId": "f0468ee8-ffce-4487-bd73-38d2434c2f56",
+            "objectType": "account",
+            "disposition": "Already in CRM - Suppression",
+            "comments": null,
+            "researchStatus": null,
+            "linkType": "input",
+            "createdAt": "2021-11-22T16:18:56.117Z",
+            "updatedAt": "2021-11-23T14:07:32.834Z",
+            "createdBy": "auth0|6135a3b49bb72d007097ee10",
+            "updatedBy": "auth0|6135a22714f3a0006acbe0a8",
+            "UserId": "auth0|6135a22714f3a0006acbe0a8"
+        }
+    }],
+    "Contacts": [{
+        "id": "1ce08b5e-522c-4517-9a99-11291e8646b3",
+        "researchStatus": "Q",
+        "prefix": null,
+        "firstName": "Adam",
+        "middleName": null,
+        "lastName": "James",
+        "jobTitle": null,
+        "jobLevel": "VP",
+        "jobDepartment": null,
+        "nsId": null,
+        "directPhone": null,
+        "email": "adam@yahoo.com",
+        "zb": "invalid",
+        "gmailStatus": "Passed",
+        "source": null,
+        "linkedInUrl": null,
+        "screenshot": null,
+        "disposition": "Contact Built",
+        "TaskLink": {
+            "TaskId": "bf71d8c0-7de5-4b24-9d68-a1a705cba119",
+            "ObjectId": "1ce08b5e-522c-4517-9a99-11291e8646b3",
+            "objectType": "contact",
+            "disposition": "Contact Built",
+            "comments": null,
+            "researchStatus": "Q",
+            "linkType": "output",
+            "createdAt": "2021-11-29T11:10:49.921Z",
+            "updatedAt": "2021-11-29T11:10:49.921Z",
+            "createdBy": "auth0|6135a22714f3a0006acbe0a8",
+            "updatedBy": "auth0|6135a22714f3a0006acbe0a8",
+            "UserId": "auth0|6135a22714f3a0006acbe0a8"
+        }
+    }, {
+        "id": "34bd85c4-be0a-4aab-afcb-0b7745f9ea53",
+        "researchStatus": "QA",
+        "prefix": null,
+        "firstName": "Test",
+        "middleName": null,
+        "lastName": "Sss",
+        "jobTitle": null,
+        "jobLevel": null,
+        "jobDepartment": null,
+        "nsId": null,
+        "directPhone": null,
+        "email": "dgibson@centier.com",
+        "zb": "valid",
+        "gmailStatus": null,
+        "source": null,
+        "linkedInUrl": null,
+        "screenshot": null,
+        "disposition": "Contact Built",
+        "TaskLink": {
+            "TaskId": "bf71d8c0-7de5-4b24-9d68-a1a705cba119",
+            "ObjectId": "34bd85c4-be0a-4aab-afcb-0b7745f9ea53",
+            "objectType": "contact",
+            "disposition": "Contact Built",
+            "comments": null,
+            "researchStatus": "QA",
+            "linkType": "output",
+            "createdAt": "2021-11-23T14:11:41.800Z",
+            "updatedAt": "2021-11-23T14:11:41.800Z",
+            "createdBy": "auth0|6135a22714f3a0006acbe0a8",
+            "updatedBy": "auth0|6135a22714f3a0006acbe0a8",
+            "UserId": "auth0|6135a22714f3a0006acbe0a8"
+        }
+    }, {
+        "id": "660effd0-f46e-404b-b82d-56158062dbf8",
+        "researchStatus": "NQ",
+        "prefix": null,
+        "firstName": "Amery",
+        "middleName": null,
+        "lastName": "Rivera",
+        "jobTitle": "Director Business Development",
+        "jobLevel": "Director",
+        "jobDepartment": "Sales",
+        "nsId": null,
+        "directPhone": null,
+        "email": "at@tincidunt.ca",
+        "zb": null,
+        "gmailStatus": null,
+        "source": null,
+        "linkedInUrl": null,
+        "screenshot": null,
+        "disposition": "Incorrect Contact",
+        "TaskLink": {
+            "TaskId": "bf71d8c0-7de5-4b24-9d68-a1a705cba119",
+            "ObjectId": "660effd0-f46e-404b-b82d-56158062dbf8",
+            "objectType": "contact",
+            "disposition": "Incorrect Contact",
+            "comments": null,
+            "researchStatus": "NQ",
+            "linkType": "output",
+            "createdAt": "2021-11-23T14:04:57.574Z",
+            "updatedAt": "2021-11-23T14:05:38.075Z",
+            "createdBy": "auth0|6135a22714f3a0006acbe0a8",
+            "updatedBy": "auth0|6135a22714f3a0006acbe0a8",
+            "UserId": "auth0|6135a22714f3a0006acbe0a8"
+        }
+    }],
+    "User": {
+        "id": "auth0|6135a22714f3a0006acbe0a8",
+        "firstName": "beta.agent1",
+        "lastName": "",
+        "userName": "beta.agent1@nexsales.com"
+    }
+}]
+
+3)
+Request URL: https://beta.da.rightleads.io/api/v1/projects/141d09b6-5024-4ca6-b60d-c72775c6f5b8/accounts/f0468ee8-ffce-4487-bd73-38d2434c2f56/contacts/1ce08b5e-522c-4517-9a99-11291e8646b3
+Method: GET
+* Query Param
+Response:
+{
+    "id": "1ce08b5e-522c-4517-9a99-11291e8646b3",
+    "researchStatus": "Q",
+    "callingStatus": null,
+    "complianceStatus": null,
+    "deliveryStatus": null,
+    "prefix": null,
+    "firstName": "Adam",
+    "middleName": null,
+    "lastName": "James",
+    "address": {
+        "street1": "32nd Avenue",
+        "street2": null,
+        "city": "Queens",
+        "state": "NY",
+        "country": "United States",
+        "zipCode": "11106"
+    },
+    "email": "adam@yahoo.com",
+    "genericEmail": null,
+    "phone": null,
+    "directPhone": null,
+    "jobTitle": null,
+    "jobLevel": "VP",
+    "jobDepartment": null,
+    "nsId": null,
+    "zoomInfoContactId": null,
+    "linkedInUrl": null,
+    "screenshot": null,
+    "handles": null,
+    "website": null,
+    "comments": null,
+    "source": null,
+    "stage": "Review",
+    "functions": null,
+    "disposition": "Contact Built",
+    "zb": "invalid",
+    "zbDateAndTime": "2021-11-29T11:00:10.502Z",
+    "gmailStatus": "Passed",
+    "complianceComments": null,
+    "previous_complianceComments": null,
+    "gmailStatusDateAndTime": null,
+    "mailTesterStatus": "invalid",
+    "emailDedupeKey": "adamjamesyahoocom",
+    "phoneDedupeKey": null,
+    "companyDedupeKey": "adamjames1000corks",
+    "phoneExtension": null,
+    "label": "inclusion",
+    "duplicateOf": null,
+    "custom1": null,
+    "custom2": null,
+    "custom3": null,
+    "custom4": null,
+    "custom5": null,
+    "custom6": null,
+    "custom7": null,
+    "custom8": null,
+    "custom9": null,
+    "custom10": null,
+    "custom11": null,
+    "custom12": null,
+    "custom13": null,
+    "custom14": null,
+    "custom15": null,
+    "previous_researchStatus": "Pending",
+    "previous_callingStatus": null,
+    "previous_complianceStatus": null,
+    "previous_deliveryStatus": null,
+    "previous_prefix": null,
+    "previous_firstName": "Adam",
+    "previous_middleName": null,
+    "previous_lastName": "James",
+    "previous_address": {
+        "street1": "32nd Avenue",
+        "street2": null,
+        "city": "Queens",
+        "state": "NY",
+        "country": "United States",
+        "zipCode": "11106"
+    },
+    "previous_email": "adam@yahoo.com",
+    "previous_genericEmail": null,
+    "previous_phone": null,
+    "previous_directPhone": null,
+    "previous_jobTitle": null,
+    "previous_jobLevel": "VP",
+    "previous_jobDepartment": null,
+    "previous_nsId": null,
+    "previous_zoomInfoContactId": null,
+    "previous_linkedInUrl": null,
+    "previous_screenshot": null,
+    "previous_handles": null,
+    "previous_website": null,
+    "previous_comments": null,
+    "previous_source": null,
+    "previous_stage": "Pending",
+    "previous_functions": null,
+    "previous_disposition": null,
+    "previous_zb": "invalid",
+    "previous_zbDateAndTime": "2021-11-29T11:00:10.502Z",
+    "previous_gmailStatus": "Passed",
+    "previous_gmailStatusDateAndTime": null,
+    "previous_mailTesterStatus": "invalid",
+    "previous_emailDedupeKey": "adamjamesyahoocom",
+    "previous_phoneDedupeKey": null,
+    "previous_companyDedupeKey": "adamjames1000corks",
+    "previous_phoneExtension": null,
+    "previous_label": "inclusion",
+    "previous_custom1": null,
+    "previous_custom2": null,
+    "previous_custom3": null,
+    "previous_custom4": null,
+    "previous_custom5": null,
+    "previous_custom6": null,
+    "previous_custom7": null,
+    "previous_custom8": null,
+    "previous_custom9": null,
+    "previous_custom10": null,
+    "previous_custom11": null,
+    "previous_custom12": null,
+    "previous_custom13": null,
+    "previous_custom14": null,
+    "previous_custom15": null,
+    "createdAt": "2021-11-29T11:05:51.483Z",
+    "updatedAt": "2021-11-29T11:10:49.942Z",
+    "AccountId": "f0468ee8-ffce-4487-bd73-38d2434c2f56",
+    "createdBy": "auth0|6135a22714f3a0006acbe0a8",
+    "updatedBy": "auth0|6135a22714f3a0006acbe0a8",
+    "Account": {
+        "id": "f0468ee8-ffce-4487-bd73-38d2434c2f56",
+        "name": "1000 Corks",
+        "researchStatus": null,
+        "callingStatus": null,
+        "complianceStatus": null,
+        "deliveryStatus": null,
+        "stage": "Pending",
+        "complianceComments": null,
+        "zoomInfoName": null,
+        "domain": "rockyourpaper.org",
+        "emailDomain": null,
+        "website": "http://www.rockyourpaper.org",
+        "description": null,
+        "segment_technology": null,
+        "nsId": null,
+        "zoomInfoContactId": null,
+        "sicCode": null,
+        "naicsCode": null,
+        "sicDescription": null,
+        "naicsDescription": null,
+        "source": null,
+        "employeeSourceLI": null,
+        "employeeSourceZ_plus": null,
+        "phoneHQ": null,
+        "email": null,
+        "industry": null,
+        "subIndustry": null,
+        "locationLI": null,
+        "addressHQ": {
+            "address1HQ": "10 Belmont street",
+            "zipHQ": "728 364",
+            "cityHQ": "Tallinn",
+            "stateHQ": "CA",
+            "countryHQ": "EST"
+        },
+        "linkedInUrl": null,
+        "revenue": null,
+        "revenue_M_B_K": "100k-500k",
+        "employeeSize": "50-100",
+        "employeeSizeLI": null,
+        "employeeSizeZ_plus": null,
+        "employeeSizeFinalBucket": null,
+        "employeeSize_others": null,
+        "employeeRangeLI": null,
+        "disposition": "Contact Built",
+        "comments": null,
+        "upperRevenue": null,
+        "lowerRevenue": null,
+        "upperEmployeeSize": null,
+        "lowerEmployeeSize": null,
+        "scrubbedName": "1000corks",
+        "aliasName": null,
+        "tokens": "1000|corks",
+        "label": "inclusion",
+        "duplicateOf": null,
+        "custom1": null,
+        "custom2": null,
+        "custom3": null,
+        "custom4": null,
+        "custom5": null,
+        "custom6": null,
+        "custom7": null,
+        "custom8": null,
+        "custom9": null,
+        "custom10": null,
+        "custom11": null,
+        "custom12": null,
+        "custom13": null,
+        "custom14": null,
+        "custom15": null,
+        "createdAt": "2021-11-22T16:03:19.709Z",
+        "updatedAt": "2021-11-23T14:05:12.299Z",
+        "ProjectId": "141d09b6-5024-4ca6-b60d-c72775c6f5b8",
+        "createdBy": "auth0|6135a3b49bb72d007097ee10",
+        "updatedBy": "auth0|6135a22714f3a0006acbe0a8"
+    }
+}
+
+4) ConatctList
+
+5)TaskLiveCouts
+Request URL: https://beta.da.rightleads.io/api/v1/tasks/tasksLiveCounts?filter=%7B%22updatedAt%22:[%2211%2F29%2F2021%22,%2211%2F29%2F2021%22]%7D&projectId=141d09b6-5024-4ca6-b60d-c72775c6f5b8&accountId=f0468ee8-ffce-4487-bd73-38d2434c2f56&countsToCalculate[]=contacts&countsToCalculate[]=accounts
+Method: GET
+* Query Param
+Response:
+{"positiveDisposedContactsCounts":1,"positiveDisposedContactsOverallCounts":3,"disposedAccountCounts":0,"disposedAccountOverallCounts":20,"negativeDisposedAccountCounts":0,"negativeDisposedAccountOverallCounts":16,"positiveDisposedContactsCountsOfAnAccount":2}
+
+6) setting
+Request URL: https://beta.da.rightleads.io/api/v1/project/141d09b6-5024-4ca6-b60d-c72775c6f5b8/setting
+Method: GET
+* Query Param
+Response:{"id":"474e5367-184c-431c-bcb4-cb616cd220fe","target":null,"deliveryFileMapping":null,"contactsPerAccount":null,"clientPoc":null,"priority":"Medium","status":"Yet to Start","createdAt":"2021-11-22T15:59:55.884Z","updatedAt":"2021-11-22T15:59:55.913Z","ProjectId":"141d09b6-5024-4ca6-b60d-c72775c6f5b8","createdBy":"auth0|6135a3b49bb72d007097ee10","updatedBy":"auth0|6135a3b49bb72d007097ee10"}
+
+========================================================================================
+Account save 
+========================================================================================
+Request URL: https://beta.da.rightleads.io/api/v1/project/141d09b6-5024-4ca6-b60d-c72775c6f5b8/accounts/f0468ee8-ffce-4487-bd73-38d2434c2f56
+Method: PUT
+* Query Param
+Response:
+{"id":"f0468ee8-ffce-4487-bd73-38d2434c2f56","name":"1000 Corks","researchStatus":null,"callingStatus":null,"complianceStatus":null,"deliveryStatus":null,"stage":null,"complianceComments":null,"zoomInfoName":null,"domain":"rockyourpaper.org","emailDomain":"rockyourpaper.org","website":"http://www.rockyourpaper.org","description":null,"segment_technology":null,"nsId":null,"zoomInfoContactId":null,"sicCode":null,"naicsCode":null,"sicDescription":null,"naicsDescription":null,"source":null,"employeeSourceLI":null,"employeeSourceZ_plus":null,"phoneHQ":null,"email":null,"industry":null,"subIndustry":null,"locationLI":null,"addressHQ":{"address1HQ":"10 Belmont street","zipHQ":"728 364","cityHQ":"Tallinn","stateHQ":"CA","countryHQ":"EST"},"linkedInUrl":null,"revenue":null,"revenue_M_B_K":"100k-500k","employeeSize":"50-100","employeeSizeLI":null,"employeeSizeZ_plus":null,"employeeSizeFinalBucket":null,"employeeSize_others":null,"employeeRangeLI":null,"disposition":"Contact Built","comments":null,"upperRevenue":null,"lowerRevenue":null,"upperEmployeeSize":null,"lowerEmployeeSize":null,"scrubbedName":"1000corks","aliasName":null,"tokens":"1000|corks","label":"inclusion","duplicateOf":null,"custom1":null,"custom2":null,"custom3":null,"custom4":null,"custom5":null,"custom6":null,"custom7":null,"custom8":null,"custom9":null,"custom10":null,"custom11":null,"custom12":null,"custom13":null,"custom14":null,"custom15":null,"createdAt":"2021-11-22T16:03:19.709Z","updatedAt":"2021-11-29T11:16:23.077Z","ProjectId":"141d09b6-5024-4ca6-b60d-c72775c6f5b8","createdBy":"auth0|6135a3b49bb72d007097ee10","updatedBy":"auth0|6135a22714f3a0006acbe0a8"}
+
+Payload : 
+ProjectId: "33caaa62-cea2-4144-bea8-81f75c271582"
+TaskLink: {TaskId: "abcaaea5-c6d4-4b7c-b22e-bf5b4ea1e72e", ObjectId: "2bb67536-954a-4695-baa9-09ac513fa7e5",…}
+ObjectId: "2bb67536-954a-4695-baa9-09ac513fa7e5"
+TaskId: "abcaaea5-c6d4-4b7c-b22e-bf5b4ea1e72e"
+UserId: "auth0|6135a22714f3a0006acbe0a8"
+comments: null
+createdAt: "2021-11-22T05:08:54.424Z"
+createdBy: "auth0|6135a3b49bb72d007097ee10"
+disposition: "Contact Built"
+linkType: "input"
+objectType: "account"
+researchStatus: null
+updatedAt: "2021-11-22T05:45:42.646Z"
+updatedBy: "auth0|6135a22714f3a0006acbe0a8"
+addressHQ: {cityHQ: "Limón (Puerto Limón)", stateHQ: "L", countryHQ: "Zimbabwe"}
+cityHQ: "Limón (Puerto Limón)"
+countryHQ: "Zimbabwe"
+stateHQ: "L"
+aliasName: null
+callingStatus: null
+comments: null
+complianceComments: null
+complianceStatus: null
+createdAt: "2021-11-22T05:02:12.958Z"
+createdBy: "auth0|6135a3b49bb72d007097ee10"
+custom1: null
+custom2: null
+custom3: null
+custom4: null
+custom5: null
+custom6: null
+custom7: null
+custom8: null
+custom9: null
+custom10: null
+custom11: null
+custom12: null
+custom13: null
+custom14: null
+custom15: null
+deliveryStatus: null
+description: null
+disposition: "Contact Built"
+domain: "duinectempusllc.com"
+duplicateOf: null
+email: null
+emailDomain: "duinectempusllc.com"
+employeeRangeLI: null
+employeeSize: "[30,70]"
+employeeSizeFinalBucket: null
+employeeSizeLI: null
+employeeSizeZ_plus: null
+employeeSize_others: null
+employeeSourceLI: null
+employeeSourceZ_plus: null
+id: "2bb67536-954a-4695-baa9-09ac513fa7e5"
+industry: null
+label: "inclusion"
+linkedInUrl: null
+locationLI: null
+lowerEmployeeSize: null
+lowerRevenue: null
+naicsCode: null
+naicsDescription: null
+name: "Dui Nec Tempus LLC"
+nsId: null
+phoneHQ: "(458) 134-6421"
+researchStatus: null
+revenue: "[10000,60000]"
+revenue_M_B_K: null
+scrubbedName: "duinectempus"
+segment_technology: null
+sicCode: null
+sicDescription: null
+source: null
+stage: null
+subIndustry: null
+tokens: "dui|nec|tempus|llc"
+updatedAt: "2021-11-22T15:31:59.890Z"
+updatedBy: "auth0|6135a22714f3a0006acbe0a8"
+upperEmployeeSize: null
+upperRevenue: null
+website: "www.duinectempusllc.com"
+zoomInfoContactId: null
+zoomInfoName: null
+
+========================================================================================
+Dispose Account (4 requests)
+========================================================================================
+1)Request URL: https://beta.da.rightleads.io/api/v1/project/141d09b6-5024-4ca6-b60d-c72775c6f5b8/account/dispose 
+Method: POST
+* Query Param
+Response:{"isAccountDisposed":"true"}
+payload : 
+account: {
+    id: "2bb67536-954a-4695-baa9-09ac513fa7e5",
+    disposition: "Contact Built",
+    comments: ""
+}
+comments: ""
+disposition: "Contact Built"
+id: "2bb67536-954a-4695-baa9-09ac513fa7e5"
+taskLink: {
+    TaskId: "abcaaea5-c6d4-4b7c-b22e-bf5b4ea1e72e",
+    ObjectId: "2bb67536-954a-4695-baa9-09ac513fa7e5",
+    …
+}
+ObjectId: "2bb67536-954a-4695-baa9-09ac513fa7e5"
+TaskId: "abcaaea5-c6d4-4b7c-b22e-bf5b4ea1e72e"
+comments: ""
+disposition: "Contact Built"
+
+2)TaskLiveCount
+Request URL: https://beta.da.rightleads.io/api/v1/tasks/tasksLiveCounts?filter=%7B%22updatedAt%22:[%2211%2F29%2F2021%22,%2211%2F29%2F2021%22]%7D&projectId=141d09b6-5024-4ca6-b60d-c72775c6f5b8&accountId=f0468ee8-ffce-4487-bd73-38d2434c2f56&countsToCalculate[]=contacts&countsToCalculate[]=accounts
+Method: GET
+* Query Param
+Response:{"positiveDisposedContactsCounts":1,"positiveDisposedContactsOverallCounts":3,"disposedAccountCounts":1,"disposedAccountOverallCounts":20,"negativeDisposedAccountCounts":1,"negativeDisposedAccountOverallCounts":16,"positiveDisposedContactsCountsOfAnAccount":2}
+
+3)setting
+Request URL: https://beta.da.rightleads.io/api/v1/project/141d09b6-5024-4ca6-b60d-c72775c6f5b8/setting 
+Method: 
+* Query Param
+Response: {"id":"474e5367-184c-431c-bcb4-cb616cd220fe","target":null,"deliveryFileMapping":null,"contactsPerAccount":null,"clientPoc":null,"priority":"Medium","status":"Yet to Start","createdAt":"2021-11-22T15:59:55.884Z","updatedAt":"2021-11-22T15:59:55.913Z","ProjectId":"141d09b6-5024-4ca6-b60d-c72775c6f5b8","createdBy":"auth0|6135a3b49bb72d007097ee10","updatedBy":"auth0|6135a3b49bb72d007097ee10"}
+
+4) TaskList 
+Request URL: https://beta.da.rightleads.io/api/v1/projects/141d09b6-5024-4ca6-b60d-c72775c6f5b8/tasks?pageNo=0&pageSize=10&filter=%7B%22status%22:[%22Completed%22]%7D
+Method: GET
+* Query Param
+Response: {
+    "counts": [{
+        "status": "Total",
+        "count": 20
+    }, {
+        "status": "Completed",
+        "count": 20
+    }, {
+        "status": "Overdue",
+        "count": 0
+    }, {
+        "status": "Upcoming",
+        "count": 0
+    }],
+    "docs": [{
+        "id": "bf71d8c0-7de5-4b24-9d68-a1a705cba119",
+        "description": null,
+        "dueDate": "2021-11-22T16:18:55.751Z",
+        "status": "Completed",
+        "priority": "Standard",
+        "completedDate": "2021-11-23T14:05:12.321Z",
+        "createdAt": "2021-11-22T16:18:56.112Z",
+        "updatedAt": "2021-11-29T11:10:49.930Z",
+        "TaskType": {
+            "id": "01",
+            "type": "Contact Build (Named Account)"
+        },
+        "Project": {
+            "id": "141d09b6-5024-4ca6-b60d-c72775c6f5b8",
+            "name": "Compliance Flow Sanity"
+        },
+        "Accounts": [{
+            "id": "f0468ee8-ffce-4487-bd73-38d2434c2f56",
+            "name": "1000 Corks",
+            "addressHQ": {
+                "address1HQ": "10 Belmont street",
+                "zipHQ": "728 364",
+                "cityHQ": "Tallinn",
+                "stateHQ": "CA",
+                "countryHQ": "EST"
+            },
+            "phoneHQ": null,
+            "website": "http://www.rockyourpaper.org",
+            "linkedInUrl": null,
+            "industry": null,
+            "revenue_M_B_K": "100k-500k",
+            "employeeSizeLI": null,
+            "employeeSizeZ_plus": null,
+            "employeeSourceZ_plus": null,
+            "employeeSizeFinalBucket": null,
+            "employeeSize_others": null,
+            "email": null,
+            "source": null,
+            "disposition": "Contact Built",
+            "TaskLink": {
+                "disposition": "Already in CRM - Suppression"
+            }
+        }],
+        "Contacts": [],
+        "User": {
+            "id": "auth0|6135a22714f3a0006acbe0a8",
+            "firstName": "beta.agent1",
+            "lastName": "",
+            "userName": "beta.agent1@nexsales.com"
+        }
+    }, {
+        "id": "3d00411d-a64e-45ee-ac4a-aaf119d87a02",
+        "description": null,
+        "dueDate": "2021-11-22T16:18:54.204Z",
+        "status": "Completed",
+        "priority": "Standard",
+        "completedDate": "2021-11-22T16:31:01.799Z",
+        "createdAt": "2021-11-22T16:18:54.995Z",
+        "updatedAt": "2021-11-22T16:31:01.799Z",
+        "TaskType": {
+            "id": "01",
+            "type": "Contact Build (Named Account)"
+        },
+        "Project": {
+            "id": "141d09b6-5024-4ca6-b60d-c72775c6f5b8",
+            "name": "Compliance Flow Sanity"
+        },
+        "Accounts": [{
+            "id": "6a5caadf-f441-4afc-8560-28db12ac1c63",
+            "name": "&TV Communications",
+            "addressHQ": {
+                "address1HQ": "10 Belmont street",
+                "zipHQ": "728 362",
+                "cityHQ": "New York",
+                "stateHQ": "NY",
+                "countryHQ": "USA"
+            },
+            "phoneHQ": null,
+            "website": "http://www.waywire.com",
+            "linkedInUrl": null,
+            "industry": null,
+            "revenue_M_B_K": "10k-60k",
+            "employeeSizeLI": null,
+            "employeeSizeZ_plus": null,
+            "employeeSourceZ_plus": null,
+            "employeeSizeFinalBucket": null,
+            "employeeSize_others": null,
+            "email": null,
+            "source": null,
+            "disposition": "No Longer",
+            "TaskLink": {
+                "disposition": "No Longer"
+            }
+        }],
+        "Contacts": [],
+        "User": {
+            "id": "auth0|6135a22714f3a0006acbe0a8",
+            "firstName": "beta.agent1",
+            "lastName": "",
+            "userName": "beta.agent1@nexsales.com"
+        }
+    }, {
+        "id": "f9a245bd-d8e4-4ea2-bd57-cc3ec97c0e88",
+        "description": null,
+        "dueDate": "2021-11-22T16:18:56.934Z",
+        "status": "Completed",
+        "priority": "Standard",
+        "completedDate": "2021-11-22T16:30:34.501Z",
+        "createdAt": "2021-11-22T16:18:57.166Z",
+        "updatedAt": "2021-11-22T16:30:34.501Z",
+        "TaskType": {
+            "id": "01",
+            "type": "Contact Build (Named Account)"
+        },
+        "Project": {
+            "id": "141d09b6-5024-4ca6-b60d-c72775c6f5b8",
+            "name": "Compliance Flow Sanity"
+        },
+        "Accounts": [{
+            "id": "5e792cf1-299f-4801-95fa-3fa5504ddba1",
+            "name": "(In)Touch Network",
+            "addressHQ": {
+                "address1HQ": "10 Belmont street",
+                "zipHQ": "728 367",
+                "cityHQ": "Oakland Park",
+                "stateHQ": "FL",
+                "countryHQ": "USA"
+            },
+            "phoneHQ": null,
+            "website": "http://nic.club/",
+            "linkedInUrl": null,
+            "industry": null,
+            "revenue_M_B_K": "10k-60k",
+            "employeeSizeLI": null,
+            "employeeSizeZ_plus": null,
+            "employeeSourceZ_plus": null,
+            "employeeSizeFinalBucket": null,
+            "employeeSize_others": null,
+            "email": null,
+            "source": null,
+            "disposition": "Website Not Found",
+            "TaskLink": {
+                "disposition": "Website Not Found"
+            }
+        }],
+        "Contacts": [],
+        "User": {
+            "id": "auth0|6135a22714f3a0006acbe0a8",
+            "firstName": "beta.agent1",
+            "lastName": "",
+            "userName": "beta.agent1@nexsales.com"
+        }
+    }, {
+        "id": "73254759-270f-4c10-a533-6b9e8d3f8a33",
+        "description": null,
+        "dueDate": "2021-11-22T16:18:56.128Z",
+        "status": "Completed",
+        "priority": "Standard",
+        "completedDate": "2021-11-22T16:30:23.280Z",
+        "createdAt": "2021-11-22T16:18:56.430Z",
+        "updatedAt": "2021-11-22T16:30:23.280Z",
+        "TaskType": {
+            "id": "01",
+            "type": "Contact Build (Named Account)"
+        },
+        "Project": {
+            "id": "141d09b6-5024-4ca6-b60d-c72775c6f5b8",
+            "name": "Compliance Flow Sanity"
+        },
+        "Accounts": [{
+            "id": "8cc21c75-71ea-4529-b406-fc8fbb8f9edd",
+            "name": "1006.tv",
+            "addressHQ": {
+                "address1HQ": "10 Belmont street",
+                "zipHQ": "728 365",
+                "cityHQ": "London",
+                "stateHQ": "CA",
+                "countryHQ": "GBR"
+            },
+            "phoneHQ": null,
+            "website": "http://www.InTouchNetwork.com",
+            "linkedInUrl": null,
+            "industry": null,
+            "revenue_M_B_K": "10k-60k",
+            "employeeSizeLI": null,
+            "employeeSizeZ_plus": null,
+            "employeeSourceZ_plus": null,
+            "employeeSizeFinalBucket": null,
+            "employeeSize_others": null,
+            "email": null,
+            "source": null,
+            "disposition": "Staff Level Title Available",
+            "TaskLink": {
+                "disposition": "Staff Level Title Available"
+            }
+        }],
+        "Contacts": [],
+        "User": {
+            "id": "auth0|6135a22714f3a0006acbe0a8",
+            "firstName": "beta.agent1",
+            "lastName": "",
+            "userName": "beta.agent1@nexsales.com"
+        }
+    }, {
+        "id": "936e9bb6-c0b0-47ed-bfaf-99f456c2c9b0",
+        "description": null,
+        "dueDate": "2021-11-22T16:18:57.192Z",
+        "status": "Completed",
+        "priority": "Standard",
+        "completedDate": "2021-11-22T16:30:13.419Z",
+        "createdAt": "2021-11-22T16:18:57.697Z",
+        "updatedAt": "2021-11-22T16:30:13.419Z",
+        "TaskType": {
+            "id": "01",
+            "type": "Contact Build (Named Account)"
+        },
+        "Project": {
+            "id": "141d09b6-5024-4ca6-b60d-c72775c6f5b8",
+            "name": "Compliance Flow Sanity"
+        },
+        "Accounts": [{
+            "id": "abb2f5a0-48c2-471d-9283-8a3753650600",
+            "name": ".Club Domains",
+            "addressHQ": {
+                "address1HQ": "10 Belmont street",
+                "zipHQ": "728 368",
+                "cityHQ": "Buenos Aires",
+                "stateHQ": "CA",
+                "countryHQ": "ARG"
+            },
+            "phoneHQ": null,
+            "website": "http://www.dotfox.com",
+            "linkedInUrl": null,
+            "industry": null,
+            "revenue_M_B_K": "10k-60k",
+            "employeeSizeLI": null,
+            "employeeSizeZ_plus": null,
+            "employeeSourceZ_plus": null,
+            "employeeSizeFinalBucket": null,
+            "employeeSize_others": null,
+            "email": null,
+            "source": null,
+            "disposition": "Staff Level Title Available",
+            "TaskLink": {
+                "disposition": "Staff Level Title Available"
+            }
+        }],
+        "Contacts": [],
+        "User": {
+            "id": "auth0|6135a22714f3a0006acbe0a8",
+            "firstName": "beta.agent1",
+            "lastName": "",
+            "userName": "beta.agent1@nexsales.com"
+        }
+    }, {
+        "id": "010382e0-ff79-4277-b0a9-287b9d927d89",
+        "description": null,
+        "dueDate": "2021-11-22T16:18:56.502Z",
+        "status": "Completed",
+        "priority": "Standard",
+        "completedDate": "2021-11-22T16:30:03.647Z",
+        "createdAt": "2021-11-22T16:18:56.916Z",
+        "updatedAt": "2021-11-22T16:30:03.647Z",
+        "TaskType": {
+            "id": "01",
+            "type": "Contact Build (Named Account)"
+        },
+        "Project": {
+            "id": "141d09b6-5024-4ca6-b60d-c72775c6f5b8",
+            "name": "Compliance Flow Sanity"
+        },
+        "Accounts": [{
+            "id": "a5c848e8-82c5-42b2-af74-24eeca9c2403",
+            "name": "'Rock' Your Paper",
+            "addressHQ": {
+                "address1HQ": "10 Belmont street",
+                "zipHQ": "728 366",
+                "cityHQ": "New York",
+                "stateHQ": "NY",
+                "countryHQ": "USA"
+            },
+            "phoneHQ": null,
+            "website": "http://plusn.com",
+            "linkedInUrl": null,
+            "industry": null,
+            "revenue_M_B_K": "10k-60k",
+            "employeeSizeLI": null,
+            "employeeSizeZ_plus": null,
+            "employeeSourceZ_plus": null,
+            "employeeSizeFinalBucket": null,
+            "employeeSize_others": null,
+            "email": null,
+            "source": null,
+            "disposition": "Incorrect Account",
+            "TaskLink": {
+                "disposition": "Incorrect Account"
+            }
+        }],
+        "Contacts": [],
+        "User": {
+            "id": "auth0|6135a22714f3a0006acbe0a8",
+            "firstName": "beta.agent1",
+            "lastName": "",
+            "userName": "beta.agent1@nexsales.com"
+        }
+    }, {
+        "id": "cdd854cf-f0fa-432a-840d-4baeebe7692a",
+        "description": null,
+        "dueDate": "2021-11-22T16:18:57.715Z",
+        "status": "Completed",
+        "priority": "Standard",
+        "completedDate": "2021-11-22T16:29:51.307Z",
+        "createdAt": "2021-11-22T16:18:57.947Z",
+        "updatedAt": "2021-11-22T16:29:51.307Z",
+        "TaskType": {
+            "id": "01",
+            "type": "Contact Build (Named Account)"
+        },
+        "Project": {
+            "id": "141d09b6-5024-4ca6-b60d-c72775c6f5b8",
+            "name": "Compliance Flow Sanity"
+        },
+        "Accounts": [{
+            "id": "53e7bf6b-11b8-442d-9047-7fa0d0712205",
+            "name": ".Fox Networks",
+            "addressHQ": {
+                "address1HQ": "10 Belmont street",
+                "zipHQ": "728 369",
+                "cityHQ": "Champaign",
+                "stateHQ": "IL",
+                "countryHQ": "USA"
+            },
+            "phoneHQ": null,
+            "website": "http://004gmbh.de/en/004-interact",
+            "linkedInUrl": null,
+            "industry": null,
+            "revenue_M_B_K": "10k-60k",
+            "employeeSizeLI": null,
+            "employeeSizeZ_plus": null,
+            "employeeSourceZ_plus": null,
+            "employeeSizeFinalBucket": null,
+            "employeeSize_others": null,
+            "email": null,
+            "source": null,
+            "disposition": "No Longer",
+            "TaskLink": {
+                "disposition": "No Longer"
+            }
+        }],
+        "Contacts": [],
+        "User": {
+            "id": "auth0|6135a22714f3a0006acbe0a8",
+            "firstName": "beta.agent1",
+            "lastName": "",
+            "userName": "beta.agent1@nexsales.com"
+        }
+    }, {
+        "id": "20b11147-62e8-4cf1-85bd-fbe01ce22a7c",
+        "description": null,
+        "dueDate": "2021-11-22T16:18:55.019Z",
+        "status": "Completed",
+        "priority": "Standard",
+        "completedDate": "2021-11-22T16:29:41.144Z",
+        "createdAt": "2021-11-22T16:18:55.728Z",
+        "updatedAt": "2021-11-22T16:29:41.144Z",
+        "TaskType": {
+            "id": "01",
+            "type": "Contact Build (Named Account)"
+        },
+        "Project": {
+            "id": "141d09b6-5024-4ca6-b60d-c72775c6f5b8",
+            "name": "Compliance Flow Sanity"
+        },
+        "Accounts": [{
+            "id": "04fc72b8-7ee3-4eea-bca5-20cbb6cdf49a",
+            "name": "+n (PlusN)",
+            "addressHQ": {
+                "address1HQ": "10 Belmont street",
+                "zipHQ": "728 363",
+                "cityHQ": "Los Angeles",
+                "stateHQ": "CA",
+                "countryHQ": "USA"
+            },
+            "phoneHQ": null,
+            "website": "http://enjoyandtv.com",
+            "linkedInUrl": null,
+            "industry": null,
+            "revenue_M_B_K": "1M-5M",
+            "employeeSizeLI": null,
+            "employeeSizeZ_plus": null,
+            "employeeSourceZ_plus": null,
+            "employeeSizeFinalBucket": null,
+            "employeeSize_others": null,
+            "email": null,
+            "source": null,
+            "disposition": "Website Not Found",
+            "TaskLink": {
+                "disposition": "Website Not Found"
+            }
+        }],
+        "Contacts": [],
+        "User": {
+            "id": "auth0|6135a22714f3a0006acbe0a8",
+            "firstName": "beta.agent1",
+            "lastName": "",
+            "userName": "beta.agent1@nexsales.com"
+        }
+    }, {
+        "id": "71baba7f-7a05-496c-8626-db183f35d3fa",
+        "description": null,
+        "dueDate": "2021-11-22T16:18:57.990Z",
+        "status": "Completed",
+        "priority": "Standard",
+        "completedDate": "2021-11-22T16:29:28.054Z",
+        "createdAt": "2021-11-22T16:18:58.447Z",
+        "updatedAt": "2021-11-22T16:29:28.054Z",
+        "TaskType": {
+            "id": "01",
+            "type": "Contact Build (Named Account)"
+        },
+        "Project": {
+            "id": "141d09b6-5024-4ca6-b60d-c72775c6f5b8",
+            "name": "Compliance Flow Sanity"
+        },
+        "Accounts": [{
+            "id": "f3ba537a-0660-42b5-ba33-1b0aee97aa6c",
+            "name": "004 Technologies",
+            "addressHQ": {
+                "address1HQ": "10 Belmont street",
+                "zipHQ": "728 370",
+                "cityHQ": "San Jose",
+                "stateHQ": "CA",
+                "countryHQ": "HKG"
+            },
+            "phoneHQ": null,
+            "website": "http://www.01games.hk/",
+            "linkedInUrl": null,
+            "industry": null,
+            "revenue_M_B_K": "10k-60k",
+            "employeeSizeLI": null,
+            "employeeSizeZ_plus": null,
+            "employeeSourceZ_plus": null,
+            "employeeSizeFinalBucket": null,
+            "employeeSize_others": null,
+            "email": null,
+            "source": null,
+            "disposition": "Staff Level Title Available",
+            "TaskLink": {
+                "disposition": "Staff Level Title Available"
+            }
+        }],
+        "Contacts": [],
+        "User": {
+            "id": "auth0|6135a22714f3a0006acbe0a8",
+            "firstName": "beta.agent1",
+            "lastName": "",
+            "userName": "beta.agent1@nexsales.com"
+        }
+    }, {
+        "id": "9e44562e-dcec-4020-bc37-81ce16f9b8a3",
+        "description": null,
+        "dueDate": "2021-11-22T16:18:58.462Z",
+        "status": "Completed",
+        "priority": "Standard",
+        "completedDate": "2021-11-22T16:29:13.858Z",
+        "createdAt": "2021-11-22T16:18:58.711Z",
+        "updatedAt": "2021-11-22T16:29:13.858Z",
+        "TaskType": {
+            "id": "01",
+            "type": "Contact Build (Named Account)"
+        },
+        "Project": {
+            "id": "141d09b6-5024-4ca6-b60d-c72775c6f5b8",
+            "name": "Compliance Flow Sanity"
+        },
+        "Accounts": [{
+            "id": "90322a50-cc97-4c9b-8dd2-c58f08cc591a",
+            "name": "01Games Technology",
+            "addressHQ": {
+                "address1HQ": "10 Belmont street",
+                "zipHQ": "728 371",
+                "cityHQ": "Mountain View",
+                "stateHQ": "CA",
+                "countryHQ": "USA"
+            },
+            "phoneHQ": null,
+            "website": "http://www.0xdata.com",
+            "linkedInUrl": null,
+            "industry": null,
+            "revenue_M_B_K": "10k-60k",
+            "employeeSizeLI": null,
+            "employeeSizeZ_plus": null,
+            "employeeSourceZ_plus": null,
+            "employeeSizeFinalBucket": null,
+            "employeeSize_others": null,
+            "email": null,
+            "source": null,
+            "disposition": "Contact Built",
+            "TaskLink": {
+                "disposition": "Contact Built"
+            }
+        }],
+        "Contacts": [],
+        "User": {
+            "id": "auth0|6135a22714f3a0006acbe0a8",
+            "firstName": "beta.agent1",
+            "lastName": "",
+            "userName": "beta.agent1@nexsales.com"
+        }
+    }],
+    "totalCount": 20
+}
+
+========================================================================================
+Conatct Preiew /refresh 
+========================================================================================
+Request URL:  https://beta.da.rightleads.io/api/v1/agent/preview?pageNo=0&pageSize=10&sort=%7B%22updatedAt%22:%22desc%22%7D&filter=%7B%7D
+Method:  GET
+* Query Param
+pageNo: 0
+pageSize: 10
+sort: {"updatedAt":"desc"}
+filter: {}
+Response:
+  {
+      "count": 75,
+      "rows": [{
+          "id": "1ce08b5e-522c-4517-9a99-11291e8646b3",
+          "Calling Status": null,
+          "complianceStatus": null,
+          "complianceComments": null,
+          "prefix": null,
+          "First Name": "Adam",
+          "Middle Name": null,
+          "Last Name": "James",
+          "Address1": "32nd Avenue",
+          "Address2": null,
+          "City": "Queens",
+          "State": "NY",
+          "Country": "United States",
+          "Zip": "11106",
+          "Email": "adam@yahoo.com",
+          "genericEmail": null,
+          "Phone": null,
+          "Direct Dial": null,
+          "Job Title": null,
+          "jobLevel": "VP",
+          "Department": null,
+          "nsId": null,
+          "zoomInfoContactId": null,
+          "linkedInUrl": null,
+          "screenshot": null,
+          "handles": null,
+          "website": null,
+          "Contact Source": null,
+          "stage": "Review",
+          "Functions": null,
+          "ZBounce": "invalid",
+          "ZB Time": "2021-11-29T11:00:10.502Z",
+          "Email Status": "Passed",
+          "gmailStatusDateAndTime": null,
+          "MailTester Status": "invalid",
+          "phoneExtension": null,
+          "label": "inclusion",
+          "Contact Status": null,
+          "Contact CRM Days": null,
+          "Date": "2021-11-29T11:10:49.921Z",
+          "Account.id": "f0468ee8-ffce-4487-bd73-38d2434c2f56",
+          "Company Name": "1000 Corks",
+          "Company Website": "http://www.rockyourpaper.org",
+          "Task.id": "bf71d8c0-7de5-4b24-9d68-a1a705cba119",
+          "Task.status": "Completed",
+          "Project.id": "141d09b6-5024-4ca6-b60d-c72775c6f5b8",
+          "Project.name": "Compliance Flow Sanity",
+          "Contact Disposition": "Contact Built",
+          "Contact Comments": null,
+          "Research Status": "Q"
+      }, {
+          "id": "0ef48b00-412a-49bd-87c4-4f9c6946c675",
+          "Calling Status": null,
+          "complianceStatus": null,
+          "complianceComments": null,
+          "prefix": null,
+          "First Name": "Mike",
+          "Middle Name": null,
+          "Last Name": "Hussy",
+          "Address1": null,
+          "Address2": null,
+          "City": null,
+          "State": null,
+          "Country": null,
+          "Zip": null,
+          "Email": null,
+          "genericEmail": null,
+          "Phone": "+12015550124",
+          "Direct Dial": "+12015550123",
+          "Job Title": null,
+          "jobLevel": null,
+          "Department": null,
+          "nsId": null,
+          "zoomInfoContactId": null,
+          "linkedInUrl": null,
+          "screenshot": null,
+          "handles": null,
+          "website": null,
+          "Contact Source": null,
+          "stage": "Review",
+          "Functions": null,
+          "ZBounce": null,
+          "ZB Time": null,
+          "Email Status": null,
+          "gmailStatusDateAndTime": null,
+          "MailTester Status": null,
+          "phoneExtension": null,
+          "label": "inclusion",
+          "Contact Status": null,
+          "Contact CRM Days": null,
+          "Date": "2021-11-24T15:11:16.540Z",
+          "Account.id": "2bb67536-954a-4695-baa9-09ac513fa7e5",
+          "Company Name": "Dui Nec Tempus LLC",
+          "Company Website": "www.duinectempusllc.com",
+          "Task.id": "abcaaea5-c6d4-4b7c-b22e-bf5b4ea1e72e",
+          "Task.status": "Completed",
+          "Project.id": "33caaa62-cea2-4144-bea8-81f75c271582",
+          "Project.name": "Compliance Work Flow Test",
+          "Contact Disposition": "Contact Built",
+          "Contact Comments": null,
+          "Research Status": "QF"
+      }, {
+          "id": "2bd099fc-d6d4-4a81-8861-981931bb3bf9",
+          "Calling Status": null,
+          "complianceStatus": "compliant",
+          "complianceComments": null,
+          "prefix": null,
+          "First Name": "Bb",
+          "Middle Name": null,
+          "Last Name": "Bb",
+          "Address1": null,
+          "Address2": null,
+          "City": null,
+          "State": null,
+          "Country": null,
+          "Zip": null,
+          "Email": null,
+          "genericEmail": null,
+          "Phone": null,
+          "Direct Dial": null,
+          "Job Title": null,
+          "jobLevel": null,
+          "Department": null,
+          "nsId": null,
+          "zoomInfoContactId": null,
+          "linkedInUrl": null,
+          "screenshot": null,
+          "handles": null,
+          "website": null,
+          "Contact Source": null,
+          "stage": "Ready",
+          "Functions": null,
+          "ZBounce": null,
+          "ZB Time": null,
+          "Email Status": null,
+          "gmailStatusDateAndTime": null,
+          "MailTester Status": null,
+          "phoneExtension": null,
+          "label": "inclusion",
+          "Contact Status": null,
+          "Contact CRM Days": null,
+          "Date": "2021-11-24T06:39:43.653Z",
+          "Account.id": "d2bc2c2d-c6bb-4ed5-b45c-c27a6965aa95",
+          "Company Name": "1000jobboersen.de",
+          "Company Website": "http://www.dollargen.de",
+          "Task.id": "120d8f3e-1b59-4ccd-94e0-fd619bc05959",
+          "Task.status": "Pending",
+          "Project.id": "c65c7717-b9a1-48cc-8143-ea2944b91a0e",
+          "Project.name": "DEMO_PROJECT_SEP16",
+          "Contact Disposition": "Contact Built",
+          "Contact Comments": null,
+          "Research Status": "QA"
+      }, {
+          "id": "d90380c6-5cf1-438e-a519-6bdd878f1a65",
+          "Calling Status": null,
+          "complianceStatus": "compliant",
+          "complianceComments": null,
+          "prefix": null,
+          "First Name": "A",
+          "Middle Name": null,
+          "Last Name": "Aaa",
+          "Address1": null,
+          "Address2": null,
+          "City": null,
+          "State": null,
+          "Country": null,
+          "Zip": null,
+          "Email": null,
+          "genericEmail": null,
+          "Phone": null,
+          "Direct Dial": null,
+          "Job Title": null,
+          "jobLevel": null,
+          "Department": null,
+          "nsId": null,
+          "zoomInfoContactId": null,
+          "linkedInUrl": null,
+          "screenshot": null,
+          "handles": null,
+          "website": null,
+          "Contact Source": null,
+          "stage": "Ready",
+          "Functions": null,
+          "ZBounce": null,
+          "ZB Time": null,
+          "Email Status": null,
+          "gmailStatusDateAndTime": null,
+          "MailTester Status": null,
+          "phoneExtension": null,
+          "label": "inclusion",
+          "Contact Status": null,
+          "Contact CRM Days": null,
+          "Date": "2021-11-24T06:39:26.264Z",
+          "Account.id": "d2bc2c2d-c6bb-4ed5-b45c-c27a6965aa95",
+          "Company Name": "1000jobboersen.de",
+          "Company Website": "http://www.dollargen.de",
+          "Task.id": "120d8f3e-1b59-4ccd-94e0-fd619bc05959",
+          "Task.status": "Pending",
+          "Project.id": "c65c7717-b9a1-48cc-8143-ea2944b91a0e",
+          "Project.name": "DEMO_PROJECT_SEP16",
+          "Contact Disposition": "Contact Built",
+          "Contact Comments": null,
+          "Research Status": "QA"
+      }, {
+          "id": "dbbf396b-3414-4e2a-95c0-f7a3e3be9e7a",
+          "Calling Status": null,
+          "complianceStatus": "compliant",
+          "complianceComments": null,
+          "prefix": null,
+          "First Name": "Drft",
+          "Middle Name": null,
+          "Last Name": "Rrgt",
+          "Address1": null,
+          "Address2": null,
+          "City": null,
+          "State": null,
+          "Country": null,
+          "Zip": null,
+          "Email": null,
+          "genericEmail": null,
+          "Phone": null,
+          "Direct Dial": null,
+          "Job Title": null,
+          "jobLevel": null,
+          "Department": null,
+          "nsId": null,
+          "zoomInfoContactId": null,
+          "linkedInUrl": null,
+          "screenshot": null,
+          "handles": null,
+          "website": null,
+          "Contact Source": null,
+          "stage": "Ready",
+          "Functions": null,
+          "ZBounce": null,
+          "ZB Time": null,
+          "Email Status": null,
+          "gmailStatusDateAndTime": null,
+          "MailTester Status": null,
+          "phoneExtension": null,
+          "label": "inclusion",
+          "Contact Status": null,
+          "Contact CRM Days": null,
+          "Date": "2021-11-24T04:43:25.371Z",
+          "Account.id": "d2bc2c2d-c6bb-4ed5-b45c-c27a6965aa95",
+          "Company Name": "1000jobboersen.de",
+          "Company Website": "http://www.dollargen.de",
+          "Task.id": "120d8f3e-1b59-4ccd-94e0-fd619bc05959",
+          "Task.status": "Pending",
+          "Project.id": "c65c7717-b9a1-48cc-8143-ea2944b91a0e",
+          "Project.name": "DEMO_PROJECT_SEP16",
+          "Contact Disposition": "Contact Built",
+          "Contact Comments": null,
+          "Research Status": "QA"
+      }, {
+          "id": "34bd85c4-be0a-4aab-afcb-0b7745f9ea53",
+          "Calling Status": null,
+          "complianceStatus": null,
+          "complianceComments": null,
+          "prefix": null,
+          "First Name": "Test",
+          "Middle Name": null,
+          "Last Name": "Sss",
+          "Address1": null,
+          "Address2": null,
+          "City": null,
+          "State": null,
+          "Country": null,
+          "Zip": null,
+          "Email": "dgibson@centier.com",
+          "genericEmail": null,
+          "Phone": null,
+          "Direct Dial": null,
+          "Job Title": null,
+          "jobLevel": null,
+          "Department": null,
+          "nsId": null,
+          "zoomInfoContactId": null,
+          "linkedInUrl": null,
+          "screenshot": null,
+          "handles": null,
+          "website": null,
+          "Contact Source": null,
+          "stage": "Review",
+          "Functions": null,
+          "ZBounce": "valid",
+          "ZB Time": "2021-11-23T14:30:35.299Z",
+          "Email Status": null,
+          "gmailStatusDateAndTime": null,
+          "MailTester Status": null,
+          "phoneExtension": null,
+          "label": "inclusion",
+          "Contact Status": null,
+          "Contact CRM Days": null,
+          "Date": "2021-11-23T14:11:41.800Z",
+          "Account.id": "f0468ee8-ffce-4487-bd73-38d2434c2f56",
+          "Company Name": "1000 Corks",
+          "Company Website": "http://www.rockyourpaper.org",
+          "Task.id": "bf71d8c0-7de5-4b24-9d68-a1a705cba119",
+          "Task.status": "Completed",
+          "Project.id": "141d09b6-5024-4ca6-b60d-c72775c6f5b8",
+          "Project.name": "Compliance Flow Sanity",
+          "Contact Disposition": "Contact Built",
+          "Contact Comments": null,
+          "Research Status": "QA"
+      }, {
+          "id": "660effd0-f46e-404b-b82d-56158062dbf8",
+          "Calling Status": "callingStatus",
+          "complianceStatus": null,
+          "complianceComments": null,
+          "prefix": null,
+          "First Name": "Amery",
+          "Middle Name": null,
+          "Last Name": "Rivera",
+          "City": "Tallinn",
+          "State": "CA",
+          "Country": "EST",
+          "Email": "at@tincidunt.ca",
+          "genericEmail": null,
+          "Phone": "+15038300708",
+          "Direct Dial": null,
+          "Job Title": "Director Business Development",
+          "jobLevel": "Director",
+          "Department": "Sales",
+          "nsId": null,
+          "zoomInfoContactId": null,
+          "linkedInUrl": null,
+          "screenshot": null,
+          "handles": null,
+          "website": null,
+          "Contact Source": null,
+          "stage": "Review",
+          "Functions": null,
+          "ZBounce": null,
+          "ZB Time": null,
+          "Email Status": null,
+          "gmailStatusDateAndTime": null,
+          "MailTester Status": null,
+          "phoneExtension": null,
+          "label": "inclusion",
+          "Contact Status": null,
+          "Contact CRM Days": null,
+          "Date": "2021-11-23T14:05:38.075Z",
+          "Account.id": "f0468ee8-ffce-4487-bd73-38d2434c2f56",
+          "Company Name": "1000 Corks",
+          "Company Website": "http://www.rockyourpaper.org",
+          "Task.id": "bf71d8c0-7de5-4b24-9d68-a1a705cba119",
+          "Task.status": "Completed",
+          "Project.id": "141d09b6-5024-4ca6-b60d-c72775c6f5b8",
+          "Project.name": "Compliance Flow Sanity",
+          "Contact Disposition": "Incorrect Contact",
+          "Contact Comments": null,
+          "Research Status": "NQ"
+      }, {
+          "id": "4eaa8116-275e-47f4-b170-21a11cc51812",
+          "Calling Status": null,
+          "complianceStatus": null,
+          "complianceComments": null,
+          "prefix": null,
+          "First Name": "Joel",
+          "Middle Name": null,
+          "Last Name": "Alenchery",
+          "Address1": null,
+          "Address2": null,
+          "City": null,
+          "State": null,
+          "Country": null,
+          "Zip": null,
+          "Email": "joel.alen@gmail.comm",
+          "genericEmail": null,
+          "Phone": null,
+          "Direct Dial": null,
+          "Job Title": null,
+          "jobLevel": null,
+          "Department": null,
+          "nsId": null,
+          "zoomInfoContactId": null,
+          "linkedInUrl": null,
+          "screenshot": null,
+          "handles": null,
+          "website": null,
+          "Contact Source": null,
+          "stage": "Review",
+          "Functions": null,
+          "ZBounce": "invalid",
+          "ZB Time": "2021-11-23T08:33:46.012Z",
+          "Email Status": null,
+          "gmailStatusDateAndTime": null,
+          "MailTester Status": null,
+          "phoneExtension": null,
+          "label": "inclusion",
+          "Contact Status": null,
+          "Contact CRM Days": null,
+          "Date": "2021-11-23T08:35:15.838Z",
+          "Account.id": "b7aa6fe4-0adb-4e43-9e29-6f2366a12cfe",
+          "Company Name": "Varius PC",
+          "Company Website": "www.variuspc.com",
+          "Task.id": "f63b735a-d717-4714-9a77-bd7801c2115f",
+          "Task.status": "Completed",
+          "Project.id": "7bd9ae56-0191-4819-92dd-722f0682e7e3",
+          "Project.name": "TEST_PROJECT_OCT14",
+          "Contact Disposition": "Incorrect Contact",
+          "Contact Comments": null,
+          "Research Status": "NQ"
+      }, {
+          "id": "c30fe6ad-2282-47ab-9d45-3c9c003e1cfa",
+          "Calling Status": null,
+          "complianceStatus": "compliant",
+          "complianceComments": null,
+          "prefix": null,
+          "First Name": "T3",
+          "Middle Name": null,
+          "Last Name": "T4",
+          "Address1": null,
+          "Address2": null,
+          "City": null,
+          "State": null,
+          "Country": null,
+          "Zip": null,
+          "Email": null,
+          "genericEmail": null,
+          "Phone": null,
+          "Direct Dial": null,
+          "Job Title": null,
+          "jobLevel": null,
+          "Department": null,
+          "nsId": null,
+          "zoomInfoContactId": null,
+          "linkedInUrl": null,
+          "screenshot": null,
+          "handles": null,
+          "website": null,
+          "Contact Source": null,
+          "stage": "Ready",
+          "Functions": null,
+          "ZBounce": null,
+          "ZB Time": null,
+          "Email Status": null,
+          "gmailStatusDateAndTime": null,
+          "MailTester Status": null,
+          "phoneExtension": null,
+          "label": "inclusion",
+          "Contact Status": null,
+          "Contact CRM Days": null,
+          "Date": "2021-11-23T04:13:46.564Z",
+          "Account.id": "e6341705-bedd-4268-ab1b-451a6f6778fe",
+          "Company Name": "1000museums.com",
+          "Company Website": "http://www.mcpss.com",
+          "Task.id": "9bc01e94-0410-407d-86a4-baea04cf91cd",
+          "Task.status": "Pending",
+          "Project.id": "c65c7717-b9a1-48cc-8143-ea2944b91a0e",
+          "Project.name": "DEMO_PROJECT_SEP16",
+          "Contact Disposition": "Contact Built",
+          "Contact Comments": null,
+          "Research Status": "QA"
+      }, {
+          "id": "09ce87e7-03b5-4e7b-b7fa-24fa04088c3a",
+          "Calling Status": "callingStatus",
+          "complianceStatus": "Bounce Email",
+          "complianceComments": "email not valid",
+          "prefix": null,
+          "First Name": "Julie",
+          "Middle Name": null,
+          "Last Name": "Kane",
+          "City": "Mountain View",
+          "State": "CA",
+          "Country": "USA",
+          "Email": "etiam.imperdiet.dictum@tinciduntpede.org",
+          "genericEmail": null,
+          "Phone": "072997 85496",
+          "Direct Dial": null,
+          "Job Title": "Director Business Development",
+          "jobLevel": "Director",
+          "Department": "Sales",
+          "nsId": null,
+          "zoomInfoContactId": null,
+          "linkedInUrl": null,
+          "screenshot": null,
+          "handles": null,
+          "website": null,
+          "Contact Source": null,
+          "stage": "Bad",
+          "Functions": null,
+          "ZBounce": "invalid",
+          "ZB Time": "2021-11-22T16:28:47.942Z",
+          "Email Status": null,
+          "gmailStatusDateAndTime": null,
+          "MailTester Status": null,
+          "phoneExtension": null,
+          "label": "inclusion",
+          "Contact Status": null,
+          "Contact CRM Days": null,
+          "Date": "2021-11-22T16:28:53.162Z",
+          "Account.id": "90322a50-cc97-4c9b-8dd2-c58f08cc591a",
+          "Company Name": "01Games Technology",
+          "Company Website": "http://www.0xdata.com",
+          "Task.id": "9e44562e-dcec-4020-bc37-81ce16f9b8a3",
+          "Task.status": "Completed",
+          "Project.id": "141d09b6-5024-4ca6-b60d-c72775c6f5b8",
+          "Project.name": "Compliance Flow Sanity",
+          "Contact Disposition": "Contact Built",
+          "Contact Comments": null,
+          "Research Status": "Q"
+      }],
+      "limit": "10",
+      "offset": 0,
+      "filter": {},
+      "sort": {
+          "updatedAt": "desc"
+      }
+  }
+

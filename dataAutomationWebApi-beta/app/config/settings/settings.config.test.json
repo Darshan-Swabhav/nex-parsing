@@ -1,0 +1,97 @@
+{
+  "settings": [
+    { "name": "jwtAudience", "value": "6ijzoq6W3NTIeXPhoFutUpcBXin4wxND" },
+    {
+      "name": "jwtURI",
+      "value": "https://innovation.auth0.com/.well-known/jwks.json"
+    },
+    { "name": "jwtIssuer", "value": "https://innovation.auth0.com/" },
+    { "name": "audience", "value": "6ijzoq6W3NTIeXPhoFutUpcBXin4wxND" },
+    { "name": "auth0Connection", "value": "Username-Password-Authentication" },
+    {
+      "name": "auth0ApiUrl",
+      "value": "https://innovation.auth0.com/api/v2/users"
+    },
+    {
+      "name": "auth0TokenUrl",
+      "value": "https://innovation.auth0.com/oauth/token"
+    },
+    {
+      "name": "auth0PwdTicketUrl",
+      "value": "https://innovation.auth0.com/api/v2/tickets/password-change"
+    },
+    { "name": "authExtAudience", "value": "urn:auth0-authz-api" },
+    {
+      "name": "authExtApiUrl",
+      "value": "https://innovation.us.webtask.io/adf6e2f2b84784b57522e3b19dfc9201/api/"
+    },
+    { "name": "appLoginUrl", "value": "" },
+    { "name": "appName", "value": "Data Automation" },
+    {
+      "name": "objectLabels",
+      "value": {
+        "SUPPRESSED": "Exact Suppressed",
+        "FUZZY_SUPPRESSED": "Fuzzy Suppressed",
+        "DUPLICATE": "duplicate",
+        "INCLUSION": "inclusion"
+      }
+    },
+    {
+      "name": "CONTACT_PREVIOUS_VALUE_PREFIX",
+      "value": "previous_"
+    },
+    {
+      "name": "contactSuppressionMatchCases",
+      "value": {
+        "FN_LN_PHONE": "FN+LN+PHONE",
+        "FN_LN_EMAIL_DOMAIN": "FN+LN+EMAIL_DOMAIN",
+        "FN_EMAIL_DOMAIN": "FN+EMAIL_DOMAIN",
+        "LN_EMAIL_DOMAIN": "LN+EMAIL_DOMAIN",
+        "FN_LN_COMPANY": "FN+LN+COMPANY",
+        "EMAIL": "EMAIL",
+        "NONE": "NONE"
+      }
+    },
+    {
+      "name": "contactDuplicateMatchCases",
+      "value": {
+        "FN_LN_PHONE": "FN+LN+PHONE",
+        "FN_LN_EMAIL_DOMAIN": "FN+LN+EMAIL_DOMAIN",
+        "FN_LN_COMPANY": "FN+LN+COMPANY",
+        "EMAIL": "EMAIL",
+        "NONE": "NONE"
+      }
+    },
+    {
+      "name": "accountSuppressionMatchCases",
+      "value": {
+        "WEBSITE_DOMAIN": "WEBSITE_DOMAIN",
+        "SCRUBBED_COMPANY_NAME": "SCRUBBED_COMPANY_NAME",
+        "COMPANY_ALIAS_NAME": "COMPANY_ALIAS_NAME",
+        "TOKENS": "TOKENS",
+        "NONE": "NONE"
+      }
+    },
+    {
+      "name": "accountDuplicateMatchCases",
+      "value": {
+        "WEBSITE_DOMAIN": "WEBSITE_DOMAIN",
+        "SCRUBBED_COMPANY_NAME": "SCRUBBED_COMPANY_NAME",
+        "COMPANY_ALIAS_NAME": "COMPANY_ALIAS_NAME",
+        "TOKENS": "TOKENS",
+        "NONE": "NONE"
+      }
+    },
+    {
+      "name": "dataTypesForDedupeGeneratorModule",
+      "value": {
+        "CONTACT": "contact",
+        "ACCOUNT": "account"
+      }
+    },
+    {
+      "name": "apiGwDeadline",
+      "value": 30.0
+    }
+  ]
+}

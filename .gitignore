@@ -1,0 +1,4 @@
+*.csv
+
+dataAutomationWebApi-beta/node_modules
+nex-front/node_modules

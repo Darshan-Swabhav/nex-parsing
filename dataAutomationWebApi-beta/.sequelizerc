@@ -1,0 +1,6 @@
+const path = require('path');
+module.exports = {
+  // 'config': path.resolve('node_modules', '@nexsalesdev/dataautomation-datamodel', 'lib', 'config', 'config.js'),
+  // 'seeders-path': path.resolve('node_modules', '@nexsalesdev/dataautomation-datamodel', 'lib', 'db', 'productionSeeders'),
+  // 'migrations-path': path.resolve('node_modules', '@nexsalesdev/dataautomation-datamodel', 'lib', 'db', 'devMigrations')
+};

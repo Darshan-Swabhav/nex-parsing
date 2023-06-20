@@ -1,0 +1,40 @@
+# Build Config File For Development Environment.
+
+steps:
+  # Build the container image
+  - name: 'gcr.io/kaniko-project/executor:latest'
+    args:
+    - --destination=gcr.io/$PROJECT_ID/backend-api:$_ENVIRONMENT
+    - --cache=true
+
+  # Bring up Test Environment
+  - name: 'gcr.io/$PROJECT_ID/docker-compose'
+    entrypoint: 'bash'
+    args: ['bin/docker/compose-up.test.sh']
+    env:
+      - 'PROJECT_ID=$PROJECT_ID'
+      - 'NODE_ENV=$_ENVIRONMENT'
+
+  # # Run Integration Test
+  # - name: 'gcr.io/$PROJECT_ID/docker-compose'
+  #   entrypoint: 'bash'
+  #   args: ['bin/docker/run_api_test.sh']
+  #   env:
+  #     - 'PROJECT_ID=$PROJECT_ID'
+  #     - 'NODE_ENV=$_ENVIRONMENT'
+
+  # Run Unit Test
+  - name: 'gcr.io/$PROJECT_ID/docker-compose'
+    entrypoint: 'bash'
+    args: ['bin/docker/run_unit_test.sh']
+    env:
+      - 'PROJECT_ID=$PROJECT_ID'
+      - 'NODE_ENV=$_ENVIRONMENT'
+
+  # Cleanup
+  - name: 'gcr.io/$PROJECT_ID/docker-compose'
+    entrypoint: 'bash'
+    args: ['bin/docker/compose-down.test.sh']
+    env:
+      - 'PROJECT_ID=$PROJECT_ID'
+      - 'NODE_ENV=$_ENVIRONMENT'

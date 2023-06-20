@@ -1,0 +1,5923 @@
+swagger: '2.0'
+info:
+  title: backend-api
+  version: 0.0.0
+  description: Data Automation API on API Gateway with a Cloud Run backend
+  license:
+    name: MIT
+    url: 'https://spdx.org/licenses/MIT.html'
+  contact:
+    name: nexsales
+    url: 'https://nexsales.com'
+    email: innovation@nexsales.com
+basePath: /api/v1
+paths:
+  /agent/preview:
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getAgentPreview
+      tags:
+        - Agent Preview
+      description: >-
+        This is agent preview route which fetch the contact and account dispose
+        data for that agent
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: pageNo
+          type: integer
+          description: The number of page
+        - in: query
+          name: pageSize
+          type: integer
+          description: The numbers of items to return
+        - in: query
+          name: filter
+          type: string
+          description: >-
+            Create an object of the column on which the filter is to be applied
+            and send it by stringify (Like- {columnName- filterValue})
+        - in: query
+          name: sort
+          type: string
+          description: >-
+            Create an object of the column on which the sort is to be applied
+            and send it by stringify (Like- {columnName- sortValue})
+      responses:
+        '200':
+          description: returns the agent preview data
+          schema:
+            items:
+              $ref: '#/definitions/agentPreviewResponse'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  /bulkCreateDummyData:
+    post:
+      security:
+        - auth0_jwk: []
+      operationId: postBulkCreateDummyData
+      tags:
+        - BULKCREATEDUMMYDATA
+      description: This is route for creating bulk dummy data
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: bulkCreateDataInput
+          schema:
+            type: object
+            properties:
+              projectId:
+                type: string
+              accountCount:
+                type: integer
+              contactCount:
+                type: integer
+      responses:
+        '201':
+          description: returns the result
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  /callbacks:
+    post:
+      operationId: callBackRoutes
+      description: callback route for auth flow
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: auth
+          schema:
+            type: object
+            properties:
+              access_token:
+                type: string
+              id_token:
+                type: string
+              scope:
+                type: string
+              expires_in:
+                type: string
+              token_type:
+                type: string
+              state:
+                type: string
+      responses:
+        '200':
+          description: returns the project list array for that given list
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  /client:
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getClient
+      tags:
+        - Client
+      description: This is client list route which fetch the all the project type
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the client array
+          schema:
+            $ref: '#/definitions/client'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+    post:
+      security:
+        - auth0_jwk: []
+      operationId: postClient
+      tags:
+        - Client
+      description: This is client create route
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: client
+          schema:
+            type: object
+            properties:
+              client:
+                type: object
+                properties:
+                  name:
+                    type: string
+                    description: name of client
+                  pseudonym:
+                    type: string
+                    description: sudo name of client
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the client object which is created
+          schema:
+            $ref: '#/definitions/client'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  '/client/{clientId}':
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getClientById
+      tags:
+        - Client
+      description: This is client route returns the single object of client
+      parameters:
+        - in: path
+          name: clientId
+          type: string
+          description: Client Id
+          required: true
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the client
+          schema:
+            $ref: '#/definitions/client'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+    put:
+      security:
+        - auth0_jwk: []
+      operationId: putClient
+      tags:
+        - Client
+      description: This is client update route
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: clientId
+          type: string
+          description: Client Id
+          required: true
+        - in: body
+          name: client
+          schema:
+            type: object
+            properties:
+              client:
+                type: object
+                properties:
+                  name:
+                    type: string
+                    description: name of client
+                  pseudonym:
+                    type: string
+                    description: sudo name of client
+      responses:
+        '200':
+          description: Update a client
+        '400':
+          description: If required parameters not passes then sends the params error
+        '403':
+          description: If user is not authenticate then sends the user authentication error
+        '500':
+          description: if something fails internally then send error
+  '/clients/{clientId}/contacts/checkReuse':
+    post:
+      security:
+        - auth0_jwk: []
+      operationId: checkContactReuse
+      tags:
+        - Contacts
+      description: Search for reusable contacts across Client
+      parameters:
+        - in: path
+          name: clientId
+          type: string
+          description: client id
+          required: true
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the result in json format for reusable contact
+          schema:
+            $ref: '#/definitions/checkReuseResponse'
+        '400':
+          description: if Required Data is not passed in request body
+        '401':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  /dispositions:
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getDispositions
+      tags:
+        - Dispositions
+      description: This is disposition list route which fetch the disposition list
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the disposition list array
+          schema:
+            $ref: '#/definitions/dispositions'
+        '500':
+          description: if something fails internally then send error
+  /emailPattern:
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getEmailPatterns
+      tags:
+        - Email Pattern
+      description: This is email pattern route which fetch the all type pattern of email
+      parameters:
+        - in: query
+          name: firstName
+          type: string
+          required: true
+          description: first name
+        - in: query
+          name: lastName
+          type: string
+          required: true
+          description: last name
+        - in: query
+          name: middleName
+          type: string
+          required: false
+          description: middle name
+        - in: query
+          name: domain
+          type: string
+          required: true
+          description: domain
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: a list of emailPatterns
+          schema:
+            type: array
+            items:
+              type: object
+              $ref: '#/definitions/emailPattern'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+    post:
+      security:
+        - auth0_jwk: []
+      operationId: addEmailPatterns
+      tags:
+        - Email Pattern
+      description: This is email pattern route which get all pattern and store
+      parameters:
+        - in: body
+          name: body
+          schema:
+            $ref: '#/definitions/postEmailPattern'
+          required: true
+          description: Email Pattern body
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: successfully created
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  /dynamicEmailPattern:
+    post:
+      security:
+        - auth0_jwk: []
+      operationId: addDynamicEmailPatterns
+      tags:
+        - Email Pattern
+      description: This is email pattern route which store dynamic email pattern
+      parameters:
+        - in: body
+          name: body
+          schema:
+            $ref: '#/definitions/dynamicEmailPattern'
+          required: true
+          description: Email Pattern body
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: successfuly created
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  /integrations/zb:
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: zbValidate
+      tags:
+        - ZB
+      description: A route proxy to zb's validation route
+      parameters:
+        - in: query
+          name: emailId
+          type: string
+          description: Email id to validate
+          required: true
+        - in: query
+          name: taskId
+          type: string
+          description: Task Id for which this email is being created
+          required: true
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns a truncated version of the validation response
+          schema:
+            $ref: '#/definitions/zbValidationResponse'
+        '400':
+          description: when required parameters are not passed
+        '500':
+          description: when the route fails to execute
+        '502':
+          description: when zb returns an error in the response
+        '504':
+          description: when zb fails to response to a request
+  /master/accounts:
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getMasterAccount
+      tags:
+        - Accounts
+      description: This is account list route which fetch data from Master DB
+      parameters:
+        - in: query
+          name: pageNo
+          type: integer
+          description: page number
+        - in: query
+          name: pageSize
+          type: integer
+          description: page sizes
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the accounts list array for that given list
+          schema:
+            $ref: '#/definitions/accountListResponse'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  '/master/account/{domain}':
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getMasterAccountByDomain
+      tags:
+        - Account
+      description: This Will Fetch Account By Domain.
+      parameters:
+        - in: path
+          name: domain
+          type: string
+          description: domain
+          required: true
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the account
+          schema:
+            $ref: '#/definitions/accountByDomain'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '401':
+          description: if user authentication fails then send error
+        '403':
+          description: if user is unauthorized then send error
+        '500':
+          description: if something fails internally then send error
+  /master/domain:
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getDomain
+      tags:
+        - Account
+      description: This Will Fetch Domain.
+      parameters:
+        - in: query
+          name: companyName
+          type: string
+          description: Company Name
+          required: true
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the domainData
+          schema:
+            $ref: '#/definitions/domainData'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  /master/domain/validate:
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: validateDomain
+      tags:
+        - Account
+      description: This Will Validate Domain.
+      parameters:
+        - in: query
+          name: domain
+          type: string
+          description: Company Domain
+          required: true
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the validate domain data
+          schema:
+            $ref: '#/definitions/validateDomainData'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  /master/contacts:
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getMasterContact
+      tags:
+        - MasterContacts
+      description: This is contact list route which fetch data from Master DB
+      parameters:
+        - in: query
+          name: pageNo
+          type: integer
+          description: page number
+        - in: query
+          name: pageSize
+          type: integer
+          description: page sizes
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the contacts list array
+          schema:
+            $ref: '#/definitions/contactListResponse'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  '/master/contacts/{contactId}':
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getMasterContactById
+      tags:
+        - MasterContacts
+      description: This is masterContact route returns the single object of master Contact
+      parameters:
+        - in: path
+          name: contactId
+          type: string
+          description: Contact Id
+          required: true
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the contact
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  /master/dataProcessor/employeeSizesMapping:
+    post:
+      security:
+        - auth0_jwk: []
+      operationId: getEmployeeSize
+      tags:
+        - Data Processor
+      description: This is employeeSize route which maps the employeeSizeNx
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          required: true
+          description: employeeSize body
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  type: string
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: successfully created
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  /master/dataProcessor/employeeSizes:
+    post:
+      security:
+        - auth0_jwk: []
+      operationId: postEmployeeSize
+      tags:
+        - Data Processor
+      description: This is employeeSize route which creates/updates the employeeSizeNx
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          required: true
+          description: employeeSize body
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  type: string
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: successfully created
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  /master/dataProcessor/revenue-range-employee-size-mapping:
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getRevenueRangeEmployeeSizeMapping
+      tags:
+        - Data Processor
+      description: This route returns a mapping of revenueRange to employeeSize
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns a mapping of revenueRange to employeeSize
+          schema:
+            $ref: '#/definitions/revenueRangeEmployeeSizeMappingResponse'
+        '500':
+          description: if something fails internally then send error
+  /master/dataProcessor/industriesMapping:
+    post:
+      security:
+        - auth0_jwk: []
+      operationId: getIndustries
+      tags:
+        - Data Processor
+      description: This is industries route which maps the industryNx and subIndustryNx
+      parameters:
+        - in: body
+          name: body
+          required: true
+          description: Industry body
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  type: string
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: successfully created
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  /master/dataProcessor/industries:
+    post:
+      security:
+        - auth0_jwk: []
+      operationId: postIndustries
+      tags:
+        - Data Processor
+      description: >-
+        This is industries route which create/update the industry, industryNx
+        and subIndustryNx
+      parameters:
+        - in: body
+          name: body
+          required: true
+          description: Industry body
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  type: string
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: successfully created
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  '/master/dataProcessor/operators/{type}':
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getOperators
+      tags:
+        - Data Processor
+      summary: Get operators by type
+      description: Get operators by type
+      produces:
+        - application/json
+      parameters:
+        - name: type
+          in: path
+          description: Type of operators
+          required: true
+          type: string
+      responses:
+        '200':
+          description: successfully fetched
+        '500':
+          description: if something fails internally then send error
+  /master/dataProcessor/revenueMapping:
+    post:
+      security:
+        - auth0_jwk: []
+      operationId: getRevenues
+      tags:
+        - Data Processor
+      description: This is revenue route which maps the revenueNx
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          required: true
+          description: revenue body
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  type: string
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: successfully created
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  /master/dataProcessor/revenues:
+    post:
+      security:
+        - auth0_jwk: []
+      operationId: postRevenue
+      tags:
+        - Data Processor
+      description: This is revenue route which creates/updates the revenueNx
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          required: true
+          description: revenue body
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  type: string
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: successfully created
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  /master/dataProcessor/employee-range-revenue-mapping:
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getEmployeeRangeRevenueMapping
+      tags:
+        - Data Processor
+      description: This route returns a mapping of employeeRange to revenue
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns a mapping of employeeRange to revenue
+          schema:
+            $ref: '#/definitions/employeeRangeRevenueMappingResponse'
+        '500':
+          description: if something fails internally then send error
+  /master/dataProcessor/stat:
+    post:
+      security:
+        - auth0_jwk: []
+      operationId: postStat
+      tags:
+        - Data Processor
+      description: This is stats route which creates the stat
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: stat
+          required: true
+          description: stat body
+          schema:
+            $ref: '#/definitions/stat'
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: successfully created
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  /master/dataProcessor/stats:
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getStats
+      tags:
+        - Data Processor
+      description: This is stats route which fetches the stats
+      consumes:
+        - application/json
+      parameters:
+        - name: pageNumber
+          in: query
+          description: Page number
+          required: false
+          type: integer
+        - name: pageSize
+          in: query
+          description: Page size
+          required: false
+          type: integer
+        - name: filter
+          in: query
+          description: Filter by keyword
+          required: false
+          type: string
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: successfully created
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  /master/dataProcessor/stats/users:
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getStatUsers
+      tags:
+        - Data Processor
+      description: This is userStats route which fetches the user email address
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: successfully created
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  /master/emailPattern:
+    post:
+      security:
+        - auth0_jwk: []
+      operationId: addMasterEmailPattern
+      tags:
+        - Master Email Pattern
+      description: This is email pattern route which store master email pattern
+      parameters:
+        - in: body
+          name: body
+          schema:
+            $ref: '#/definitions/postEmailPattern'
+          required: true
+          description: Email Pattern body
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: successfully created
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  /master/files:
+    post:
+      security:
+        - auth0_jwk: []
+      operationId: uploadMasterFile
+      tags:
+        - MasterFile
+      description: Upload Master File Route
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: fileUploadBody
+          schema:
+            type: object
+            required:
+              - fileType
+              - mapping
+              - fileName
+              - fileContentType
+              - operationParam
+            properties:
+              fileName:
+                type: string
+              fileContentType:
+                type: string
+              fileType:
+                type: string
+              operationName:
+                type: string
+              mapping:
+                type: object
+              operationParam:
+                type: object
+      responses:
+        '200':
+          description: Return an SignedUrl and file id to Upload File.
+          schema:
+            type: object
+            properties:
+              uploadUrl:
+                type: string
+              fileId:
+                type: string
+        '400':
+          description: if required parameters not passes then sends the params error
+        '401':
+          description: if user authentication fails then send error
+        '403':
+          description: if user is unauthorized then send error
+        '500':
+          description: if something fails internally then send error
+  '/master/files/{fileId}':
+    delete:
+      security:
+        - auth0_jwk: []
+      operationId: deleteMasterFile
+      tags:
+        - MasterFile
+      description: This is a delete master file route
+      parameters:
+        - in: path
+          name: fileId
+          type: integer
+          description: file id
+          required: true
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: successfully delete the master file
+        '400':
+          description: if required parameters not passes then sends the params error
+        '401':
+          description: if user authentication fails then send error
+        '403':
+          description: if user is unauthorized then send error
+        '500':
+          description: if something fails internally then send error
+  '/master/importError/{importErrorType}':
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getImportErrorReport
+      tags:
+        - ImportError
+      description: >-
+        This is importError Report route which fetch all type of error category
+        with number of failed row
+      parameters:
+        - in: path
+          name: importErrorType
+          type: string
+          description: Import Error Type
+          required: true
+        - in: query
+          name: pageNo
+          type: integer
+          description: page number
+        - in: query
+          name: pageSize
+          type: integer
+          description: page sizes
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the import error report
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/importErrorReportObj'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  '/master/importError/{importErrorType}/files':
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getImportErrorFilesReport
+      tags:
+        - ImportError
+      description: >-
+        This is importError Files Report route which fetch all type of error
+        category with number of failed row
+      parameters:
+        - in: path
+          name: importErrorType
+          type: string
+          description: Import Error Type
+          required: true
+        - in: query
+          name: pageNo
+          type: integer
+          description: page number
+        - in: query
+          name: pageSize
+          type: integer
+          description: page sizes
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the import error report
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/importErrorFileReportObj'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  /master/jobs:
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getMasterJobs
+      tags:
+        - MasterJob
+      description: This is job list route which fetch the all the job from master
+      parameters:
+        - in: query
+          name: pageNo
+          type: integer
+          description: page number
+        - in: query
+          name: pageSize
+          type: integer
+          description: page sizes
+        - in: query
+          name: sort
+          type: string
+          description: >-
+            Create an object of the column on which the sort is to be applied
+            and send it by stringify
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the job list with total jobs count
+          schema:
+            $ref: '#/definitions/masterJobListResponse'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '401':
+          description: if user authentication fails then send error
+        '403':
+          description: if user is unauthorized then send error
+        '500':
+          description: if something fails internally then send error
+  '/master/jobs/{jobId}/getSignedURL':
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getMasterJobSignedURL
+      tags:
+        - Generate Signed URL
+      description: it will generate the signed url for the given job's output file.
+      parameters:
+        - in: path
+          name: jobId
+          type: integer
+          description: job id
+          required: true
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the signed URL
+          schema:
+            $ref: '#/definitions/masterJobSignedURL'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '401':
+          description: if user authentication fails then send error
+        '403':
+          description: if user is unauthorized then send error
+        '500':
+          description: if something fails internally then send error
+  '/master/jobs/{jobId}/jobErrors':
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getMasterJobErrors
+      tags:
+        - MasterJobErrors
+      description: >-
+        This is job errors list route which fetch the all the job errors from
+        the master
+      parameters:
+        - in: path
+          name: jobId
+          type: integer
+          description: job id
+          required: true
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the job errors from the master
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/masterJobErrors'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '401':
+          description: if user authentication fails then send error
+        '403':
+          description: if user is unauthorized then send error
+        '500':
+          description: if something fails internally then send error
+  /master/locations:
+    get:
+      operationId: getMasterLocations
+      security:
+        - auth0_jwk: []
+      tags:
+        - MasterLocationList
+      description: This is Master Locations list route which list the location for the user
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the industry name list
+        '403':
+          description: if user is unauthorized then send error
+        '500':
+          description: if something fails internally then send error
+  /master/rawQueries:
+    post:
+      security:
+        - auth0_jwk: []
+      operationId: postMasterRawQueries
+      tags:
+        - MASTER_RAW_QUERIES
+      description: This is raw queries route for master DB
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: rawQueriesInput
+          schema:
+            type: object
+            properties:
+              sql:
+                type: string
+              replacements:
+                type: object
+      responses:
+        '201':
+          description: returns the raw queries result
+        '400':
+          description: if required parameters not passes then sends the params error
+        '401':
+          description: if user authentication fails then send error
+        '403':
+          description: if user is unauthorized then send error
+        '500':
+          description: if something fails internally then send error
+  /master/industry:
+    get:
+      operationId: getMasterIndustry
+      security:
+        - auth0_jwk: []
+      tags:
+        - MasterSearch
+      description: >-
+        This is Master Industry list route which search the industry list for
+        that user
+      parameters:
+        - in: query
+          name: param
+          type: string
+          required: true
+          description: industry param
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the industry name list
+        '400':
+          description: if required parameters not passes then sends the params error
+        '401':
+          description: if user authentication fails then send error
+        '403':
+          description: if user is unauthorized then send error
+        '500':
+          description: if something fails internally then send error
+  /master/jobDepartments:
+    get:
+      operationId: getJobDepartMentSearch
+      tags:
+        - Search
+      security:
+        - auth0_jwk: []
+      description: >-
+        This is Job Department list route which search the job department list
+        for that user
+      parameters:
+        - in: query
+          name: param
+          type: string
+          required: true
+          description: job department param
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the job department list
+        '500':
+          description: if something fails internally then send error
+  /master/jobLevels:
+    get:
+      operationId: getJobLevelSearch
+      tags:
+        - Search
+      security:
+        - auth0_jwk: []
+      description: >-
+        This is Job Level list route which search the job level list for that
+        user
+      parameters:
+        - in: query
+          name: param
+          type: string
+          required: true
+          description: job level param
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the job level list
+        '500':
+          description: if something fails internally then send error
+  /master/naicsCode:
+    get:
+      operationId: getMasterNaicsCode
+      tags:
+        - MasterSearch
+      security:
+        - auth0_jwk: []
+      description: >-
+        This is Master Naics Code list route which search the Sic Code list for
+        that user
+      parameters:
+        - in: query
+          name: param
+          type: string
+          required: true
+          description: Naics Code param
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the Naics code list
+        '400':
+          description: if required parameters not passes then sends the params error
+        '401':
+          description: if user authentication fails then send error
+        '403':
+          description: if user is unauthorized then send error
+        '500':
+          description: if something fails internally then send error
+  /master/sicCode:
+    get:
+      operationId: getMasterSicCode
+      tags:
+        - MasterSearch
+      security:
+        - auth0_jwk: []
+      description: >-
+        This is Master Sic Code list route which search the Sic Code list for
+        that user
+      parameters:
+        - in: query
+          name: param
+          type: string
+          required: true
+          description: Sic Code param
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the Sic code list
+        '400':
+          description: if required parameters not passes then sends the params error
+        '401':
+          description: if user authentication fails then send error
+        '403':
+          description: if user is unauthorized then send error
+        '500':
+          description: if something fails internally then send error
+  /master/subIndustry:
+    get:
+      operationId: getMasterSub-Industry
+      security:
+        - auth0_jwk: []
+      tags:
+        - MasterSearch
+      description: >-
+        This is Master Sub-Industry list route which search the Sub-Industry
+        list for that user
+      parameters:
+        - in: query
+          name: param
+          type: string
+          required: true
+          description: subIndustry param
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the Sub-Industry name list
+        '400':
+          description: if required parameters not passes then sends the params error
+        '401':
+          description: if user authentication fails then send error
+        '403':
+          description: if user is unauthorized then send error
+        '500':
+          description: if something fails internally then send error
+  /master/technology:
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getTechnologies
+      tags:
+        - Technology
+      description: This is technology list route which fetch the technology list
+      parameters:
+        - in: query
+          name: param
+          type: string
+          description: user searched param
+        - in: query
+          name: limit
+          type: integer
+          description: fetch limit instances/rows
+        - in: query
+          name: offset
+          type: integer
+          description: skip offset instances/rows
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the technologies list array
+          schema:
+            $ref: '#/definitions/technologies'
+        '500':
+          description: if something fails internally then send error
+  '/master/uploadReport/{type}':
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getUploadReports
+      summary: Upload report
+      description: Upload report for a given type
+      tags:
+        - Master
+      parameters:
+        - name: type
+          in: path
+          description: Type of report to upload
+          required: true
+          type: string
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the accounts list array for that given list
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  /master/verifyAccounts:
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getVerifyMasterAccount
+      tags:
+        - Accounts
+      description: This is account list route which fetch data from Master DB
+      parameters:
+        - in: query
+          name: pageNo
+          type: integer
+          description: page number
+        - in: query
+          name: pageSize
+          type: integer
+          description: page sizes
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the verifyAccounts list array for that given list
+          schema:
+            $ref: '#/definitions/verifyAccountListResponse'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+    post:
+      security:
+        - auth0_jwk: []
+      operationId: postVerifyMasterAccount
+      tags:
+        - Save to Verify Account
+      description: Save Account to Master DB in VerifyAccounts DB
+      parameters:
+        - in: body
+          name: account
+          schema:
+            type: object
+            description: account data
+      produces:
+        - application/json
+      responses:
+        '201':
+          description: returns the saved result in json format
+          schema:
+            items:
+              $ref: '#/definitions/verifyAccounts'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  /master/verifyContacts:
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getVerifyMasterContacts
+      tags:
+        - Contacts
+      description: This is contact list route which fetch data from Master DB
+      parameters:
+        - in: query
+          name: pageNo
+          type: integer
+          description: page number
+        - in: query
+          name: pageSize
+          type: integer
+          description: page sizes
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the verifyContacts list array for that given list
+          schema:
+            $ref: '#/definitions/verifyContactListResponse'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+    post:
+      security:
+        - auth0_jwk: []
+      operationId: postVerifyMasterContact
+      tags:
+        - Save to Verify Contact
+      description: Save Contact to Master DB in VerifyContacts DB
+      parameters:
+        - in: body
+          name: contact
+          schema:
+            type: object
+            description: contact data
+      produces:
+        - application/json
+      responses:
+        '201':
+          description: returns the saved result in json format
+          schema:
+            items:
+              $ref: '#/definitions/verifyContacts'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  /ping:
+    get:
+      operationId: pingRoute
+      description: ping route
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the pong
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  '/project/{project_id}/accounts':
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getAccount
+      tags:
+        - Accounts
+      description: This is account list route which fetch the project list for that user
+      parameters:
+        - in: path
+          name: project_id
+          type: integer
+          description: project id
+          required: true
+        - in: query
+          name: pageNo
+          type: integer
+          description: page number
+        - in: query
+          name: pageSize
+          type: integer
+          description: page sizes
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the accounts list array for that given list
+          schema:
+            $ref: '#/definitions/accountListResponse'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  '/project/{project_id}/accounts/{account_id}':
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getAccountById
+      tags:
+        - Accounts
+      description: This is account by Id route which fetch the account for that project
+      parameters:
+        - in: path
+          name: project_id
+          type: string
+          description: project id
+          required: true
+        - in: path
+          name: account_id
+          type: string
+          description: account id
+          required: true
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the account
+          schema:
+            $ref: '#/definitions/accounts'
+        '401':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+    put:
+      security:
+        - auth0_jwk: []
+      operationId: editAccount
+      tags:
+        - Accounts
+      description: This is account edit route which edit the account for that project
+      parameters:
+        - in: path
+          name: project_id
+          type: string
+          description: project id
+          required: true
+        - in: path
+          name: account_id
+          type: string
+          description: account id
+          required: true
+        - in: body
+          name: account
+          schema:
+            $ref: '#/definitions/accounts'
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: update success
+        '401':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  '/project/{project_id}/account/dispose':
+    post:
+      security:
+        - auth0_jwk: []
+      operationId: disposeAccount
+      tags:
+        - Accounts
+      description: Dispose The Account
+      parameters:
+        - in: path
+          name: project_id
+          type: string
+          description: project id
+          required: true
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the result in json format with true/false for disposition
+          schema:
+            $ref: '#/definitions/accountDispositionResponse'
+        '400':
+          description: if Required Data is not passed in request body
+        '401':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  '/projects/{project_id}/accounts/stats':
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getAccountStats
+      tags:
+        - Account Stats
+      description: >-
+        This is account stats list route which fetch the distinct stats for that
+        user
+      parameters:
+        - in: path
+          name: project_id
+          type: integer
+          description: project id
+          required: true
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the account stats for that given list
+          schema:
+            $ref: '#/definitions/accountStats'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  '/projects/{project_id}/account/check':
+    post:
+      security:
+        - auth0_jwk: []
+      operationId: checkAccountSupDup
+      tags:
+        - Account Suppression and Duplicate Check
+      description: Check if Account is in Suppression Set or Duplicate
+      parameters:
+        - in: path
+          name: project_id
+          type: integer
+          description: project id
+          required: true
+        - in: query
+          name: checkSuppression
+          type: boolean
+          description: flag for check suppression
+        - in: query
+          name: checkDuplicate
+          type: boolean
+          description: flag for check duplicate
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the result in json format with true false for suppression
+          schema:
+            items:
+              $ref: '#/definitions/accountCheckResponse'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  '/project/{projectId}/accounts/dispositions':
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getAccountDispositions
+      tags:
+        - Accounts Disposition
+      description: >-
+        This is account disposition list route which fetch the unique
+        dispositions
+      parameters:
+        - in: path
+          name: projectId
+          type: integer
+          description: project id
+          required: true
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the unique list of accounts disposition
+          schema:
+            $ref: '#/definitions/accountDispositionsResponse'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  '/projects/{project_id}/accounts/{account_id}/contacts':
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getContactOfAccount
+      tags:
+        - Contacts
+      description: This is contact list route which fetch the project list for that user
+      parameters:
+        - in: path
+          name: project_id
+          type: string
+          description: project id
+          required: true
+        - in: path
+          name: account_id
+          type: string
+          description: account id
+          required: true
+        - in: query
+          name: pageNo
+          type: integer
+          description: page number
+        - in: query
+          name: pageSize
+          type: integer
+          description: page sizes
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the contacts list array for that given list
+          schema:
+            $ref: '#/definitions/contacts'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+    post:
+      security:
+        - auth0_jwk: []
+      operationId: createContactOfAccount
+      tags:
+        - Contacts
+      description: This is contact list route which fetch the project list for that user
+      parameters:
+        - in: path
+          name: project_id
+          type: string
+          description: project id
+          required: true
+        - in: path
+          name: account_id
+          type: string
+          description: account id
+          required: true
+        - in: body
+          name: body
+          schema:
+            $ref: '#/definitions/contactsPost'
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the contacts list array for that given list
+          schema:
+            $ref: '#/definitions/contacts'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  '/projects/{project_id}/accounts/{account_id}/contacts/{contact_id}':
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getContactById
+      tags:
+        - Contacts
+      description: This is contact list route which fetch the project list for that user
+      parameters:
+        - in: path
+          name: project_id
+          type: string
+          description: project id
+          required: true
+        - in: path
+          name: account_id
+          type: string
+          description: account id
+          required: true
+        - in: path
+          name: contact_id
+          type: string
+          description: contact id
+          required: true
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the contacts list array for that given list
+          schema:
+            $ref: '#/definitions/contacts'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+    put:
+      security:
+        - auth0_jwk: []
+      operationId: editContactById
+      tags:
+        - Contacts
+      description: This is contact list route which fetch the project list for that user
+      parameters:
+        - in: path
+          name: project_id
+          type: string
+          description: project id
+          required: true
+        - in: path
+          name: account_id
+          type: string
+          description: account id
+          required: true
+        - in: path
+          name: contact_id
+          type: string
+          description: contact id
+          required: true
+        - in: body
+          name: body
+          schema:
+            $ref: '#/definitions/contactsPost'
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the contacts list array for that given list
+          schema:
+            $ref: '#/definitions/contacts'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  '/project/{projectId}/contacts':
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getContact
+      tags:
+        - Contacts
+      description: This is contact list route which fetch the contact list of the project
+      parameters:
+        - in: path
+          name: projectId
+          type: integer
+          description: project id
+          required: true
+        - in: query
+          name: pageNo
+          type: integer
+          description: page number
+        - in: query
+          name: pageSize
+          type: integer
+          description: page sizes
+        - in: query
+          name: download
+          type: boolean
+          description: for download file
+        - in: query
+          name: filter
+          type: string
+          description: >-
+            Create an object of the column on which the filter is to be applied
+            and send it by stringify
+        - in: query
+          name: sort
+          type: string
+          description: >-
+            Create an object of the column on which the sort is to be applied
+            and send it by stringify
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the contacts list array for that given list
+          schema:
+            $ref: '#/definitions/contactListResponse'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  '/projects/{projectId}/contacts/stats':
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getContactsStats
+      tags:
+        - Contacts Stats
+      description: >-
+        This is contact stats list route which fetch the distinct stats for that
+        user
+      parameters:
+        - in: path
+          name: projectId
+          type: integer
+          description: project id
+          required: true
+        - in: query
+          name: filter
+          type: string
+          description: >-
+            Create an object of the column on which the filter is to be applied
+            and send it by stringify
+        - in: query
+          name: sort
+          type: string
+          description: >-
+            Create an object of the column on which the sort is to be applied
+            and send it by stringify
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the contacts stats for that given list
+          schema:
+            $ref: '#/definitions/contactsStats'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  '/projects/{project_id}/contacts/check':
+    post:
+      security:
+        - auth0_jwk: []
+      operationId: checkContactSuppression
+      tags:
+        - Contact Suppression Check
+      description: Check if Contact is in Suppression Set or Not
+      parameters:
+        - in: path
+          name: project_id
+          type: integer
+          description: project id
+          required: true
+        - in: query
+          name: checkSuppression
+          type: boolean
+          description: flag for check suppression
+        - in: query
+          name: checkDuplicate
+          type: boolean
+          description: flag for check duplicate
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the result in json format with true false for suppression
+          schema:
+            items:
+              $ref: '#/definitions/contactCheckResponse'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  '/project/{projectId}/contacts/facets':
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getContactUniqueFields
+      tags:
+        - Contacts Unique Facet fields
+      description: This is contact facet route which fetch the unique value for given field
+      parameters:
+        - in: path
+          name: projectId
+          type: integer
+          description: project id
+          required: true
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the unique list of chosen contacts field
+          schema:
+            $ref: '#/definitions/contactFacetResponse'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  /files:
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getFile
+      tags:
+        - File
+      description: >-
+        This is the file data list route that fetches the file data for that
+        user
+      consumes:
+        - application/json
+      parameters:
+        - in: query
+          name: projectId
+          type: string
+          required: true
+          description: project id
+      responses:
+        '200':
+          description: returns the file data list array for that project
+          schema:
+            $ref: '#/definitions/file'
+        '400':
+          description: if required parameters does not pass then send the params error
+        '500':
+          description: if something fails internally then send an error
+    post:
+      security:
+        - auth0_jwk: []
+      operationId: postFile
+      tags:
+        - File
+      description: Upload File Route
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: fileUploadBody
+          schema:
+            type: object
+            required:
+              - projectId
+              - fileType
+              - mapping
+              - rowCount
+              - fileName
+              - fileContentType
+            properties:
+              fileName:
+                type: string
+              fileContentType:
+                type: string
+              fileType:
+                type: string
+                enum:
+                  - Suppression
+                  - Inclusion
+                  - Supporting Document
+                  - Import
+                  - In Progress
+              operationName:
+                type: string
+                enum:
+                  - accountSuppression
+                  - contactSuppression
+                  - accountInclusion
+                  - contactInclusion
+                  - accountImport
+                  - contactImport
+                  - acccountInProgress
+                  - contactInProgress
+              mapping:
+                type: object
+              rowCount:
+                type: string
+              projectId:
+                type: string
+              taskTypeId:
+                type: string
+              objectType:
+                type: string
+      responses:
+        '200':
+          description: Return an SignedUrl to Upload File.
+          schema:
+            type: object
+            properties:
+              uploadUrl:
+                type: string
+        '400':
+          description: if required parameters does not pass then send the params error
+        '500':
+          description: if something fails internally then send an error
+  '/files/{fileId}':
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getFileById
+      tags:
+        - File
+      description: This is the File route that returns File data or File.
+      consumes:
+        - application/json
+      parameters:
+        - in: path
+          name: fileId
+          type: string
+          required: true
+          description: file id
+        - in: query
+          name: shouldGenerateDownloadUrl
+          type: boolean
+          required: false
+          description: flag to get file download URL
+      responses:
+        '200':
+          description: returns the file data or file
+          schema:
+            $ref: '#/definitions/file'
+        '400':
+          description: if required parameters does not pass then send the params error
+        '404':
+          description: if a file data not found then send an error
+        '500':
+          description: if something fails internally then send an error
+    delete:
+      security:
+        - auth0_jwk: []
+      operationId: deleteFileById
+      tags:
+        - File
+      description: This is the File route that deletes the file.
+      consumes:
+        - application/json
+      parameters:
+        - in: path
+          name: fileId
+          type: string
+          required: true
+          description: file id
+      responses:
+        '200':
+          description: returns the file id which deleted
+          schema:
+            $ref: '#/definitions/file'
+        '400':
+          description: if required parameters does not pass then send the params error
+        '404':
+          description: if a file data not found then send an error
+        '500':
+          description: if something fails internally then send an error
+  '/clients/{clientId}/projects/{projectId}/sharedFiles/fileExistance':
+    post:
+      security:
+        - auth0_jwk: []
+      operationId: checkSuppressionFileExistence
+      tags:
+        - File
+      description: Check Existance Of Suppression File
+      consumes:
+        - application/json
+      parameters:
+        - in: path
+          name: projectId
+          type: string
+          required: true
+          description: project id
+        - in: path
+          name: clientId
+          type: string
+          required: true
+          description: client id
+        - in: body
+          name: suppressionFileCheck
+          schema:
+            type: object
+            required:
+              - fileName
+            properties:
+              fileName:
+                type: string
+      responses:
+        '201':
+          description: Return suppression file existance result.
+        '400':
+          description: if required parameters does not pass then send the params error
+        '500':
+          description: if something fails internally then send an error
+  /files/facets:
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getSharedFileFacets
+      tags:
+        - Shared Files Unique Facet fields
+      description: >-
+        This is shared files facet route which fetch the unique value for given
+        field
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the unique list of chosen shared file field
+          schema:
+            $ref: '#/definitions/fileFacetResponse'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  /suppresion:
+    post:
+      security:
+        - auth0_jwk: []
+      operationId: findAndCountAllobjects
+      description: object route
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          schema:
+            $ref: '#/definitions/seqObjectParams'
+          required: true
+      responses:
+        '200':
+          description: returns count and sample json
+          schema:
+            $ref: '#/definitions/seqObject'
+        '400':
+          description: If required parameters are not passed then sends the params error
+        '403':
+          description: >-
+            If user is not authenticated then sends the user authentication
+            error
+        '500':
+          description: if something fails internally then send error
+  '/project/{projectId}/jobs':
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getJob
+      tags:
+        - Job
+      description: This is job list route which fetch the all the job
+      parameters:
+        - in: path
+          name: projectId
+          type: integer
+          description: project id
+          required: true
+        - in: query
+          name: pageNo
+          type: integer
+          description: page number
+        - in: query
+          name: pageSize
+          type: integer
+          description: page sizes
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the job array
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/job'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  '/project/{projectId}/jobs/{jobId}':
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getJobById
+      tags:
+        - Job
+      description: This is the Job route that returns Job data.
+      parameters:
+        - in: path
+          name: projectId
+          type: integer
+          description: project id
+          required: true
+        - in: path
+          name: jobId
+          type: integer
+          description: job id
+          required: true
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the job
+          schema:
+            $ref: '#/definitions/job'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+    put:
+      security:
+        - auth0_jwk: []
+      operationId: updateJob
+      tags:
+        - Tasks
+      description: This is job update route
+      parameters:
+        - in: path
+          name: projectId
+          type: string
+          description: Project Id
+          required: true
+        - in: path
+          name: jobId
+          type: string
+          description: Job Id
+          required: true
+        - in: body
+          name: jobData
+          schema:
+            type: object
+            properties:
+              status:
+                type: string
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: if job update successfully then Return 200 with a Success Message
+        '400':
+          description: >-
+            if required parameters not passes or parameters value is incorrect
+            then sends the params error
+        '403':
+          description: If user does not have access to this route then send error
+        '500':
+          description: if something fails internally then send error
+  '/project/{projectId}/jobs/{jobId}/jobErrors':
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getJobErrorsByJobId
+      tags:
+        - Job Errors
+      description: This is the Job Error route that returns Job Errors data.
+      parameters:
+        - in: path
+          name: projectId
+          type: integer
+          description: project id
+          required: true
+        - in: path
+          name: jobId
+          type: integer
+          description: job id
+          required: true
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the job errors
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/jobErrors'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  '/project/{projectId}/jobs/{jobId}/getSignedURL':
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getSignedURL
+      tags:
+        - Generate Signed URL
+      description: it will generate the signed url for the given job's output file.
+      parameters:
+        - in: path
+          name: projectId
+          type: integer
+          description: project id
+          required: true
+        - in: path
+          name: jobId
+          type: integer
+          description: job id
+          required: true
+        - in: query
+          name: originalFileWithIds
+          type: boolean
+          description: Download File With Ids Injected
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the signed URL
+          schema:
+            $ref: '#/definitions/signedURL'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  '/projects/{projectId}/jobs/{jobId}/taskAllocationTemps':
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getAllTaskAllocationTempData
+      tags:
+        - Task Allocation Temp
+      description: >-
+        This is task allocation temp data list route which fetch the all task
+        allocation temp data of taskAllocation job
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: projectId
+          type: string
+          description: project id
+          required: true
+        - in: path
+          name: jobId
+          type: string
+          description: job id
+          required: true
+        - in: query
+          name: pageNo
+          type: integer
+          description: The number of page
+        - in: query
+          name: pageSize
+          type: integer
+          description: The numbers of items to return
+      responses:
+        '200':
+          description: returns the agent preview data
+          schema:
+            $ref: '#/definitions/getAllTaskAllocationTempDataResponse'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  '/projects/{projectId}/jobs/{jobId}/taskAllocationTemps/{taskAllocationTempId}':
+    delete:
+      security:
+        - auth0_jwk: []
+      operationId: deleteTaskAllocationTempById
+      tags:
+        - Task Allocation Temp
+      description: Route to delete taskAllocationTemp Data By Id
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: projectId
+          type: string
+          description: project id
+          required: true
+        - in: path
+          name: jobId
+          type: string
+          description: job id
+          required: true
+        - in: path
+          name: taskAllocationTempId
+          type: string
+          description: taskAllocationTemp Data id
+          required: true
+      responses:
+        '200':
+          description: delete operation success
+        '400':
+          description: 'bad Request, missing required parameters'
+        '500':
+          description: 'Internal Error, Unexpected Server Error'
+    put:
+      security:
+        - auth0_jwk: []
+      operationId: editTaskAllocationTempById
+      tags:
+        - Task Allocation Temp
+      description: Route to edit taskAllocationTemp Data By Id
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: projectId
+          type: string
+          description: project id
+          required: true
+        - in: path
+          name: jobId
+          type: string
+          description: job id
+          required: true
+        - in: path
+          name: taskAllocationTempId
+          type: string
+          description: taskAllocationTemp Data id
+          required: true
+      responses:
+        '200':
+          description: edit operation success
+        '400':
+          description: 'bad Request, missing required parameters'
+        '500':
+          description: 'Internal Error, Unexpected Server Error'
+  '/projects/{projectId}/excludedJobTitle':
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getAllExcludedJobTitles
+      tags:
+        - JOB_TITLE
+      description: This route returns excluded job titles of project
+      parameters:
+        - in: path
+          name: projectId
+          type: string
+          required: true
+          description: Unique Id of Project
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Returns the excluded job titles of project
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/excludedJobTitle'
+        '400':
+          description: If required parameters not passes then sends the params error
+          schema:
+            $ref: '#/definitions/errorResponse'
+        '403':
+          description: If user is not authenticate then sends the user authentication error
+          schema:
+            $ref: '#/definitions/errorResponse'
+        '500':
+          description: if something fails internally then send error
+          schema:
+            $ref: '#/definitions/errorResponse'
+  '/project/{project_id}/masterImport/account':
+    post:
+      security:
+        - auth0_jwk: []
+      operationId: masterImportAccount
+      tags:
+        - Accounts
+      description: Import Account from Master
+      parameters:
+        - in: path
+          name: project_id
+          type: string
+          description: project id
+          required: true
+        - in: body
+          name: masterImportBody
+          schema:
+            type: object
+            required:
+              - filter
+              - limit
+              - sort
+            properties:
+              filter:
+                type: object
+              limit:
+                type: string
+              sort:
+                type: object
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the result in json format with true/false for disposition
+          schema:
+            $ref: '#/definitions/masterImportResponse'
+        '400':
+          description: if Required Data is not passed in request body
+        '401':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  '/project/{project_id}/masterImport/contact':
+    post:
+      security:
+        - auth0_jwk: []
+      operationId: masterImportContact
+      tags:
+        - MasterContacts
+      description: Import Contact from Master
+      parameters:
+        - in: path
+          name: project_id
+          type: integer
+          description: project id
+          required: true
+        - in: body
+          name: masterImportBody
+          schema:
+            type: object
+            required:
+              - filter
+              - limit
+            properties:
+              filter:
+                type: object
+              limit:
+                type: string
+              sort:
+                type: object
+              startImport:
+                type: boolean
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the result message Saved Successfully
+        '400':
+          description: if Required Data is not passed in request body
+        '500':
+          description: if something fails internally then send error
+  '/project/{projectId}/masterContact':
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getMasterContacts
+      tags:
+        - Master Contacts list
+      description: gets the master contacts
+      parameters:
+        - in: path
+          name: projectId
+          type: integer
+          description: project id
+          required: true
+        - in: query
+          name: accountDomain
+          type: string
+          description: domain of account
+        - in: query
+          name: pageNo
+          type: integer
+          description: page number
+        - in: query
+          name: pageSize
+          type: integer
+          description: page sizes
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the contacts list of chosen filter field
+          schema:
+            $ref: '#/definitions/tempMasterContacts'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  '/project/{projectId}/masterContact/contacts/{contactId}':
+    post:
+      security:
+        - auth0_jwk: []
+      operationId: addTemporaryMasterContact
+      tags:
+        - Temporary Master Contact To GoldMine
+      description: Add Temporary Master Contact To GoldMine
+      parameters:
+        - in: path
+          name: projectId
+          type: string
+          description: project id
+          required: true
+        - in: path
+          name: contactId
+          type: string
+          description: contactId of contact
+          required: true
+        - in: query
+          name: flag
+          type: string
+          description: flag
+          required: true
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the inserted contact of GoldMine
+          schema:
+            $ref: '#/definitions/contact'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  /project:
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getAllProjects
+      tags:
+        - PROJECT
+      description: This is project list route which fetch the project list for that user
+      parameters:
+        - in: query
+          name: pageNo
+          type: integer
+          description: page number
+        - in: query
+          name: pageSize
+          type: integer
+          description: page size
+        - in: query
+          name: filter
+          type: string
+          description: >-
+            Create an object of the column on which the filter is to be applied
+            and send it by stringify (Like- {columnName- filterValue})
+        - in: query
+          name: sort
+          type: string
+          description: >-
+            Create an object of the column on which the sort is to be applied
+            and send it by stringify (Like- {columnName- sortValue})
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the project list array for that given list
+          schema:
+            $ref: '#/definitions/ProjectGetAll'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+    post:
+      operationId: postProject
+      security:
+        - auth0_jwk: []
+      tags:
+        - PROJECT
+      description: Create project route
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: projectPostObject
+          schema:
+            $ref: '#/definitions/ProjectPost'
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the project which created
+          schema:
+            $ref: '#/definitions/Project'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  '/project/{project_id}':
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getProjectById
+      consumes:
+        - application/json
+      parameters:
+        - in: path
+          name: project_id
+          type: string
+          description: PROJECT Id
+          required: true
+      tags:
+        - PROJECT
+      description: This is project list route which fetch the project list for that user
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the project list array for that given list
+          schema:
+            $ref: '#/definitions/Project'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+    put:
+      security:
+        - auth0_jwk: []
+      operationId: putProject
+      tags:
+        - PROJECT
+      description: Create project route
+      consumes:
+        - application/json
+      parameters:
+        - in: path
+          name: project_id
+          type: string
+          description: PROJECT Id
+          required: true
+        - in: body
+          name: projectPostObject
+          schema:
+            $ref: '#/definitions/ProjectPost'
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the project which updated
+          schema:
+            $ref: '#/definitions/Project'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+    delete:
+      security:
+        - auth0_jwk: []
+      operationId: deleteProjectById
+      consumes:
+        - application/json
+      parameters:
+        - in: path
+          name: project_id
+          type: string
+          description: PROJECT Id
+          required: true
+      tags:
+        - PROJECT
+      description: This is project delete route
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the project deleted successfully
+        '400':
+          description: if required parameters not passes then sends the params error
+        '403':
+          description: if user do not have deleting permission
+        '500':
+          description: if something fails internally then send error
+  '/project/{project_id}/setting':
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getProjectSettings
+      tags:
+        - PROJECTSetting
+      description: Fetch PROJECT Setting
+      parameters:
+        - in: path
+          name: project_id
+          type: string
+          description: PROJECT Id
+          required: true
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: 'OK, Successfully Fetched PROJECT Settings'
+          schema:
+            $ref: '#/definitions/Projectsettings'
+        '400':
+          description: 'Bad Request, Missing Required Parameters in Request'
+        '401':
+          description: 'Unauthorized, Missing Or Invalid Token'
+        '500':
+          description: 'Internal Error, Unexpected Error'
+    put:
+      security:
+        - auth0_jwk: []
+      operationId: putProjectSetting
+      tags:
+        - PROJECTSetting
+      description: Fetch PROJECT Setting
+      parameters:
+        - in: path
+          name: project_id
+          type: string
+          description: PROJECT Id
+          required: true
+        - in: body
+          name: projectSettings
+          schema:
+            type: object
+            properties:
+              projectSetting:
+                type: object
+                properties:
+                  target:
+                    type: object
+                  contactsPerAccount:
+                    type: object
+                  clientPoc:
+                    type: string
+                  priority:
+                    type: string
+                  status:
+                    type: string
+                  users:
+                    type: object
+                  name:
+                    type: string
+                  clientId:
+                    type: string
+                  projectTypeId:
+                    type: string
+                  receivedDate:
+                    type: object
+                  dueDate:
+                    type: object
+                  deliveryFileMapping:
+                    type: object
+                  contactExpiry:
+                    type: string
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: 'OK, Successfully return updated project setting'
+          schema:
+            $ref: '#/definitions/Projectsettings'
+        '400':
+          description: 'Bad Request, Missing Required Parameters in Request'
+        '401':
+          description: 'Unauthorized, Missing Or Invalid Token'
+        '500':
+          description: 'Internal Error, Unexpected Error'
+  '/projects/{project_id}/editSettings':
+    put:
+      security:
+        - auth0_jwk: []
+      operationId: editProjectSetting
+      tags:
+        - PROJECTSetting
+      description: Edit PROJECT Setting
+      parameters:
+        - in: path
+          name: project_id
+          type: string
+          description: PROJECT Id
+          required: true
+        - in: body
+          name: projectSettings
+          schema:
+            type: object
+            properties:
+              projectSetting:
+                type: object
+                properties:
+                  target:
+                    type: object
+                  contactsPerAccount:
+                    type: object
+                  clientPoc:
+                    type: string
+                  priority:
+                    type: string
+                  status:
+                    type: string
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: 'OK, Successfully return updated project setting'
+        '400':
+          description: 'Bad Request, Missing Required Parameters in Request'
+        '401':
+          description: 'Unauthorized, Missing Or Invalid Token'
+        '500':
+          description: 'Internal Error, Unexpected Error'
+  '/clients/{clientId}/projects/{projectId}/sharedFiles':
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getLinkableFile
+      tags:
+        - SharedFiles
+      description: >-
+        This route returns all Linkable File to Current Project using clientId
+        and projectId
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: clientId
+          type: string
+          required: true
+          description: Client Id
+        - in: path
+          name: projectId
+          type: string
+          required: true
+          description: Project Id
+      responses:
+        '200':
+          description: Returns all Linkable File of a project
+          schema:
+            $ref: '#/definitions/listFile'
+        '400':
+          description: If required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+    post:
+      security:
+        - auth0_jwk: []
+      operationId: linkSharedFiles
+      tags:
+        - SharedFiles
+      description: This is Link shared File route
+      consumes:
+        - application/json
+      parameters:
+        - in: path
+          name: clientId
+          type: string
+          required: true
+          description: Client Id
+        - in: path
+          name: projectId
+          type: string
+          required: true
+          description: Project Id
+        - in: body
+          name: body
+          schema:
+            type: object
+            properties:
+              filesId:
+                type: array
+                items:
+                  type: string
+      produces:
+        - application/json
+      responses:
+        '201':
+          description: returns the Link created
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  '/clients/{clientId}/projects/{projectId}/sharedFiles/{sharedFileId}':
+    delete:
+      security:
+        - auth0_jwk: []
+      operationId: deleteSharedFileLink
+      tags:
+        - SharedFiles
+      description: This Shared File route unlinks a file of project using project file id
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: clientId
+          type: string
+          required: true
+          description: Client Id
+        - in: path
+          name: projectId
+          type: string
+          required: true
+          description: Project Id
+        - in: path
+          name: sharedFileId
+          type: string
+          required: true
+          description: Delete File id
+      responses:
+        '200':
+          description: delete a shared file link from the project
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  '/project/{project_id}/specs':
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getSpec
+      tags:
+        - PROJECT spec
+      description: This project spec route returns specs of project
+      parameters:
+        - in: path
+          name: project_id
+          type: string
+          required: true
+          description: Project id
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Returns the project spcs list of a project
+          schema:
+            $ref: '#/definitions/ProjectSpec'
+        '400':
+          description: If required parameters not passes then sends the params error
+        '403':
+          description: If user is not authenticate then sends the user authentication error
+        '500':
+          description: if something fails internally then send error
+    post:
+      operationId: postSpec
+      security:
+        - auth0_jwk: []
+      tags:
+        - PROJECT spec
+      description: This project spec route adds specs of a project
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: project_id
+          type: string
+          required: true
+          description: Project id
+        - in: body
+          name: body
+          schema:
+            $ref: '#/definitions/ProjectSpecPost'
+          required: true
+          description: Project body
+      responses:
+        '200':
+          description: Updates a project spec object with id
+          schema:
+            $ref: '#/definitions/ProjectSpec'
+        '400':
+          description: If required parameters not passes then sends the params error
+        '403':
+          description: If user is not authenticate then sends the user authentication error
+        '500':
+          description: if something fails internally then send error
+  '/project/{project_id}/specs/{specs_id}':
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getOneSpec
+      tags:
+        - PROJECT spec
+      description: This project spec route returns a spec of project using project spec id
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: project_id
+          type: string
+          required: true
+          description: Project id
+        - in: path
+          name: specs_id
+          type: string
+          required: true
+          description: Project spec id
+      responses:
+        '200':
+          description: Returns a project spc of a project
+          schema:
+            $ref: '#/definitions/ProjectSpec'
+        '400':
+          description: If required parameters not passes then sends the params error
+        '403':
+          description: If user is not authenticate then sends the user authentication error
+        '500':
+          description: if something fails internally then send error
+    put:
+      security:
+        - auth0_jwk: []
+      operationId: putSpecRoute
+      tags:
+        - PROJECT spec
+      description: This project spec route adds specs of a project
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: project_id
+          type: string
+          required: true
+          description: Project id
+        - in: path
+          name: specs_id
+          type: string
+          required: true
+          description: Project spec id
+        - in: body
+          name: body
+          schema:
+            $ref: '#/definitions/ProjectSpecPost'
+          required: true
+          description: Project body
+      responses:
+        '200':
+          description: Updates a project spec object with id
+          schema:
+            $ref: '#/definitions/ProjectSpec'
+        '400':
+          description: If required parameters not passes then sends the params error
+        '403':
+          description: If user is not authenticate then sends the user authentication error
+        '500':
+          description: if something fails internally then send error
+    delete:
+      security:
+        - auth0_jwk: []
+      operationId: deleteSpecRoute
+      tags:
+        - PROJECT spec
+      description: This project spec route deletes a spec of project using project spec id
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: project_id
+          type: string
+          required: true
+          description: Project id
+        - in: path
+          name: specs_id
+          type: string
+          required: true
+          description: Project spec id
+      responses:
+        '201':
+          description: Deletes a project spc of a project
+        '400':
+          description: If required parameters not passes then sends the params error
+        '403':
+          description: If user is not authenticate then sends the user authentication error
+        '500':
+          description: if something fails internally then send error
+  '/projects/{projectId}/tasks':
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getTasks
+      tags:
+        - Tasks
+      description: This is task list route which fetch the task list
+      parameters:
+        - in: path
+          name: projectId
+          type: string
+          description: project id
+          required: true
+        - in: query
+          name: pageNo
+          type: integer
+          description: page number
+        - in: query
+          name: pageSize
+          type: integer
+          description: page sizes
+        - in: query
+          name: download
+          type: boolean
+          description: for download file
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the tasks list array for that given list
+          schema:
+            $ref: '#/definitions/taskListResponse'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+    post:
+      security:
+        - auth0_jwk: []
+      operationId: assignTasks
+      tags:
+        - Tasks
+      description: This is tasks create route which add job for tasks create
+      parameters:
+        - in: path
+          name: projectId
+          type: string
+          description: Project Id
+          required: true
+        - in: query
+          name: filter
+          type: string
+          description: >-
+            Create an object of the column on which the filter is to be applied
+            and send it by stringify
+        - in: query
+          name: sort
+          type: string
+          description: >-
+            Create an object of the column on which the sort is to be applied
+            and send it by stringify
+        - in: body
+          name: tasksAssignData
+          schema:
+            type: object
+            properties:
+              taskAllocationStrategy:
+                type: string
+              blockSize:
+                type: integer
+              allocationOf:
+                type: string
+              agents:
+                type: array
+                items:
+                  type: string
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: >-
+            if task assign job add successfully then Return 200 with a Success
+            Message
+        '400':
+          description: >-
+            if required parameters not passes or parameters value is incorrect
+            then sends the params error
+        '403':
+          description: If user does not have access to this route then send error
+        '500':
+          description: if something fails internally then send error
+  '/projects/{projectId}/tasks/{id}':
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getTaskById
+      tags:
+        - Tasks
+      description: This is get task route which fetch the task by taskId
+      parameters:
+        - in: path
+          name: projectId
+          type: string
+          description: Project Id
+          required: true
+        - in: path
+          name: id
+          type: string
+          description: Task Id
+          required: true
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the task Object
+          schema:
+            type: object
+            items:
+              $ref: '#/definitions/agentTask'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  /taskStats:
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getAgentTaskStatsForAgents
+      tags:
+        - Tasks
+      description: This is task stats route which fetch the task stats for agents
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the tasks list array for that given list
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/taskStats'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  '/api/v1/projects/{projectId}/tasks/stats':
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getAllTaskStatsOfAProject
+      tags:
+        - Tasks
+      description: This is task stats route which fetch the task stats of a project
+      parameters:
+        - in: path
+          name: projectId
+          type: string
+          description: Project Id
+          required: true
+        - in: query
+          name: filter
+          type: string
+          description: >-
+            Create an object of the column on which the filter is to be applied
+            and send it by stringify
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the tasks list array for that given list
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/taskStats'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  /tasks/tasksLiveCounts:
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getTasksLiveCounts
+      tags:
+        - Tasks
+      description: >-
+        This is task live counts route which fetch the task live counts of
+        contacts and accounts of an agents
+      parameters:
+        - in: query
+          name: projectId
+          type: string
+          description: Project Id
+          required: true
+        - in: query
+          name: countsToCalculate
+          type: array
+          items:
+            type: string
+          description: Counts To calculate for
+          required: true
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the object of counts of contacts and accounts of an agent
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  '/project/{projectId}/tasks/facets':
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getTaskUniqueFields
+      tags:
+        - Tasks Unique fields
+      description: This is task facet route which fetch the unique value for given field
+      parameters:
+        - in: path
+          name: projectId
+          type: integer
+          description: project id
+          required: true
+        - in: query
+          name: field
+          type: string
+          required: false
+        - in: query
+          name: type
+          type: string
+          required: false
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the unique list of chosen task field
+          schema:
+            $ref: '#/definitions/taskFacetResponse'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  /projects/taskTypes:
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getTaskTypes
+      tags:
+        - TASK Type
+      description: This is task type list route which fetch the all the task type
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the task type array
+          schema:
+            $ref: '#/definitions/taskType'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  '/project/{projectId}/taskType':
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getTaskTypeOfAProject
+      tags:
+        - TASK Type
+      description: This is task type route which fetch the the task type of a project
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: projectId
+          type: string
+          required: true
+          description: project id
+      responses:
+        '200':
+          description: returns the task type id
+          schema:
+            $ref: '#/definitions/taskTypeOfAProject'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  /projects/templates:
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getTemplates
+      tags:
+        - TEMPLATE
+      description: This is template list route which fetch the all the template
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the template array
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/template'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+    post:
+      security:
+        - auth0_jwk: []
+      operationId: createTemplate
+      tags:
+        - TEMPLATE
+      description: This is template list route which create the new template
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: templateInput
+          schema:
+            type: object
+            properties:
+              name:
+                type: string
+              config:
+                type: object
+      responses:
+        '201':
+          description: creates the new template
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  '/project/{projectId}/template':
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getTemplateOfAProject
+      tags:
+        - TEMPLATE
+      description: This is template route which fetch the the template of a project
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: projectId
+          type: string
+          required: true
+          description: project id
+      responses:
+        '200':
+          description: returns the template object
+          schema:
+            $ref: '#/definitions/template'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  '/projects/templates/{templateId}':
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getTemplateById
+      tags:
+        - TEMPLATE
+      description: This is template route which return the template
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: templateId
+          type: string
+          required: true
+          description: template id
+      responses:
+        '201':
+          description: send the template
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+    put:
+      security:
+        - auth0_jwk: []
+      operationId: updateTemplate
+      tags:
+        - TEMPLATE
+      description: This is template route which updates the template
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: templateId
+          type: string
+          required: true
+          description: template id
+        - in: body
+          name: templateInput
+          schema:
+            type: object
+            properties:
+              name:
+                type: string
+              config:
+                type: object
+      responses:
+        '201':
+          description: updates the templates
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  '/projects/templates/{templateId}/gridConfigs':
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getGridConfigsOfTemplate
+      tags:
+        - TEMPLATE
+      description: Return Grid Config JSON of Single Template
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: templateId
+          type: string
+          required: true
+          description: unique ID of Template
+      responses:
+        '200':
+          description: Return Grid Configuration JSON
+          schema:
+            type: object
+            properties:
+              headers:
+                type: array
+                items:
+                  type: object
+              footerProps:
+                type: object
+              gridOptions:
+                type: object
+        '400':
+          description: if required parameters not passes then sends the params error
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+                description: Error Message.
+              desc:
+                type: string
+                description: Error Description.
+        '500':
+          description: if something fails internally then send error
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+                description: Error Message.
+              desc:
+                type: string
+                description: Error Description.
+  /projects/types:
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getProjectTypes
+      tags:
+        - PROJECT Type
+      description: This is project type list route which fetch the all the project type
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the project type array
+          schema:
+            $ref: '#/definitions/projectType'
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  /rawQueries:
+    post:
+      security:
+        - auth0_jwk: []
+      operationId: postRawQueries
+      tags:
+        - RAWQUERIES
+      description: This is raw queries route
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: rawQueriesInput
+          schema:
+            type: object
+            properties:
+              sql:
+                type: string
+              replacements:
+                type: object
+      responses:
+        '200':
+          description: returns the raw queries result
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  /companyRevenue:
+    get:
+      operationId: getCompanyRevenueSearch
+      security:
+        - auth0_jwk: []
+      tags:
+        - Search
+      description: >-
+        This is CompanyRevenue list route which search the companyRevenue list
+        for that user
+      parameters:
+        - in: query
+          name: param
+          type: string
+          required: true
+          description: company revenue param
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the companyRevenue name list
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  /employeeCount:
+    get:
+      operationId: getEmployeeCountSerach
+      security:
+        - auth0_jwk: []
+      tags:
+        - Search
+      description: >-
+        This is employeeCount list route which search the employeeCount list for
+        that user
+      parameters:
+        - in: query
+          name: param
+          type: string
+          required: true
+          description: employee count param
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the employeeCount name list
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  /industry:
+    get:
+      operationId: getIndustrySearch
+      security:
+        - auth0_jwk: []
+      tags:
+        - Search
+      description: This is Industry list route which search the industry list for that user
+      parameters:
+        - in: query
+          name: param
+          type: string
+          required: true
+          description: industry param
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the industry name list
+        '500':
+          description: if something fails internally then send error
+  /jobDepartment:
+    get:
+      operationId: getJobDepartMentSerach
+      tags:
+        - Search
+      security:
+        - auth0_jwk: []
+      description: >-
+        This is Job Department list route which search the job department list
+        for that user
+      parameters:
+        - in: query
+          name: param
+          type: string
+          required: true
+          description: job department param
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the job department list
+        '500':
+          description: if something fails internally then send error
+  /jobFunction:
+    get:
+      operationId: getJobFunctionSerach
+      tags:
+        - Search
+      security:
+        - auth0_jwk: []
+      description: >-
+        This is Job Function list route which search the job function list for
+        that user
+      parameters:
+        - in: query
+          name: param
+          type: string
+          required: true
+          description: job function param
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the job function list
+        '500':
+          description: if something fails internally then send error
+  /jobLevel:
+    get:
+      operationId: getJoblevelSerch
+      tags:
+        - Search
+      security:
+        - auth0_jwk: []
+      description: >-
+        This is Job Level list route which search the job level list for that
+        user
+      parameters:
+        - in: query
+          name: param
+          type: string
+          required: true
+          description: job level param
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the job level list
+        '500':
+          description: if something fails internally then send error
+  /jobTitle:
+    get:
+      operationId: getJobTitleData
+      tags:
+        - Search
+      security:
+        - auth0_jwk: []
+      description: >-
+        This Route returns the JobTitle related JobDepartment, JobLevel, and
+        jobFunction
+      parameters:
+        - in: query
+          name: param
+          type: string
+          required: true
+          description: job title
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: 'returns the JobDepartment, JobLevel, and jobFunction'
+        '400':
+          description: if JobTitle not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  /naicsCode:
+    get:
+      operationId: getNaicsCodeSerach
+      tags:
+        - Search
+      security:
+        - auth0_jwk: []
+      description: >-
+        This is naics Code list route which search the naics Code list for that
+        user
+      parameters:
+        - in: query
+          name: param
+          type: string
+          required: true
+          description: naics Code param
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the naics code list
+        '500':
+          description: if something fails internally then send error
+  /segmentTechnology:
+    get:
+      operationId: getSegmentTechnologySerach
+      security:
+        - auth0_jwk: []
+      tags:
+        - Search
+      description: >-
+        This is segmentTechnology list route which search the segmentTechnology
+        list for that user
+      parameters:
+        - in: query
+          name: param
+          type: string
+          required: true
+          description: segment technology param
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the segmentTechnology name list
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  /sicCode:
+    get:
+      operationId: getSicCodeSerach
+      tags:
+        - Search
+      security:
+        - auth0_jwk: []
+      description: This is Sic Code list route which search the Sic Code list for that user
+      parameters:
+        - in: query
+          name: param
+          type: string
+          required: true
+          description: Sic Code param
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the Sic code list
+        '500':
+          description: if something fails internally then send error
+  /subIndustry:
+    get:
+      operationId: getSub-IndustrySearch
+      security:
+        - auth0_jwk: []
+      tags:
+        - Search
+      description: >-
+        This is Sub-Industry list route which search the Sub-Industry list for
+        that user
+      parameters:
+        - in: query
+          name: param
+          type: string
+          required: true
+          description: subIndustry param
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the Sub-Industry name list
+        '500':
+          description: if something fails internally then send error
+  /taskAllocationStrategies:
+    get:
+      operationId: getTaskAllocationStrategies
+      security:
+        - auth0_jwk: []
+      tags:
+        - Search
+      description: This is taskAllocationStrategies list route
+      parameters:
+        - in: query
+          name: param
+          type: string
+          description: taskAllocationStrategy param
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the Task Allocation Strategies
+        '500':
+          description: if something fails internally then send error
+  /userSearch:
+    get:
+      tags:
+        - Search
+      operationId: getUserSearch
+      security:
+        - auth0_jwk: []
+      description: This is User list route which search the user name list for that user
+      parameters:
+        - in: query
+          name: param
+          type: string
+          required: true
+          description: user name param
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the user name list
+        '400':
+          description: if required parameters not passes then sends the params error
+        '500':
+          description: if something fails internally then send error
+  /generateTask:
+    post:
+      security:
+        - auth0_jwk: []
+      operationId: taskGenerator
+      tags:
+        - TASK_GENERATOR
+      description: create task to task queue
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns status OK
+  /users:
+    get:
+      security:
+        - auth0_jwk: []
+      operationId: getUser
+      tags:
+        - Users
+      description: This is user list route which fetch the user list
+      parameters:
+        - in: query
+          name: role
+          type: string
+          description: user role
+        - in: query
+          name: download
+          type: boolean
+          description: get user list or download user data
+        - in: query
+          name: pageNo
+          type: integer
+          description: page number
+        - in: query
+          name: pageSize
+          type: integer
+          description: page sizes
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: returns the user list array
+          schema:
+            $ref: '#/definitions/users'
+        '500':
+          description: if something fails internally then send error
+definitions:
+  agentPreview:
+    properties:
+      taskId:
+        type: string
+      taskStatus:
+        type: string
+      projectId:
+        type: string
+      contactId:
+        type: string
+      date:
+        type: string
+      contactDisposeDate:
+        type: string
+      accountDisposeDate:
+        type: string
+      projectName:
+        type: string
+      researchStatus:
+        type: string
+      email:
+        type: string
+      companyName:
+        type: string
+      accountDisposition:
+        type: string
+      accountComments:
+        type: string
+      ccPersona(contactCustom1):
+        type: string
+      prefix:
+        type: string
+      firstName:
+        type: string
+      middleName:
+        type: string
+      lastName:
+        type: string
+      jobTitle:
+        type: string
+      department:
+        type: string
+      function:
+        type: string
+      level:
+        type: string
+      city:
+        type: string
+      state:
+        type: string
+      country:
+        type: string
+      phone:
+        type: string
+      directPhone:
+        type: string
+      genericEmail:
+        type: string
+      zb:
+        type: string
+      zbTime:
+        type: string
+      gmailStatus(domainStatus):
+        type: string
+      companyWebsite:
+        type: string
+      contactDisposition:
+        type: string
+      contactComments:
+        type: string
+      contactSource(others):
+        type: string
+      contactSource(linkedin):
+        type: string
+      companyLinkedinUrl:
+        type: string
+      cityHQ:
+        type: string
+      stateHQ:
+        type: string
+      countryHQ:
+        type: string
+      phoneHQ:
+        type: string
+      industry:
+        type: string
+      annualRevenue:
+        type: string
+      employeeSize:
+        type: string
+      employeeRange(LI):
+        type: string
+      employeeSize(LI):
+        type: string
+      employeeSource(LI):
+        type: string
+      employeeSize(Z+):
+        type: string
+      employeeSource(Z+):
+        type: string
+      finalBucket:
+        type: string
+      employeeSize(others):
+        type: string
+      source(employeeSizeOther):
+        type: string
+      address1:
+        type: string
+      address2:
+        type: string
+  agentPreviewResponse:
+    properties:
+      count:
+        type: number
+      rows:
+        type: array
+        items:
+          $ref: '#/definitions/agentPreview'
+  client:
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      pseudonym:
+        type: string
+      createdAt:
+        type: string
+      updatedAt:
+        type: string
+      createdBy:
+        type: string
+      updatedBy:
+        type: string
+  checkReuseResponse:
+    properties:
+      matchType:
+        type: string
+      matchWith:
+        type: object
+  dispositions:
+    properties:
+      id:
+        type: string
+      dispositionType:
+        type: string
+      dispositionLevel:
+        type: string
+      dispositionCategory:
+        type: string
+  patterns:
+    properties:
+      contacts:
+        type: integer
+      occurance:
+        type: number
+      pattern:
+        type: string
+  emailPattern:
+    properties:
+      contacts:
+        type: integer
+      occurance:
+        type: number
+      pattern:
+        type: string
+      source:
+        type: string
+      totalContact:
+        type: integer
+  postEmailPattern:
+    properties:
+      totalContact:
+        type: integer
+      patterns:
+        type: array
+        items:
+          $ref: '#/definitions/patterns'
+      email:
+        type: string
+      firstName:
+        type: string
+      middleName:
+        type: string
+      lastName:
+        type: string
+      website:
+        type: string
+      verifiedData:
+        type: object
+  dynamicEmailPattern:
+    properties:
+      email:
+        type: string
+      firstName:
+        type: string
+      middleName:
+        type: string
+      lastName:
+        type: string
+      website:
+        type: string
+      verifiedData:
+        type: object
+  zbValidationResponse:
+    properties:
+      address:
+        type: string
+      status:
+        type: string
+      sub_status:
+        type: string
+      free_email:
+        type: string
+      processed_at:
+        type: string
+  accountByDomain:
+    properties:
+      id:
+        type: string
+        format: uuid
+      name:
+        type: string
+      parentAccountName:
+        type: string
+      website:
+        type: string
+      domain:
+        type: string
+      type:
+        type: string
+      aliasName:
+        type: object
+      scrubbedAliasName:
+        type: array
+        items:
+          type: string
+      email:
+        type: string
+      industry:
+        type: string
+      subIndustry:
+        type: string
+      sicCode:
+        type: string
+      sicDescription:
+        type: string
+      naicsCode:
+        type: integer
+      naicsDescription:
+        type: string
+      employeeRange:
+        type: string
+      employeeSize:
+        type: integer
+      employeeSizeLI:
+        type: integer
+      employeeSizeZPlus:
+        type: integer
+      employeeSizeOthers:
+        type: integer
+      revenue:
+        type: number
+        format: float
+      revenueRange:
+        type: string
+      totalFunding:
+        type: number
+        format: float
+      latestFundingAmount:
+        type: number
+        format: float
+      itSpend:
+        type: number
+        format: float
+      liUrl:
+        type: string
+      description:
+        type: string
+      duns:
+        type: integer
+      technology:
+        type: array
+        items:
+          type: string
+      tags:
+        type: array
+        items:
+          type: string
+      state:
+        type: string
+      zipCode:
+        type: string
+      country:
+        type: string
+      disposition:
+        type: string
+      comments:
+        type: string
+      requestedBy:
+        type: string
+      foundedYear:
+        type: integer
+      lastRaisedAt:
+        type: string
+      seoDescription:
+        type: string
+      keywords:
+        type: array
+        items:
+          type: string
+      previousName:
+        type: string
+      previousWebsite:
+        type: string
+      previousType:
+        type: string
+      previousIndustry:
+        type: string
+      previousSubIndustry:
+        type: string
+      previousEmployeeSize:
+        type: integer
+      previousRevenue:
+        type: number
+        format: float
+      previousTechnology:
+        type: array
+        items:
+          type: string
+  account:
+    properties:
+      name:
+        type: string
+      domain:
+        type: string
+      industry:
+        type: string
+      disposition:
+        type: string
+      researchStatus:
+        type: string
+      stage:
+        type: string
+      complianceStatus:
+        type: string
+      createdAt:
+        type: string
+      potential:
+        type: string
+      isAssigned:
+        type: string
+  accountListResponse:
+    properties:
+      totalCount:
+        type: integer
+        format: int32
+        minimum: 0
+        description: total number of accounts
+      docs:
+        type: array
+        items:
+          $ref: '#/definitions/account'
+  domainData:
+    properties:
+      domain:
+        type: string
+  validateDomainData:
+    properties:
+      isValid:
+        type: boolean
+  contact:
+    properties:
+      id:
+        type: string
+        format: uuid
+      firstName:
+        type: string
+      lastName:
+        type: string
+      workEmail:
+        type: string
+      jobTitle:
+        type: string
+      jobLevel:
+        type: string
+      jobDepartment:
+        type: string
+      zbStatus:
+        type: string
+      disposition:
+        type: string
+      updatedAt:
+        type: string
+      researchStatus:
+        type: string
+      stage:
+        type: string
+      complianceStatus:
+        type: string
+      companyName:
+        type: string
+      contactFullName:
+        type: string
+      contactLabel:
+        type: string
+      domain:
+        type: string
+      accountLabel:
+        type: string
+      updatedBy:
+        type: string
+  contactListResponse:
+    properties:
+      totalCount:
+        type: integer
+        format: int32
+        minimum: 0
+        description: total number of contacts
+      docs:
+        type: array
+        items:
+          $ref: '#/definitions/contact'
+  revenueRangeEmployeeSizeMapping:
+    properties:
+      id:
+        type: string
+      revenueRange:
+        type: string
+      employeeSize:
+        type: number
+  revenueRangeEmployeeSizeMappingResponse:
+    items:
+      $ref: '#/definitions/revenueRangeEmployeeSizeMapping'
+  employeeRangeRevenueMapping:
+    properties:
+      id:
+        type: string
+      employeeRange:
+        type: string
+      revenue:
+        type: number
+  employeeRangeRevenueMappingResponse:
+    items:
+      $ref: '#/definitions/employeeRangeRevenueMapping'
+  stat:
+    properties:
+      id:
+        type: string
+        format: uuid
+      fileName:
+        type: string
+      category:
+        type: string
+      subCategory:
+        type: string
+      totalRecords:
+        type: string
+      successCounts:
+        type: string
+      failedCounts:
+        type: string
+      systemMappedCount:
+        type: string
+      newlyMappedCount:
+        type: string
+      missingRequiredColumnCount:
+        type: string
+      startTime:
+        type: string
+        format: date-time
+      endTime:
+        type: string
+        format: date-time
+      createdBy:
+        type: string
+      createdAt:
+        type: string
+        format: date-time
+      updatedAt:
+        type: string
+        format: date-time
+  importErrorReportObj:
+    properties:
+      category:
+        type: string
+      operationName:
+        type: string
+      count:
+        type: integer
+      unresolvedErrorCount:
+        type: integer
+  importErrorFileReportObj:
+    properties:
+      id:
+        type: string
+      category:
+        type: string
+      name:
+        type: string
+      operationName:
+        type: string
+      totalCount:
+        type: integer
+      unresolvedErrorCount:
+        type: integer
+  masterJob:
+    properties:
+      fileName:
+        type: string
+      jobName:
+        type: string
+      fileType:
+        type: string
+      jobId:
+        type: string
+      status:
+        type: string
+      totalProcessed:
+        type: string
+      imported:
+        type: string
+      failed:
+        type: string
+      createdAt:
+        type: string
+      updatedAt:
+        type: string
+  masterJobSignedURL:
+    properties:
+      url:
+        type: string
+  masterJobErrors:
+    properties:
+      id:
+        type: string
+      errorDesc:
+        type: string
+      rowContent:
+        type: object
+      errorCount:
+        type: integer
+      type:
+        type: string
+      rowIndex:
+        type: integer
+      chunkIndex:
+        type: integer
+      createdAt:
+        type: string
+      updatedAt:
+        type: string
+      jobId:
+        type: string
+  masterJobListResponse:
+    properties:
+      totalCount:
+        type: integer
+        format: int32
+        minimum: 0
+        description: total number of jobs
+      docs:
+        type: array
+        items:
+          $ref: '#/definitions/masterJob'
+  technologies:
+    type: array
+    items:
+      type: string
+  verifyAccounts:
+    properties:
+      name:
+        type: string
+      website:
+        type: string
+      domain:
+        type: string
+      tokens:
+        type: string
+      type:
+        type: string
+      aliasName:
+        type: object
+      email:
+        type: string
+      industry:
+        type: string
+      subIndustry:
+        type: string
+      sicCode:
+        type: number
+      sicDescription:
+        type: string
+      naicsCode:
+        type: number
+      naicsDescription:
+        type: string
+      employeeRange:
+        type: string
+      employeeSize:
+        type: number
+      employeeSizeLI:
+        type: number
+      employeeSizeZPlus:
+        type: number
+      employeeSizeOthers:
+        type: number
+      revenue:
+        type: number
+      revenueRange:
+        type: string
+      totalFunding:
+        type: number
+      itSpend:
+        type: number
+      liUrl:
+        type: string
+      description:
+        type: string
+      duns:
+        type: number
+      technology:
+        type: string
+      tags:
+        type: string
+      location:
+        type: object
+  verifyAccountListResponse:
+    properties:
+      totalCount:
+        type: integer
+        format: int32
+        minimum: 0
+        description: total number of verifyAccounts
+      docs:
+        type: array
+        items:
+          $ref: '#/definitions/verifyAccounts'
+  verifyContacts:
+    properties:
+      name:
+        type: string
+      website:
+        type: string
+      domain:
+        type: string
+      tokens:
+        type: string
+      type:
+        type: string
+      aliasName:
+        type: object
+      email:
+        type: string
+      industry:
+        type: string
+      subIndustry:
+        type: string
+      sicCode:
+        type: number
+      sicDescription:
+        type: string
+      naicsCode:
+        type: number
+      naicsDescription:
+        type: string
+      employeeRange:
+        type: string
+      employeeSize:
+        type: number
+      employeeSizeLI:
+        type: number
+      employeeSizeZPlus:
+        type: number
+      employeeSizeOthers:
+        type: number
+      revenue:
+        type: number
+      revenueRange:
+        type: string
+      totalFunding:
+        type: number
+      itSpend:
+        type: number
+      liUrl:
+        type: string
+      description:
+        type: string
+      duns:
+        type: number
+      technology:
+        type: string
+      tags:
+        type: string
+      location:
+        type: object
+  verifyContactListResponse:
+    properties:
+      totalCount:
+        type: integer
+        format: int32
+        minimum: 0
+        description: total number of verifyContacts
+      docs:
+        type: array
+        items:
+          $ref: '#/definitions/verifyContacts'
+  accounts:
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      researchStatus:
+        type: string
+      callingStatus:
+        type: string
+      complianceStatus:
+        type: string
+      stage:
+        type: string
+      zoomInfoName:
+        type: string
+      domain:
+        type: string
+      website:
+        type: string
+      description:
+        type: string
+      segment_technology:
+        type: string
+      nsId:
+        type: string
+      zoomInfoContactId:
+        type: string
+      sicCode:
+        type: string
+      naicsCode:
+        type: string
+      sicDescription:
+        type: string
+      source:
+        type: string
+      employeeSourceLI:
+        type: string
+      employeeSourceZ_plus:
+        type: string
+      phoneHQ:
+        type: string
+      email:
+        type: string
+      industry:
+        type: string
+      subIndustry:
+        type: string
+      locationLI:
+        type: string
+      addressHQ:
+        type: object
+      linkedInUrl:
+        type: string
+      employeeSize:
+        type: object
+      employeeSizeLI:
+        type: string
+      employeeSizeZ_plus:
+        type: string
+      employeeSizeFinalBucket:
+        type: string
+      employeeSize_others:
+        type: string
+      employeeRangeLI:
+        type: string
+      disposition:
+        type: string
+      comments:
+        type: string
+      revenue:
+        type: object
+      revenue_M_B_K:
+        type: string
+      upperRevenue:
+        type: string
+      lowerRevenue:
+        type: string
+      upperEmployeeSize:
+        type: string
+      lowerEmployeeSize:
+        type: string
+      ProjectId:
+        type: string
+      updatedAt:
+        type: string
+      createdAt:
+        type: string
+      createdBy:
+        type: string
+      updatedBy:
+        type: string
+      custom1:
+        type: string
+      custom2:
+        type: string
+      custom3:
+        type: string
+      custom4:
+        type: string
+      custom5:
+        type: string
+      custom6:
+        type: string
+      custom7:
+        type: string
+      custom8:
+        type: string
+      custom9:
+        type: string
+      custom10:
+        type: string
+      custom11:
+        type: string
+      custom12:
+        type: string
+      custom13:
+        type: string
+      custom14:
+        type: string
+      custom15:
+        type: string
+  accountDispositionResponse:
+    properties:
+      isDisposed:
+        type: boolean
+  accountDisposition:
+    properties:
+      data:
+        type: array
+        items:
+          $ref: '#/definitions/accountDispositionData'
+      totalCount:
+        type: integer
+  accountStage:
+    properties:
+      data:
+        type: array
+        items:
+          $ref: '#/definitions/accountStageData'
+      totalCount:
+        type: integer
+  accountDispositionData:
+    properties:
+      disposition:
+        type: string
+      count:
+        type: integer
+  accountStageData:
+    properties:
+      stage:
+        type: string
+      count:
+        type: integer
+  accountStats:
+    properties:
+      dispositions:
+        type: object
+        $ref: '#/definitions/accountDisposition'
+      stages:
+        type: object
+        $ref: '#/definitions/accountStage'
+  accountCheckResponse:
+    properties:
+      matchType:
+        type: string
+      matchCase:
+        type: string
+      matchWith:
+        type: array
+  accountDispositionsResponse:
+    properties:
+      disposition:
+        type: array
+  contacts:
+    properties:
+      id:
+        type: string
+      researchStatus:
+        type: string
+      callingStatus:
+        type: string
+      complianceStatus:
+        type: string
+      prefix:
+        type: string
+      firstName:
+        type: string
+      middleName:
+        type: string
+      lastName:
+        type: string
+      address:
+        type: object
+      email:
+        type: string
+      genericEmail:
+        type: string
+      phone:
+        type: string
+      directPhone:
+        type: string
+      jobTitle:
+        type: string
+      jobLevel:
+        type: string
+      jobDepartment:
+        type: string
+      linkedInUrl:
+        type: string
+      stage:
+        type: string
+      AccountId:
+        type: string
+      website:
+        type: string
+      comments:
+        type: string
+      source:
+        type: string
+      nsId:
+        type: object
+      zoomInfoContactId:
+        type: string
+      screenshot:
+        type: string
+      functions:
+        type: string
+      disposition:
+        type: string
+      zb:
+        type: string
+      gmailStatus:
+        type: string
+      mailTesterStatus:
+        type: string
+      handles:
+        type: string
+      updatedAt:
+        type: string
+      createdBy:
+        type: string
+      createdAt:
+        type: string
+      updatedBy:
+        type: string
+      custom1:
+        type: string
+      custom2:
+        type: string
+      custom3:
+        type: string
+      custom4:
+        type: string
+      custom5:
+        type: string
+      custom6:
+        type: string
+      custom7:
+        type: string
+      custom8:
+        type: string
+      custom9:
+        type: string
+      custom10:
+        type: string
+      custom11:
+        type: string
+      custom12:
+        type: string
+      custom13:
+        type: string
+      custom14:
+        type: string
+      custom15:
+        type: string
+  contactsPost:
+    properties:
+      researchStatus:
+        type: string
+      callingStatus:
+        type: string
+      complianceStatus:
+        type: string
+      prefix:
+        type: string
+      firstName:
+        type: string
+      middleName:
+        type: string
+      lastName:
+        type: string
+      address:
+        type: object
+      email:
+        type: string
+      genericEmail:
+        type: string
+      phone:
+        type: string
+      directPhone:
+        type: string
+      jobTitle:
+        type: string
+      jobLevel:
+        type: string
+      jobDepartment:
+        type: string
+      linkedInUrl:
+        type: string
+      stage:
+        type: string
+      AccountId:
+        type: string
+      website:
+        type: string
+      comments:
+        type: string
+      source:
+        type: string
+      nsId:
+        type: object
+      zoomInfoContactId:
+        type: string
+      screenshot:
+        type: string
+      functions:
+        type: string
+      disposition:
+        type: string
+      zb:
+        type: string
+      gmailStatus:
+        type: string
+      mailTesterStatus:
+        type: string
+      handles:
+        type: string
+      updatedAt:
+        type: string
+      createdBy:
+        type: string
+      createdAt:
+        type: string
+      updatedBy:
+        type: string
+      custom1:
+        type: string
+      custom2:
+        type: string
+      custom3:
+        type: string
+      custom4:
+        type: string
+      custom5:
+        type: string
+      custom6:
+        type: string
+      custom7:
+        type: string
+      custom8:
+        type: string
+      custom9:
+        type: string
+      custom10:
+        type: string
+      custom11:
+        type: string
+      custom12:
+        type: string
+      custom13:
+        type: string
+      custom14:
+        type: string
+      custom15:
+        type: string
+  contactCheckResponse:
+    properties:
+      isSuppressed:
+        type: boolean
+      suppressedWith:
+        type: object
+      suppressionMatchCase:
+        type: string
+      isDuplicate:
+        type: boolean
+      duplicateMatchCase:
+        type: string
+      duplicateWith:
+        type: object
+  contactsStats:
+    properties:
+      researchStatus:
+        type: object
+        $ref: '#/definitions/contactResearchStatus'
+      stage:
+        type: object
+        $ref: '#/definitions/contactStage'
+  contactResearchStatus:
+    properties:
+      data:
+        type: array
+        items:
+          $ref: '#/definitions/contactResearchStatusData'
+      totalCount:
+        type: integer
+  contactStage:
+    properties:
+      data:
+        type: array
+        items:
+          $ref: '#/definitions/contactStageData'
+      totalCount:
+        type: integer
+  contactResearchStatusData:
+    properties:
+      researchStatus:
+        type: string
+      count:
+        type: integer
+  contactStageData:
+    properties:
+      stage:
+        type: string
+      count:
+        type: integer
+  contactFacetResponse:
+    properties:
+      disposition:
+        type: array
+      updatedBy:
+        type: array
+  file:
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      type:
+        type: string
+        enum:
+          - Suppression
+          - Inclusion
+          - Supporting Document
+          - Import
+          - In Progress
+      mapping:
+        type: object
+      operationName:
+        type: string
+        enum:
+          - accountSuppression
+          - contactSuppression
+          - accountInclusion
+          - contactInclusion
+          - accountImport
+          - contactImport
+          - acccountInProgress
+          - contactInProgress
+      ProjectId:
+        type: string
+  fileUpload:
+    properties:
+      fileId:
+        type: string
+      fileName:
+        type: string
+      jobId:
+        type: string
+  fileFacetResponse:
+    properties:
+      client:
+        type: array
+      createdBy:
+        type: array
+  seqObjectParams:
+    properties:
+      model:
+        type: string
+      query:
+        type: string
+  seqObject:
+    type: object
+  job:
+    properties:
+      jobId:
+        type: string
+      status:
+        type: string
+      operation_name:
+        type: string
+      result_processed:
+        type: integer
+      result_imported:
+        type: integer
+      result_errored:
+        type: integer
+      createdAt:
+        type: string
+      updatedAt:
+        type: string
+      fileId:
+        type: string
+      fileName:
+        type: string
+  jobErrors:
+    properties:
+      id:
+        type: string
+      error_desc:
+        type: string
+      row_content:
+        type: object
+      error_count:
+        type: integer
+      type:
+        type: string
+      row_index:
+        type: integer
+      chunk_index:
+        type: integer
+      createdAt:
+        type: string
+      updatedAt:
+        type: string
+      JobId:
+        type: string
+  signedURL:
+    properties:
+      url:
+        type: string
+  taskAllocationTempData:
+    properties:
+      id:
+        type: string
+      accountName:
+        type: string
+      accountWebsite:
+        type: string
+      accountDomain:
+        type: string
+      agentName:
+        type: string
+  getAllTaskAllocationTempDataResponse:
+    properties:
+      count:
+        type: number
+      rows:
+        type: array
+        items:
+          $ref: '#/definitions/taskAllocationTempData'
+  excludedJobTitle:
+    type: string
+    description: An excluded job title
+  errorResponse:
+    properties:
+      error:
+        type: string
+      description:
+        type: string
+  masterImportResponse:
+    properties:
+      fileId:
+        type: string
+      fileName:
+        type: string
+      jobId:
+        type: string
+  tempMasterContacts:
+    properties:
+      name:
+        type: string
+      accountName:
+        type: string
+      email:
+        type: string
+      emailStatus:
+        type: string
+      jobTitle:
+        type: string
+      jobLevel:
+        type: string
+      linkedInUrl:
+        type: string
+      otherSourceLink:
+        type: string
+  Project:
+    properties:
+      id:
+        type: string
+        description: project id
+      name:
+        type: string
+        description: name of project
+      ClientId:
+        type: string
+        description: client id
+      receivedDate:
+        type: string
+        description: date of recived
+      startDate:
+        type: string
+        description: start date
+      deliveryDate:
+        type: string
+        description: delivery date
+      description:
+        type: string
+      dueDate:
+        type: string
+        description: due date
+      projectTypeId:
+        type: string
+        description: project type id
+      templateId:
+        type: string
+        description: template id
+      createdBy:
+        type: string
+        description: created by which user
+      updatedBy:
+        type: string
+        description: updated by which user
+      createdAt:
+        type: string
+        description: created at what time
+      updatedAt:
+        type: string
+        description: updated at what time
+      fieldLabelProject:
+        type: string
+      fieldLabelAccount:
+        type: string
+      fieldLabelContact:
+        type: string
+      fieldLabelUser:
+        type: string
+      ProjectSetting:
+        $ref: '#/definitions/Projectsettings'
+      Client:
+        $ref: '#/definitions/client'
+      Users:
+        $ref: '#/definitions/Users'
+  ProjectUser:
+    properties:
+      ProjectId:
+        type: string
+        description: project id
+      UserId:
+        type: string
+        description: user id
+      userLevel:
+        type: string
+        description: level of user
+      createdBy:
+        type: string
+        description: created by which user
+      updatedBy:
+        type: string
+        description: updated by which user
+      createdAt:
+        type: string
+        description: created at what time
+      updatedAt:
+        type: string
+        description: updated at what time
+  Users:
+    properties:
+      ProjectUser:
+        $ref: '#/definitions/ProjectUser'
+      id:
+        type: string
+        description: user id
+      firstName:
+        type: string
+        description: user first name
+      lastName:
+        type: string
+        description: user last name
+      role:
+        type: string
+        description: role of user
+      gmailId:
+        type: string
+      userName:
+        type: string
+        description: username of user
+      createdBy:
+        type: string
+        description: created by which user
+      updatedBy:
+        type: string
+        description: updated by which user
+      createdAt:
+        type: string
+        description: created at what time
+      updatedAt:
+        type: string
+        description: updated at what time
+      custom1:
+        type: string
+      custom2:
+        type: string
+      custom3:
+        type: string
+      custom4:
+        type: string
+      custom5:
+        type: string
+      custom6:
+        type: string
+      custom7:
+        type: string
+      custom8:
+        type: string
+      custom9:
+        type: string
+      custom10:
+        type: string
+      custom11:
+        type: string
+      custom12:
+        type: string
+      custom13:
+        type: string
+      custom14:
+        type: string
+      custom15:
+        type: string
+  ProjectGet:
+    properties:
+      projectId:
+        type: string
+        description: project id
+      projectName:
+        type: string
+        description: name of project
+      clientId:
+        type: string
+        description: client id
+      client:
+        type: string
+        description: name of client
+      createdAt:
+        type: string
+        description: created at
+      dueDate:
+        type: string
+        description: due date
+      updatedAt:
+        type: string
+        description: updated at
+      status:
+        type: string
+        description: project status
+      targetAccount:
+        type: string
+        description: number of target accounts
+      targetContact:
+        type: string
+        description: number of target contacts
+  ProjectGetAll:
+    properties:
+      totalCount:
+        type: integer
+        format: int32
+        minimum: 0
+        description: total number of projects
+      docs:
+        type: array
+        items:
+          $ref: '#/definitions/ProjectGet'
+  ProjectPost:
+    properties:
+      id:
+        type: string
+        description: project id
+      name:
+        type: string
+        description: name of project
+      ClientId:
+        type: string
+        description: client id
+      receivedDate:
+        type: string
+        description: date of recived
+      startDate:
+        type: string
+        description: start date
+      deliveryDate:
+        type: string
+        description: delivery date
+      description:
+        type: string
+      dueDate:
+        type: string
+        description: due date
+      ProjectSetting:
+        $ref: '#/definitions/ProjectsettingsPost'
+      ProjectType:
+        $ref: '#/definitions/projectType'
+    required:
+      - id
+      - name
+      - ClientId
+      - dueDate
+  Projectsettings:
+    properties:
+      id:
+        type: string
+      target:
+        type: object
+      deliveryFileMapping:
+        type: object
+      contactsPerAccount:
+        type: string
+      clientPoc:
+        type: string
+      priority:
+        type: string
+      status:
+        type: string
+      createdAt:
+        type: string
+      updatedAt:
+        type: string
+      ProjectId:
+        type: string
+      createdBy:
+        type: string
+      updatedBy:
+        type: string
+  ProjectsettingsPost:
+    properties:
+      id:
+        type: string
+      target:
+        type: object
+      contactsPerAccount:
+        type: string
+      clientPoc:
+        type: string
+      deliveryFileMapping:
+        type: object
+      priority:
+        type: string
+      status:
+        type: string
+  listFile:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+  ProjectSpec:
+    type: object
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      values:
+        type: object
+      comments:
+        type: string
+      createdAt:
+        type: string
+      updatedAt:
+        type: string
+      ProjectId:
+        type: string
+      createdBy:
+        type: string
+      updatedBy:
+        type: string
+  ProjectSpecPost:
+    type: object
+    properties:
+      projectSpec:
+        type: object
+        properties:
+          name:
+            type: string
+          values:
+            type: object
+          comments:
+            type: string
+  managerTask:
+    properties:
+      accountName:
+        type: string
+      website:
+        type: string
+      userName:
+        type: string
+      status:
+        type: string
+      priority:
+        type: string
+      accountDisposition:
+        type: string
+      contactDisposition:
+        type: string
+      accountFinalDisposition:
+        type: string
+      contactEmail:
+        type: string
+      activity:
+        type: string
+      potential:
+        type: number
+      taskCreatedDate:
+        type: string
+  agentTask:
+    properties:
+      id:
+        type: string
+      description:
+        type: string
+      dueDate:
+        type: string
+      status:
+        type: string
+      priority:
+        type: string
+      completedDate:
+        type: string
+      TaskType:
+        properties:
+          id:
+            type: string
+          type:
+            type: string
+      Accounts:
+        type: array
+        items:
+          $ref: '#/definitions/taskAccount'
+      Contacts:
+        type: array
+        items:
+          $ref: '#/definitions/taskContact'
+      User:
+        properties:
+          id:
+            type: string
+          firstName:
+            type: string
+          lastName:
+            type: string
+          userName:
+            type: string
+  taskAccount:
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+  taskContact:
+    properties:
+      id:
+        type: string
+      firstName:
+        type: string
+      middleName:
+        type: string
+      lastName:
+        type: string
+  taskStats:
+    properties:
+      status:
+        type: string
+      count:
+        type: number
+  managerTaskListResponse:
+    description: >-
+      If the user is an manager then the object of this structure is sent in
+      response
+    properties:
+      totalCount:
+        type: integer
+        format: int32
+        minimum: 0
+        description: total number of tasks
+      docs:
+        type: array
+        items:
+          $ref: '#/definitions/managerTask'
+  agentTaskList:
+    description: >-
+      If the user is an agent then the object of this structure is sent in
+      response
+    properties:
+      totalCount:
+        type: integer
+        format: int32
+        minimum: 0
+        description: total number of tasks
+      docs:
+        type: array
+        items:
+          $ref: '#/definitions/agentTask'
+  taskListResponse:
+    properties:
+      agent:
+        $ref: '#/definitions/agentTaskList'
+      manager:
+        $ref: '#/definitions/managerTaskListResponse'
+  taskFacetResponse:
+    properties:
+      disposition:
+        type: array
+  taskType:
+    properties:
+      id:
+        type: string
+        description: task type id
+      type:
+        type: string
+        description: task type name
+  taskTypeOfAProject:
+    properties:
+      id:
+        type: string
+        description: task type id
+  template:
+    properties:
+      id:
+        type: string
+        description: template id
+      name:
+        type: string
+        description: template name
+      config:
+        type: object
+        description: template configuration
+  projectType:
+    properties:
+      id:
+        type: string
+        description: project id
+      type:
+        type: string
+        description: project type name
+  users:
+    properties:
+      id:
+        type: string
+      userName:
+        type: string
+      firstName:
+        type: string
+      lastName:
+        type: string
+      role:
+        type: string
+      gmailId:
+        type: string
+responses: {}
+parameters: {}
+securityDefinitions:
+  auth0_jwk:
+    authorizationUrl: ''
+    flow: implicit
+    type: oauth2
+    x-google-issuer: 'https://innovation.auth0.com/'
+    x-google-jwks_uri: 'https://innovation.auth0.com/.well-known/jwks.json'
+    x-google-audiences: 6ijzoq6W3NTIeXPhoFutUpcBXin4wxND
+tags:
+  - name: PROJECT Job Titles
+  - name: PROJECT spec
+  - name: Search
+    description: search value
+schemes:
+  - http
+  - https
+x-google-backend:
+  address: 'localhost:20100'

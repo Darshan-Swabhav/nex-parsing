@@ -1,0 +1,15 @@
+#!/bin/bash
+
+parentdir="$(dirname "$PWD")"
+echo $parentdir
+echo ">>>>>>>>>>>>>"
+for entry in "$PWD"/*
+do
+  echo "$entry"
+done
+echo ">>>>>>>>>>>>>"
+CLOUD_RUN_ADDRESS=$(grep cloud_run_service_url /workspace/terraform_output | awk '{print $3}' | tr -d '"')
+npm install swagger-jsdoc write-yaml
+npm install convict@^1.5.0  throw.js@^3.0.1  uuidv4@^6.2.7  winston@^3.3.3
+npm install git+https://ffe8c114b3a27bc3cb3cc62f0efd22a6a5bd5e95:x-oauth-basic@github.com/nexsalesdev/nodeUtility.git#v2.1.0
+CLOUD_RUN_ADDRESS=$CLOUD_RUN_ADDRESS npm run apiDocs 

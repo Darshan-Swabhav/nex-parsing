@@ -1,0 +1,5927 @@
+[
+  {
+    "id": "9999",
+    "title": "Nonclassifiable Establishments",
+    "fullTitle": "9999 - Nonclassifiable Establishments"
+  },
+  {
+    "id": "111110",
+    "title": "Soybean Farming",
+    "fullTitle": "111110 - Soybean Farming"
+  },
+  {
+    "id": "111120",
+    "title": "Oilseed (except Soybean) Farming",
+    "fullTitle": "111120 - Oilseed (except Soybean) Farming"
+  },
+  {
+    "id": "111130",
+    "title": "Dry Pea and Bean Farming",
+    "fullTitle": "111130 - Dry Pea and Bean Farming"
+  },
+  {
+    "id": "111140",
+    "title": "Wheat Farming",
+    "fullTitle": "111140 -Wheat Farming "
+  },
+  {
+    "id": "111150",
+    "title": "Corn Farming",
+    "fullTitle": "111150 Corn Farming- "
+  },
+  {
+    "id": "111160",
+    "title": "Rice Farming",
+    "fullTitle": "111160 Rice Farming- "
+  },
+  {
+    "id": "111191",
+    "title": "Oilseed and Grain Combination Farming",
+    "fullTitle": "111191 - Oilseed and Grain Combination Farming"
+  },
+  {
+    "id": "111199",
+    "title": "All Other Grain Farming",
+    "fullTitle": "111199 - All Other Grain Farming"
+  },
+  {
+    "id": "111211",
+    "title": "Potato Farming",
+    "fullTitle": "111211 - Potato Farming"
+  },
+  {
+    "id": "111219",
+    "title": "Other Vegetable (except Potato) and Melon Farming",
+    "fullTitle": "111219 - Other Vegetable (except Potato) and Melon Farming"
+  },
+  {
+    "id": "111310",
+    "title": "Orange Groves",
+    "fullTitle": "111310 -Orange Groves "
+  },
+  {
+    "id": "111320",
+    "title": "Citrus (except Orange) Groves",
+    "fullTitle": "111320 - Citrus (except Orange) Groves"
+  },
+  {
+    "id": "111331",
+    "title": "Apple Orchards",
+    "fullTitle": "111331 - Apple Orchards"
+  },
+  {
+    "id": "111332",
+    "title": "Grape Vineyards",
+    "fullTitle": "111332 - Grape Vineyards"
+  },
+  {
+    "id": "111333",
+    "title": "Strawberry Farming",
+    "fullTitle": "111333 - Strawberry Farming"
+  },
+  {
+    "id": "111334",
+    "title": "Berry (except Strawberry) Farming",
+    "fullTitle": "111334 - Berry (except Strawberry) Farming"
+  },
+  {
+    "id": "111335",
+    "title": "Tree Nut Farming",
+    "fullTitle": "111335 - Tree Nut Farming"
+  },
+  {
+    "id": "111336",
+    "title": "Fruit and Tree Nut Combination Farming",
+    "fullTitle": "111336 - Fruit and Tree Nut Combination Farming"
+  },
+  {
+    "id": "111339",
+    "title": "Other Noncitrus Fruit Farming",
+    "fullTitle": "111339 - Other Noncitrus Fruit Farming"
+  },
+  {
+    "id": "111411",
+    "title": "Mushroom Production",
+    "fullTitle": "111411 - Mushroom Production"
+  },
+  {
+    "id": "111419",
+    "title": "Other Food Crops Grown Under Cover",
+    "fullTitle": "111419 - Other Food Crops Grown Under Cover"
+  },
+  {
+    "id": "111421",
+    "title": "Nursery and Tree Production",
+    "fullTitle": "111421 - Nursery and Tree Production"
+  },
+  {
+    "id": "111422",
+    "title": "Floriculture Production",
+    "fullTitle": "111422 - Floriculture Production"
+  },
+  {
+    "id": "111910",
+    "title": "Tobacco Farming",
+    "fullTitle": "111910 - Tobacco Farming"
+  },
+  {
+    "id": "111920",
+    "title": "Cotton Farming",
+    "fullTitle": "111920 - Cotton Farming"
+  },
+  {
+    "id": "111930",
+    "title": "Sugarcane Farming",
+    "fullTitle": "111930 - Sugarcane Farming"
+  },
+  {
+    "id": "111940",
+    "title": "Hay Farming",
+    "fullTitle": "111940Hay Farming - "
+  },
+  {
+    "id": "111991",
+    "title": "Sugar Beet Farming",
+    "fullTitle": "111991 - Sugar Beet Farming"
+  },
+  {
+    "id": "111992",
+    "title": "Peanut Farming",
+    "fullTitle": "111992 - Peanut Farming"
+  },
+  {
+    "id": "111998",
+    "title": "All Other Miscellaneous Crop Farming",
+    "fullTitle": "111998 - All Other Miscellaneous Crop Farming"
+  },
+  {
+    "id": "112111",
+    "title": "Beef Cattle Ranching and Farming",
+    "fullTitle": "112111 - Beef Cattle Ranching and Farming"
+  },
+  {
+    "id": "112112",
+    "title": "Cattle Feedlots",
+    "fullTitle": "112112 - Cattle Feedlots"
+  },
+  {
+    "id": "112120",
+    "title": "Dairy Cattle and Milk Production",
+    "fullTitle": "112120 - Dairy Cattle and Milk Production"
+  },
+  {
+    "id": "112130",
+    "title": "Dual-Purpose Cattle Ranching and Farming",
+    "fullTitle": "112130 - Dual-Purpose Cattle Ranching and Farming"
+  },
+  {
+    "id": "112210",
+    "title": "Hog and Pig Farming",
+    "fullTitle": "112210 - Hog and Pig Farming"
+  },
+  {
+    "id": "112310",
+    "title": "Chicken Egg Production",
+    "fullTitle": "112310 - Chicken Egg Production"
+  },
+  {
+    "id": "112320",
+    "title": "Broilers and Other Meat Type Chicken Production",
+    "fullTitle": "112320 - Broilers and Other Meat Type Chicken Production"
+  },
+  {
+    "id": "112330",
+    "title": "Turkey Production",
+    "fullTitle": "112330 - Turkey Production"
+  },
+  {
+    "id": "112340",
+    "title": "Poultry Hatcheries",
+    "fullTitle": "112340 - Poultry Hatcheries"
+  },
+  {
+    "id": "112390",
+    "title": "Other Poultry Production",
+    "fullTitle": "112390 - Other Poultry Production"
+  },
+  {
+    "id": "112410",
+    "title": "Sheep Farming",
+    "fullTitle": "112410 -Sheep Farming "
+  },
+  {
+    "id": "112420",
+    "title": "Goat Farming",
+    "fullTitle": "112420 Goat Farming- "
+  },
+  {
+    "id": "112511",
+    "title": "Finfish Farming and Fish Hatcheries",
+    "fullTitle": "112511 - Finfish Farming and Fish Hatcheries"
+  },
+  {
+    "id": "112512",
+    "title": "Shellfish Farming",
+    "fullTitle": "112512 - Shellfish Farming"
+  },
+  {
+    "id": "112519",
+    "title": "Other Aquaculture",
+    "fullTitle": "112519 - Other Aquaculture"
+  },
+  {
+    "id": "112910",
+    "title": "Apiculture",
+    "fullTitle": "11291Apiculture0 - "
+  },
+  {
+    "id": "112920",
+    "title": "Horses and Other Equine Production",
+    "fullTitle": "112920 - Horses and Other Equine Production"
+  },
+  {
+    "id": "112930",
+    "title": "Fur-Bearing Animal and Rabbit Production",
+    "fullTitle": "112930 - Fur-Bearing Animal and Rabbit Production"
+  },
+  {
+    "id": "112990",
+    "title": "All Other Animal Production",
+    "fullTitle": "112990 - All Other Animal Production"
+  },
+  {
+    "id": "113110",
+    "title": "Timber Tract Operations",
+    "fullTitle": "113110 - Timber Tract Operations"
+  },
+  {
+    "id": "113210",
+    "title": "Forest Nurseries and Gathering of Forest Products",
+    "fullTitle": "113210 - Forest Nurseries and Gathering of Forest Products"
+  },
+  {
+    "id": "113310",
+    "title": "Logging",
+    "fullTitle": "11Logging3310 - "
+  },
+  {
+    "id": "114111",
+    "title": "Finfish Fishing",
+    "fullTitle": "114111 - Finfish Fishing"
+  },
+  {
+    "id": "114112",
+    "title": "Shellfish Fishing",
+    "fullTitle": "114112 - Shellfish Fishing"
+  },
+  {
+    "id": "114119",
+    "title": "Other Marine Fishing",
+    "fullTitle": "114119 - Other Marine Fishing"
+  },
+  {
+    "id": "114210",
+    "title": "Hunting and Trapping",
+    "fullTitle": "114210 - Hunting and Trapping"
+  },
+  {
+    "id": "115111",
+    "title": "Cotton Ginning",
+    "fullTitle": "115111 - Cotton Ginning"
+  },
+  {
+    "id": "115112",
+    "title": "Soil Preparation, Planting, and Cultivating",
+    "fullTitle": "115112 - Soil Preparation, Planting, and Cultivating"
+  },
+  {
+    "id": "115113",
+    "title": "Crop Harvesting, Primarily by Machine",
+    "fullTitle": "115113 - Crop Harvesting, Primarily by Machine"
+  },
+  {
+    "id": "115114",
+    "title": "Postharvest Crop Activities (except Cotton Ginning)",
+    "fullTitle": "115114 - Postharvest Crop Activities (except Cotton Ginning)"
+  },
+  {
+    "id": "115115",
+    "title": "Farm Labor Contractors and Crew Leaders",
+    "fullTitle": "115115 - Farm Labor Contractors and Crew Leaders"
+  },
+  {
+    "id": "115116",
+    "title": "Farm Management Services",
+    "fullTitle": "115116 - Farm Management Services"
+  },
+  {
+    "id": "115210",
+    "title": "Support Activities for Animal Production",
+    "fullTitle": "115210 - Support Activities for Animal Production"
+  },
+  {
+    "id": "115310",
+    "title": "Support Activities for Forestry",
+    "fullTitle": "115310 - Support Activities for Forestry"
+  },
+  {
+    "id": "211111",
+    "title": "Crude Petroleum and Natural Gas Extraction",
+    "fullTitle": "211111 - Crude Petroleum and Natural Gas Extraction"
+  },
+  {
+    "id": "211112",
+    "title": "Natural Gas Liquid Extraction",
+    "fullTitle": "211112 - Natural Gas Liquid Extraction"
+  },
+  {
+    "id": "212111",
+    "title": "Bituminous Coal and Lignite Surface Mining",
+    "fullTitle": "212111 - Bituminous Coal and Lignite Surface Mining"
+  },
+  {
+    "id": "212112",
+    "title": "Bituminous Coal Underground Mining",
+    "fullTitle": "212112 - Bituminous Coal Underground Mining"
+  },
+  {
+    "id": "212113",
+    "title": "Anthracite Mining",
+    "fullTitle": "212113 - Anthracite Mining"
+  },
+  {
+    "id": "212210",
+    "title": "Iron Ore Mining",
+    "fullTitle": "212210 - Iron Ore Mining"
+  },
+  {
+    "id": "212221",
+    "title": "Gold Ore Mining",
+    "fullTitle": "212221 - Gold Ore Mining"
+  },
+  {
+    "id": "212222",
+    "title": "Silver Ore Mining",
+    "fullTitle": "212222 - Silver Ore Mining"
+  },
+  {
+    "id": "212231",
+    "title": "Lead Ore and Zinc Ore Mining",
+    "fullTitle": "212231 - Lead Ore and Zinc Ore Mining"
+  },
+  {
+    "id": "212234",
+    "title": "Copper Ore and Nickel Ore Mining",
+    "fullTitle": "212234 - Copper Ore and Nickel Ore Mining"
+  },
+  {
+    "id": "212291",
+    "title": "Uranium-Radium-Vanadium Ore Mining",
+    "fullTitle": "212291 - Uranium-Radium-Vanadium Ore Mining"
+  },
+  {
+    "id": "212299",
+    "title": "All Other Metal Ore Mining",
+    "fullTitle": "212299 - All Other Metal Ore Mining"
+  },
+  {
+    "id": "212311",
+    "title": "Dimension Stone Mining and Quarrying",
+    "fullTitle": "212311 - Dimension Stone Mining and Quarrying"
+  },
+  {
+    "id": "212312",
+    "title": "Crushed and Broken Limestone Mining and Quarrying",
+    "fullTitle": "212312 - Crushed and Broken Limestone Mining and Quarrying"
+  },
+  {
+    "id": "212313",
+    "title": "Crushed and Broken Granite Mining and Quarrying",
+    "fullTitle": "212313 - Crushed and Broken Granite Mining and Quarrying"
+  },
+  {
+    "id": "212319",
+    "title": "Other Crushed and Broken Stone Mining and Quarrying",
+    "fullTitle": "212319 - Other Crushed and Broken Stone Mining and Quarrying"
+  },
+  {
+    "id": "212321",
+    "title": "Construction Sand and Gravel Mining",
+    "fullTitle": "212321 - Construction Sand and Gravel Mining"
+  },
+  {
+    "id": "212322",
+    "title": "Industrial Sand Mining",
+    "fullTitle": "212322 - Industrial Sand Mining"
+  },
+  {
+    "id": "212324",
+    "title": "Kaolin and Ball Clay Mining",
+    "fullTitle": "212324 - Kaolin and Ball Clay Mining"
+  },
+  {
+    "id": "212325",
+    "title": "Clay and Ceramic and Refractory Minerals Mining",
+    "fullTitle": "212325 - Clay and Ceramic and Refractory Minerals Mining"
+  },
+  {
+    "id": "212391",
+    "title": "Potash, Soda, and Borate Mineral Mining",
+    "fullTitle": "212391 - Potash, Soda, and Borate Mineral Mining"
+  },
+  {
+    "id": "212392",
+    "title": "Phosphate Rock Mining",
+    "fullTitle": "212392 - Phosphate Rock Mining"
+  },
+  {
+    "id": "212393",
+    "title": "Other Chemical and Fertilizer Mineral Mining",
+    "fullTitle": "212393 - Other Chemical and Fertilizer Mineral Mining"
+  },
+  {
+    "id": "212399",
+    "title": "All Other Nonmetallic Mineral Mining",
+    "fullTitle": "212399 - All Other Nonmetallic Mineral Mining"
+  },
+  {
+    "id": "213111",
+    "title": "Drilling Oil and Gas Wells",
+    "fullTitle": "213111 - Drilling Oil and Gas Wells"
+  },
+  {
+    "id": "213112",
+    "title": "Support Activities for Oil and Gas Operations",
+    "fullTitle": "213112 - Support Activities for Oil and Gas Operations"
+  },
+  {
+    "id": "213113",
+    "title": "Support Activities for Coal Mining",
+    "fullTitle": "213113 - Support Activities for Coal Mining"
+  },
+  {
+    "id": "213114",
+    "title": "Support Activities for Metal Mining",
+    "fullTitle": "213114 - Support Activities for Metal Mining"
+  },
+  {
+    "id": "213115",
+    "title": "Support Activities for Nonmetallic Minerals (except Fuels) Mining",
+    "fullTitle": "213115 - Support Activities for Nonmetallic Minerals (except Fuels) Mining"
+  },
+  {
+    "id": "221111",
+    "title": "Hydroelectric Power Generation",
+    "fullTitle": "221111 - Hydroelectric Power Generation"
+  },
+  {
+    "id": "221112",
+    "title": "Fossil Fuel Electric Power Generation",
+    "fullTitle": "221112 - Fossil Fuel Electric Power Generation"
+  },
+  {
+    "id": "221113",
+    "title": "Nuclear Electric Power Generation",
+    "fullTitle": "221113 - Nuclear Electric Power Generation"
+  },
+  {
+    "id": "221114",
+    "title": "Solar Electric Power Generation",
+    "fullTitle": "221114 - Solar Electric Power Generation"
+  },
+  {
+    "id": "221115",
+    "title": "Wind Electric Power Generation",
+    "fullTitle": "221115 - Wind Electric Power Generation"
+  },
+  {
+    "id": "221116",
+    "title": "Geothermal Electric Power Generation",
+    "fullTitle": "221116 - Geothermal Electric Power Generation"
+  },
+  {
+    "id": "221117",
+    "title": "Biomass Electric Power Generation",
+    "fullTitle": "221117 - Biomass Electric Power Generation"
+  },
+  {
+    "id": "221118",
+    "title": "Other Electric Power Generation",
+    "fullTitle": "221118 - Other Electric Power Generation"
+  },
+  {
+    "id": "221121",
+    "title": "Electric Bulk Power Transmission and Control",
+    "fullTitle": "221121 - Electric Bulk Power Transmission and Control"
+  },
+  {
+    "id": "221122",
+    "title": "Electric Power Distribution",
+    "fullTitle": "221122 - Electric Power Distribution"
+  },
+  {
+    "id": "221210",
+    "title": "Natural Gas Distribution",
+    "fullTitle": "221210 - Natural Gas Distribution"
+  },
+  {
+    "id": "221310",
+    "title": "Water Supply and Irrigation Systems",
+    "fullTitle": "221310 - Water Supply and Irrigation Systems"
+  },
+  {
+    "id": "221320",
+    "title": "Sewage Treatment Facilities",
+    "fullTitle": "221320 - Sewage Treatment Facilities"
+  },
+  {
+    "id": "221330",
+    "title": "Steam and Air-Conditioning Supply",
+    "fullTitle": "221330 - Steam and Air-Conditioning Supply"
+  },
+  {
+    "id": "236115",
+    "title": "New Single-Family Housing Construction (except For-Sale Builders)",
+    "fullTitle": "236115 - New Single-Family Housing Construction (except For-Sale Builders)"
+  },
+  {
+    "id": "236116",
+    "title": "New Multifamily Housing Construction (except For-Sale Builders)",
+    "fullTitle": "236116 - New Multifamily Housing Construction (except For-Sale Builders)"
+  },
+  {
+    "id": "236117",
+    "title": "New Housing For-Sale Builders",
+    "fullTitle": "236117 - New Housing For-Sale Builders"
+  },
+  {
+    "id": "236118",
+    "title": "Residential Remodelers",
+    "fullTitle": "236118 - Residential Remodelers"
+  },
+  {
+    "id": "236210",
+    "title": "Industrial Building Construction",
+    "fullTitle": "236210 - Industrial Building Construction"
+  },
+  {
+    "id": "236220",
+    "title": "Commercial and Institutional Building Construction",
+    "fullTitle": "236220 - Commercial and Institutional Building Construction"
+  },
+  {
+    "id": "237110",
+    "title": "Water and Sewer Line and Related Structures Construction",
+    "fullTitle": "237110 - Water and Sewer Line and Related Structures Construction"
+  },
+  {
+    "id": "237120",
+    "title": "Oil and Gas Pipeline and Related Structures Construction",
+    "fullTitle": "237120 - Oil and Gas Pipeline and Related Structures Construction"
+  },
+  {
+    "id": "237130",
+    "title": "Power and Communication Line and Related Structures Construction",
+    "fullTitle": "237130 - Power and Communication Line and Related Structures Construction"
+  },
+  {
+    "id": "237210",
+    "title": "Land Subdivision",
+    "fullTitle": "237210 - Land Subdivision"
+  },
+  {
+    "id": "237310",
+    "title": "Highway, Street, and Bridge Construction",
+    "fullTitle": "237310 - Highway, Street, and Bridge Construction"
+  },
+  {
+    "id": "237990",
+    "title": "Other Heavy and Civil Engineering Construction",
+    "fullTitle": "237990 - Other Heavy and Civil Engineering Construction"
+  },
+  {
+    "id": "238110",
+    "title": "Poured Concrete Foundation and Structure Contractors",
+    "fullTitle": "238110 - Poured Concrete Foundation and Structure Contractors"
+  },
+  {
+    "id": "238120",
+    "title": "Structural Steel and Precast Concrete Contractors",
+    "fullTitle": "238120 - Structural Steel and Precast Concrete Contractors"
+  },
+  {
+    "id": "238130",
+    "title": "Framing Contractors",
+    "fullTitle": "238130 - Framing Contractors"
+  },
+  {
+    "id": "238140",
+    "title": "Masonry Contractors",
+    "fullTitle": "238140 - Masonry Contractors"
+  },
+  {
+    "id": "238150",
+    "title": "Glass and Glazing Contractors",
+    "fullTitle": "238150 - Glass and Glazing Contractors"
+  },
+  {
+    "id": "238160",
+    "title": "Roofing Contractors",
+    "fullTitle": "238160 - Roofing Contractors"
+  },
+  {
+    "id": "238170",
+    "title": "Siding Contractors",
+    "fullTitle": "238170 - Siding Contractors"
+  },
+  {
+    "id": "238190",
+    "title": "Other Foundation, Structure, and Building Exterior Contractors",
+    "fullTitle": "238190 - Other Foundation, Structure, and Building Exterior Contractors"
+  },
+  {
+    "id": "238210",
+    "title": "Electrical Contractors and Other Wiring Installation Contractors",
+    "fullTitle": "238210 - Electrical Contractors and Other Wiring Installation Contractors"
+  },
+  {
+    "id": "238220",
+    "title": "Plumbing, Heating, and Air-Conditioning Contractors",
+    "fullTitle": "238220 - Plumbing, Heating, and Air-Conditioning Contractors"
+  },
+  {
+    "id": "238290",
+    "title": "Other Building Equipment Contractors",
+    "fullTitle": "238290 - Other Building Equipment Contractors"
+  },
+  {
+    "id": "238310",
+    "title": "Drywall and Insulation Contractors",
+    "fullTitle": "238310 - Drywall and Insulation Contractors"
+  },
+  {
+    "id": "238310",
+    "title": "Drywall and Insulation Contractors",
+    "fullTitle": "238310 - Drywall and Insulation Contractors"
+  },
+  {
+    "id": "238310",
+    "title": "Drywall and Insulation Contractors",
+    "fullTitle": "238310 - Drywall and Insulation Contractors"
+  },
+  {
+    "id": "238320",
+    "title": "Painting and Wall Covering Contractors",
+    "fullTitle": "238320 - Painting and Wall Covering Contractors"
+  },
+  {
+    "id": "238330",
+    "title": "Flooring Contractors",
+    "fullTitle": "238330 - Flooring Contractors"
+  },
+  {
+    "id": "238340",
+    "title": "Tile and Terrazzo Contractors",
+    "fullTitle": "238340 - Tile and Terrazzo Contractors"
+  },
+  {
+    "id": "238350",
+    "title": "Finish Carpentry Contractors",
+    "fullTitle": "238350 - Finish Carpentry Contractors"
+  },
+  {
+    "id": "238390",
+    "title": "Other Building Finishing Contractors",
+    "fullTitle": "238390 - Other Building Finishing Contractors"
+  },
+  {
+    "id": "238910",
+    "title": "Site Preparation Contractors",
+    "fullTitle": "238910 - Site Preparation Contractors"
+  },
+  {
+    "id": "238990",
+    "title": "All Other Specialty Trade Contractors",
+    "fullTitle": "238990 - All Other Specialty Trade Contractors"
+  },
+  {
+    "id": "311111",
+    "title": "Dog and Cat Food Manufacturing",
+    "fullTitle": "311111 - Dog and Cat Food Manufacturing"
+  },
+  {
+    "id": "311119",
+    "title": "Other Animal Food Manufacturing",
+    "fullTitle": "311119 - Other Animal Food Manufacturing"
+  },
+  {
+    "id": "311211",
+    "title": "Flour Milling",
+    "fullTitle": "311211 -Flour Milling "
+  },
+  {
+    "id": "311212",
+    "title": "Rice Milling",
+    "fullTitle": "311212 Rice Milling- "
+  },
+  {
+    "id": "311213",
+    "title": "Malt Manufacturing",
+    "fullTitle": "311213 - Malt Manufacturing"
+  },
+  {
+    "id": "311221",
+    "title": "Wet Corn Milling",
+    "fullTitle": "311221 - Wet Corn Milling"
+  },
+  {
+    "id": "311224",
+    "title": "Soybean and Other Oilseed Processing",
+    "fullTitle": "311224 - Soybean and Other Oilseed Processing"
+  },
+  {
+    "id": "311224",
+    "title": "Soybean and Other Oilseed Processing",
+    "fullTitle": "311224 - Soybean and Other Oilseed Processing"
+  },
+  {
+    "id": "311225",
+    "title": "Fats and Oils Refining and Blending",
+    "fullTitle": "311225 - Fats and Oils Refining and Blending"
+  },
+  {
+    "id": "311230",
+    "title": "Breakfast Cereal Manufacturing",
+    "fullTitle": "311230 - Breakfast Cereal Manufacturing"
+  },
+  {
+    "id": "311313",
+    "title": "Beet Sugar Manufacturing",
+    "fullTitle": "311313 - Beet Sugar Manufacturing"
+  },
+  {
+    "id": "311314",
+    "title": "Cane Sugar Manufacturing",
+    "fullTitle": "311314 - Cane Sugar Manufacturing"
+  },
+  {
+    "id": "311314",
+    "title": "Cane Sugar Manufacturing",
+    "fullTitle": "311314 - Cane Sugar Manufacturing"
+  },
+  {
+    "id": "311340",
+    "title": "Nonchocolate Confectionery Manufacturing",
+    "fullTitle": "311340 - Nonchocolate Confectionery Manufacturing"
+  },
+  {
+    "id": "311351",
+    "title": "Chocolate and Confectionery Manufacturing from Cacao Beans",
+    "fullTitle": "311351 - Chocolate and Confectionery Manufacturing from Cacao Beans"
+  },
+  {
+    "id": "311352",
+    "title": "Confectionery Manufacturing from Purchased Chocolate",
+    "fullTitle": "311352 - Confectionery Manufacturing from Purchased Chocolate"
+  },
+  {
+    "id": "311411",
+    "title": "Frozen Fruit, Juice, and Vegetable Manufacturing",
+    "fullTitle": "311411 - Frozen Fruit, Juice, and Vegetable Manufacturing"
+  },
+  {
+    "id": "311412",
+    "title": "Frozen Specialty Food Manufacturing",
+    "fullTitle": "311412 - Frozen Specialty Food Manufacturing"
+  },
+  {
+    "id": "311421",
+    "title": "Fruit and Vegetable Canning",
+    "fullTitle": "311421 - Fruit and Vegetable Canning"
+  },
+  {
+    "id": "311422",
+    "title": "Specialty Canning",
+    "fullTitle": "311422 - Specialty Canning"
+  },
+  {
+    "id": "311423",
+    "title": "Dried and Dehydrated Food Manufacturing",
+    "fullTitle": "311423 - Dried and Dehydrated Food Manufacturing"
+  },
+  {
+    "id": "311511",
+    "title": "Fluid Milk Manufacturing",
+    "fullTitle": "311511 - Fluid Milk Manufacturing"
+  },
+  {
+    "id": "311512",
+    "title": "Creamery Butter Manufacturing",
+    "fullTitle": "311512 - Creamery Butter Manufacturing"
+  },
+  {
+    "id": "311513",
+    "title": "Cheese Manufacturing",
+    "fullTitle": "311513 - Cheese Manufacturing"
+  },
+  {
+    "id": "311514",
+    "title": "Dry, Condensed, and Evaporated Dairy Product Manufacturing",
+    "fullTitle": "311514 - Dry, Condensed, and Evaporated Dairy Product Manufacturing"
+  },
+  {
+    "id": "311520",
+    "title": "Ice Cream and Frozen Dessert Manufacturing",
+    "fullTitle": "311520 - Ice Cream and Frozen Dessert Manufacturing"
+  },
+  {
+    "id": "311611",
+    "title": "Animal (except Poultry) Slaughtering",
+    "fullTitle": "311611 - Animal (except Poultry) Slaughtering"
+  },
+  {
+    "id": "311612",
+    "title": "Meat Processed from Carcasses",
+    "fullTitle": "311612 - Meat Processed from Carcasses"
+  },
+  {
+    "id": "311613",
+    "title": "Rendering and Meat Byproduct Processing",
+    "fullTitle": "311613 - Rendering and Meat Byproduct Processing"
+  },
+  {
+    "id": "311615",
+    "title": "Poultry Processing",
+    "fullTitle": "311615 - Poultry Processing"
+  },
+  {
+    "id": "311710",
+    "title": "Seafood Product Preparation and Packaging",
+    "fullTitle": "311710 - Seafood Product Preparation and Packaging"
+  },
+  {
+    "id": "311710",
+    "title": "Seafood Product Preparation and Packaging",
+    "fullTitle": "311710 - Seafood Product Preparation and Packaging"
+  },
+  {
+    "id": "311811",
+    "title": "Retail Bakeries",
+    "fullTitle": "311811 - Retail Bakeries"
+  },
+  {
+    "id": "311812",
+    "title": "Commercial Bakeries",
+    "fullTitle": "311812 - Commercial Bakeries"
+  },
+  {
+    "id": "311813",
+    "title": "Frozen Cakes, Pies, and Other Pastries Manufacturing",
+    "fullTitle": "311813 - Frozen Cakes, Pies, and Other Pastries Manufacturing"
+  },
+  {
+    "id": "311821",
+    "title": "Cookie and Cracker Manufacturing",
+    "fullTitle": "311821 - Cookie and Cracker Manufacturing"
+  },
+  {
+    "id": "311824",
+    "title": "Dry Pasta, Dough, and Flour Mixes Manufacturing from Purchased Flour",
+    "fullTitle": "311824 - Dry Pasta, Dough, and Flour Mixes Manufacturing from Purchased Flour"
+  },
+  {
+    "id": "311824",
+    "title": "Dry Pasta, Dough, and Flour Mixes Manufacturing from Purchased Flour",
+    "fullTitle": "311824 - Dry Pasta, Dough, and Flour Mixes Manufacturing from Purchased Flour"
+  },
+  {
+    "id": "311830",
+    "title": "Tortilla Manufacturing",
+    "fullTitle": "311830 - Tortilla Manufacturing"
+  },
+  {
+    "id": "311911",
+    "title": "Roasted Nuts and Peanut Butter Manufacturing",
+    "fullTitle": "311911 - Roasted Nuts and Peanut Butter Manufacturing"
+  },
+  {
+    "id": "311919",
+    "title": "Other Snack Food Manufacturing",
+    "fullTitle": "311919 - Other Snack Food Manufacturing"
+  },
+  {
+    "id": "311920",
+    "title": "Coffee and Tea Manufacturing",
+    "fullTitle": "311920 - Coffee and Tea Manufacturing"
+  },
+  {
+    "id": "311930",
+    "title": "Flavoring Syrup and Concentrate Manufacturing",
+    "fullTitle": "311930 - Flavoring Syrup and Concentrate Manufacturing"
+  },
+  {
+    "id": "311941",
+    "title": "Mayonnaise, Dressing, and Other Prepared Sauce Manufacturing",
+    "fullTitle": "311941 - Mayonnaise, Dressing, and Other Prepared Sauce Manufacturing"
+  },
+  {
+    "id": "311942",
+    "title": "Spice and Extract Manufacturing",
+    "fullTitle": "311942 - Spice and Extract Manufacturing"
+  },
+  {
+    "id": "311991",
+    "title": "Perishable Prepared Food Manufacturing",
+    "fullTitle": "311991 - Perishable Prepared Food Manufacturing"
+  },
+  {
+    "id": "311999",
+    "title": "All Other Miscellaneous Food Manufacturing",
+    "fullTitle": "311999 - All Other Miscellaneous Food Manufacturing"
+  },
+  {
+    "id": "312111",
+    "title": "Soft Drink Manufacturing",
+    "fullTitle": "312111 - Soft Drink Manufacturing"
+  },
+  {
+    "id": "312112",
+    "title": "Bottled Water Manufacturing",
+    "fullTitle": "312112 - Bottled Water Manufacturing"
+  },
+  {
+    "id": "312113",
+    "title": "Ice Manufacturing",
+    "fullTitle": "312113 - Ice Manufacturing"
+  },
+  {
+    "id": "312120",
+    "title": "Breweries",
+    "fullTitle": "3121Breweries20 - "
+  },
+  {
+    "id": "312130",
+    "title": "Wineries",
+    "fullTitle": "312Wineries130 - "
+  },
+  {
+    "id": "312140",
+    "title": "Distilleries",
+    "fullTitle": "312140 Distilleries- "
+  },
+  {
+    "id": "312230",
+    "title": "Tobacco Manufacturing",
+    "fullTitle": "312230 - Tobacco Manufacturing"
+  },
+  {
+    "id": "312230",
+    "title": "Tobacco Manufacturing",
+    "fullTitle": "312230 - Tobacco Manufacturing"
+  },
+  {
+    "id": "312230",
+    "title": "Tobacco Manufacturing",
+    "fullTitle": "312230 - Tobacco Manufacturing"
+  },
+  {
+    "id": "313110",
+    "title": "Fiber, Yarn, and Thread Mills",
+    "fullTitle": "313110 - Fiber, Yarn, and Thread Mills"
+  },
+  {
+    "id": "313110",
+    "title": "Fiber, Yarn, and Thread Mills",
+    "fullTitle": "313110 - Fiber, Yarn, and Thread Mills"
+  },
+  {
+    "id": "313110",
+    "title": "Fiber, Yarn, and Thread Mills",
+    "fullTitle": "313110 - Fiber, Yarn, and Thread Mills"
+  },
+  {
+    "id": "313210",
+    "title": "Broadwoven Fabric Mills",
+    "fullTitle": "313210 - Broadwoven Fabric Mills"
+  },
+  {
+    "id": "313220",
+    "title": "Narrow Fabric Mills and Schiffli Machine Embroidery",
+    "fullTitle": "313220 - Narrow Fabric Mills and Schiffli Machine Embroidery"
+  },
+  {
+    "id": "313220",
+    "title": "Narrow Fabric Mills and Schiffli Machine Embroidery",
+    "fullTitle": "313220 - Narrow Fabric Mills and Schiffli Machine Embroidery"
+  },
+  {
+    "id": "313230",
+    "title": "Nonwoven Fabric Mills",
+    "fullTitle": "313230 - Nonwoven Fabric Mills"
+  },
+  {
+    "id": "313240",
+    "title": "Knit Fabric Mills",
+    "fullTitle": "313240 - Knit Fabric Mills"
+  },
+  {
+    "id": "313240",
+    "title": "Knit Fabric Mills",
+    "fullTitle": "313240 - Knit Fabric Mills"
+  },
+  {
+    "id": "313310",
+    "title": "Textile and Fabric Finishing Mills",
+    "fullTitle": "313310 - Textile and Fabric Finishing Mills"
+  },
+  {
+    "id": "313310",
+    "title": "Textile and Fabric Finishing Mills",
+    "fullTitle": "313310 - Textile and Fabric Finishing Mills"
+  },
+  {
+    "id": "313320",
+    "title": "Fabric Coating Mills",
+    "fullTitle": "313320 - Fabric Coating Mills"
+  },
+  {
+    "id": "314110",
+    "title": "Carpet and Rug Mills",
+    "fullTitle": "314110 - Carpet and Rug Mills"
+  },
+  {
+    "id": "314120",
+    "title": "Curtain and Linen Mills",
+    "fullTitle": "314120 - Curtain and Linen Mills"
+  },
+  {
+    "id": "314120",
+    "title": "Curtain and Linen Mills",
+    "fullTitle": "314120 - Curtain and Linen Mills"
+  },
+  {
+    "id": "314910",
+    "title": "Textile Bag and Canvas Mills",
+    "fullTitle": "314910 - Textile Bag and Canvas Mills"
+  },
+  {
+    "id": "314910",
+    "title": "Textile Bag and Canvas Mills",
+    "fullTitle": "314910 - Textile Bag and Canvas Mills"
+  },
+  {
+    "id": "314994",
+    "title": "Rope, Cordage, Twine, Tire Cord, and Tire Fabric Mills",
+    "fullTitle": "314994 - Rope, Cordage, Twine, Tire Cord, and Tire Fabric Mills"
+  },
+  {
+    "id": "314994",
+    "title": "Rope, Cordage, Twine, Tire Cord, and Tire Fabric Mills",
+    "fullTitle": "314994 - Rope, Cordage, Twine, Tire Cord, and Tire Fabric Mills"
+  },
+  {
+    "id": "314999",
+    "title": "All Other Miscellaneous Textile Product Mills",
+    "fullTitle": "314999 - All Other Miscellaneous Textile Product Mills"
+  },
+  {
+    "id": "315110",
+    "title": "Hosiery and Sock Mills",
+    "fullTitle": "315110 - Hosiery and Sock Mills"
+  },
+  {
+    "id": "315110",
+    "title": "Hosiery and Sock Mills",
+    "fullTitle": "315110 - Hosiery and Sock Mills"
+  },
+  {
+    "id": "315190",
+    "title": "Other Apparel Knitting Mills",
+    "fullTitle": "315190 - Other Apparel Knitting Mills"
+  },
+  {
+    "id": "315190",
+    "title": "Other Apparel Knitting Mills",
+    "fullTitle": "315190 - Other Apparel Knitting Mills"
+  },
+  {
+    "id": "315210",
+    "title": "Cut and Sew Apparel Contractors",
+    "fullTitle": "315210 - Cut and Sew Apparel Contractors"
+  },
+  {
+    "id": "315210",
+    "title": "Cut and Sew Apparel Contractors",
+    "fullTitle": "315210 - Cut and Sew Apparel Contractors"
+  },
+  {
+    "id": "315220",
+    "title": "Men’s and Boys’ Cut and Sew Apparel Manufacturing",
+    "fullTitle": "315220 - Men’s and Boys’ Cut and Sew Apparel Manufacturing"
+  },
+  {
+    "id": "315220",
+    "title": "Men’s and Boys’ Cut and Sew Apparel Manufacturing",
+    "fullTitle": "315220 - Men’s and Boys’ Cut and Sew Apparel Manufacturing"
+  },
+  {
+    "id": "315220",
+    "title": "Men’s and Boys’ Cut and Sew Apparel Manufacturing",
+    "fullTitle": "315220 - Men’s and Boys’ Cut and Sew Apparel Manufacturing"
+  },
+  {
+    "id": "315220",
+    "title": "Men’s and Boys’ Cut and Sew Apparel Manufacturing",
+    "fullTitle": "315220 - Men’s and Boys’ Cut and Sew Apparel Manufacturing"
+  },
+  {
+    "id": "315220",
+    "title": "Men’s and Boys’ Cut and Sew Apparel Manufacturing",
+    "fullTitle": "315220 - Men’s and Boys’ Cut and Sew Apparel Manufacturing"
+  },
+  {
+    "id": "315220",
+    "title": "Men’s and Boys’ Cut and Sew Apparel Manufacturing",
+    "fullTitle": "315220 - Men’s and Boys’ Cut and Sew Apparel Manufacturing"
+  },
+  {
+    "id": "315240",
+    "title": "Women's, Girls', and Infants' Cut and Sew Apparel Manufacturing",
+    "fullTitle": "315240 - Women's, Girls', and Infants' Cut and Sew Apparel Manufacturing"
+  },
+  {
+    "id": "315240",
+    "title": "Women's, Girls', and Infants' Cut and Sew Apparel Manufacturing",
+    "fullTitle": "315240 - Women's, Girls', and Infants' Cut and Sew Apparel Manufacturing"
+  },
+  {
+    "id": "315240",
+    "title": "Women's, Girls', and Infants' Cut and Sew Apparel Manufacturing",
+    "fullTitle": "315240 - Women's, Girls', and Infants' Cut and Sew Apparel Manufacturing"
+  },
+  {
+    "id": "315240",
+    "title": "Women's, Girls', and Infants' Cut and Sew Apparel Manufacturing",
+    "fullTitle": "315240 - Women's, Girls', and Infants' Cut and Sew Apparel Manufacturing"
+  },
+  {
+    "id": "315240",
+    "title": "Women's, Girls', and Infants' Cut and Sew Apparel Manufacturing",
+    "fullTitle": "315240 - Women's, Girls', and Infants' Cut and Sew Apparel Manufacturing"
+  },
+  {
+    "id": "315240",
+    "title": "Women's, Girls', and Infants' Cut and Sew Apparel Manufacturing",
+    "fullTitle": "315240 - Women's, Girls', and Infants' Cut and Sew Apparel Manufacturing"
+  },
+  {
+    "id": "315280",
+    "title": "Other Cut and Sew Apparel Manufacturing",
+    "fullTitle": "315280 - Other Cut and Sew Apparel Manufacturing"
+  },
+  {
+    "id": "315280",
+    "title": "Other Cut and Sew Apparel Manufacturing",
+    "fullTitle": "315280 - Other Cut and Sew Apparel Manufacturing"
+  },
+  {
+    "id": "315990",
+    "title": "Apparel Accessories and Other Apparel Manufacturing",
+    "fullTitle": "315990 - Apparel Accessories and Other Apparel Manufacturing"
+  },
+  {
+    "id": "315990",
+    "title": "Apparel Accessories and Other Apparel Manufacturing",
+    "fullTitle": "315990 - Apparel Accessories and Other Apparel Manufacturing"
+  },
+  {
+    "id": "315990",
+    "title": "Apparel Accessories and Other Apparel Manufacturing",
+    "fullTitle": "315990 - Apparel Accessories and Other Apparel Manufacturing"
+  },
+  {
+    "id": "315990",
+    "title": "Apparel Accessories and Other Apparel Manufacturing",
+    "fullTitle": "315990 - Apparel Accessories and Other Apparel Manufacturing"
+  },
+  {
+    "id": "316110",
+    "title": "Leather and Hide Tanning and Finishing",
+    "fullTitle": "316110 - Leather and Hide Tanning and Finishing"
+  },
+  {
+    "id": "316210",
+    "title": "Footwear Manufacturing",
+    "fullTitle": "316210 - Footwear Manufacturing"
+  },
+  {
+    "id": "316210",
+    "title": "Footwear Manufacturing",
+    "fullTitle": "316210 - Footwear Manufacturing"
+  },
+  {
+    "id": "316210",
+    "title": "Footwear Manufacturing",
+    "fullTitle": "316210 - Footwear Manufacturing"
+  },
+  {
+    "id": "316210",
+    "title": "Footwear Manufacturing",
+    "fullTitle": "316210 - Footwear Manufacturing"
+  },
+  {
+    "id": "316210",
+    "title": "Footwear Manufacturing",
+    "fullTitle": "316210 - Footwear Manufacturing"
+  },
+  {
+    "id": "316992",
+    "title": "Women's Handbag and Purse Manufacturing",
+    "fullTitle": "316992 - Women's Handbag and Purse Manufacturing"
+  },
+  {
+    "id": "316998",
+    "title": "All Other Leather Good and Allied Product Manufacturing",
+    "fullTitle": "316998 - All Other Leather Good and Allied Product Manufacturing"
+  },
+  {
+    "id": "316998",
+    "title": "All Other Leather Good and Allied Product Manufacturing",
+    "fullTitle": "316998 - All Other Leather Good and Allied Product Manufacturing"
+  },
+  {
+    "id": "316998",
+    "title": "All Other Leather Good and Allied Product Manufacturing",
+    "fullTitle": "316998 - All Other Leather Good and Allied Product Manufacturing"
+  },
+  {
+    "id": "321113",
+    "title": "Sawmills",
+    "fullTitle": "321Sawmills113 - "
+  },
+  {
+    "id": "321114",
+    "title": "Wood Preservation",
+    "fullTitle": "321114 - Wood Preservation"
+  },
+  {
+    "id": "321211",
+    "title": "Hardwood Veneer and Plywood Manufacturing",
+    "fullTitle": "321211 - Hardwood Veneer and Plywood Manufacturing"
+  },
+  {
+    "id": "321212",
+    "title": "Softwood Veneer and Plywood Manufacturing",
+    "fullTitle": "321212 - Softwood Veneer and Plywood Manufacturing"
+  },
+  {
+    "id": "321213",
+    "title": "Engineered Wood Member (except Truss) Manufacturing",
+    "fullTitle": "321213 - Engineered Wood Member (except Truss) Manufacturing"
+  },
+  {
+    "id": "321214",
+    "title": "Truss Manufacturing",
+    "fullTitle": "321214 - Truss Manufacturing"
+  },
+  {
+    "id": "321219",
+    "title": "Reconstituted Wood Product Manufacturing",
+    "fullTitle": "321219 - Reconstituted Wood Product Manufacturing"
+  },
+  {
+    "id": "321911",
+    "title": "Wood Window and Door Manufacturing",
+    "fullTitle": "321911 - Wood Window and Door Manufacturing"
+  },
+  {
+    "id": "321912",
+    "title": "Cut Stock, Resawing Lumber, and Planing",
+    "fullTitle": "321912 - Cut Stock, Resawing Lumber, and Planing"
+  },
+  {
+    "id": "321918",
+    "title": "Other Millwork (including Flooring)",
+    "fullTitle": "321918 - Other Millwork (including Flooring)"
+  },
+  {
+    "id": "321920",
+    "title": "Wood Container and Pallet Manufacturing",
+    "fullTitle": "321920 - Wood Container and Pallet Manufacturing"
+  },
+  {
+    "id": "321991",
+    "title": "Manufactured Home (Mobile Home) Manufacturing",
+    "fullTitle": "321991 - Manufactured Home (Mobile Home) Manufacturing"
+  },
+  {
+    "id": "321992",
+    "title": "Prefabricated Wood Building Manufacturing",
+    "fullTitle": "321992 - Prefabricated Wood Building Manufacturing"
+  },
+  {
+    "id": "321999",
+    "title": "All Other Miscellaneous Wood Product Manufacturing",
+    "fullTitle": "321999 - All Other Miscellaneous Wood Product Manufacturing"
+  },
+  {
+    "id": "321999",
+    "title": "All Other Miscellaneous Wood Product Manufacturing",
+    "fullTitle": "321999 - All Other Miscellaneous Wood Product Manufacturing"
+  },
+  {
+    "id": "322110",
+    "title": "Pulp Mills",
+    "fullTitle": "32211Pulp Mills0 - "
+  },
+  {
+    "id": "322121",
+    "title": "Paper (except Newsprint) Mills",
+    "fullTitle": "322121 - Paper (except Newsprint) Mills"
+  },
+  {
+    "id": "322122",
+    "title": "Newsprint Mills",
+    "fullTitle": "322122 - Newsprint Mills"
+  },
+  {
+    "id": "322130",
+    "title": "Paperboard Mills",
+    "fullTitle": "322130 - Paperboard Mills"
+  },
+  {
+    "id": "322211",
+    "title": "Corrugated and Solid Fiber Box Manufacturing",
+    "fullTitle": "322211 - Corrugated and Solid Fiber Box Manufacturing"
+  },
+  {
+    "id": "322212",
+    "title": "Folding Paperboard Box Manufacturing",
+    "fullTitle": "322212 - Folding Paperboard Box Manufacturing"
+  },
+  {
+    "id": "322219",
+    "title": "Other Paperboard Container Manufacturing",
+    "fullTitle": "322219 - Other Paperboard Container Manufacturing"
+  },
+  {
+    "id": "322219",
+    "title": "Other Paperboard Container Manufacturing",
+    "fullTitle": "322219 - Other Paperboard Container Manufacturing"
+  },
+  {
+    "id": "322219",
+    "title": "Other Paperboard Container Manufacturing",
+    "fullTitle": "322219 - Other Paperboard Container Manufacturing"
+  },
+  {
+    "id": "322220",
+    "title": "Paper Bag and Coated and Treated Paper Manufacturing",
+    "fullTitle": "322220 - Paper Bag and Coated and Treated Paper Manufacturing"
+  },
+  {
+    "id": "322220",
+    "title": "Paper Bag and Coated and Treated Paper Manufacturing",
+    "fullTitle": "322220 - Paper Bag and Coated and Treated Paper Manufacturing"
+  },
+  {
+    "id": "322220",
+    "title": "Paper Bag and Coated and Treated Paper Manufacturing",
+    "fullTitle": "322220 - Paper Bag and Coated and Treated Paper Manufacturing"
+  },
+  {
+    "id": "322220",
+    "title": "Paper Bag and Coated and Treated Paper Manufacturing",
+    "fullTitle": "322220 - Paper Bag and Coated and Treated Paper Manufacturing"
+  },
+  {
+    "id": "322220",
+    "title": "Paper Bag and Coated and Treated Paper Manufacturing",
+    "fullTitle": "322220 - Paper Bag and Coated and Treated Paper Manufacturing"
+  },
+  {
+    "id": "322220",
+    "title": "Paper Bag and Coated and Treated Paper Manufacturing",
+    "fullTitle": "322220 - Paper Bag and Coated and Treated Paper Manufacturing"
+  },
+  {
+    "id": "322230",
+    "title": "Stationery Product Manufacturing",
+    "fullTitle": "322230 - Stationery Product Manufacturing"
+  },
+  {
+    "id": "322230",
+    "title": "Stationery Product Manufacturing",
+    "fullTitle": "322230 - Stationery Product Manufacturing"
+  },
+  {
+    "id": "322230",
+    "title": "Stationery Product Manufacturing",
+    "fullTitle": "322230 - Stationery Product Manufacturing"
+  },
+  {
+    "id": "322291",
+    "title": "Sanitary Paper Product Manufacturing",
+    "fullTitle": "322291 - Sanitary Paper Product Manufacturing"
+  },
+  {
+    "id": "322299",
+    "title": "All Other Converted Paper Product Manufacturing",
+    "fullTitle": "322299 - All Other Converted Paper Product Manufacturing"
+  },
+  {
+    "id": "323111",
+    "title": "Commercial Printing (except Screen and Books)",
+    "fullTitle": "323111 - Commercial Printing (except Screen and Books)"
+  },
+  {
+    "id": "323111",
+    "title": "Commercial Printing (except Screen and Books)",
+    "fullTitle": "323111 - Commercial Printing (except Screen and Books)"
+  },
+  {
+    "id": "323111",
+    "title": "Commercial Printing (except Screen and Books)",
+    "fullTitle": "323111 - Commercial Printing (except Screen and Books)"
+  },
+  {
+    "id": "323111",
+    "title": "Commercial Printing (except Screen and Books)",
+    "fullTitle": "323111 - Commercial Printing (except Screen and Books)"
+  },
+  {
+    "id": "323111",
+    "title": "Commercial Printing (except Screen and Books)",
+    "fullTitle": "323111 - Commercial Printing (except Screen and Books)"
+  },
+  {
+    "id": "323111",
+    "title": "Commercial Printing (except Screen and Books)",
+    "fullTitle": "323111 - Commercial Printing (except Screen and Books)"
+  },
+  {
+    "id": "323111",
+    "title": "Commercial Printing (except Screen and Books)",
+    "fullTitle": "323111 - Commercial Printing (except Screen and Books)"
+  },
+  {
+    "id": "323111",
+    "title": "Commercial Printing (except Screen and Books)",
+    "fullTitle": "323111 - Commercial Printing (except Screen and Books)"
+  },
+  {
+    "id": "323113",
+    "title": "Commercial Screen Printing",
+    "fullTitle": "323113 - Commercial Screen Printing"
+  },
+  {
+    "id": "323117",
+    "title": "Books Printing",
+    "fullTitle": "323117 - Books Printing"
+  },
+  {
+    "id": "323120",
+    "title": "Support Activities for Printing",
+    "fullTitle": "323120 - Support Activities for Printing"
+  },
+  {
+    "id": "323120",
+    "title": "Support Activities for Printing",
+    "fullTitle": "323120 - Support Activities for Printing"
+  },
+  {
+    "id": "324110",
+    "title": "Petroleum Refineries",
+    "fullTitle": "324110 - Petroleum Refineries"
+  },
+  {
+    "id": "324121",
+    "title": "Asphalt Paving Mixture and Block Manufacturing",
+    "fullTitle": "324121 - Asphalt Paving Mixture and Block Manufacturing"
+  },
+  {
+    "id": "324122",
+    "title": "Asphalt Shingle and Coating Materials Manufacturing",
+    "fullTitle": "324122 - Asphalt Shingle and Coating Materials Manufacturing"
+  },
+  {
+    "id": "324191",
+    "title": "Petroleum Lubricating Oil and Grease Manufacturing",
+    "fullTitle": "324191 - Petroleum Lubricating Oil and Grease Manufacturing"
+  },
+  {
+    "id": "324199",
+    "title": "All Other Petroleum and Coal Products Manufacturing",
+    "fullTitle": "324199 - All Other Petroleum and Coal Products Manufacturing"
+  },
+  {
+    "id": "325110",
+    "title": "Petrochemical Manufacturing",
+    "fullTitle": "325110 - Petrochemical Manufacturing"
+  },
+  {
+    "id": "325120",
+    "title": "Industrial Gas Manufacturing",
+    "fullTitle": "325120 - Industrial Gas Manufacturing"
+  },
+  {
+    "id": "325130",
+    "title": "Synthetic Dye and Pigment Manufacturing",
+    "fullTitle": "325130 - Synthetic Dye and Pigment Manufacturing"
+  },
+  {
+    "id": "325130",
+    "title": "Synthetic Dye and Pigment Manufacturing",
+    "fullTitle": "325130 - Synthetic Dye and Pigment Manufacturing"
+  },
+  {
+    "id": "325180",
+    "title": "Other Basic Inorganic Chemical Manufacturing",
+    "fullTitle": "325180 - Other Basic Inorganic Chemical Manufacturing"
+  },
+  {
+    "id": "325180",
+    "title": "Other Basic Inorganic Chemical Manufacturing",
+    "fullTitle": "325180 - Other Basic Inorganic Chemical Manufacturing"
+  },
+  {
+    "id": "325180",
+    "title": "Other Basic Inorganic Chemical Manufacturing",
+    "fullTitle": "325180 - Other Basic Inorganic Chemical Manufacturing"
+  },
+  {
+    "id": "325193",
+    "title": "Ethyl Alcohol Manufacturing",
+    "fullTitle": "325193 - Ethyl Alcohol Manufacturing"
+  },
+  {
+    "id": "325194",
+    "title": "Cyclic Crude, Intermediate, and Gum and Wood Chemical Manufacturing",
+    "fullTitle": "325194 - Cyclic Crude, Intermediate, and Gum and Wood Chemical Manufacturing"
+  },
+  {
+    "id": "325194",
+    "title": "Cyclic Crude, Intermediate, and Gum and Wood Chemical Manufacturing",
+    "fullTitle": "325194 - Cyclic Crude, Intermediate, and Gum and Wood Chemical Manufacturing"
+  },
+  {
+    "id": "325199",
+    "title": "All Other Basic Organic Chemical Manufacturing",
+    "fullTitle": "325199 - All Other Basic Organic Chemical Manufacturing"
+  },
+  {
+    "id": "325211",
+    "title": "Plastics Material and Resin Manufacturing",
+    "fullTitle": "325211 - Plastics Material and Resin Manufacturing"
+  },
+  {
+    "id": "325212",
+    "title": "Synthetic Rubber Manufacturing",
+    "fullTitle": "325212 - Synthetic Rubber Manufacturing"
+  },
+  {
+    "id": "325220",
+    "title": "Artificial and Synthetic Fibers and Filaments Manufacturing",
+    "fullTitle": "325220 - Artificial and Synthetic Fibers and Filaments Manufacturing"
+  },
+  {
+    "id": "325220",
+    "title": "Artificial and Synthetic Fibers and Filaments Manufacturing",
+    "fullTitle": "325220 - Artificial and Synthetic Fibers and Filaments Manufacturing"
+  },
+  {
+    "id": "325311",
+    "title": "Nitrogenous Fertilizer Manufacturing",
+    "fullTitle": "325311 - Nitrogenous Fertilizer Manufacturing"
+  },
+  {
+    "id": "325312",
+    "title": "Phosphatic Fertilizer Manufacturing",
+    "fullTitle": "325312 - Phosphatic Fertilizer Manufacturing"
+  },
+  {
+    "id": "325314",
+    "title": "Fertilizer (Mixing Only) Manufacturing",
+    "fullTitle": "325314 - Fertilizer (Mixing Only) Manufacturing"
+  },
+  {
+    "id": "325320",
+    "title": "Pesticide and Other Agricultural Chemical Manufacturing",
+    "fullTitle": "325320 - Pesticide and Other Agricultural Chemical Manufacturing"
+  },
+  {
+    "id": "325411",
+    "title": "Medicinal and Botanical Manufacturing",
+    "fullTitle": "325411 - Medicinal and Botanical Manufacturing"
+  },
+  {
+    "id": "325412",
+    "title": "Pharmaceutical Preparation Manufacturing",
+    "fullTitle": "325412 - Pharmaceutical Preparation Manufacturing"
+  },
+  {
+    "id": "325413",
+    "title": "In-Vitro Diagnostic Substance Manufacturing",
+    "fullTitle": "325413 - In-Vitro Diagnostic Substance Manufacturing"
+  },
+  {
+    "id": "325414",
+    "title": "Biological Product (except Diagnostic) Manufacturing",
+    "fullTitle": "325414 - Biological Product (except Diagnostic) Manufacturing"
+  },
+  {
+    "id": "325510",
+    "title": "Paint and Coating Manufacturing",
+    "fullTitle": "325510 - Paint and Coating Manufacturing"
+  },
+  {
+    "id": "325520",
+    "title": "Adhesive Manufacturing",
+    "fullTitle": "325520 - Adhesive Manufacturing"
+  },
+  {
+    "id": "325611",
+    "title": "Soap and Other Detergent Manufacturing",
+    "fullTitle": "325611 - Soap and Other Detergent Manufacturing"
+  },
+  {
+    "id": "325612",
+    "title": "Polish and Other Sanitation Good Manufacturing",
+    "fullTitle": "325612 - Polish and Other Sanitation Good Manufacturing"
+  },
+  {
+    "id": "325613",
+    "title": "Surface Active Agent Manufacturing",
+    "fullTitle": "325613 - Surface Active Agent Manufacturing"
+  },
+  {
+    "id": "325620",
+    "title": "Toilet Preparation Manufacturing",
+    "fullTitle": "325620 - Toilet Preparation Manufacturing"
+  },
+  {
+    "id": "325910",
+    "title": "Printing Ink Manufacturing",
+    "fullTitle": "325910 - Printing Ink Manufacturing"
+  },
+  {
+    "id": "325920",
+    "title": "Explosives Manufacturing",
+    "fullTitle": "325920 - Explosives Manufacturing"
+  },
+  {
+    "id": "325991",
+    "title": "Custom Compounding of Purchased Resins",
+    "fullTitle": "325991 - Custom Compounding of Purchased Resins"
+  },
+  {
+    "id": "325992",
+    "title": "Photographic Film, Paper, Plate, and Chemical Manufacturing",
+    "fullTitle": "325992 - Photographic Film, Paper, Plate, and Chemical Manufacturing"
+  },
+  {
+    "id": "325998",
+    "title": "All Other Miscellaneous Chemical Product and Preparation Manufacturing",
+    "fullTitle": "325998 - All Other Miscellaneous Chemical Product and Preparation Manufacturing"
+  },
+  {
+    "id": "326111",
+    "title": "Plastics Bag and Pouch Manufacturing",
+    "fullTitle": "326111 - Plastics Bag and Pouch Manufacturing"
+  },
+  {
+    "id": "326112",
+    "title": "Plastics Packaging Film and Sheet (including Laminated) Manufacturing",
+    "fullTitle": "326112 - Plastics Packaging Film and Sheet (including Laminated) Manufacturing"
+  },
+  {
+    "id": "326113",
+    "title": "Unlaminated Plastics Film and Sheet (except Packaging) Manufacturing",
+    "fullTitle": "326113 - Unlaminated Plastics Film and Sheet (except Packaging) Manufacturing"
+  },
+  {
+    "id": "326121",
+    "title": "Unlaminated Plastics Profile Shape Manufacturing",
+    "fullTitle": "326121 - Unlaminated Plastics Profile Shape Manufacturing"
+  },
+  {
+    "id": "326122",
+    "title": "Plastics Pipe and Pipe Fitting Manufacturing",
+    "fullTitle": "326122 - Plastics Pipe and Pipe Fitting Manufacturing"
+  },
+  {
+    "id": "326130",
+    "title": "Laminated Plastics Plate, Sheet (except Packaging), and Shape Manufacturing",
+    "fullTitle": "326130 - Laminated Plastics Plate, Sheet (except Packaging), and Shape Manufacturing"
+  },
+  {
+    "id": "326140",
+    "title": "Polystyrene Foam Product Manufacturing",
+    "fullTitle": "326140 - Polystyrene Foam Product Manufacturing"
+  },
+  {
+    "id": "326150",
+    "title": "Urethane and Other Foam Product (except Polystyrene) Manufacturing",
+    "fullTitle": "326150 - Urethane and Other Foam Product (except Polystyrene) Manufacturing"
+  },
+  {
+    "id": "326160",
+    "title": "Plastics Bottle Manufacturing",
+    "fullTitle": "326160 - Plastics Bottle Manufacturing"
+  },
+  {
+    "id": "326191",
+    "title": "Plastics Plumbing Fixture Manufacturing",
+    "fullTitle": "326191 - Plastics Plumbing Fixture Manufacturing"
+  },
+  {
+    "id": "326199",
+    "title": "All Other Plastics Product Manufacturing",
+    "fullTitle": "326199 - All Other Plastics Product Manufacturing"
+  },
+  {
+    "id": "326199",
+    "title": "All Other Plastics Product Manufacturing",
+    "fullTitle": "326199 - All Other Plastics Product Manufacturing"
+  },
+  {
+    "id": "326211",
+    "title": "Tire Manufacturing (except Retreading)",
+    "fullTitle": "326211 - Tire Manufacturing (except Retreading)"
+  },
+  {
+    "id": "326212",
+    "title": "Tire Retreading",
+    "fullTitle": "326212 - Tire Retreading"
+  },
+  {
+    "id": "326220",
+    "title": "Rubber and Plastics Hoses and Belting Manufacturing",
+    "fullTitle": "326220 - Rubber and Plastics Hoses and Belting Manufacturing"
+  },
+  {
+    "id": "326291",
+    "title": "Rubber Product Manufacturing for Mechanical Use",
+    "fullTitle": "326291 - Rubber Product Manufacturing for Mechanical Use"
+  },
+  {
+    "id": "326299",
+    "title": "All Other Rubber Product Manufacturing",
+    "fullTitle": "326299 - All Other Rubber Product Manufacturing"
+  },
+  {
+    "id": "327110",
+    "title": "Pottery, Ceramics, and Plumbing Fixture Manufacturing",
+    "fullTitle": "327110 - Pottery, Ceramics, and Plumbing Fixture Manufacturing"
+  },
+  {
+    "id": "327110",
+    "title": "Pottery, Ceramics, and Plumbing Fixture Manufacturing",
+    "fullTitle": "327110 - Pottery, Ceramics, and Plumbing Fixture Manufacturing"
+  },
+  {
+    "id": "327110",
+    "title": "Pottery, Ceramics, and Plumbing Fixture Manufacturing",
+    "fullTitle": "327110 - Pottery, Ceramics, and Plumbing Fixture Manufacturing"
+  },
+  {
+    "id": "327120",
+    "title": "Clay Building Material and Refractories Manufacturing",
+    "fullTitle": "327120 - Clay Building Material and Refractories Manufacturing"
+  },
+  {
+    "id": "327120",
+    "title": "Clay Building Material and Refractories Manufacturing",
+    "fullTitle": "327120 - Clay Building Material and Refractories Manufacturing"
+  },
+  {
+    "id": "327120",
+    "title": "Clay Building Material and Refractories Manufacturing",
+    "fullTitle": "327120 - Clay Building Material and Refractories Manufacturing"
+  },
+  {
+    "id": "327120",
+    "title": "Clay Building Material and Refractories Manufacturing",
+    "fullTitle": "327120 - Clay Building Material and Refractories Manufacturing"
+  },
+  {
+    "id": "327120",
+    "title": "Clay Building Material and Refractories Manufacturing",
+    "fullTitle": "327120 - Clay Building Material and Refractories Manufacturing"
+  },
+  {
+    "id": "327211",
+    "title": "Flat Glass Manufacturing",
+    "fullTitle": "327211 - Flat Glass Manufacturing"
+  },
+  {
+    "id": "327212",
+    "title": "Other Pressed and Blown Glass and Glassware Manufacturing",
+    "fullTitle": "327212 - Other Pressed and Blown Glass and Glassware Manufacturing"
+  },
+  {
+    "id": "327213",
+    "title": "Glass Container Manufacturing",
+    "fullTitle": "327213 - Glass Container Manufacturing"
+  },
+  {
+    "id": "327215",
+    "title": "Glass Product Manufacturing Made of Purchased Glass",
+    "fullTitle": "327215 - Glass Product Manufacturing Made of Purchased Glass"
+  },
+  {
+    "id": "327310",
+    "title": "Cement Manufacturing",
+    "fullTitle": "327310 - Cement Manufacturing"
+  },
+  {
+    "id": "327320",
+    "title": "Ready-Mix Concrete Manufacturing",
+    "fullTitle": "327320 - Ready-Mix Concrete Manufacturing"
+  },
+  {
+    "id": "327331",
+    "title": "Concrete Block and Brick Manufacturing",
+    "fullTitle": "327331 - Concrete Block and Brick Manufacturing"
+  },
+  {
+    "id": "327332",
+    "title": "Concrete Pipe Manufacturing",
+    "fullTitle": "327332 - Concrete Pipe Manufacturing"
+  },
+  {
+    "id": "327390",
+    "title": "Other Concrete Product Manufacturing",
+    "fullTitle": "327390 - Other Concrete Product Manufacturing"
+  },
+  {
+    "id": "327410",
+    "title": "Lime Manufacturing",
+    "fullTitle": "327410 - Lime Manufacturing"
+  },
+  {
+    "id": "327420",
+    "title": "Gypsum Product Manufacturing",
+    "fullTitle": "327420 - Gypsum Product Manufacturing"
+  },
+  {
+    "id": "327910",
+    "title": "Abrasive Product Manufacturing",
+    "fullTitle": "327910 - Abrasive Product Manufacturing"
+  },
+  {
+    "id": "327991",
+    "title": "Cut Stone and Stone Product Manufacturing",
+    "fullTitle": "327991 - Cut Stone and Stone Product Manufacturing"
+  },
+  {
+    "id": "327992",
+    "title": "Ground or Treated Mineral and Earth Manufacturing",
+    "fullTitle": "327992 - Ground or Treated Mineral and Earth Manufacturing"
+  },
+  {
+    "id": "327993",
+    "title": "Mineral Wool Manufacturing",
+    "fullTitle": "327993 - Mineral Wool Manufacturing"
+  },
+  {
+    "id": "327999",
+    "title": "All Other Miscellaneous Nonmetallic Mineral Product Manufacturing",
+    "fullTitle": "327999 - All Other Miscellaneous Nonmetallic Mineral Product Manufacturing"
+  },
+  {
+    "id": "331110",
+    "title": "Iron and Steel Mills and Ferroalloy Manufacturing",
+    "fullTitle": "331110 - Iron and Steel Mills and Ferroalloy Manufacturing"
+  },
+  {
+    "id": "331110",
+    "title": "Iron and Steel Mills and Ferroalloy Manufacturing",
+    "fullTitle": "331110 - Iron and Steel Mills and Ferroalloy Manufacturing"
+  },
+  {
+    "id": "331210",
+    "title": "Iron and Steel Pipe and Tube Manufacturing from Purchased Steel",
+    "fullTitle": "331210 - Iron and Steel Pipe and Tube Manufacturing from Purchased Steel"
+  },
+  {
+    "id": "331221",
+    "title": "Rolled Steel Shape Manufacturing",
+    "fullTitle": "331221 - Rolled Steel Shape Manufacturing"
+  },
+  {
+    "id": "331222",
+    "title": "Steel Wire Drawing",
+    "fullTitle": "331222 - Steel Wire Drawing"
+  },
+  {
+    "id": "331313",
+    "title": "Alumina Refining and Primary Aluminum Production",
+    "fullTitle": "331313 - Alumina Refining and Primary Aluminum Production"
+  },
+  {
+    "id": "331313",
+    "title": "Alumina Refining and Primary Aluminum Production",
+    "fullTitle": "331313 - Alumina Refining and Primary Aluminum Production"
+  },
+  {
+    "id": "331314",
+    "title": "Secondary Smelting and Alloying of Aluminum",
+    "fullTitle": "331314 - Secondary Smelting and Alloying of Aluminum"
+  },
+  {
+    "id": "331315",
+    "title": "Aluminum Sheet, Plate, and Foil Manufacturing",
+    "fullTitle": "331315 - Aluminum Sheet, Plate, and Foil Manufacturing"
+  },
+  {
+    "id": "331318",
+    "title": "Other Aluminum Rolling, Drawing, and Extruding",
+    "fullTitle": "331318 - Other Aluminum Rolling, Drawing, and Extruding"
+  },
+  {
+    "id": "331318",
+    "title": "Other Aluminum Rolling, Drawing, and Extruding",
+    "fullTitle": "331318 - Other Aluminum Rolling, Drawing, and Extruding"
+  },
+  {
+    "id": "331410",
+    "title": "Nonferrous Metal (except Aluminum) Smelting and Refining",
+    "fullTitle": "331410 - Nonferrous Metal (except Aluminum) Smelting and Refining"
+  },
+  {
+    "id": "331410",
+    "title": "Nonferrous Metal (except Aluminum) Smelting and Refining",
+    "fullTitle": "331410 - Nonferrous Metal (except Aluminum) Smelting and Refining"
+  },
+  {
+    "id": "331420",
+    "title": "Copper Rolling, Drawing, Extruding, and Alloying",
+    "fullTitle": "331420 - Copper Rolling, Drawing, Extruding, and Alloying"
+  },
+  {
+    "id": "331420",
+    "title": "Copper Rolling, Drawing, Extruding, and Alloying",
+    "fullTitle": "331420 - Copper Rolling, Drawing, Extruding, and Alloying"
+  },
+  {
+    "id": "331420",
+    "title": "Copper Rolling, Drawing, Extruding, and Alloying",
+    "fullTitle": "331420 - Copper Rolling, Drawing, Extruding, and Alloying"
+  },
+  {
+    "id": "331491",
+    "title": "Nonferrous Metal (except Copper and Aluminum) Rolling, Drawing, and Extruding",
+    "fullTitle": "331491 - Nonferrous Metal (except Copper and Aluminum) Rolling, Drawing, and Extruding"
+  },
+  {
+    "id": "331492",
+    "title": "Secondary Smelting, Refining, and Alloying of Nonferrous Metal (except Copper and Aluminum)",
+    "fullTitle": "331492 - Secondary Smelting, Refining, and Alloying of Nonferrous Metal (except Copper and Aluminum)"
+  },
+  {
+    "id": "331511",
+    "title": "Iron Foundries",
+    "fullTitle": "331511 - Iron Foundries"
+  },
+  {
+    "id": "331512",
+    "title": "Steel Investment Foundries",
+    "fullTitle": "331512 - Steel Investment Foundries"
+  },
+  {
+    "id": "331513",
+    "title": "Steel Foundries (except Investment)",
+    "fullTitle": "331513 - Steel Foundries (except Investment)"
+  },
+  {
+    "id": "331523",
+    "title": "Nonferrous Metal Die-Casting Foundries",
+    "fullTitle": "331523 - Nonferrous Metal Die-Casting Foundries"
+  },
+  {
+    "id": "331523",
+    "title": "Nonferrous Metal Die-Casting Foundries",
+    "fullTitle": "331523 - Nonferrous Metal Die-Casting Foundries"
+  },
+  {
+    "id": "331524",
+    "title": "Aluminum Foundries (except Die-Casting)",
+    "fullTitle": "331524 - Aluminum Foundries (except Die-Casting)"
+  },
+  {
+    "id": "331529",
+    "title": "Other Nonferrous Metal Foundries (except Die-Casting)",
+    "fullTitle": "331529 - Other Nonferrous Metal Foundries (except Die-Casting)"
+  },
+  {
+    "id": "331529",
+    "title": "Other Nonferrous Metal Foundries (except Die-Casting)",
+    "fullTitle": "331529 - Other Nonferrous Metal Foundries (except Die-Casting)"
+  },
+  {
+    "id": "332111",
+    "title": "Iron and Steel Forging",
+    "fullTitle": "332111 - Iron and Steel Forging"
+  },
+  {
+    "id": "332112",
+    "title": "Nonferrous Forging",
+    "fullTitle": "332112 - Nonferrous Forging"
+  },
+  {
+    "id": "332114",
+    "title": "Custom Roll Forming",
+    "fullTitle": "332114 - Custom Roll Forming"
+  },
+  {
+    "id": "332117",
+    "title": "Powder Metallurgy Part Manufacturing",
+    "fullTitle": "332117 - Powder Metallurgy Part Manufacturing"
+  },
+  {
+    "id": "332119",
+    "title": "Metal Crown, Closure, and Other Metal Stamping (except Automotive)",
+    "fullTitle": "332119 - Metal Crown, Closure, and Other Metal Stamping (except Automotive)"
+  },
+  {
+    "id": "332119",
+    "title": "Metal Crown, Closure, and Other Metal Stamping (except Automotive)",
+    "fullTitle": "332119 - Metal Crown, Closure, and Other Metal Stamping (except Automotive)"
+  },
+  {
+    "id": "332215",
+    "title": "Metal Kitchen Cookware, Utensil, Cutlery, and Flatware (except Precious) Manufacturing",
+    "fullTitle": "332215 - Metal Kitchen Cookware, Utensil, Cutlery, and Flatware (except Precious) Manufacturing"
+  },
+  {
+    "id": "332215",
+    "title": "Metal Kitchen Cookware, Utensil, Cutlery, and Flatware (except Precious) Manufacturing",
+    "fullTitle": "332215 - Metal Kitchen Cookware, Utensil, Cutlery, and Flatware (except Precious) Manufacturing"
+  },
+  {
+    "id": "332216",
+    "title": "Saw Blade and Handtool Manufacturing",
+    "fullTitle": "332216 - Saw Blade and Handtool Manufacturing"
+  },
+  {
+    "id": "332216",
+    "title": "Saw Blade and Handtool Manufacturing",
+    "fullTitle": "332216 - Saw Blade and Handtool Manufacturing"
+  },
+  {
+    "id": "332311",
+    "title": "Prefabricated Metal Building and Component Manufacturing",
+    "fullTitle": "332311 - Prefabricated Metal Building and Component Manufacturing"
+  },
+  {
+    "id": "332312",
+    "title": "Fabricated Structural Metal Manufacturing",
+    "fullTitle": "332312 - Fabricated Structural Metal Manufacturing"
+  },
+  {
+    "id": "332313",
+    "title": "Plate Work Manufacturing",
+    "fullTitle": "332313 - Plate Work Manufacturing"
+  },
+  {
+    "id": "332321",
+    "title": "Metal Window and Door Manufacturing",
+    "fullTitle": "332321 - Metal Window and Door Manufacturing"
+  },
+  {
+    "id": "332322",
+    "title": "Sheet Metal Work Manufacturing",
+    "fullTitle": "332322 - Sheet Metal Work Manufacturing"
+  },
+  {
+    "id": "332323",
+    "title": "Ornamental and Architectural Metal Work Manufacturing",
+    "fullTitle": "332323 - Ornamental and Architectural Metal Work Manufacturing"
+  },
+  {
+    "id": "332410",
+    "title": "Power Boiler and Heat Exchanger Manufacturing",
+    "fullTitle": "332410 - Power Boiler and Heat Exchanger Manufacturing"
+  },
+  {
+    "id": "332420",
+    "title": "Metal Tank (Heavy Gauge) Manufacturing",
+    "fullTitle": "332420 - Metal Tank (Heavy Gauge) Manufacturing"
+  },
+  {
+    "id": "332431",
+    "title": "Metal Can Manufacturing",
+    "fullTitle": "332431 - Metal Can Manufacturing"
+  },
+  {
+    "id": "332439",
+    "title": "Other Metal Container Manufacturing",
+    "fullTitle": "332439 - Other Metal Container Manufacturing"
+  },
+  {
+    "id": "332510",
+    "title": "Hardware Manufacturing",
+    "fullTitle": "332510 - Hardware Manufacturing"
+  },
+  {
+    "id": "332613",
+    "title": "Spring Manufacturing",
+    "fullTitle": "332613 - Spring Manufacturing"
+  },
+  {
+    "id": "332613",
+    "title": "Spring Manufacturing",
+    "fullTitle": "332613 - Spring Manufacturing"
+  },
+  {
+    "id": "332618",
+    "title": "Other Fabricated Wire Product Manufacturing",
+    "fullTitle": "332618 - Other Fabricated Wire Product Manufacturing"
+  },
+  {
+    "id": "332710",
+    "title": "Machine Shops",
+    "fullTitle": "332710 -Machine Shops "
+  },
+  {
+    "id": "332721",
+    "title": "Precision Turned Product Manufacturing",
+    "fullTitle": "332721 - Precision Turned Product Manufacturing"
+  },
+  {
+    "id": "332722",
+    "title": "Bolt, Nut, Screw, Rivet, and Washer Manufacturing",
+    "fullTitle": "332722 - Bolt, Nut, Screw, Rivet, and Washer Manufacturing"
+  },
+  {
+    "id": "332811",
+    "title": "Metal Heat Treating",
+    "fullTitle": "332811 - Metal Heat Treating"
+  },
+  {
+    "id": "332812",
+    "title": "Metal Coating, Engraving (except Jewelry and Silverware), and Allied Services to Manufacturers",
+    "fullTitle": "332812 - Metal Coating, Engraving (except Jewelry and Silverware), and Allied Services to Manufacturers"
+  },
+  {
+    "id": "332813",
+    "title": "Electroplating, Plating, Polishing, Anodizing, and Coloring",
+    "fullTitle": "332813 - Electroplating, Plating, Polishing, Anodizing, and Coloring"
+  },
+  {
+    "id": "332911",
+    "title": "Industrial Valve Manufacturing",
+    "fullTitle": "332911 - Industrial Valve Manufacturing"
+  },
+  {
+    "id": "332912",
+    "title": "Fluid Power Valve and Hose Fitting Manufacturing",
+    "fullTitle": "332912 - Fluid Power Valve and Hose Fitting Manufacturing"
+  },
+  {
+    "id": "332913",
+    "title": "Plumbing Fixture Fitting and Trim Manufacturing",
+    "fullTitle": "332913 - Plumbing Fixture Fitting and Trim Manufacturing"
+  },
+  {
+    "id": "332919",
+    "title": "Other Metal Valve and Pipe Fitting Manufacturing",
+    "fullTitle": "332919 - Other Metal Valve and Pipe Fitting Manufacturing"
+  },
+  {
+    "id": "332991",
+    "title": "Ball and Roller Bearing Manufacturing",
+    "fullTitle": "332991 - Ball and Roller Bearing Manufacturing"
+  },
+  {
+    "id": "332992",
+    "title": "Small Arms Ammunition Manufacturing",
+    "fullTitle": "332992 - Small Arms Ammunition Manufacturing"
+  },
+  {
+    "id": "332993",
+    "title": "Ammunition (except Small Arms) Manufacturing",
+    "fullTitle": "332993 - Ammunition (except Small Arms) Manufacturing"
+  },
+  {
+    "id": "332994",
+    "title": "Small Arms, Ordnance, and Ordnance Accessories Manufacturing",
+    "fullTitle": "332994 - Small Arms, Ordnance, and Ordnance Accessories Manufacturing"
+  },
+  {
+    "id": "332994",
+    "title": "Small Arms, Ordnance, and Ordnance Accessories Manufacturing",
+    "fullTitle": "332994 - Small Arms, Ordnance, and Ordnance Accessories Manufacturing"
+  },
+  {
+    "id": "332996",
+    "title": "Fabricated Pipe and Pipe Fitting Manufacturing",
+    "fullTitle": "332996 - Fabricated Pipe and Pipe Fitting Manufacturing"
+  },
+  {
+    "id": "332999",
+    "title": "All Other Miscellaneous Fabricated Metal Product Manufacturing",
+    "fullTitle": "332999 - All Other Miscellaneous Fabricated Metal Product Manufacturing"
+  },
+  {
+    "id": "332999",
+    "title": "All Other Miscellaneous Fabricated Metal Product Manufacturing",
+    "fullTitle": "332999 - All Other Miscellaneous Fabricated Metal Product Manufacturing"
+  },
+  {
+    "id": "332999",
+    "title": "All Other Miscellaneous Fabricated Metal Product Manufacturing",
+    "fullTitle": "332999 - All Other Miscellaneous Fabricated Metal Product Manufacturing"
+  },
+  {
+    "id": "333111",
+    "title": "Farm Machinery and Equipment Manufacturing",
+    "fullTitle": "333111 - Farm Machinery and Equipment Manufacturing"
+  },
+  {
+    "id": "333112",
+    "title": "Lawn and Garden Tractor and Home Lawn and Garden Equipment Manufacturing",
+    "fullTitle": "333112 - Lawn and Garden Tractor and Home Lawn and Garden Equipment Manufacturing"
+  },
+  {
+    "id": "333120",
+    "title": "Construction Machinery Manufacturing",
+    "fullTitle": "333120 - Construction Machinery Manufacturing"
+  },
+  {
+    "id": "333131",
+    "title": "Mining Machinery and Equipment Manufacturing",
+    "fullTitle": "333131 - Mining Machinery and Equipment Manufacturing"
+  },
+  {
+    "id": "333132",
+    "title": "Oil and Gas Field Machinery and Equipment Manufacturing",
+    "fullTitle": "333132 - Oil and Gas Field Machinery and Equipment Manufacturing"
+  },
+  {
+    "id": "333241",
+    "title": "Food Product Machinery Manufacturing",
+    "fullTitle": "333241 - Food Product Machinery Manufacturing"
+  },
+  {
+    "id": "333242",
+    "title": "Semiconductor Machinery Manufacturing",
+    "fullTitle": "333242 - Semiconductor Machinery Manufacturing"
+  },
+  {
+    "id": "333243",
+    "title": "Sawmill, Woodworking, and Paper Machinery Manufacturing",
+    "fullTitle": "333243 - Sawmill, Woodworking, and Paper Machinery Manufacturing"
+  },
+  {
+    "id": "333243",
+    "title": "Sawmill, Woodworking, and Paper Machinery Manufacturing",
+    "fullTitle": "333243 - Sawmill, Woodworking, and Paper Machinery Manufacturing"
+  },
+  {
+    "id": "333244",
+    "title": "Printing Machinery and Equipment Manufacturing",
+    "fullTitle": "333244 - Printing Machinery and Equipment Manufacturing"
+  },
+  {
+    "id": "333249",
+    "title": "Other Industrial Machinery Manufacturing",
+    "fullTitle": "333249 - Other Industrial Machinery Manufacturing"
+  },
+  {
+    "id": "333249",
+    "title": "Other Industrial Machinery Manufacturing",
+    "fullTitle": "333249 - Other Industrial Machinery Manufacturing"
+  },
+  {
+    "id": "333249",
+    "title": "Other Industrial Machinery Manufacturing",
+    "fullTitle": "333249 - Other Industrial Machinery Manufacturing"
+  },
+  {
+    "id": "333314",
+    "title": "Optical Instrument and Lens Manufacturing",
+    "fullTitle": "333314 - Optical Instrument and Lens Manufacturing"
+  },
+  {
+    "id": "333316",
+    "title": "Computer Terminal and Other Computer Peripheral Equipment Manufacturing",
+    "fullTitle": "333316 - Computer Terminal and Other Computer Peripheral Equipment Manufacturing"
+  },
+  {
+    "id": "333316",
+    "title": "Computer Terminal and Other Computer Peripheral Equipment Manufacturing",
+    "fullTitle": "333316 - Computer Terminal and Other Computer Peripheral Equipment Manufacturing"
+  },
+  {
+    "id": "333318",
+    "title": "Other Commercial and Service Industry Machinery Manufacturing",
+    "fullTitle": "333318 - Other Commercial and Service Industry Machinery Manufacturing"
+  },
+  {
+    "id": "333318",
+    "title": "Other Commercial and Service Industry Machinery Manufacturing",
+    "fullTitle": "333318 - Other Commercial and Service Industry Machinery Manufacturing"
+  },
+  {
+    "id": "333318",
+    "title": "Other Commercial and Service Industry Machinery Manufacturing",
+    "fullTitle": "333318 - Other Commercial and Service Industry Machinery Manufacturing"
+  },
+  {
+    "id": "333318",
+    "title": "Other Commercial and Service Industry Machinery Manufacturing",
+    "fullTitle": "333318 - Other Commercial and Service Industry Machinery Manufacturing"
+  },
+  {
+    "id": "333413",
+    "title": "Industrial and Commercial Fan and Blower and Air Purification Equipment Manufacturing",
+    "fullTitle": "333413 - Industrial and Commercial Fan and Blower and Air Purification Equipment Manufacturing"
+  },
+  {
+    "id": "333413",
+    "title": "Industrial and Commercial Fan and Blower and Air Purification Equipment Manufacturing",
+    "fullTitle": "333413 - Industrial and Commercial Fan and Blower and Air Purification Equipment Manufacturing"
+  },
+  {
+    "id": "333414",
+    "title": "Heating Equipment (except Warm Air Furnaces) Manufacturing",
+    "fullTitle": "333414 - Heating Equipment (except Warm Air Furnaces) Manufacturing"
+  },
+  {
+    "id": "333415",
+    "title": "Air-Conditioning and Warm Air Heating Equipment and Commercial and Industrial Refrigeration Equipment Manufacturing",
+    "fullTitle": "333415 - Air-Conditioning and Warm Air Heating Equipment and Commercial and Industrial Refrigeration Equipment Manufacturing"
+  },
+  {
+    "id": "333511",
+    "title": "Industrial Mold Manufacturing",
+    "fullTitle": "333511 - Industrial Mold Manufacturing"
+  },
+  {
+    "id": "333514",
+    "title": "Special Die and Tool, Die Set, Jig, and Fixture Manufacturing",
+    "fullTitle": "333514 - Special Die and Tool, Die Set, Jig, and Fixture Manufacturing"
+  },
+  {
+    "id": "333515",
+    "title": "Cutting Tool and Machine Tool Accessory Manufacturing",
+    "fullTitle": "333515 - Cutting Tool and Machine Tool Accessory Manufacturing"
+  },
+  {
+    "id": "333517",
+    "title": "Machine Tool Manufacturing",
+    "fullTitle": "333517 - Machine Tool Manufacturing"
+  },
+  {
+    "id": "333517",
+    "title": "Machine Tool Manufacturing",
+    "fullTitle": "333517 - Machine Tool Manufacturing"
+  },
+  {
+    "id": "333519",
+    "title": "Rolling Mill and Other Metalworking Machinery Manufacturing",
+    "fullTitle": "333519 - Rolling Mill and Other Metalworking Machinery Manufacturing"
+  },
+  {
+    "id": "333519",
+    "title": "Rolling Mill and Other Metalworking Machinery Manufacturing",
+    "fullTitle": "333519 - Rolling Mill and Other Metalworking Machinery Manufacturing"
+  },
+  {
+    "id": "333611",
+    "title": "Turbine and Turbine Generator Set Units Manufacturing",
+    "fullTitle": "333611 - Turbine and Turbine Generator Set Units Manufacturing"
+  },
+  {
+    "id": "333612",
+    "title": "Speed Changer, Industrial High-Speed Drive, and Gear Manufacturing",
+    "fullTitle": "333612 - Speed Changer, Industrial High-Speed Drive, and Gear Manufacturing"
+  },
+  {
+    "id": "333613",
+    "title": "Mechanical Power Transmission Equipment Manufacturing",
+    "fullTitle": "333613 - Mechanical Power Transmission Equipment Manufacturing"
+  },
+  {
+    "id": "333618",
+    "title": "Other Engine Equipment Manufacturing",
+    "fullTitle": "333618 - Other Engine Equipment Manufacturing"
+  },
+  {
+    "id": "333911",
+    "title": "Pump and Pumping Equipment Manufacturing",
+    "fullTitle": "333911 - Pump and Pumping Equipment Manufacturing"
+  },
+  {
+    "id": "333912",
+    "title": "Air and Gas Compressor Manufacturing",
+    "fullTitle": "333912 - Air and Gas Compressor Manufacturing"
+  },
+  {
+    "id": "333913",
+    "title": "Measuring and Dispensing Pump Manufacturing",
+    "fullTitle": "333913 - Measuring and Dispensing Pump Manufacturing"
+  },
+  {
+    "id": "333921",
+    "title": "Elevator and Moving Stairway Manufacturing",
+    "fullTitle": "333921 - Elevator and Moving Stairway Manufacturing"
+  },
+  {
+    "id": "333922",
+    "title": "Conveyor and Conveying Equipment Manufacturing",
+    "fullTitle": "333922 - Conveyor and Conveying Equipment Manufacturing"
+  },
+  {
+    "id": "333923",
+    "title": "Overhead Traveling Crane, Hoist, and Monorail System Manufacturing",
+    "fullTitle": "333923 - Overhead Traveling Crane, Hoist, and Monorail System Manufacturing"
+  },
+  {
+    "id": "333924",
+    "title": "Industrial Truck, Tractor, Trailer, and Stacker Machinery Manufacturing",
+    "fullTitle": "333924 - Industrial Truck, Tractor, Trailer, and Stacker Machinery Manufacturing"
+  },
+  {
+    "id": "333991",
+    "title": "Power-Driven Handtool Manufacturing",
+    "fullTitle": "333991 - Power-Driven Handtool Manufacturing"
+  },
+  {
+    "id": "333992",
+    "title": "Welding and Soldering Equipment Manufacturing",
+    "fullTitle": "333992 - Welding and Soldering Equipment Manufacturing"
+  },
+  {
+    "id": "333993",
+    "title": "Packaging Machinery Manufacturing",
+    "fullTitle": "333993 - Packaging Machinery Manufacturing"
+  },
+  {
+    "id": "333994",
+    "title": "Industrial Process Furnace and Oven Manufacturing",
+    "fullTitle": "333994 - Industrial Process Furnace and Oven Manufacturing"
+  },
+  {
+    "id": "333995",
+    "title": "Fluid Power Cylinder and Actuator Manufacturing",
+    "fullTitle": "333995 - Fluid Power Cylinder and Actuator Manufacturing"
+  },
+  {
+    "id": "333996",
+    "title": "Fluid Power Pump and Motor Manufacturing",
+    "fullTitle": "333996 - Fluid Power Pump and Motor Manufacturing"
+  },
+  {
+    "id": "333997",
+    "title": "Scale and Balance Manufacturing",
+    "fullTitle": "333997 - Scale and Balance Manufacturing"
+  },
+  {
+    "id": "333999",
+    "title": "All Other Miscellaneous General Purpose Machinery Manufacturing",
+    "fullTitle": "333999 - All Other Miscellaneous General Purpose Machinery Manufacturing"
+  },
+  {
+    "id": "334111",
+    "title": "Electronic Computer Manufacturing",
+    "fullTitle": "334111 - Electronic Computer Manufacturing"
+  },
+  {
+    "id": "334112",
+    "title": "Computer Storage Device Manufacturing",
+    "fullTitle": "334112 - Computer Storage Device Manufacturing"
+  },
+  {
+    "id": "334118",
+    "title": "Computer Terminal and Other Computer Peripheral Equipment Manufacturing",
+    "fullTitle": "334118 - Computer Terminal and Other Computer Peripheral Equipment Manufacturing"
+  },
+  {
+    "id": "334118",
+    "title": "Computer Terminal and Other Computer Peripheral Equipment Manufacturing",
+    "fullTitle": "334118 - Computer Terminal and Other Computer Peripheral Equipment Manufacturing"
+  },
+  {
+    "id": "334210",
+    "title": "Telephone Apparatus Manufacturing",
+    "fullTitle": "334210 - Telephone Apparatus Manufacturing"
+  },
+  {
+    "id": "334220",
+    "title": "Radio and Television Broadcasting and Wireless Communications Equipment Manufacturing",
+    "fullTitle": "334220 - Radio and Television Broadcasting and Wireless Communications Equipment Manufacturing"
+  },
+  {
+    "id": "334290",
+    "title": "Other Communications Equipment Manufacturing",
+    "fullTitle": "334290 - Other Communications Equipment Manufacturing"
+  },
+  {
+    "id": "334310",
+    "title": "Audio and Video Equipment Manufacturing",
+    "fullTitle": "334310 - Audio and Video Equipment Manufacturing"
+  },
+  {
+    "id": "334412",
+    "title": "Bare Printed Circuit Board Manufacturing",
+    "fullTitle": "334412 - Bare Printed Circuit Board Manufacturing"
+  },
+  {
+    "id": "334413",
+    "title": "Semiconductor and Related Device Manufacturing",
+    "fullTitle": "334413 - Semiconductor and Related Device Manufacturing"
+  },
+  {
+    "id": "334416",
+    "title": "Capacitor, Resistor, Coil, Transformer, and Other Inductor Manufacturing",
+    "fullTitle": "334416 - Capacitor, Resistor, Coil, Transformer, and Other Inductor Manufacturing"
+  },
+  {
+    "id": "334416",
+    "title": "Capacitor, Resistor, Coil, Transformer, and Other Inductor Manufacturing",
+    "fullTitle": "334416 - Capacitor, Resistor, Coil, Transformer, and Other Inductor Manufacturing"
+  },
+  {
+    "id": "334416",
+    "title": "Capacitor, Resistor, Coil, Transformer, and Other Inductor Manufacturing",
+    "fullTitle": "334416 - Capacitor, Resistor, Coil, Transformer, and Other Inductor Manufacturing"
+  },
+  {
+    "id": "334417",
+    "title": "Electronic Connector Manufacturing",
+    "fullTitle": "334417 - Electronic Connector Manufacturing"
+  },
+  {
+    "id": "334418",
+    "title": "Printed Circuit Assembly (Electronic Assembly) Manufacturing",
+    "fullTitle": "334418 - Printed Circuit Assembly (Electronic Assembly) Manufacturing"
+  },
+  {
+    "id": "334419",
+    "title": "Other Electronic Component Manufacturing",
+    "fullTitle": "334419 - Other Electronic Component Manufacturing"
+  },
+  {
+    "id": "334419",
+    "title": "Other Electronic Component Manufacturing",
+    "fullTitle": "334419 - Other Electronic Component Manufacturing"
+  },
+  {
+    "id": "334510",
+    "title": "Electromedical and Electrotherapeutic Apparatus Manufacturing",
+    "fullTitle": "334510 - Electromedical and Electrotherapeutic Apparatus Manufacturing"
+  },
+  {
+    "id": "334511",
+    "title": "Search, Detection, Navigation, Guidance, Aeronautical, and Nautical System and Instrument Manufacturing",
+    "fullTitle": "334511 - Search, Detection, Navigation, Guidance, Aeronautical, and Nautical System and Instrument Manufacturing"
+  },
+  {
+    "id": "334512",
+    "title": "Automatic Environmental Control Manufacturing for Residential, Commercial, and Appliance Use",
+    "fullTitle": "334512 - Automatic Environmental Control Manufacturing for Residential, Commercial, and Appliance Use"
+  },
+  {
+    "id": "334513",
+    "title": "Instruments and Related Products Manufacturing for Measuring, Displaying, and Controlling Industrial Process Variables",
+    "fullTitle": "334513 - Instruments and Related Products Manufacturing for Measuring, Displaying, and Controlling Industrial Process Variables"
+  },
+  {
+    "id": "334514",
+    "title": "Totalizing Fluid Meter and Counting Device Manufacturing",
+    "fullTitle": "334514 - Totalizing Fluid Meter and Counting Device Manufacturing"
+  },
+  {
+    "id": "334515",
+    "title": "Instrument Manufacturing for Measuring and Testing Electricity and Electrical Signals",
+    "fullTitle": "334515 - Instrument Manufacturing for Measuring and Testing Electricity and Electrical Signals"
+  },
+  {
+    "id": "334516",
+    "title": "Analytical Laboratory Instrument Manufacturing",
+    "fullTitle": "334516 - Analytical Laboratory Instrument Manufacturing"
+  },
+  {
+    "id": "334517",
+    "title": "Irradiation Apparatus Manufacturing",
+    "fullTitle": "334517 - Irradiation Apparatus Manufacturing"
+  },
+  {
+    "id": "334519",
+    "title": "Other Measuring and Controlling Device Manufacturing",
+    "fullTitle": "334519 - Other Measuring and Controlling Device Manufacturing"
+  },
+  {
+    "id": "334519",
+    "title": "Other Measuring and Controlling Device Manufacturing",
+    "fullTitle": "334519 - Other Measuring and Controlling Device Manufacturing"
+  },
+  {
+    "id": "334613",
+    "title": "Blank Magnetic and Optical Recording Media Manufacturing",
+    "fullTitle": "334613 - Blank Magnetic and Optical Recording Media Manufacturing"
+  },
+  {
+    "id": "334614",
+    "title": "Software and Other Prerecorded Compact Disc, Tape, and Record Reproducing",
+    "fullTitle": "334614 - Software and Other Prerecorded Compact Disc, Tape, and Record Reproducing"
+  },
+  {
+    "id": "334614",
+    "title": "Software and Other Prerecorded Compact Disc, Tape, and Record Reproducing",
+    "fullTitle": "334614 - Software and Other Prerecorded Compact Disc, Tape, and Record Reproducing"
+  },
+  {
+    "id": "335110",
+    "title": "Electric Lamp Bulb and Part Manufacturing",
+    "fullTitle": "335110 - Electric Lamp Bulb and Part Manufacturing"
+  },
+  {
+    "id": "335121",
+    "title": "Residential Electric Lighting Fixture Manufacturing",
+    "fullTitle": "335121 - Residential Electric Lighting Fixture Manufacturing"
+  },
+  {
+    "id": "335122",
+    "title": "Commercial, Industrial, and Institutional Electric Lighting Fixture Manufacturing",
+    "fullTitle": "335122 - Commercial, Industrial, and Institutional Electric Lighting Fixture Manufacturing"
+  },
+  {
+    "id": "335129",
+    "title": "Other Lighting Equipment Manufacturing",
+    "fullTitle": "335129 - Other Lighting Equipment Manufacturing"
+  },
+  {
+    "id": "335210",
+    "title": "Small Electrical Appliance Manufacturing",
+    "fullTitle": "335210 - Small Electrical Appliance Manufacturing"
+  },
+  {
+    "id": "335210",
+    "title": "Small Electrical Appliance Manufacturing",
+    "fullTitle": "335210 - Small Electrical Appliance Manufacturing"
+  },
+  {
+    "id": "335221",
+    "title": "Household Cooking Appliance Manufacturing",
+    "fullTitle": "335221 - Household Cooking Appliance Manufacturing"
+  },
+  {
+    "id": "335222",
+    "title": "Household Refrigerator and Home Freezer Manufacturing",
+    "fullTitle": "335222 - Household Refrigerator and Home Freezer Manufacturing"
+  },
+  {
+    "id": "335224",
+    "title": "Household Laundry Equipment Manufacturing",
+    "fullTitle": "335224 - Household Laundry Equipment Manufacturing"
+  },
+  {
+    "id": "335228",
+    "title": "Other Major Household Appliance Manufacturing",
+    "fullTitle": "335228 - Other Major Household Appliance Manufacturing"
+  },
+  {
+    "id": "335311",
+    "title": "Power, Distribution, and Specialty Transformer Manufacturing",
+    "fullTitle": "335311 - Power, Distribution, and Specialty Transformer Manufacturing"
+  },
+  {
+    "id": "335312",
+    "title": "Motor and Generator Manufacturing",
+    "fullTitle": "335312 - Motor and Generator Manufacturing"
+  },
+  {
+    "id": "335313",
+    "title": "Switchgear and Switchboard Apparatus Manufacturing",
+    "fullTitle": "335313 - Switchgear and Switchboard Apparatus Manufacturing"
+  },
+  {
+    "id": "335314",
+    "title": "Relay and Industrial Control Manufacturing",
+    "fullTitle": "335314 - Relay and Industrial Control Manufacturing"
+  },
+  {
+    "id": "335911",
+    "title": "Storage Battery Manufacturing",
+    "fullTitle": "335911 - Storage Battery Manufacturing"
+  },
+  {
+    "id": "335912",
+    "title": "Primary Battery Manufacturing",
+    "fullTitle": "335912 - Primary Battery Manufacturing"
+  },
+  {
+    "id": "335921",
+    "title": "Fiber Optic Cable Manufacturing",
+    "fullTitle": "335921 - Fiber Optic Cable Manufacturing"
+  },
+  {
+    "id": "335929",
+    "title": "Other Communication and Energy Wire Manufacturing",
+    "fullTitle": "335929 - Other Communication and Energy Wire Manufacturing"
+  },
+  {
+    "id": "335931",
+    "title": "Current-Carrying Wiring Device Manufacturing",
+    "fullTitle": "335931 - Current-Carrying Wiring Device Manufacturing"
+  },
+  {
+    "id": "335932",
+    "title": "Noncurrent-Carrying Wiring Device Manufacturing",
+    "fullTitle": "335932 - Noncurrent-Carrying Wiring Device Manufacturing"
+  },
+  {
+    "id": "335991",
+    "title": "Carbon and Graphite Product Manufacturing",
+    "fullTitle": "335991 - Carbon and Graphite Product Manufacturing"
+  },
+  {
+    "id": "335999",
+    "title": "All Other Miscellaneous Electrical Equipment and Component Manufacturing",
+    "fullTitle": "335999 - All Other Miscellaneous Electrical Equipment and Component Manufacturing"
+  },
+  {
+    "id": "336111",
+    "title": "Automobile Manufacturing",
+    "fullTitle": "336111 - Automobile Manufacturing"
+  },
+  {
+    "id": "336112",
+    "title": "Light Truck and Utility Vehicle Manufacturing",
+    "fullTitle": "336112 - Light Truck and Utility Vehicle Manufacturing"
+  },
+  {
+    "id": "336120",
+    "title": "Heavy Duty Truck Manufacturing",
+    "fullTitle": "336120 - Heavy Duty Truck Manufacturing"
+  },
+  {
+    "id": "336211",
+    "title": "Motor Vehicle Body Manufacturing",
+    "fullTitle": "336211 - Motor Vehicle Body Manufacturing"
+  },
+  {
+    "id": "336212",
+    "title": "Truck Trailer Manufacturing",
+    "fullTitle": "336212 - Truck Trailer Manufacturing"
+  },
+  {
+    "id": "336213",
+    "title": "Motor Home Manufacturing",
+    "fullTitle": "336213 - Motor Home Manufacturing"
+  },
+  {
+    "id": "336214",
+    "title": "Travel Trailer and Camper Manufacturing",
+    "fullTitle": "336214 - Travel Trailer and Camper Manufacturing"
+  },
+  {
+    "id": "336310",
+    "title": "Motor Vehicle Gasoline Engine and Engine Parts Manufacturing",
+    "fullTitle": "336310 - Motor Vehicle Gasoline Engine and Engine Parts Manufacturing"
+  },
+  {
+    "id": "336310",
+    "title": "Motor Vehicle Gasoline Engine and Engine Parts Manufacturing",
+    "fullTitle": "336310 - Motor Vehicle Gasoline Engine and Engine Parts Manufacturing"
+  },
+  {
+    "id": "336320",
+    "title": "Motor Vehicle Electrical and Electronic Equipment Manufacturing",
+    "fullTitle": "336320 - Motor Vehicle Electrical and Electronic Equipment Manufacturing"
+  },
+  {
+    "id": "336320",
+    "title": "Motor Vehicle Electrical and Electronic Equipment Manufacturing",
+    "fullTitle": "336320 - Motor Vehicle Electrical and Electronic Equipment Manufacturing"
+  },
+  {
+    "id": "336330",
+    "title": "Motor Vehicle Steering and Suspension Components (except Spring) Manufacturing",
+    "fullTitle": "336330 - Motor Vehicle Steering and Suspension Components (except Spring) Manufacturing"
+  },
+  {
+    "id": "336340",
+    "title": "Motor Vehicle Brake System Manufacturing",
+    "fullTitle": "336340 - Motor Vehicle Brake System Manufacturing"
+  },
+  {
+    "id": "336350",
+    "title": "Motor Vehicle Transmission and Power Train Parts Manufacturing",
+    "fullTitle": "336350 - Motor Vehicle Transmission and Power Train Parts Manufacturing"
+  },
+  {
+    "id": "336360",
+    "title": "Motor Vehicle Seating and Interior Trim Manufacturing",
+    "fullTitle": "336360 - Motor Vehicle Seating and Interior Trim Manufacturing"
+  },
+  {
+    "id": "336370",
+    "title": "Motor Vehicle Metal Stamping",
+    "fullTitle": "336370 - Motor Vehicle Metal Stamping"
+  },
+  {
+    "id": "336390",
+    "title": "Other Motor Vehicle Parts Manufacturing",
+    "fullTitle": "336390 - Other Motor Vehicle Parts Manufacturing"
+  },
+  {
+    "id": "336390",
+    "title": "Other Motor Vehicle Parts Manufacturing",
+    "fullTitle": "336390 - Other Motor Vehicle Parts Manufacturing"
+  },
+  {
+    "id": "336411",
+    "title": "Aircraft Manufacturing",
+    "fullTitle": "336411 - Aircraft Manufacturing"
+  },
+  {
+    "id": "336412",
+    "title": "Aircraft Engine and Engine Parts Manufacturing",
+    "fullTitle": "336412 - Aircraft Engine and Engine Parts Manufacturing"
+  },
+  {
+    "id": "336413",
+    "title": "Other Aircraft Parts and Auxiliary Equipment Manufacturing",
+    "fullTitle": "336413 - Other Aircraft Parts and Auxiliary Equipment Manufacturing"
+  },
+  {
+    "id": "336414",
+    "title": "Guided Missile and Space Vehicle Manufacturing",
+    "fullTitle": "336414 - Guided Missile and Space Vehicle Manufacturing"
+  },
+  {
+    "id": "336415",
+    "title": "Guided Missile and Space Vehicle Propulsion Unit and Propulsion Unit Parts Manufacturing",
+    "fullTitle": "336415 - Guided Missile and Space Vehicle Propulsion Unit and Propulsion Unit Parts Manufacturing"
+  },
+  {
+    "id": "336419",
+    "title": "Other Guided Missile and Space Vehicle Parts and Auxiliary Equipment Manufacturing",
+    "fullTitle": "336419 - Other Guided Missile and Space Vehicle Parts and Auxiliary Equipment Manufacturing"
+  },
+  {
+    "id": "336510",
+    "title": "Railroad Rolling Stock Manufacturing",
+    "fullTitle": "336510 - Railroad Rolling Stock Manufacturing"
+  },
+  {
+    "id": "336611",
+    "title": "Ship Building and Repairing",
+    "fullTitle": "336611 - Ship Building and Repairing"
+  },
+  {
+    "id": "336612",
+    "title": "Boat Building",
+    "fullTitle": "336612 -Boat Building "
+  },
+  {
+    "id": "336991",
+    "title": "Motorcycle, Bicycle, and Parts Manufacturing",
+    "fullTitle": "336991 - Motorcycle, Bicycle, and Parts Manufacturing"
+  },
+  {
+    "id": "336992",
+    "title": "Military Armored Vehicle, Tank, and Tank Component Manufacturing",
+    "fullTitle": "336992 - Military Armored Vehicle, Tank, and Tank Component Manufacturing"
+  },
+  {
+    "id": "336999",
+    "title": "All Other Transportation Equipment Manufacturing",
+    "fullTitle": "336999 - All Other Transportation Equipment Manufacturing"
+  },
+  {
+    "id": "337110",
+    "title": "Wood Kitchen Cabinet and Countertop Manufacturing",
+    "fullTitle": "337110 - Wood Kitchen Cabinet and Countertop Manufacturing"
+  },
+  {
+    "id": "337121",
+    "title": "Upholstered Household Furniture Manufacturing",
+    "fullTitle": "337121 - Upholstered Household Furniture Manufacturing"
+  },
+  {
+    "id": "337122",
+    "title": "Nonupholstered Wood Household Furniture Manufacturing",
+    "fullTitle": "337122 - Nonupholstered Wood Household Furniture Manufacturing"
+  },
+  {
+    "id": "337124",
+    "title": "Metal Household Furniture Manufacturing",
+    "fullTitle": "337124 - Metal Household Furniture Manufacturing"
+  },
+  {
+    "id": "337125",
+    "title": "Household Furniture (except Wood and Metal) Manufacturing",
+    "fullTitle": "337125 - Household Furniture (except Wood and Metal) Manufacturing"
+  },
+  {
+    "id": "337127",
+    "title": "Institutional Furniture Manufacturing",
+    "fullTitle": "337127 - Institutional Furniture Manufacturing"
+  },
+  {
+    "id": "337211",
+    "title": "Wood Office Furniture Manufacturing",
+    "fullTitle": "337211 - Wood Office Furniture Manufacturing"
+  },
+  {
+    "id": "337212",
+    "title": "Custom Architectural Woodwork and Millwork Manufacturing",
+    "fullTitle": "337212 - Custom Architectural Woodwork and Millwork Manufacturing"
+  },
+  {
+    "id": "337214",
+    "title": "Office Furniture (except Wood) Manufacturing",
+    "fullTitle": "337214 - Office Furniture (except Wood) Manufacturing"
+  },
+  {
+    "id": "337215",
+    "title": "Showcase, Partition, Shelving, and Locker Manufacturing",
+    "fullTitle": "337215 - Showcase, Partition, Shelving, and Locker Manufacturing"
+  },
+  {
+    "id": "337910",
+    "title": "Mattress Manufacturing",
+    "fullTitle": "337910 - Mattress Manufacturing"
+  },
+  {
+    "id": "337920",
+    "title": "Blind and Shade Manufacturing",
+    "fullTitle": "337920 - Blind and Shade Manufacturing"
+  },
+  {
+    "id": "339112",
+    "title": "Surgical and Medical Instrument Manufacturing",
+    "fullTitle": "339112 - Surgical and Medical Instrument Manufacturing"
+  },
+  {
+    "id": "339113",
+    "title": "Surgical Appliance and Supplies Manufacturing",
+    "fullTitle": "339113 - Surgical Appliance and Supplies Manufacturing"
+  },
+  {
+    "id": "339114",
+    "title": "Dental Equipment and Supplies Manufacturing",
+    "fullTitle": "339114 - Dental Equipment and Supplies Manufacturing"
+  },
+  {
+    "id": "339115",
+    "title": "Ophthalmic Goods Manufacturing",
+    "fullTitle": "339115 - Ophthalmic Goods Manufacturing"
+  },
+  {
+    "id": "339116",
+    "title": "Dental Laboratories",
+    "fullTitle": "339116 - Dental Laboratories"
+  },
+  {
+    "id": "339910",
+    "title": "Jewelry and Silverware Manufacturing",
+    "fullTitle": "339910 - Jewelry and Silverware Manufacturing"
+  },
+  {
+    "id": "339910",
+    "title": "Jewelry and Silverware Manufacturing",
+    "fullTitle": "339910 - Jewelry and Silverware Manufacturing"
+  },
+  {
+    "id": "339910",
+    "title": "Jewelry and Silverware Manufacturing",
+    "fullTitle": "339910 - Jewelry and Silverware Manufacturing"
+  },
+  {
+    "id": "339910",
+    "title": "Jewelry and Silverware Manufacturing",
+    "fullTitle": "339910 - Jewelry and Silverware Manufacturing"
+  },
+  {
+    "id": "339920",
+    "title": "Sporting and Athletic Goods Manufacturing",
+    "fullTitle": "339920 - Sporting and Athletic Goods Manufacturing"
+  },
+  {
+    "id": "339930",
+    "title": "Doll, Toy, and Game Manufacturing",
+    "fullTitle": "339930 - Doll, Toy, and Game Manufacturing"
+  },
+  {
+    "id": "339930",
+    "title": "Doll, Toy, and Game Manufacturing",
+    "fullTitle": "339930 - Doll, Toy, and Game Manufacturing"
+  },
+  {
+    "id": "339940",
+    "title": "Office Supplies (except Paper) Manufacturing",
+    "fullTitle": "339940 - Office Supplies (except Paper) Manufacturing"
+  },
+  {
+    "id": "339940",
+    "title": "Office Supplies (except Paper) Manufacturing",
+    "fullTitle": "339940 - Office Supplies (except Paper) Manufacturing"
+  },
+  {
+    "id": "339940",
+    "title": "Office Supplies (except Paper) Manufacturing",
+    "fullTitle": "339940 - Office Supplies (except Paper) Manufacturing"
+  },
+  {
+    "id": "339940",
+    "title": "Office Supplies (except Paper) Manufacturing",
+    "fullTitle": "339940 - Office Supplies (except Paper) Manufacturing"
+  },
+  {
+    "id": "339950",
+    "title": "Sign Manufacturing",
+    "fullTitle": "339950 - Sign Manufacturing"
+  },
+  {
+    "id": "339991",
+    "title": "Gasket, Packing, and Sealing Device Manufacturing",
+    "fullTitle": "339991 - Gasket, Packing, and Sealing Device Manufacturing"
+  },
+  {
+    "id": "339992",
+    "title": "Musical Instrument Manufacturing",
+    "fullTitle": "339992 - Musical Instrument Manufacturing"
+  },
+  {
+    "id": "339993",
+    "title": "Fastener, Button, Needle, and Pin Manufacturing",
+    "fullTitle": "339993 - Fastener, Button, Needle, and Pin Manufacturing"
+  },
+  {
+    "id": "339994",
+    "title": "Broom, Brush, and Mop Manufacturing",
+    "fullTitle": "339994 - Broom, Brush, and Mop Manufacturing"
+  },
+  {
+    "id": "339995",
+    "title": "Burial Casket Manufacturing",
+    "fullTitle": "339995 - Burial Casket Manufacturing"
+  },
+  {
+    "id": "339999",
+    "title": "All Other Miscellaneous Manufacturing",
+    "fullTitle": "339999 - All Other Miscellaneous Manufacturing"
+  },
+  {
+    "id": "423110",
+    "title": "Automobile and Other Motor Vehicle Merchant Wholesalers",
+    "fullTitle": "423110 - Automobile and Other Motor Vehicle Merchant Wholesalers"
+  },
+  {
+    "id": "423120",
+    "title": "Motor Vehicle Supplies and New Parts Merchant Wholesalers",
+    "fullTitle": "423120 - Motor Vehicle Supplies and New Parts Merchant Wholesalers"
+  },
+  {
+    "id": "423130",
+    "title": "Tire and Tube Merchant Wholesalers",
+    "fullTitle": "423130 - Tire and Tube Merchant Wholesalers"
+  },
+  {
+    "id": "423140",
+    "title": "Motor Vehicle Parts (Used) Merchant Wholesalers",
+    "fullTitle": "423140 - Motor Vehicle Parts (Used) Merchant Wholesalers"
+  },
+  {
+    "id": "423210",
+    "title": "Furniture Merchant Wholesalers",
+    "fullTitle": "423210 - Furniture Merchant Wholesalers"
+  },
+  {
+    "id": "423220",
+    "title": "Home Furnishing Merchant Wholesalers",
+    "fullTitle": "423220 - Home Furnishing Merchant Wholesalers"
+  },
+  {
+    "id": "423310",
+    "title": "Lumber, Plywood, Millwork, and Wood Panel Merchant Wholesalers",
+    "fullTitle": "423310 - Lumber, Plywood, Millwork, and Wood Panel Merchant Wholesalers"
+  },
+  {
+    "id": "423320",
+    "title": "Brick, Stone, and Related Construction Material Merchant Wholesalers",
+    "fullTitle": "423320 - Brick, Stone, and Related Construction Material Merchant Wholesalers"
+  },
+  {
+    "id": "423330",
+    "title": "Roofing, Siding, and Insulation Material Merchant Wholesalers",
+    "fullTitle": "423330 - Roofing, Siding, and Insulation Material Merchant Wholesalers"
+  },
+  {
+    "id": "423390",
+    "title": "Other Construction Material Merchant Wholesalers",
+    "fullTitle": "423390 - Other Construction Material Merchant Wholesalers"
+  },
+  {
+    "id": "423410",
+    "title": "Photographic Equipment and Supplies Merchant Wholesalers",
+    "fullTitle": "423410 - Photographic Equipment and Supplies Merchant Wholesalers"
+  },
+  {
+    "id": "423420",
+    "title": "Office Equipment Merchant Wholesalers",
+    "fullTitle": "423420 - Office Equipment Merchant Wholesalers"
+  },
+  {
+    "id": "423430",
+    "title": "Computer and Computer Peripheral Equipment and Software Merchant Wholesalers",
+    "fullTitle": "423430 - Computer and Computer Peripheral Equipment and Software Merchant Wholesalers"
+  },
+  {
+    "id": "423440",
+    "title": "Other Commercial Equipment Merchant Wholesalers",
+    "fullTitle": "423440 - Other Commercial Equipment Merchant Wholesalers"
+  },
+  {
+    "id": "423450",
+    "title": "Medical, Dental, and Hospital Equipment and Supplies Merchant Wholesalers",
+    "fullTitle": "423450 - Medical, Dental, and Hospital Equipment and Supplies Merchant Wholesalers"
+  },
+  {
+    "id": "423460",
+    "title": "Ophthalmic Goods Merchant Wholesalers",
+    "fullTitle": "423460 - Ophthalmic Goods Merchant Wholesalers"
+  },
+  {
+    "id": "423490",
+    "title": "Other Professional Equipment and Supplies Merchant Wholesalers",
+    "fullTitle": "423490 - Other Professional Equipment and Supplies Merchant Wholesalers"
+  },
+  {
+    "id": "423510",
+    "title": "Metal Service Centers and Other Metal Merchant Wholesalers",
+    "fullTitle": "423510 - Metal Service Centers and Other Metal Merchant Wholesalers"
+  },
+  {
+    "id": "423520",
+    "title": "Coal and Other Mineral and Ore Merchant Wholesalers",
+    "fullTitle": "423520 - Coal and Other Mineral and Ore Merchant Wholesalers"
+  },
+  {
+    "id": "423610",
+    "title": "Electrical Apparatus and Equipment, Wiring Supplies, and Related Equipment Merchant Wholesalers",
+    "fullTitle": "423610 - Electrical Apparatus and Equipment, Wiring Supplies, and Related Equipment Merchant Wholesalers"
+  },
+  {
+    "id": "423620",
+    "title": "Household Appliances, Electric Housewares, and Consumer Electronics Merchant Wholesalers",
+    "fullTitle": "423620 - Household Appliances, Electric Housewares, and Consumer Electronics Merchant Wholesalers"
+  },
+  {
+    "id": "423620",
+    "title": "Household Appliances, Electric Housewares, and Consumer Electronics Merchant Wholesalers",
+    "fullTitle": "423620 - Household Appliances, Electric Housewares, and Consumer Electronics Merchant Wholesalers"
+  },
+  {
+    "id": "423690",
+    "title": "Other Electronic Parts and Equipment Merchant Wholesalers",
+    "fullTitle": "423690 - Other Electronic Parts and Equipment Merchant Wholesalers"
+  },
+  {
+    "id": "423710",
+    "title": "Hardware Merchant Wholesalers",
+    "fullTitle": "423710 - Hardware Merchant Wholesalers"
+  },
+  {
+    "id": "423720",
+    "title": "Plumbing and Heating Equipment and Supplies (Hydronics) Merchant Wholesalers",
+    "fullTitle": "423720 - Plumbing and Heating Equipment and Supplies (Hydronics) Merchant Wholesalers"
+  },
+  {
+    "id": "423720",
+    "title": "Plumbing and Heating Equipment and Supplies (Hydronics) Merchant Wholesalers",
+    "fullTitle": "423720 - Plumbing and Heating Equipment and Supplies (Hydronics) Merchant Wholesalers"
+  },
+  {
+    "id": "423730",
+    "title": "Warm Air Heating and Air-Conditioning Equipment and Supplies Merchant Wholesalers",
+    "fullTitle": "423730 - Warm Air Heating and Air-Conditioning Equipment and Supplies Merchant Wholesalers"
+  },
+  {
+    "id": "423740",
+    "title": "Refrigeration Equipment and Supplies Merchant Wholesalers",
+    "fullTitle": "423740 - Refrigeration Equipment and Supplies Merchant Wholesalers"
+  },
+  {
+    "id": "423810",
+    "title": "Construction and Mining (except Oil Well) Machinery and Equipment Merchant Wholesalers",
+    "fullTitle": "423810 - Construction and Mining (except Oil Well) Machinery and Equipment Merchant Wholesalers"
+  },
+  {
+    "id": "423820",
+    "title": "Farm and Garden Machinery and Equipment Merchant Wholesalers",
+    "fullTitle": "423820 - Farm and Garden Machinery and Equipment Merchant Wholesalers"
+  },
+  {
+    "id": "423830",
+    "title": "Industrial Machinery and Equipment Merchant Wholesalers",
+    "fullTitle": "423830 - Industrial Machinery and Equipment Merchant Wholesalers"
+  },
+  {
+    "id": "423840",
+    "title": "Industrial Supplies Merchant Wholesalers",
+    "fullTitle": "423840 - Industrial Supplies Merchant Wholesalers"
+  },
+  {
+    "id": "423850",
+    "title": "Service Establishment Equipment and Supplies Merchant Wholesalers",
+    "fullTitle": "423850 - Service Establishment Equipment and Supplies Merchant Wholesalers"
+  },
+  {
+    "id": "423860",
+    "title": "Transportation Equipment and Supplies (except Motor Vehicle) Merchant Wholesalers",
+    "fullTitle": "423860 - Transportation Equipment and Supplies (except Motor Vehicle) Merchant Wholesalers"
+  },
+  {
+    "id": "423910",
+    "title": "Sporting and Recreational Goods and Supplies Merchant Wholesalers",
+    "fullTitle": "423910 - Sporting and Recreational Goods and Supplies Merchant Wholesalers"
+  },
+  {
+    "id": "423920",
+    "title": "Toy and Hobby Goods and Supplies Merchant Wholesalers",
+    "fullTitle": "423920 - Toy and Hobby Goods and Supplies Merchant Wholesalers"
+  },
+  {
+    "id": "423930",
+    "title": "Recyclable Material Merchant Wholesalers",
+    "fullTitle": "423930 - Recyclable Material Merchant Wholesalers"
+  },
+  {
+    "id": "423940",
+    "title": "Jewelry, Watch, Precious Stone, and Precious Metal Merchant Wholesalers",
+    "fullTitle": "423940 - Jewelry, Watch, Precious Stone, and Precious Metal Merchant Wholesalers"
+  },
+  {
+    "id": "423990",
+    "title": "Other Miscellaneous Durable Goods Merchant Wholesalers",
+    "fullTitle": "423990 - Other Miscellaneous Durable Goods Merchant Wholesalers"
+  },
+  {
+    "id": "424110",
+    "title": "Printing and Writing Paper Merchant Wholesalers",
+    "fullTitle": "424110 - Printing and Writing Paper Merchant Wholesalers"
+  },
+  {
+    "id": "424120",
+    "title": "Stationery and Office Supplies Merchant Wholesalers",
+    "fullTitle": "424120 - Stationery and Office Supplies Merchant Wholesalers"
+  },
+  {
+    "id": "424130",
+    "title": "Industrial and Personal Service Paper Merchant Wholesalers",
+    "fullTitle": "424130 - Industrial and Personal Service Paper Merchant Wholesalers"
+  },
+  {
+    "id": "424210",
+    "title": "Drugs and Druggists' Sundries Merchant Wholesalers",
+    "fullTitle": "424210 - Drugs and Druggists' Sundries Merchant Wholesalers"
+  },
+  {
+    "id": "424310",
+    "title": "Piece Goods, Notions, and Other Dry Goods Merchant Wholesalers",
+    "fullTitle": "424310 - Piece Goods, Notions, and Other Dry Goods Merchant Wholesalers"
+  },
+  {
+    "id": "424320",
+    "title": "Men's and Boys' Clothing and Furnishings Merchant Wholesalers",
+    "fullTitle": "424320 - Men's and Boys' Clothing and Furnishings Merchant Wholesalers"
+  },
+  {
+    "id": "424330",
+    "title": "Women's, Children's, and Infants' Clothing and Accessories Merchant Wholesalers",
+    "fullTitle": "424330 - Women's, Children's, and Infants' Clothing and Accessories Merchant Wholesalers"
+  },
+  {
+    "id": "424340",
+    "title": "Footwear Merchant Wholesalers",
+    "fullTitle": "424340 - Footwear Merchant Wholesalers"
+  },
+  {
+    "id": "424410",
+    "title": "General Line Grocery Merchant Wholesalers",
+    "fullTitle": "424410 - General Line Grocery Merchant Wholesalers"
+  },
+  {
+    "id": "424420",
+    "title": "Packaged Frozen Food Merchant Wholesalers",
+    "fullTitle": "424420 - Packaged Frozen Food Merchant Wholesalers"
+  },
+  {
+    "id": "424430",
+    "title": "Dairy Product (except Dried or Canned) Merchant Wholesalers",
+    "fullTitle": "424430 - Dairy Product (except Dried or Canned) Merchant Wholesalers"
+  },
+  {
+    "id": "424440",
+    "title": "Poultry and Poultry Product Merchant Wholesalers",
+    "fullTitle": "424440 - Poultry and Poultry Product Merchant Wholesalers"
+  },
+  {
+    "id": "424450",
+    "title": "Confectionery Merchant Wholesalers",
+    "fullTitle": "424450 - Confectionery Merchant Wholesalers"
+  },
+  {
+    "id": "424460",
+    "title": "Fish and Seafood Merchant Wholesalers",
+    "fullTitle": "424460 - Fish and Seafood Merchant Wholesalers"
+  },
+  {
+    "id": "424470",
+    "title": "Meat and Meat Product Merchant Wholesalers",
+    "fullTitle": "424470 - Meat and Meat Product Merchant Wholesalers"
+  },
+  {
+    "id": "424480",
+    "title": "Fresh Fruit and Vegetable Merchant Wholesalers",
+    "fullTitle": "424480 - Fresh Fruit and Vegetable Merchant Wholesalers"
+  },
+  {
+    "id": "424490",
+    "title": "Other Grocery and Related Products Merchant Wholesalers",
+    "fullTitle": "424490 - Other Grocery and Related Products Merchant Wholesalers"
+  },
+  {
+    "id": "424510",
+    "title": "Grain and Field Bean Merchant Wholesalers",
+    "fullTitle": "424510 - Grain and Field Bean Merchant Wholesalers"
+  },
+  {
+    "id": "424520",
+    "title": "Livestock Merchant Wholesalers",
+    "fullTitle": "424520 - Livestock Merchant Wholesalers"
+  },
+  {
+    "id": "424590",
+    "title": "Other Farm Product Raw Material Merchant Wholesalers",
+    "fullTitle": "424590 - Other Farm Product Raw Material Merchant Wholesalers"
+  },
+  {
+    "id": "424610",
+    "title": "Plastics Materials and Basic Forms and Shapes Merchant Wholesalers",
+    "fullTitle": "424610 - Plastics Materials and Basic Forms and Shapes Merchant Wholesalers"
+  },
+  {
+    "id": "424690",
+    "title": "Other Chemical and Allied Products Merchant Wholesalers",
+    "fullTitle": "424690 - Other Chemical and Allied Products Merchant Wholesalers"
+  },
+  {
+    "id": "424710",
+    "title": "Petroleum Bulk Stations and Terminals",
+    "fullTitle": "424710 - Petroleum Bulk Stations and Terminals"
+  },
+  {
+    "id": "424720",
+    "title": "Petroleum and Petroleum Products Merchant Wholesalers (except Bulk Stations and Terminals)",
+    "fullTitle": "424720 - Petroleum and Petroleum Products Merchant Wholesalers (except Bulk Stations and Terminals)"
+  },
+  {
+    "id": "424810",
+    "title": "Beer and Ale Merchant Wholesalers",
+    "fullTitle": "424810 - Beer and Ale Merchant Wholesalers"
+  },
+  {
+    "id": "424820",
+    "title": "Wine and Distilled Alcoholic Beverage Merchant Wholesalers",
+    "fullTitle": "424820 - Wine and Distilled Alcoholic Beverage Merchant Wholesalers"
+  },
+  {
+    "id": "424910",
+    "title": "Farm Supplies Merchant Wholesalers",
+    "fullTitle": "424910 - Farm Supplies Merchant Wholesalers"
+  },
+  {
+    "id": "424920",
+    "title": "Book, Periodical, and Newspaper Merchant Wholesalers",
+    "fullTitle": "424920 - Book, Periodical, and Newspaper Merchant Wholesalers"
+  },
+  {
+    "id": "424930",
+    "title": "Flower, Nursery Stock, and Florists' Supplies Merchant Wholesalers",
+    "fullTitle": "424930 - Flower, Nursery Stock, and Florists' Supplies Merchant Wholesalers"
+  },
+  {
+    "id": "424940",
+    "title": "Tobacco and Tobacco Product Merchant Wholesalers",
+    "fullTitle": "424940 - Tobacco and Tobacco Product Merchant Wholesalers"
+  },
+  {
+    "id": "424950",
+    "title": "Paint, Varnish, and Supplies Merchant Wholesalers",
+    "fullTitle": "424950 - Paint, Varnish, and Supplies Merchant Wholesalers"
+  },
+  {
+    "id": "424990",
+    "title": "Other Miscellaneous Nondurable Goods Merchant Wholesalers",
+    "fullTitle": "424990 - Other Miscellaneous Nondurable Goods Merchant Wholesalers"
+  },
+  {
+    "id": "425110",
+    "title": "Business to Business Electronic Markets",
+    "fullTitle": "425110 - Business to Business Electronic Markets"
+  },
+  {
+    "id": "425120",
+    "title": "Wholesale Trade Agents and Brokers",
+    "fullTitle": "425120 - Wholesale Trade Agents and Brokers"
+  },
+  {
+    "id": "441110",
+    "title": "New Car Dealers",
+    "fullTitle": "441110 - New Car Dealers"
+  },
+  {
+    "id": "441120",
+    "title": "Used Car Dealers",
+    "fullTitle": "441120 - Used Car Dealers"
+  },
+  {
+    "id": "441210",
+    "title": "Recreational Vehicle Dealers",
+    "fullTitle": "441210 - Recreational Vehicle Dealers"
+  },
+  {
+    "id": "441222",
+    "title": "Boat Dealers",
+    "fullTitle": "441222 Boat Dealers- "
+  },
+  {
+    "id": "441228",
+    "title": "Motorcycle, ATV, and All Other Motor Vehicle Dealers",
+    "fullTitle": "441228 - Motorcycle, ATV, and All Other Motor Vehicle Dealers"
+  },
+  {
+    "id": "441228",
+    "title": "Motorcycle, ATV, and All Other Motor Vehicle Dealers",
+    "fullTitle": "441228 - Motorcycle, ATV, and All Other Motor Vehicle Dealers"
+  },
+  {
+    "id": "441310",
+    "title": "Automotive Parts and Accessories Stores",
+    "fullTitle": "441310 - Automotive Parts and Accessories Stores"
+  },
+  {
+    "id": "441320",
+    "title": "Tire Dealers",
+    "fullTitle": "441320 Tire Dealers- "
+  },
+  {
+    "id": "442110",
+    "title": "Furniture Stores",
+    "fullTitle": "442110 - Furniture Stores"
+  },
+  {
+    "id": "442210",
+    "title": "Floor Covering Stores",
+    "fullTitle": "442210 - Floor Covering Stores"
+  },
+  {
+    "id": "442291",
+    "title": "Window Treatment Stores",
+    "fullTitle": "442291 - Window Treatment Stores"
+  },
+  {
+    "id": "442299",
+    "title": "All Other Home Furnishings Stores",
+    "fullTitle": "442299 - All Other Home Furnishings Stores"
+  },
+  {
+    "id": "443141",
+    "title": "Household Appliance Stores",
+    "fullTitle": "443141 - Household Appliance Stores"
+  },
+  {
+    "id": "443142",
+    "title": "Electronics Stores",
+    "fullTitle": "443142 - Electronics Stores"
+  },
+  {
+    "id": "443142",
+    "title": "Electronics Stores",
+    "fullTitle": "443142 - Electronics Stores"
+  },
+  {
+    "id": "443142",
+    "title": "Electronics Stores",
+    "fullTitle": "443142 - Electronics Stores"
+  },
+  {
+    "id": "443142",
+    "title": "Electronics Stores",
+    "fullTitle": "443142 - Electronics Stores"
+  },
+  {
+    "id": "444110",
+    "title": "Home Centers",
+    "fullTitle": "444110 Home Centers- "
+  },
+  {
+    "id": "444120",
+    "title": "Paint and Wallpaper Stores",
+    "fullTitle": "444120 - Paint and Wallpaper Stores"
+  },
+  {
+    "id": "444130",
+    "title": "Hardware Stores",
+    "fullTitle": "444130 - Hardware Stores"
+  },
+  {
+    "id": "444190",
+    "title": "Other Building Material Dealers",
+    "fullTitle": "444190 - Other Building Material Dealers"
+  },
+  {
+    "id": "444210",
+    "title": "Outdoor Power Equipment Stores",
+    "fullTitle": "444210 - Outdoor Power Equipment Stores"
+  },
+  {
+    "id": "444220",
+    "title": "Nursery, Garden Center, and Farm Supply Stores",
+    "fullTitle": "444220 - Nursery, Garden Center, and Farm Supply Stores"
+  },
+  {
+    "id": "445110",
+    "title": "Supermarkets and Other Grocery (except Convenience) Stores",
+    "fullTitle": "445110 - Supermarkets and Other Grocery (except Convenience) Stores"
+  },
+  {
+    "id": "445120",
+    "title": "Convenience Stores",
+    "fullTitle": "445120 - Convenience Stores"
+  },
+  {
+    "id": "445210",
+    "title": "Meat Markets",
+    "fullTitle": "445210 Meat Markets- "
+  },
+  {
+    "id": "445220",
+    "title": "Fish and Seafood Markets",
+    "fullTitle": "445220 - Fish and Seafood Markets"
+  },
+  {
+    "id": "445230",
+    "title": "Fruit and Vegetable Markets",
+    "fullTitle": "445230 - Fruit and Vegetable Markets"
+  },
+  {
+    "id": "445291",
+    "title": "Baked Goods Stores",
+    "fullTitle": "445291 - Baked Goods Stores"
+  },
+  {
+    "id": "445292",
+    "title": "Confectionery and Nut Stores",
+    "fullTitle": "445292 - Confectionery and Nut Stores"
+  },
+  {
+    "id": "445299",
+    "title": "All Other Specialty Food Stores",
+    "fullTitle": "445299 - All Other Specialty Food Stores"
+  },
+  {
+    "id": "445310",
+    "title": "Beer, Wine, and Liquor Stores",
+    "fullTitle": "445310 - Beer, Wine, and Liquor Stores"
+  },
+  {
+    "id": "446110",
+    "title": "Pharmacies and Drug Stores",
+    "fullTitle": "446110 - Pharmacies and Drug Stores"
+  },
+  {
+    "id": "446120",
+    "title": "Cosmetics, Beauty Supplies, and Perfume Stores",
+    "fullTitle": "446120 - Cosmetics, Beauty Supplies, and Perfume Stores"
+  },
+  {
+    "id": "446130",
+    "title": "Optical Goods Stores",
+    "fullTitle": "446130 - Optical Goods Stores"
+  },
+  {
+    "id": "446191",
+    "title": "Food (Health) Supplement Stores",
+    "fullTitle": "446191 - Food (Health) Supplement Stores"
+  },
+  {
+    "id": "446199",
+    "title": "All Other Health and Personal Care Stores",
+    "fullTitle": "446199 - All Other Health and Personal Care Stores"
+  },
+  {
+    "id": "447110",
+    "title": "Gasoline Stations with Convenience Stores",
+    "fullTitle": "447110 - Gasoline Stations with Convenience Stores"
+  },
+  {
+    "id": "447190",
+    "title": "Other Gasoline Stations",
+    "fullTitle": "447190 - Other Gasoline Stations"
+  },
+  {
+    "id": "448110",
+    "title": "Men's Clothing Stores",
+    "fullTitle": "448110 - Men's Clothing Stores"
+  },
+  {
+    "id": "448120",
+    "title": "Women's Clothing Stores",
+    "fullTitle": "448120 - Women's Clothing Stores"
+  },
+  {
+    "id": "448130",
+    "title": "Children's and Infants' Clothing Stores",
+    "fullTitle": "448130 - Children's and Infants' Clothing Stores"
+  },
+  {
+    "id": "448140",
+    "title": "Family Clothing Stores",
+    "fullTitle": "448140 - Family Clothing Stores"
+  },
+  {
+    "id": "448150",
+    "title": "Clothing Accessories Stores",
+    "fullTitle": "448150 - Clothing Accessories Stores"
+  },
+  {
+    "id": "448190",
+    "title": "Other Clothing Stores",
+    "fullTitle": "448190 - Other Clothing Stores"
+  },
+  {
+    "id": "448210",
+    "title": "Shoe Stores",
+    "fullTitle": "448210Shoe Stores - "
+  },
+  {
+    "id": "448310",
+    "title": "Jewelry Stores",
+    "fullTitle": "448310 - Jewelry Stores"
+  },
+  {
+    "id": "448320",
+    "title": "Luggage and Leather Goods Stores",
+    "fullTitle": "448320 - Luggage and Leather Goods Stores"
+  },
+  {
+    "id": "451110",
+    "title": "Sporting Goods Stores",
+    "fullTitle": "451110 - Sporting Goods Stores"
+  },
+  {
+    "id": "451120",
+    "title": "Hobby, Toy, and Game Stores",
+    "fullTitle": "451120 - Hobby, Toy, and Game Stores"
+  },
+  {
+    "id": "451130",
+    "title": "Sewing, Needlework, and Piece Goods Stores",
+    "fullTitle": "451130 - Sewing, Needlework, and Piece Goods Stores"
+  },
+  {
+    "id": "451140",
+    "title": "Musical Instrument and Supplies Stores",
+    "fullTitle": "451140 - Musical Instrument and Supplies Stores"
+  },
+  {
+    "id": "451211",
+    "title": "Book Stores",
+    "fullTitle": "451211Book Stores - "
+  },
+  {
+    "id": "451212",
+    "title": "News Dealers and Newsstands",
+    "fullTitle": "451212 - News Dealers and Newsstands"
+  },
+  {
+    "id": "452111",
+    "title": "Department Stores (except Discount Department Stores)",
+    "fullTitle": "452111 - Department Stores (except Discount Department Stores)"
+  },
+  {
+    "id": "452112",
+    "title": "Discount Department Stores",
+    "fullTitle": "452112 - Discount Department Stores"
+  },
+  {
+    "id": "452910",
+    "title": "Warehouse Clubs and Supercenters",
+    "fullTitle": "452910 - Warehouse Clubs and Supercenters"
+  },
+  {
+    "id": "452990",
+    "title": "All Other General Merchandise Stores",
+    "fullTitle": "452990 - All Other General Merchandise Stores"
+  },
+  {
+    "id": "453110",
+    "title": "Florists",
+    "fullTitle": "453Florists110 - "
+  },
+  {
+    "id": "453210",
+    "title": "Office Supplies and Stationery Stores",
+    "fullTitle": "453210 - Office Supplies and Stationery Stores"
+  },
+  {
+    "id": "453220",
+    "title": "Gift, Novelty, and Souvenir Stores",
+    "fullTitle": "453220 - Gift, Novelty, and Souvenir Stores"
+  },
+  {
+    "id": "453310",
+    "title": "Used Merchandise Stores",
+    "fullTitle": "453310 - Used Merchandise Stores"
+  },
+  {
+    "id": "453910",
+    "title": "Pet and Pet Supplies Stores",
+    "fullTitle": "453910 - Pet and Pet Supplies Stores"
+  },
+  {
+    "id": "453920",
+    "title": "Art Dealers",
+    "fullTitle": "453920Art Dealers - "
+  },
+  {
+    "id": "453930",
+    "title": "Manufactured (Mobile) Home Dealers",
+    "fullTitle": "453930 - Manufactured (Mobile) Home Dealers"
+  },
+  {
+    "id": "453991",
+    "title": "Tobacco Stores",
+    "fullTitle": "453991 - Tobacco Stores"
+  },
+  {
+    "id": "453998",
+    "title": "All Other Miscellaneous Store Retailers (except Tobacco Stores)",
+    "fullTitle": "453998 - All Other Miscellaneous Store Retailers (except Tobacco Stores)"
+  },
+  {
+    "id": "454111",
+    "title": "Electronic Shopping",
+    "fullTitle": "454111 - Electronic Shopping"
+  },
+  {
+    "id": "454112",
+    "title": "Electronic Auctions",
+    "fullTitle": "454112 - Electronic Auctions"
+  },
+  {
+    "id": "454113",
+    "title": "Mail-Order Houses",
+    "fullTitle": "454113 - Mail-Order Houses"
+  },
+  {
+    "id": "454210",
+    "title": "Vending Machine Operators",
+    "fullTitle": "454210 - Vending Machine Operators"
+  },
+  {
+    "id": "454310",
+    "title": "Fuel Dealers",
+    "fullTitle": "454310 Fuel Dealers- "
+  },
+  {
+    "id": "454310",
+    "title": "Fuel Dealers",
+    "fullTitle": "454310 Fuel Dealers- "
+  },
+  {
+    "id": "454310",
+    "title": "Fuel Dealers",
+    "fullTitle": "454310 Fuel Dealers- "
+  },
+  {
+    "id": "454390",
+    "title": "Other Direct Selling Establishments",
+    "fullTitle": "454390 - Other Direct Selling Establishments"
+  },
+  {
+    "id": "481111",
+    "title": "Scheduled Passenger Air Transportation",
+    "fullTitle": "481111 - Scheduled Passenger Air Transportation"
+  },
+  {
+    "id": "481112",
+    "title": "Scheduled Freight Air Transportation",
+    "fullTitle": "481112 - Scheduled Freight Air Transportation"
+  },
+  {
+    "id": "481211",
+    "title": "Nonscheduled Chartered Passenger Air Transportation",
+    "fullTitle": "481211 - Nonscheduled Chartered Passenger Air Transportation"
+  },
+  {
+    "id": "481212",
+    "title": "Nonscheduled Chartered Freight Air Transportation",
+    "fullTitle": "481212 - Nonscheduled Chartered Freight Air Transportation"
+  },
+  {
+    "id": "481219",
+    "title": "Other Nonscheduled Air Transportation",
+    "fullTitle": "481219 - Other Nonscheduled Air Transportation"
+  },
+  {
+    "id": "482111",
+    "title": "Line-Haul Railroads",
+    "fullTitle": "482111 - Line-Haul Railroads"
+  },
+  {
+    "id": "482112",
+    "title": "Short Line Railroads",
+    "fullTitle": "482112 - Short Line Railroads"
+  },
+  {
+    "id": "483111",
+    "title": "Deep Sea Freight Transportation",
+    "fullTitle": "483111 - Deep Sea Freight Transportation"
+  },
+  {
+    "id": "483112",
+    "title": "Deep Sea Passenger Transportation",
+    "fullTitle": "483112 - Deep Sea Passenger Transportation"
+  },
+  {
+    "id": "483113",
+    "title": "Coastal and Great Lakes Freight Transportation",
+    "fullTitle": "483113 - Coastal and Great Lakes Freight Transportation"
+  },
+  {
+    "id": "483114",
+    "title": "Coastal and Great Lakes Passenger Transportation",
+    "fullTitle": "483114 - Coastal and Great Lakes Passenger Transportation"
+  },
+  {
+    "id": "483211",
+    "title": "Inland Water Freight Transportation",
+    "fullTitle": "483211 - Inland Water Freight Transportation"
+  },
+  {
+    "id": "483212",
+    "title": "Inland Water Passenger Transportation",
+    "fullTitle": "483212 - Inland Water Passenger Transportation"
+  },
+  {
+    "id": "484110",
+    "title": "General Freight Trucking, Local",
+    "fullTitle": "484110 - General Freight Trucking, Local"
+  },
+  {
+    "id": "484121",
+    "title": "General Freight Trucking, Long-Distance, Truckload",
+    "fullTitle": "484121 - General Freight Trucking, Long-Distance, Truckload"
+  },
+  {
+    "id": "484122",
+    "title": "General Freight Trucking, Long-Distance, Less Than Truckload",
+    "fullTitle": "484122 - General Freight Trucking, Long-Distance, Less Than Truckload"
+  },
+  {
+    "id": "484210",
+    "title": "Used Household and Office Goods Moving",
+    "fullTitle": "484210 - Used Household and Office Goods Moving"
+  },
+  {
+    "id": "484220",
+    "title": "Specialized Freight (except Used Goods) Trucking, Local",
+    "fullTitle": "484220 - Specialized Freight (except Used Goods) Trucking, Local"
+  },
+  {
+    "id": "484230",
+    "title": "Specialized Freight (except Used Goods) Trucking, Long-Distance",
+    "fullTitle": "484230 - Specialized Freight (except Used Goods) Trucking, Long-Distance"
+  },
+  {
+    "id": "485111",
+    "title": "Mixed Mode Transit Systems",
+    "fullTitle": "485111 - Mixed Mode Transit Systems"
+  },
+  {
+    "id": "485112",
+    "title": "Commuter Rail Systems",
+    "fullTitle": "485112 - Commuter Rail Systems"
+  },
+  {
+    "id": "485113",
+    "title": "Bus and Other Motor Vehicle Transit Systems",
+    "fullTitle": "485113 - Bus and Other Motor Vehicle Transit Systems"
+  },
+  {
+    "id": "485119",
+    "title": "Other Urban Transit Systems",
+    "fullTitle": "485119 - Other Urban Transit Systems"
+  },
+  {
+    "id": "485210",
+    "title": "Interurban and Rural Bus Transportation",
+    "fullTitle": "485210 - Interurban and Rural Bus Transportation"
+  },
+  {
+    "id": "485310",
+    "title": "Taxi Service",
+    "fullTitle": "485310 Taxi Service- "
+  },
+  {
+    "id": "485320",
+    "title": "Limousine Service",
+    "fullTitle": "485320 - Limousine Service"
+  },
+  {
+    "id": "485410",
+    "title": "School and Employee Bus Transportation",
+    "fullTitle": "485410 - School and Employee Bus Transportation"
+  },
+  {
+    "id": "485510",
+    "title": "Charter Bus Industry",
+    "fullTitle": "485510 - Charter Bus Industry"
+  },
+  {
+    "id": "485991",
+    "title": "Special Needs Transportation",
+    "fullTitle": "485991 - Special Needs Transportation"
+  },
+  {
+    "id": "485999",
+    "title": "All Other Transit and Ground Passenger Transportation",
+    "fullTitle": "485999 - All Other Transit and Ground Passenger Transportation"
+  },
+  {
+    "id": "486110",
+    "title": "Pipeline Transportation of Crude Oil",
+    "fullTitle": "486110 - Pipeline Transportation of Crude Oil"
+  },
+  {
+    "id": "486210",
+    "title": "Pipeline Transportation of Natural Gas",
+    "fullTitle": "486210 - Pipeline Transportation of Natural Gas"
+  },
+  {
+    "id": "486910",
+    "title": "Pipeline Transportation of Refined Petroleum Products",
+    "fullTitle": "486910 - Pipeline Transportation of Refined Petroleum Products"
+  },
+  {
+    "id": "486990",
+    "title": "All Other Pipeline Transportation",
+    "fullTitle": "486990 - All Other Pipeline Transportation"
+  },
+  {
+    "id": "487110",
+    "title": "Scenic and Sightseeing Transportation, Land",
+    "fullTitle": "487110 - Scenic and Sightseeing Transportation, Land"
+  },
+  {
+    "id": "487210",
+    "title": "Scenic and Sightseeing Transportation, Water",
+    "fullTitle": "487210 - Scenic and Sightseeing Transportation, Water"
+  },
+  {
+    "id": "487990",
+    "title": "Scenic and Sightseeing Transportation, Other",
+    "fullTitle": "487990 - Scenic and Sightseeing Transportation, Other"
+  },
+  {
+    "id": "488111",
+    "title": "Air Traffic Control",
+    "fullTitle": "488111 - Air Traffic Control"
+  },
+  {
+    "id": "488119",
+    "title": "Other Airport Operations",
+    "fullTitle": "488119 - Other Airport Operations"
+  },
+  {
+    "id": "488190",
+    "title": "Other Support Activities for Air Transportation",
+    "fullTitle": "488190 - Other Support Activities for Air Transportation"
+  },
+  {
+    "id": "488210",
+    "title": "Support Activities for Rail Transportation",
+    "fullTitle": "488210 - Support Activities for Rail Transportation"
+  },
+  {
+    "id": "488310",
+    "title": "Port and Harbor Operations",
+    "fullTitle": "488310 - Port and Harbor Operations"
+  },
+  {
+    "id": "488320",
+    "title": "Marine Cargo Handling",
+    "fullTitle": "488320 - Marine Cargo Handling"
+  },
+  {
+    "id": "488330",
+    "title": "Navigational Services to Shipping",
+    "fullTitle": "488330 - Navigational Services to Shipping"
+  },
+  {
+    "id": "488390",
+    "title": "Other Support Activities for Water Transportation",
+    "fullTitle": "488390 - Other Support Activities for Water Transportation"
+  },
+  {
+    "id": "488410",
+    "title": "Motor Vehicle Towing",
+    "fullTitle": "488410 - Motor Vehicle Towing"
+  },
+  {
+    "id": "488490",
+    "title": "Other Support Activities for Road Transportation",
+    "fullTitle": "488490 - Other Support Activities for Road Transportation"
+  },
+  {
+    "id": "488510",
+    "title": "Freight Transportation Arrangement",
+    "fullTitle": "488510 - Freight Transportation Arrangement"
+  },
+  {
+    "id": "488991",
+    "title": "Packing and Crating",
+    "fullTitle": "488991 - Packing and Crating"
+  },
+  {
+    "id": "488999",
+    "title": "All Other Support Activities for Transportation",
+    "fullTitle": "488999 - All Other Support Activities for Transportation"
+  },
+  {
+    "id": "491110",
+    "title": "Postal Service",
+    "fullTitle": "491110 - Postal Service"
+  },
+  {
+    "id": "492110",
+    "title": "Couriers and Express Delivery Services",
+    "fullTitle": "492110 - Couriers and Express Delivery Services"
+  },
+  {
+    "id": "492210",
+    "title": "Local Messengers and Local Delivery",
+    "fullTitle": "492210 - Local Messengers and Local Delivery"
+  },
+  {
+    "id": "493110",
+    "title": "General Warehousing and Storage",
+    "fullTitle": "493110 - General Warehousing and Storage"
+  },
+  {
+    "id": "493120",
+    "title": "Refrigerated Warehousing and Storage",
+    "fullTitle": "493120 - Refrigerated Warehousing and Storage"
+  },
+  {
+    "id": "493130",
+    "title": "Farm Product Warehousing and Storage",
+    "fullTitle": "493130 - Farm Product Warehousing and Storage"
+  },
+  {
+    "id": "493190",
+    "title": "Other Warehousing and Storage",
+    "fullTitle": "493190 - Other Warehousing and Storage"
+  },
+  {
+    "id": "511110",
+    "title": "Newspaper Publishers",
+    "fullTitle": "511110 - Newspaper Publishers"
+  },
+  {
+    "id": "511120",
+    "title": "Periodical Publishers",
+    "fullTitle": "511120 - Periodical Publishers"
+  },
+  {
+    "id": "511130",
+    "title": "Book Publishers",
+    "fullTitle": "511130 - Book Publishers"
+  },
+  {
+    "id": "511140",
+    "title": "Directory and Mailing List Publishers",
+    "fullTitle": "511140 - Directory and Mailing List Publishers"
+  },
+  {
+    "id": "511191",
+    "title": "Greeting Card Publishers",
+    "fullTitle": "511191 - Greeting Card Publishers"
+  },
+  {
+    "id": "511199",
+    "title": "All Other Publishers",
+    "fullTitle": "511199 - All Other Publishers"
+  },
+  {
+    "id": "511210",
+    "title": "Software Publishers",
+    "fullTitle": "511210 - Software Publishers"
+  },
+  {
+    "id": "512110",
+    "title": "Motion Picture and Video Production",
+    "fullTitle": "512110 - Motion Picture and Video Production"
+  },
+  {
+    "id": "512120",
+    "title": "Motion Picture and Video Distribution",
+    "fullTitle": "512120 - Motion Picture and Video Distribution"
+  },
+  {
+    "id": "512131",
+    "title": "Motion Picture Theaters (except Drive-Ins)",
+    "fullTitle": "512131 - Motion Picture Theaters (except Drive-Ins)"
+  },
+  {
+    "id": "512132",
+    "title": "Drive-In Motion Picture Theaters",
+    "fullTitle": "512132 - Drive-In Motion Picture Theaters"
+  },
+  {
+    "id": "512191",
+    "title": "Teleproduction and Other Postproduction Services",
+    "fullTitle": "512191 - Teleproduction and Other Postproduction Services"
+  },
+  {
+    "id": "512199",
+    "title": "Other Motion Picture and Video Industries",
+    "fullTitle": "512199 - Other Motion Picture and Video Industries"
+  },
+  {
+    "id": "512210",
+    "title": "Record Production",
+    "fullTitle": "512210 - Record Production"
+  },
+  {
+    "id": "512220",
+    "title": "Integrated Record Production/Distribution",
+    "fullTitle": "512220 - Integrated Record Production/Distribution"
+  },
+  {
+    "id": "512230",
+    "title": "Music Publishers",
+    "fullTitle": "512230 - Music Publishers"
+  },
+  {
+    "id": "512240",
+    "title": "Sound Recording Studios",
+    "fullTitle": "512240 - Sound Recording Studios"
+  },
+  {
+    "id": "512290",
+    "title": "Other Sound Recording Industries",
+    "fullTitle": "512290 - Other Sound Recording Industries"
+  },
+  {
+    "id": "515111",
+    "title": "Radio Networks",
+    "fullTitle": "515111 - Radio Networks"
+  },
+  {
+    "id": "515112",
+    "title": "Radio Stations",
+    "fullTitle": "515112 - Radio Stations"
+  },
+  {
+    "id": "515120",
+    "title": "Television Broadcasting",
+    "fullTitle": "515120 - Television Broadcasting"
+  },
+  {
+    "id": "515210",
+    "title": "Cable and Other Subscription Programming",
+    "fullTitle": "515210 - Cable and Other Subscription Programming"
+  },
+  {
+    "id": "517110",
+    "title": "Wired Telecommunications Carriers",
+    "fullTitle": "517110 - Wired Telecommunications Carriers"
+  },
+  {
+    "id": "517210",
+    "title": "Wireless Telecommunications Carriers (except Satellite)",
+    "fullTitle": "517210 - Wireless Telecommunications Carriers (except Satellite)"
+  },
+  {
+    "id": "517410",
+    "title": "Satellite Telecommunications",
+    "fullTitle": "517410 - Satellite Telecommunications"
+  },
+  {
+    "id": "517911",
+    "title": "Telecommunications Resellers",
+    "fullTitle": "517911 - Telecommunications Resellers"
+  },
+  {
+    "id": "517919",
+    "title": "All Other Telecommunications",
+    "fullTitle": "517919 - All Other Telecommunications"
+  },
+  {
+    "id": "518210",
+    "title": "Data Processing, Hosting, and Related Services",
+    "fullTitle": "518210 - Data Processing, Hosting, and Related Services"
+  },
+  {
+    "id": "519110",
+    "title": "News Syndicates",
+    "fullTitle": "519110 - News Syndicates"
+  },
+  {
+    "id": "519120",
+    "title": "Libraries and Archives",
+    "fullTitle": "519120 - Libraries and Archives"
+  },
+  {
+    "id": "519130",
+    "title": "Internet Publishing and Broadcasting and Web Search Portals",
+    "fullTitle": "519130 - Internet Publishing and Broadcasting and Web Search Portals"
+  },
+  {
+    "id": "519190",
+    "title": "All Other Information Services",
+    "fullTitle": "519190 - All Other Information Services"
+  },
+  {
+    "id": "521110",
+    "title": "Monetary Authorities-Central Bank",
+    "fullTitle": "521110 - Monetary Authorities-Central Bank"
+  },
+  {
+    "id": "522110",
+    "title": "Commercial Banking",
+    "fullTitle": "522110 - Commercial Banking"
+  },
+  {
+    "id": "522120",
+    "title": "Savings Institutions",
+    "fullTitle": "522120 - Savings Institutions"
+  },
+  {
+    "id": "522130",
+    "title": "Credit Unions",
+    "fullTitle": "522130 -Credit Unions "
+  },
+  {
+    "id": "522190",
+    "title": "Other Depository Credit Intermediation",
+    "fullTitle": "522190 - Other Depository Credit Intermediation"
+  },
+  {
+    "id": "522210",
+    "title": "Credit Card Issuing",
+    "fullTitle": "522210 - Credit Card Issuing"
+  },
+  {
+    "id": "522220",
+    "title": "Sales Financing",
+    "fullTitle": "522220 - Sales Financing"
+  },
+  {
+    "id": "522291",
+    "title": "Consumer Lending",
+    "fullTitle": "522291 - Consumer Lending"
+  },
+  {
+    "id": "522292",
+    "title": "Real Estate Credit",
+    "fullTitle": "522292 - Real Estate Credit"
+  },
+  {
+    "id": "522293",
+    "title": "International Trade Financing",
+    "fullTitle": "522293 - International Trade Financing"
+  },
+  {
+    "id": "522294",
+    "title": "Secondary Market Financing",
+    "fullTitle": "522294 - Secondary Market Financing"
+  },
+  {
+    "id": "522298",
+    "title": "All Other Nondepository Credit Intermediation",
+    "fullTitle": "522298 - All Other Nondepository Credit Intermediation"
+  },
+  {
+    "id": "522310",
+    "title": "Mortgage and Nonmortgage Loan Brokers",
+    "fullTitle": "522310 - Mortgage and Nonmortgage Loan Brokers"
+  },
+  {
+    "id": "522320",
+    "title": "Financial Transactions Processing, Reserve, and Clearinghouse Activities",
+    "fullTitle": "522320 - Financial Transactions Processing, Reserve, and Clearinghouse Activities"
+  },
+  {
+    "id": "522390",
+    "title": "Other Activities Related to Credit Intermediation",
+    "fullTitle": "522390 - Other Activities Related to Credit Intermediation"
+  },
+  {
+    "id": "523110",
+    "title": "Investment Banking and Securities Dealing",
+    "fullTitle": "523110 - Investment Banking and Securities Dealing"
+  },
+  {
+    "id": "523120",
+    "title": "Securities Brokerage",
+    "fullTitle": "523120 - Securities Brokerage"
+  },
+  {
+    "id": "523130",
+    "title": "Commodity Contracts Dealing",
+    "fullTitle": "523130 - Commodity Contracts Dealing"
+  },
+  {
+    "id": "523140",
+    "title": "Commodity Contracts Brokerage",
+    "fullTitle": "523140 - Commodity Contracts Brokerage"
+  },
+  {
+    "id": "523210",
+    "title": "Securities and Commodity Exchanges",
+    "fullTitle": "523210 - Securities and Commodity Exchanges"
+  },
+  {
+    "id": "523910",
+    "title": "Miscellaneous Intermediation",
+    "fullTitle": "523910 - Miscellaneous Intermediation"
+  },
+  {
+    "id": "523920",
+    "title": "Portfolio Management",
+    "fullTitle": "523920 - Portfolio Management"
+  },
+  {
+    "id": "523930",
+    "title": "Investment Advice",
+    "fullTitle": "523930 - Investment Advice"
+  },
+  {
+    "id": "523991",
+    "title": "Trust, Fiduciary, and Custody Activities",
+    "fullTitle": "523991 - Trust, Fiduciary, and Custody Activities"
+  },
+  {
+    "id": "523999",
+    "title": "Miscellaneous Financial Investment Activities",
+    "fullTitle": "523999 - Miscellaneous Financial Investment Activities"
+  },
+  {
+    "id": "524113",
+    "title": "Direct Life Insurance Carriers",
+    "fullTitle": "524113 - Direct Life Insurance Carriers"
+  },
+  {
+    "id": "524114",
+    "title": "Direct Health and Medical Insurance Carriers",
+    "fullTitle": "524114 - Direct Health and Medical Insurance Carriers"
+  },
+  {
+    "id": "524126",
+    "title": "Direct Property and Casualty Insurance Carriers",
+    "fullTitle": "524126 - Direct Property and Casualty Insurance Carriers"
+  },
+  {
+    "id": "524127",
+    "title": "Direct Title Insurance Carriers",
+    "fullTitle": "524127 - Direct Title Insurance Carriers"
+  },
+  {
+    "id": "524128",
+    "title": "Other Direct Insurance (except Life, Health, and Medical) Carriers",
+    "fullTitle": "524128 - Other Direct Insurance (except Life, Health, and Medical) Carriers"
+  },
+  {
+    "id": "524130",
+    "title": "Reinsurance Carriers",
+    "fullTitle": "524130 - Reinsurance Carriers"
+  },
+  {
+    "id": "524210",
+    "title": "Insurance Agencies and Brokerages",
+    "fullTitle": "524210 - Insurance Agencies and Brokerages"
+  },
+  {
+    "id": "524291",
+    "title": "Claims Adjusting",
+    "fullTitle": "524291 - Claims Adjusting"
+  },
+  {
+    "id": "524292",
+    "title": "Third Party Administration of Insurance and Pension Funds",
+    "fullTitle": "524292 - Third Party Administration of Insurance and Pension Funds"
+  },
+  {
+    "id": "524298",
+    "title": "All Other Insurance Related Activities",
+    "fullTitle": "524298 - All Other Insurance Related Activities"
+  },
+  {
+    "id": "525110",
+    "title": "Pension Funds",
+    "fullTitle": "525110 -Pension Funds "
+  },
+  {
+    "id": "525120",
+    "title": "Health and Welfare Funds",
+    "fullTitle": "525120 - Health and Welfare Funds"
+  },
+  {
+    "id": "525190",
+    "title": "Other Insurance Funds",
+    "fullTitle": "525190 - Other Insurance Funds"
+  },
+  {
+    "id": "525910",
+    "title": "Open-End Investment Funds",
+    "fullTitle": "525910 - Open-End Investment Funds"
+  },
+  {
+    "id": "525920",
+    "title": "Trusts, Estates, and Agency Accounts",
+    "fullTitle": "525920 - Trusts, Estates, and Agency Accounts"
+  },
+  {
+    "id": "525990",
+    "title": "Other Financial Vehicles",
+    "fullTitle": "525990 - Other Financial Vehicles"
+  },
+  {
+    "id": "531110",
+    "title": "Lessors of Residential Buildings and Dwellings",
+    "fullTitle": "531110 - Lessors of Residential Buildings and Dwellings"
+  },
+  {
+    "id": "531120",
+    "title": "Lessors of Nonresidential Buildings (except Miniwarehouses)",
+    "fullTitle": "531120 - Lessors of Nonresidential Buildings (except Miniwarehouses)"
+  },
+  {
+    "id": "531130",
+    "title": "Lessors of Miniwarehouses and Self-Storage Units",
+    "fullTitle": "531130 - Lessors of Miniwarehouses and Self-Storage Units"
+  },
+  {
+    "id": "531190",
+    "title": "Lessors of Other Real Estate Property",
+    "fullTitle": "531190 - Lessors of Other Real Estate Property"
+  },
+  {
+    "id": "531210",
+    "title": "Offices of Real Estate Agents and Brokers",
+    "fullTitle": "531210 - Offices of Real Estate Agents and Brokers"
+  },
+  {
+    "id": "531311",
+    "title": "Residential Property Managers",
+    "fullTitle": "531311 - Residential Property Managers"
+  },
+  {
+    "id": "531312",
+    "title": "Nonresidential Property Managers",
+    "fullTitle": "531312 - Nonresidential Property Managers"
+  },
+  {
+    "id": "531320",
+    "title": "Offices of Real Estate Appraisers",
+    "fullTitle": "531320 - Offices of Real Estate Appraisers"
+  },
+  {
+    "id": "531390",
+    "title": "Other Activities Related to Real Estate",
+    "fullTitle": "531390 - Other Activities Related to Real Estate"
+  },
+  {
+    "id": "532111",
+    "title": "Passenger Car Rental",
+    "fullTitle": "532111 - Passenger Car Rental"
+  },
+  {
+    "id": "532112",
+    "title": "Passenger Car Leasing",
+    "fullTitle": "532112 - Passenger Car Leasing"
+  },
+  {
+    "id": "532120",
+    "title": "Truck, Utility Trailer, and RV (Recreational Vehicle) Rental and Leasing",
+    "fullTitle": "532120 - Truck, Utility Trailer, and RV (Recreational Vehicle) Rental and Leasing"
+  },
+  {
+    "id": "532210",
+    "title": "Consumer Electronics and Appliances Rental",
+    "fullTitle": "532210 - Consumer Electronics and Appliances Rental"
+  },
+  {
+    "id": "532220",
+    "title": "Formal Wear and Costume Rental",
+    "fullTitle": "532220 - Formal Wear and Costume Rental"
+  },
+  {
+    "id": "532230",
+    "title": "Video Tape and Disc Rental",
+    "fullTitle": "532230 - Video Tape and Disc Rental"
+  },
+  {
+    "id": "532291",
+    "title": "Home Health Equipment Rental",
+    "fullTitle": "532291 - Home Health Equipment Rental"
+  },
+  {
+    "id": "532292",
+    "title": "Recreational Goods Rental",
+    "fullTitle": "532292 - Recreational Goods Rental"
+  },
+  {
+    "id": "532299",
+    "title": "All Other Consumer Goods Rental",
+    "fullTitle": "532299 - All Other Consumer Goods Rental"
+  },
+  {
+    "id": "532310",
+    "title": "General Rental Centers",
+    "fullTitle": "532310 - General Rental Centers"
+  },
+  {
+    "id": "532411",
+    "title": "Commercial Air, Rail, and Water Transportation Equipment Rental and Leasing",
+    "fullTitle": "532411 - Commercial Air, Rail, and Water Transportation Equipment Rental and Leasing"
+  },
+  {
+    "id": "532412",
+    "title": "Construction, Mining, and Forestry Machinery and Equipment Rental and Leasing",
+    "fullTitle": "532412 - Construction, Mining, and Forestry Machinery and Equipment Rental and Leasing"
+  },
+  {
+    "id": "532420",
+    "title": "Office Machinery and Equipment Rental and Leasing",
+    "fullTitle": "532420 - Office Machinery and Equipment Rental and Leasing"
+  },
+  {
+    "id": "532490",
+    "title": "Other Commercial and Industrial Machinery and Equipment Rental and Leasing",
+    "fullTitle": "532490 - Other Commercial and Industrial Machinery and Equipment Rental and Leasing"
+  },
+  {
+    "id": "533110",
+    "title": "Lessors of Nonfinancial Intangible Assets (except Copyrighted Works)",
+    "fullTitle": "533110 - Lessors of Nonfinancial Intangible Assets (except Copyrighted Works)"
+  },
+  {
+    "id": "541110",
+    "title": "Offices of Lawyers",
+    "fullTitle": "541110 - Offices of Lawyers"
+  },
+  {
+    "id": "541120",
+    "title": "Offices of Notaries",
+    "fullTitle": "541120 - Offices of Notaries"
+  },
+  {
+    "id": "541191",
+    "title": "Title Abstract and Settlement Offices",
+    "fullTitle": "541191 - Title Abstract and Settlement Offices"
+  },
+  {
+    "id": "541199",
+    "title": "All Other Legal Services",
+    "fullTitle": "541199 - All Other Legal Services"
+  },
+  {
+    "id": "541211",
+    "title": "Offices of Certified Public Accountants",
+    "fullTitle": "541211 - Offices of Certified Public Accountants"
+  },
+  {
+    "id": "541213",
+    "title": "Tax Preparation Services",
+    "fullTitle": "541213 - Tax Preparation Services"
+  },
+  {
+    "id": "541214",
+    "title": "Payroll Services",
+    "fullTitle": "541214 - Payroll Services"
+  },
+  {
+    "id": "541219",
+    "title": "Other Accounting Services",
+    "fullTitle": "541219 - Other Accounting Services"
+  },
+  {
+    "id": "541310",
+    "title": "Architectural Services",
+    "fullTitle": "541310 - Architectural Services"
+  },
+  {
+    "id": "541320",
+    "title": "Landscape Architectural Services",
+    "fullTitle": "541320 - Landscape Architectural Services"
+  },
+  {
+    "id": "541330",
+    "title": "Engineering Services",
+    "fullTitle": "541330 - Engineering Services"
+  },
+  {
+    "id": "541340",
+    "title": "Drafting Services",
+    "fullTitle": "541340 - Drafting Services"
+  },
+  {
+    "id": "541350",
+    "title": "Building Inspection Services",
+    "fullTitle": "541350 - Building Inspection Services"
+  },
+  {
+    "id": "541360",
+    "title": "Geophysical Surveying and Mapping Services",
+    "fullTitle": "541360 - Geophysical Surveying and Mapping Services"
+  },
+  {
+    "id": "541370",
+    "title": "Surveying and Mapping (except Geophysical) Services",
+    "fullTitle": "541370 - Surveying and Mapping (except Geophysical) Services"
+  },
+  {
+    "id": "541380",
+    "title": "Testing Laboratories",
+    "fullTitle": "541380 - Testing Laboratories"
+  },
+  {
+    "id": "541410",
+    "title": "Interior Design Services",
+    "fullTitle": "541410 - Interior Design Services"
+  },
+  {
+    "id": "541420",
+    "title": "Industrial Design Services",
+    "fullTitle": "541420 - Industrial Design Services"
+  },
+  {
+    "id": "541430",
+    "title": "Graphic Design Services",
+    "fullTitle": "541430 - Graphic Design Services"
+  },
+  {
+    "id": "541490",
+    "title": "Other Specialized Design Services",
+    "fullTitle": "541490 - Other Specialized Design Services"
+  },
+  {
+    "id": "541511",
+    "title": "Custom Computer Programming Services",
+    "fullTitle": "541511 - Custom Computer Programming Services"
+  },
+  {
+    "id": "541512",
+    "title": "Computer Systems Design Services",
+    "fullTitle": "541512 - Computer Systems Design Services"
+  },
+  {
+    "id": "541513",
+    "title": "Computer Facilities Management Services",
+    "fullTitle": "541513 - Computer Facilities Management Services"
+  },
+  {
+    "id": "541519",
+    "title": "Other Computer Related Services",
+    "fullTitle": "541519 - Other Computer Related Services"
+  },
+  {
+    "id": "541611",
+    "title": "Administrative Management and General Management Consulting Services",
+    "fullTitle": "541611 - Administrative Management and General Management Consulting Services"
+  },
+  {
+    "id": "541612",
+    "title": "Human Resources Consulting Services",
+    "fullTitle": "541612 - Human Resources Consulting Services"
+  },
+  {
+    "id": "541613",
+    "title": "Marketing Consulting Services",
+    "fullTitle": "541613 - Marketing Consulting Services"
+  },
+  {
+    "id": "541614",
+    "title": "Process, Physical Distribution, and Logistics Consulting Services",
+    "fullTitle": "541614 - Process, Physical Distribution, and Logistics Consulting Services"
+  },
+  {
+    "id": "541618",
+    "title": "Other Management Consulting Services",
+    "fullTitle": "541618 - Other Management Consulting Services"
+  },
+  {
+    "id": "541620",
+    "title": "Environmental Consulting Services",
+    "fullTitle": "541620 - Environmental Consulting Services"
+  },
+  {
+    "id": "541690",
+    "title": "Other Scientific and Technical Consulting Services",
+    "fullTitle": "541690 - Other Scientific and Technical Consulting Services"
+  },
+  {
+    "id": "541711",
+    "title": "Research and Development in Biotechnology",
+    "fullTitle": "541711 - Research and Development in Biotechnology"
+  },
+  {
+    "id": "541712",
+    "title": "Research and Development in the Physical, Engineering, and Life Sciences (except Biotechnology)",
+    "fullTitle": "541712 - Research and Development in the Physical, Engineering, and Life Sciences (except Biotechnology)"
+  },
+  {
+    "id": "541720",
+    "title": "Research and Development in the Social Sciences and Humanities",
+    "fullTitle": "541720 - Research and Development in the Social Sciences and Humanities"
+  },
+  {
+    "id": "541810",
+    "title": "Advertising Agencies",
+    "fullTitle": "541810 - Advertising Agencies"
+  },
+  {
+    "id": "541820",
+    "title": "Public Relations Agencies",
+    "fullTitle": "541820 - Public Relations Agencies"
+  },
+  {
+    "id": "541830",
+    "title": "Media Buying Agencies",
+    "fullTitle": "541830 - Media Buying Agencies"
+  },
+  {
+    "id": "541840",
+    "title": "Media Representatives",
+    "fullTitle": "541840 - Media Representatives"
+  },
+  {
+    "id": "541850",
+    "title": "Outdoor Advertising",
+    "fullTitle": "541850 - Outdoor Advertising"
+  },
+  {
+    "id": "541860",
+    "title": "Direct Mail Advertising",
+    "fullTitle": "541860 - Direct Mail Advertising"
+  },
+  {
+    "id": "541870",
+    "title": "Advertising Material Distribution Services",
+    "fullTitle": "541870 - Advertising Material Distribution Services"
+  },
+  {
+    "id": "541890",
+    "title": "Other Services Related to Advertising",
+    "fullTitle": "541890 - Other Services Related to Advertising"
+  },
+  {
+    "id": "541910",
+    "title": "Marketing Research and Public Opinion Polling",
+    "fullTitle": "541910 - Marketing Research and Public Opinion Polling"
+  },
+  {
+    "id": "541921",
+    "title": "Photography Studios, Portrait",
+    "fullTitle": "541921 - Photography Studios, Portrait"
+  },
+  {
+    "id": "541922",
+    "title": "Commercial Photography",
+    "fullTitle": "541922 - Commercial Photography"
+  },
+  {
+    "id": "541930",
+    "title": "Translation and Interpretation Services",
+    "fullTitle": "541930 - Translation and Interpretation Services"
+  },
+  {
+    "id": "541940",
+    "title": "Veterinary Services",
+    "fullTitle": "541940 - Veterinary Services"
+  },
+  {
+    "id": "541990",
+    "title": "All Other Professional, Scientific, and Technical Services",
+    "fullTitle": "541990 - All Other Professional, Scientific, and Technical Services"
+  },
+  {
+    "id": "551111",
+    "title": "Offices of Bank Holding Companies",
+    "fullTitle": "551111 - Offices of Bank Holding Companies"
+  },
+  {
+    "id": "551112",
+    "title": "Offices of Other Holding Companies",
+    "fullTitle": "551112 - Offices of Other Holding Companies"
+  },
+  {
+    "id": "551114",
+    "title": "Corporate, Subsidiary, and Regional Managing Offices",
+    "fullTitle": "551114 - Corporate, Subsidiary, and Regional Managing Offices"
+  },
+  {
+    "id": "561110",
+    "title": "Office Administrative Services",
+    "fullTitle": "561110 - Office Administrative Services"
+  },
+  {
+    "id": "561210",
+    "title": "Facilities Support Services",
+    "fullTitle": "561210 - Facilities Support Services"
+  },
+  {
+    "id": "561311",
+    "title": "Employment Placement Agencies",
+    "fullTitle": "561311 - Employment Placement Agencies"
+  },
+  {
+    "id": "561312",
+    "title": "Executive Search Services",
+    "fullTitle": "561312 - Executive Search Services"
+  },
+  {
+    "id": "561320",
+    "title": "Temporary Help Services",
+    "fullTitle": "561320 - Temporary Help Services"
+  },
+  {
+    "id": "561330",
+    "title": "Professional Employer Organizations",
+    "fullTitle": "561330 - Professional Employer Organizations"
+  },
+  {
+    "id": "561410",
+    "title": "Document Preparation Services",
+    "fullTitle": "561410 - Document Preparation Services"
+  },
+  {
+    "id": "561421",
+    "title": "Telephone Answering Services",
+    "fullTitle": "561421 - Telephone Answering Services"
+  },
+  {
+    "id": "561422",
+    "title": "Telemarketing Bureaus and Other Contact Centers",
+    "fullTitle": "561422 - Telemarketing Bureaus and Other Contact Centers"
+  },
+  {
+    "id": "561431",
+    "title": "Private Mail Centers",
+    "fullTitle": "561431 - Private Mail Centers"
+  },
+  {
+    "id": "561439",
+    "title": "Other Business Service Centers (including Copy Shops)",
+    "fullTitle": "561439 - Other Business Service Centers (including Copy Shops)"
+  },
+  {
+    "id": "561440",
+    "title": "Collection Agencies",
+    "fullTitle": "561440 - Collection Agencies"
+  },
+  {
+    "id": "561450",
+    "title": "Credit Bureaus",
+    "fullTitle": "561450 - Credit Bureaus"
+  },
+  {
+    "id": "561491",
+    "title": "Repossession Services",
+    "fullTitle": "561491 - Repossession Services"
+  },
+  {
+    "id": "561492",
+    "title": "Court Reporting and Stenotype Services",
+    "fullTitle": "561492 - Court Reporting and Stenotype Services"
+  },
+  {
+    "id": "561499",
+    "title": "All Other Business Support Services",
+    "fullTitle": "561499 - All Other Business Support Services"
+  },
+  {
+    "id": "561510",
+    "title": "Travel Agencies",
+    "fullTitle": "561510 - Travel Agencies"
+  },
+  {
+    "id": "561520",
+    "title": "Tour Operators",
+    "fullTitle": "561520 - Tour Operators"
+  },
+  {
+    "id": "561591",
+    "title": "Convention and Visitors Bureaus",
+    "fullTitle": "561591 - Convention and Visitors Bureaus"
+  },
+  {
+    "id": "561599",
+    "title": "All Other Travel Arrangement and Reservation Services",
+    "fullTitle": "561599 - All Other Travel Arrangement and Reservation Services"
+  },
+  {
+    "id": "561611",
+    "title": "Investigation Services",
+    "fullTitle": "561611 - Investigation Services"
+  },
+  {
+    "id": "561612",
+    "title": "Security Guards and Patrol Services",
+    "fullTitle": "561612 - Security Guards and Patrol Services"
+  },
+  {
+    "id": "561613",
+    "title": "Armored Car Services",
+    "fullTitle": "561613 - Armored Car Services"
+  },
+  {
+    "id": "561621",
+    "title": "Security Systems Services (except Locksmiths)",
+    "fullTitle": "561621 - Security Systems Services (except Locksmiths)"
+  },
+  {
+    "id": "561622",
+    "title": "Locksmiths",
+    "fullTitle": "56162Locksmiths2 - "
+  },
+  {
+    "id": "561710",
+    "title": "Exterminating and Pest Control Services",
+    "fullTitle": "561710 - Exterminating and Pest Control Services"
+  },
+  {
+    "id": "561720",
+    "title": "Janitorial Services",
+    "fullTitle": "561720 - Janitorial Services"
+  },
+  {
+    "id": "561730",
+    "title": "Landscaping Services",
+    "fullTitle": "561730 - Landscaping Services"
+  },
+  {
+    "id": "561740",
+    "title": "Carpet and Upholstery Cleaning Services",
+    "fullTitle": "561740 - Carpet and Upholstery Cleaning Services"
+  },
+  {
+    "id": "561790",
+    "title": "Other Services to Buildings and Dwellings",
+    "fullTitle": "561790 - Other Services to Buildings and Dwellings"
+  },
+  {
+    "id": "561910",
+    "title": "Packaging and Labeling Services",
+    "fullTitle": "561910 - Packaging and Labeling Services"
+  },
+  {
+    "id": "561920",
+    "title": "Convention and Trade Show Organizers",
+    "fullTitle": "561920 - Convention and Trade Show Organizers"
+  },
+  {
+    "id": "561990",
+    "title": "All Other Support Services",
+    "fullTitle": "561990 - All Other Support Services"
+  },
+  {
+    "id": "562111",
+    "title": "Solid Waste Collection",
+    "fullTitle": "562111 - Solid Waste Collection"
+  },
+  {
+    "id": "562112",
+    "title": "Hazardous Waste Collection",
+    "fullTitle": "562112 - Hazardous Waste Collection"
+  },
+  {
+    "id": "562119",
+    "title": "Other Waste Collection",
+    "fullTitle": "562119 - Other Waste Collection"
+  },
+  {
+    "id": "562211",
+    "title": "Hazardous Waste Treatment and Disposal",
+    "fullTitle": "562211 - Hazardous Waste Treatment and Disposal"
+  },
+  {
+    "id": "562212",
+    "title": "Solid Waste Landfill",
+    "fullTitle": "562212 - Solid Waste Landfill"
+  },
+  {
+    "id": "562213",
+    "title": "Solid Waste Combustors and Incinerators",
+    "fullTitle": "562213 - Solid Waste Combustors and Incinerators"
+  },
+  {
+    "id": "562219",
+    "title": "Other Nonhazardous Waste Treatment and Disposal",
+    "fullTitle": "562219 - Other Nonhazardous Waste Treatment and Disposal"
+  },
+  {
+    "id": "562910",
+    "title": "Remediation Services",
+    "fullTitle": "562910 - Remediation Services"
+  },
+  {
+    "id": "562920",
+    "title": "Materials Recovery Facilities",
+    "fullTitle": "562920 - Materials Recovery Facilities"
+  },
+  {
+    "id": "562991",
+    "title": "Septic Tank and Related Services",
+    "fullTitle": "562991 - Septic Tank and Related Services"
+  },
+  {
+    "id": "562998",
+    "title": "All Other Miscellaneous Waste Management Services",
+    "fullTitle": "562998 - All Other Miscellaneous Waste Management Services"
+  },
+  {
+    "id": "611110",
+    "title": "Elementary and Secondary Schools",
+    "fullTitle": "611110 - Elementary and Secondary Schools"
+  },
+  {
+    "id": "611210",
+    "title": "Junior Colleges",
+    "fullTitle": "611210 - Junior Colleges"
+  },
+  {
+    "id": "611310",
+    "title": "Colleges, Universities, and Professional Schools",
+    "fullTitle": "611310 - Colleges, Universities, and Professional Schools"
+  },
+  {
+    "id": "611410",
+    "title": "Business and Secretarial Schools",
+    "fullTitle": "611410 - Business and Secretarial Schools"
+  },
+  {
+    "id": "611420",
+    "title": "Computer Training",
+    "fullTitle": "611420 - Computer Training"
+  },
+  {
+    "id": "611430",
+    "title": "Professional and Management Development Training",
+    "fullTitle": "611430 - Professional and Management Development Training"
+  },
+  {
+    "id": "611511",
+    "title": "Cosmetology and Barber Schools",
+    "fullTitle": "611511 - Cosmetology and Barber Schools"
+  },
+  {
+    "id": "611512",
+    "title": "Flight Training",
+    "fullTitle": "611512 - Flight Training"
+  },
+  {
+    "id": "611513",
+    "title": "Apprenticeship Training",
+    "fullTitle": "611513 - Apprenticeship Training"
+  },
+  {
+    "id": "611519",
+    "title": "Other Technical and Trade Schools",
+    "fullTitle": "611519 - Other Technical and Trade Schools"
+  },
+  {
+    "id": "611610",
+    "title": "Fine Arts Schools",
+    "fullTitle": "611610 - Fine Arts Schools"
+  },
+  {
+    "id": "611620",
+    "title": "Sports and Recreation Instruction",
+    "fullTitle": "611620 - Sports and Recreation Instruction"
+  },
+  {
+    "id": "611630",
+    "title": "Language Schools",
+    "fullTitle": "611630 - Language Schools"
+  },
+  {
+    "id": "611691",
+    "title": "Exam Preparation and Tutoring",
+    "fullTitle": "611691 - Exam Preparation and Tutoring"
+  },
+  {
+    "id": "611692",
+    "title": "Automobile Driving Schools",
+    "fullTitle": "611692 - Automobile Driving Schools"
+  },
+  {
+    "id": "611699",
+    "title": "All Other Miscellaneous Schools and Instruction",
+    "fullTitle": "611699 - All Other Miscellaneous Schools and Instruction"
+  },
+  {
+    "id": "611710",
+    "title": "Educational Support Services",
+    "fullTitle": "611710 - Educational Support Services"
+  },
+  {
+    "id": "621111",
+    "title": "Offices of Physicians (except Mental Health Specialists)",
+    "fullTitle": "621111 - Offices of Physicians (except Mental Health Specialists)"
+  },
+  {
+    "id": "621112",
+    "title": "Offices of Physicians, Mental Health Specialists",
+    "fullTitle": "621112 - Offices of Physicians, Mental Health Specialists"
+  },
+  {
+    "id": "621210",
+    "title": "Offices of Dentists",
+    "fullTitle": "621210 - Offices of Dentists"
+  },
+  {
+    "id": "621310",
+    "title": "Offices of Chiropractors",
+    "fullTitle": "621310 - Offices of Chiropractors"
+  },
+  {
+    "id": "621320",
+    "title": "Offices of Optometrists",
+    "fullTitle": "621320 - Offices of Optometrists"
+  },
+  {
+    "id": "621330",
+    "title": "Offices of Mental Health Practitioners (except Physicians)",
+    "fullTitle": "621330 - Offices of Mental Health Practitioners (except Physicians)"
+  },
+  {
+    "id": "621340",
+    "title": "Offices of Physical, Occupational and Speech Therapists, and Audiologists",
+    "fullTitle": "621340 - Offices of Physical, Occupational and Speech Therapists, and Audiologists"
+  },
+  {
+    "id": "621391",
+    "title": "Offices of Podiatrists",
+    "fullTitle": "621391 - Offices of Podiatrists"
+  },
+  {
+    "id": "621399",
+    "title": "Offices of All Other Miscellaneous Health Practitioners",
+    "fullTitle": "621399 - Offices of All Other Miscellaneous Health Practitioners"
+  },
+  {
+    "id": "621410",
+    "title": "Family Planning Centers",
+    "fullTitle": "621410 - Family Planning Centers"
+  },
+  {
+    "id": "621420",
+    "title": "Outpatient Mental Health and Substance Abuse Centers",
+    "fullTitle": "621420 - Outpatient Mental Health and Substance Abuse Centers"
+  },
+  {
+    "id": "621491",
+    "title": "HMO Medical Centers",
+    "fullTitle": "621491 - HMO Medical Centers"
+  },
+  {
+    "id": "621492",
+    "title": "Kidney Dialysis Centers",
+    "fullTitle": "621492 - Kidney Dialysis Centers"
+  },
+  {
+    "id": "621493",
+    "title": "Freestanding Ambulatory Surgical and Emergency Centers",
+    "fullTitle": "621493 - Freestanding Ambulatory Surgical and Emergency Centers"
+  },
+  {
+    "id": "621498",
+    "title": "All Other Outpatient Care Centers",
+    "fullTitle": "621498 - All Other Outpatient Care Centers"
+  },
+  {
+    "id": "621511",
+    "title": "Medical Laboratories",
+    "fullTitle": "621511 - Medical Laboratories"
+  },
+  {
+    "id": "621512",
+    "title": "Diagnostic Imaging Centers",
+    "fullTitle": "621512 - Diagnostic Imaging Centers"
+  },
+  {
+    "id": "621610",
+    "title": "Home Health Care Services",
+    "fullTitle": "621610 - Home Health Care Services"
+  },
+  {
+    "id": "621910",
+    "title": "Ambulance Services",
+    "fullTitle": "621910 - Ambulance Services"
+  },
+  {
+    "id": "621991",
+    "title": "Blood and Organ Banks",
+    "fullTitle": "621991 - Blood and Organ Banks"
+  },
+  {
+    "id": "621999",
+    "title": "All Other Miscellaneous Ambulatory Health Care Services",
+    "fullTitle": "621999 - All Other Miscellaneous Ambulatory Health Care Services"
+  },
+  {
+    "id": "622110",
+    "title": "General Medical and Surgical Hospitals",
+    "fullTitle": "622110 - General Medical and Surgical Hospitals"
+  },
+  {
+    "id": "622210",
+    "title": "Psychiatric and Substance Abuse Hospitals",
+    "fullTitle": "622210 - Psychiatric and Substance Abuse Hospitals"
+  },
+  {
+    "id": "622310",
+    "title": "Specialty (except Psychiatric and Substance Abuse) Hospitals",
+    "fullTitle": "622310 - Specialty (except Psychiatric and Substance Abuse) Hospitals"
+  },
+  {
+    "id": "623110",
+    "title": "Nursing Care Facilities (Skilled Nursing Facilities)",
+    "fullTitle": "623110 - Nursing Care Facilities (Skilled Nursing Facilities)"
+  },
+  {
+    "id": "623210",
+    "title": "Residential Intellectual and Developmental Disability Facilities",
+    "fullTitle": "623210 - Residential Intellectual and Developmental Disability Facilities"
+  },
+  {
+    "id": "623220",
+    "title": "Residential Mental Health and Substance Abuse Facilities",
+    "fullTitle": "623220 - Residential Mental Health and Substance Abuse Facilities"
+  },
+  {
+    "id": "623311",
+    "title": "Continuing Care Retirement Communities",
+    "fullTitle": "623311 - Continuing Care Retirement Communities"
+  },
+  {
+    "id": "623312",
+    "title": "Assisted Living Facilities for the Elderly",
+    "fullTitle": "623312 - Assisted Living Facilities for the Elderly"
+  },
+  {
+    "id": "623990",
+    "title": "Other Residential Care Facilities",
+    "fullTitle": "623990 - Other Residential Care Facilities"
+  },
+  {
+    "id": "624110",
+    "title": "Child and Youth Services",
+    "fullTitle": "624110 - Child and Youth Services"
+  },
+  {
+    "id": "624120",
+    "title": "Services for the Elderly and Persons with Disabilities",
+    "fullTitle": "624120 - Services for the Elderly and Persons with Disabilities"
+  },
+  {
+    "id": "624190",
+    "title": "Other Individual and Family Services",
+    "fullTitle": "624190 - Other Individual and Family Services"
+  },
+  {
+    "id": "624210",
+    "title": "Community Food Services",
+    "fullTitle": "624210 - Community Food Services"
+  },
+  {
+    "id": "624221",
+    "title": "Temporary Shelters",
+    "fullTitle": "624221 - Temporary Shelters"
+  },
+  {
+    "id": "624229",
+    "title": "Other Community Housing Services",
+    "fullTitle": "624229 - Other Community Housing Services"
+  },
+  {
+    "id": "624230",
+    "title": "Emergency and Other Relief Services",
+    "fullTitle": "624230 - Emergency and Other Relief Services"
+  },
+  {
+    "id": "624310",
+    "title": "Vocational Rehabilitation Services",
+    "fullTitle": "624310 - Vocational Rehabilitation Services"
+  },
+  {
+    "id": "624410",
+    "title": "Child Day Care Services",
+    "fullTitle": "624410 - Child Day Care Services"
+  },
+  {
+    "id": "711110",
+    "title": "Theater Companies and Dinner Theaters",
+    "fullTitle": "711110 - Theater Companies and Dinner Theaters"
+  },
+  {
+    "id": "711120",
+    "title": "Dance Companies",
+    "fullTitle": "711120 - Dance Companies"
+  },
+  {
+    "id": "711130",
+    "title": "Musical Groups and Artists",
+    "fullTitle": "711130 - Musical Groups and Artists"
+  },
+  {
+    "id": "711190",
+    "title": "Other Performing Arts Companies",
+    "fullTitle": "711190 - Other Performing Arts Companies"
+  },
+  {
+    "id": "711211",
+    "title": "Sports Teams and Clubs",
+    "fullTitle": "711211 - Sports Teams and Clubs"
+  },
+  {
+    "id": "711212",
+    "title": "Racetracks",
+    "fullTitle": "71121Racetracks2 - "
+  },
+  {
+    "id": "711219",
+    "title": "Other Spectator Sports",
+    "fullTitle": "711219 - Other Spectator Sports"
+  },
+  {
+    "id": "711310",
+    "title": "Promoters of Performing Arts, Sports, and Similar Events with Facilities",
+    "fullTitle": "711310 - Promoters of Performing Arts, Sports, and Similar Events with Facilities"
+  },
+  {
+    "id": "711320",
+    "title": "Promoters of Performing Arts, Sports, and Similar Events without Facilities",
+    "fullTitle": "711320 - Promoters of Performing Arts, Sports, and Similar Events without Facilities"
+  },
+  {
+    "id": "711410",
+    "title": "Agents and Managers for Artists, Athletes, Entertainers, and Other Public Figures",
+    "fullTitle": "711410 - Agents and Managers for Artists, Athletes, Entertainers, and Other Public Figures"
+  },
+  {
+    "id": "711510",
+    "title": "Independent Artists, Writers, and Performers",
+    "fullTitle": "711510 - Independent Artists, Writers, and Performers"
+  },
+  {
+    "id": "712110",
+    "title": "Museums",
+    "fullTitle": "71Museums2110 - "
+  },
+  {
+    "id": "712120",
+    "title": "Historical Sites",
+    "fullTitle": "712120 - Historical Sites"
+  },
+  {
+    "id": "712130",
+    "title": "Zoos and Botanical Gardens",
+    "fullTitle": "712130 - Zoos and Botanical Gardens"
+  },
+  {
+    "id": "712190",
+    "title": "Nature Parks and Other Similar Institutions",
+    "fullTitle": "712190 - Nature Parks and Other Similar Institutions"
+  },
+  {
+    "id": "713110",
+    "title": "Amusement and Theme Parks",
+    "fullTitle": "713110 - Amusement and Theme Parks"
+  },
+  {
+    "id": "713120",
+    "title": "Amusement Arcades",
+    "fullTitle": "713120 - Amusement Arcades"
+  },
+  {
+    "id": "713210",
+    "title": "Casinos (except Casino Hotels)",
+    "fullTitle": "713210 - Casinos (except Casino Hotels)"
+  },
+  {
+    "id": "713290",
+    "title": "Other Gambling Industries",
+    "fullTitle": "713290 - Other Gambling Industries"
+  },
+  {
+    "id": "713910",
+    "title": "Golf Courses and Country Clubs",
+    "fullTitle": "713910 - Golf Courses and Country Clubs"
+  },
+  {
+    "id": "713920",
+    "title": "Skiing Facilities",
+    "fullTitle": "713920 - Skiing Facilities"
+  },
+  {
+    "id": "713930",
+    "title": "Marinas",
+    "fullTitle": "71Marinas3930 - "
+  },
+  {
+    "id": "713940",
+    "title": "Fitness and Recreational Sports Centers",
+    "fullTitle": "713940 - Fitness and Recreational Sports Centers"
+  },
+  {
+    "id": "713950",
+    "title": "Bowling Centers",
+    "fullTitle": "713950 - Bowling Centers"
+  },
+  {
+    "id": "713990",
+    "title": "All Other Amusement and Recreation Industries",
+    "fullTitle": "713990 - All Other Amusement and Recreation Industries"
+  },
+  {
+    "id": "721110",
+    "title": "Hotels (except Casino Hotels) and Motels",
+    "fullTitle": "721110 - Hotels (except Casino Hotels) and Motels"
+  },
+  {
+    "id": "721120",
+    "title": "Casino Hotels",
+    "fullTitle": "721120 -Casino Hotels "
+  },
+  {
+    "id": "721191",
+    "title": "Bed-and-Breakfast Inns",
+    "fullTitle": "721191 - Bed-and-Breakfast Inns"
+  },
+  {
+    "id": "721199",
+    "title": "All Other Traveler Accommodation",
+    "fullTitle": "721199 - All Other Traveler Accommodation"
+  },
+  {
+    "id": "721211",
+    "title": "RV (Recreational Vehicle) Parks and Campgrounds",
+    "fullTitle": "721211 - RV (Recreational Vehicle) Parks and Campgrounds"
+  },
+  {
+    "id": "721214",
+    "title": "Recreational and Vacation Camps (except Campgrounds)",
+    "fullTitle": "721214 - Recreational and Vacation Camps (except Campgrounds)"
+  },
+  {
+    "id": "721310",
+    "title": "Rooming and Boarding Houses",
+    "fullTitle": "721310 - Rooming and Boarding Houses"
+  },
+  {
+    "id": "722310",
+    "title": "Food Service Contractors",
+    "fullTitle": "722310 - Food Service Contractors"
+  },
+  {
+    "id": "722320",
+    "title": "Caterers",
+    "fullTitle": "722Caterers320 - "
+  },
+  {
+    "id": "722330",
+    "title": "Mobile Food Services",
+    "fullTitle": "722330 - Mobile Food Services"
+  },
+  {
+    "id": "722410",
+    "title": "Drinking Places (Alcoholic Beverages)",
+    "fullTitle": "722410 - Drinking Places (Alcoholic Beverages)"
+  },
+  {
+    "id": "722511",
+    "title": "Full-Service Restaurants",
+    "fullTitle": "722511 - Full-Service Restaurants"
+  },
+  {
+    "id": "722513",
+    "title": "Limited-Service Restaurants",
+    "fullTitle": "722513 - Limited-Service Restaurants"
+  },
+  {
+    "id": "722514",
+    "title": "Cafeterias, Grill Buffets, and Buffets",
+    "fullTitle": "722514 - Cafeterias, Grill Buffets, and Buffets"
+  },
+  {
+    "id": "722515",
+    "title": "Snack and Nonalcoholic Beverage Bars",
+    "fullTitle": "722515 - Snack and Nonalcoholic Beverage Bars"
+  },
+  {
+    "id": "811111",
+    "title": "General Automotive Repair",
+    "fullTitle": "811111 - General Automotive Repair"
+  },
+  {
+    "id": "811112",
+    "title": "Automotive Exhaust System Repair",
+    "fullTitle": "811112 - Automotive Exhaust System Repair"
+  },
+  {
+    "id": "811113",
+    "title": "Automotive Transmission Repair",
+    "fullTitle": "811113 - Automotive Transmission Repair"
+  },
+  {
+    "id": "811118",
+    "title": "Other Automotive Mechanical and Electrical Repair and Maintenance",
+    "fullTitle": "811118 - Other Automotive Mechanical and Electrical Repair and Maintenance"
+  },
+  {
+    "id": "811121",
+    "title": "Automotive Body, Paint, and Interior Repair and Maintenance",
+    "fullTitle": "811121 - Automotive Body, Paint, and Interior Repair and Maintenance"
+  },
+  {
+    "id": "811122",
+    "title": "Automotive Glass Replacement Shops",
+    "fullTitle": "811122 - Automotive Glass Replacement Shops"
+  },
+  {
+    "id": "811191",
+    "title": "Automotive Oil Change and Lubrication Shops",
+    "fullTitle": "811191 - Automotive Oil Change and Lubrication Shops"
+  },
+  {
+    "id": "811192",
+    "title": "Car Washes",
+    "fullTitle": "81119Car Washes2 - "
+  },
+  {
+    "id": "811198",
+    "title": "All Other Automotive Repair and Maintenance",
+    "fullTitle": "811198 - All Other Automotive Repair and Maintenance"
+  },
+  {
+    "id": "811211",
+    "title": "Consumer Electronics Repair and Maintenance",
+    "fullTitle": "811211 - Consumer Electronics Repair and Maintenance"
+  },
+  {
+    "id": "811212",
+    "title": "Computer and Office Machine Repair and Maintenance",
+    "fullTitle": "811212 - Computer and Office Machine Repair and Maintenance"
+  },
+  {
+    "id": "811213",
+    "title": "Communication Equipment Repair and Maintenance",
+    "fullTitle": "811213 - Communication Equipment Repair and Maintenance"
+  },
+  {
+    "id": "811219",
+    "title": "Other Electronic and Precision Equipment Repair and Maintenance",
+    "fullTitle": "811219 - Other Electronic and Precision Equipment Repair and Maintenance"
+  },
+  {
+    "id": "811310",
+    "title": "Commercial and Industrial Machinery and Equipment (except Automotive and Electronic) Repair and Maintenance",
+    "fullTitle": "811310 - Commercial and Industrial Machinery and Equipment (except Automotive and Electronic) Repair and Maintenance"
+  },
+  {
+    "id": "811411",
+    "title": "Home and Garden Equipment Repair and Maintenance",
+    "fullTitle": "811411 - Home and Garden Equipment Repair and Maintenance"
+  },
+  {
+    "id": "811412",
+    "title": "Appliance Repair and Maintenance",
+    "fullTitle": "811412 - Appliance Repair and Maintenance"
+  },
+  {
+    "id": "811420",
+    "title": "Reupholstery and Furniture Repair",
+    "fullTitle": "811420 - Reupholstery and Furniture Repair"
+  },
+  {
+    "id": "811430",
+    "title": "Footwear and Leather Goods Repair",
+    "fullTitle": "811430 - Footwear and Leather Goods Repair"
+  },
+  {
+    "id": "811490",
+    "title": "Other Personal and Household Goods Repair and Maintenance",
+    "fullTitle": "811490 - Other Personal and Household Goods Repair and Maintenance"
+  },
+  {
+    "id": "812111",
+    "title": "Barber Shops",
+    "fullTitle": "812111 Barber Shops- "
+  },
+  {
+    "id": "812112",
+    "title": "Beauty Salons",
+    "fullTitle": "812112 -Beauty Salons "
+  },
+  {
+    "id": "812113",
+    "title": "Nail Salons",
+    "fullTitle": "812113Nail Salons - "
+  },
+  {
+    "id": "812191",
+    "title": "Diet and Weight Reducing Centers",
+    "fullTitle": "812191 - Diet and Weight Reducing Centers"
+  },
+  {
+    "id": "812199",
+    "title": "Other Personal Care Services",
+    "fullTitle": "812199 - Other Personal Care Services"
+  },
+  {
+    "id": "812210",
+    "title": "Funeral Homes and Funeral Services",
+    "fullTitle": "812210 - Funeral Homes and Funeral Services"
+  },
+  {
+    "id": "812220",
+    "title": "Cemeteries and Crematories",
+    "fullTitle": "812220 - Cemeteries and Crematories"
+  },
+  {
+    "id": "812310",
+    "title": "Coin-Operated Laundries and Drycleaners",
+    "fullTitle": "812310 - Coin-Operated Laundries and Drycleaners"
+  },
+  {
+    "id": "812320",
+    "title": "Drycleaning and Laundry Services (except Coin-Operated)",
+    "fullTitle": "812320 - Drycleaning and Laundry Services (except Coin-Operated)"
+  },
+  {
+    "id": "812331",
+    "title": "Linen Supply",
+    "fullTitle": "812331 Linen Supply- "
+  },
+  {
+    "id": "812332",
+    "title": "Industrial Launderers",
+    "fullTitle": "812332 - Industrial Launderers"
+  },
+  {
+    "id": "812910",
+    "title": "Pet Care (except Veterinary) Services",
+    "fullTitle": "812910 - Pet Care (except Veterinary) Services"
+  },
+  {
+    "id": "812921",
+    "title": "Photofinishing Laboratories (except One-Hour)",
+    "fullTitle": "812921 - Photofinishing Laboratories (except One-Hour)"
+  },
+  {
+    "id": "812922",
+    "title": "One-Hour Photofinishing",
+    "fullTitle": "812922 - One-Hour Photofinishing"
+  },
+  {
+    "id": "812930",
+    "title": "Parking Lots and Garages",
+    "fullTitle": "812930 - Parking Lots and Garages"
+  },
+  {
+    "id": "812990",
+    "title": "All Other Personal Services",
+    "fullTitle": "812990 - All Other Personal Services"
+  },
+  {
+    "id": "813110",
+    "title": "Religious Organizations",
+    "fullTitle": "813110 - Religious Organizations"
+  },
+  {
+    "id": "813211",
+    "title": "Grantmaking Foundations",
+    "fullTitle": "813211 - Grantmaking Foundations"
+  },
+  {
+    "id": "813212",
+    "title": "Voluntary Health Organizations",
+    "fullTitle": "813212 - Voluntary Health Organizations"
+  },
+  {
+    "id": "813219",
+    "title": "Other Grantmaking and Giving Services",
+    "fullTitle": "813219 - Other Grantmaking and Giving Services"
+  },
+  {
+    "id": "813311",
+    "title": "Human Rights Organizations",
+    "fullTitle": "813311 - Human Rights Organizations"
+  },
+  {
+    "id": "813312",
+    "title": "Environment, Conservation and Wildlife Organizations",
+    "fullTitle": "813312 - Environment, Conservation and Wildlife Organizations"
+  },
+  {
+    "id": "813319",
+    "title": "Other Social Advocacy Organizations",
+    "fullTitle": "813319 - Other Social Advocacy Organizations"
+  },
+  {
+    "id": "813410",
+    "title": "Civic and Social Organizations",
+    "fullTitle": "813410 - Civic and Social Organizations"
+  },
+  {
+    "id": "813910",
+    "title": "Business Associations",
+    "fullTitle": "813910 - Business Associations"
+  },
+  {
+    "id": "813920",
+    "title": "Professional Organizations",
+    "fullTitle": "813920 - Professional Organizations"
+  },
+  {
+    "id": "813930",
+    "title": "Labor Unions and Similar Labor Organizations",
+    "fullTitle": "813930 - Labor Unions and Similar Labor Organizations"
+  },
+  {
+    "id": "813940",
+    "title": "Political Organizations",
+    "fullTitle": "813940 - Political Organizations"
+  },
+  {
+    "id": "813990",
+    "title": "Other Similar Organizations (except Business, Professional, Labor, and Political Organizations)",
+    "fullTitle": "813990 - Other Similar Organizations (except Business, Professional, Labor, and Political Organizations)"
+  },
+  {
+    "id": "814110",
+    "title": "Private Households",
+    "fullTitle": "814110 - Private Households"
+  },
+  {
+    "id": "921110",
+    "title": "Executive Offices",
+    "fullTitle": "921110 - Executive Offices"
+  },
+  {
+    "id": "921120",
+    "title": "Legislative Bodies",
+    "fullTitle": "921120 - Legislative Bodies"
+  },
+  {
+    "id": "921130",
+    "title": "Public Finance Activities",
+    "fullTitle": "921130 - Public Finance Activities"
+  },
+  {
+    "id": "921140",
+    "title": "Executive and Legislative Offices, Combined",
+    "fullTitle": "921140 - Executive and Legislative Offices, Combined"
+  },
+  {
+    "id": "921150",
+    "title": "American Indian and Alaska Native Tribal Governments",
+    "fullTitle": "921150 - American Indian and Alaska Native Tribal Governments"
+  },
+  {
+    "id": "921190",
+    "title": "Other General Government Support",
+    "fullTitle": "921190 - Other General Government Support"
+  },
+  {
+    "id": "922110",
+    "title": "Courts",
+    "fullTitle": "9Courts22110 - "
+  },
+  {
+    "id": "922120",
+    "title": "Police Protection",
+    "fullTitle": "922120 - Police Protection"
+  },
+  {
+    "id": "922130",
+    "title": "Legal Counsel and Prosecution",
+    "fullTitle": "922130 - Legal Counsel and Prosecution"
+  },
+  {
+    "id": "922140",
+    "title": "Correctional Institutions",
+    "fullTitle": "922140 - Correctional Institutions"
+  },
+  {
+    "id": "922150",
+    "title": "Parole Offices and Probation Offices",
+    "fullTitle": "922150 - Parole Offices and Probation Offices"
+  },
+  {
+    "id": "922160",
+    "title": "Fire Protection",
+    "fullTitle": "922160 - Fire Protection"
+  },
+  {
+    "id": "922190",
+    "title": "Other Justice, Public Order, and Safety Activities",
+    "fullTitle": "922190 - Other Justice, Public Order, and Safety Activities"
+  },
+  {
+    "id": "923110",
+    "title": "Administration of Education Programs",
+    "fullTitle": "923110 - Administration of Education Programs"
+  },
+  {
+    "id": "923120",
+    "title": "Administration of Public Health Programs",
+    "fullTitle": "923120 - Administration of Public Health Programs"
+  },
+  {
+    "id": "923130",
+    "title": "Administration of Human Resource Programs (except Education, Public Health, and Veterans' Affairs Programs)",
+    "fullTitle": "923130 - Administration of Human Resource Programs (except Education, Public Health, and Veterans' Affairs Programs)"
+  },
+  {
+    "id": "923140",
+    "title": "Administration of Veterans' Affairs",
+    "fullTitle": "923140 - Administration of Veterans' Affairs"
+  },
+  {
+    "id": "924110",
+    "title": "Administration of Air and Water Resource and Solid Waste Management Programs",
+    "fullTitle": "924110 - Administration of Air and Water Resource and Solid Waste Management Programs"
+  },
+  {
+    "id": "924120",
+    "title": "Administration of Conservation Programs",
+    "fullTitle": "924120 - Administration of Conservation Programs"
+  },
+  {
+    "id": "925110",
+    "title": "Administration of Housing Programs",
+    "fullTitle": "925110 - Administration of Housing Programs"
+  },
+  {
+    "id": "925120",
+    "title": "Administration of Urban Planning and Community and Rural Development",
+    "fullTitle": "925120 - Administration of Urban Planning and Community and Rural Development"
+  },
+  {
+    "id": "926110",
+    "title": "Administration of General Economic Programs",
+    "fullTitle": "926110 - Administration of General Economic Programs"
+  },
+  {
+    "id": "926120",
+    "title": "Regulation and Administration of Transportation Programs",
+    "fullTitle": "926120 - Regulation and Administration of Transportation Programs"
+  },
+  {
+    "id": "926130",
+    "title": "Regulation and Administration of Communications, Electric, Gas, and Other Utilities",
+    "fullTitle": "926130 - Regulation and Administration of Communications, Electric, Gas, and Other Utilities"
+  },
+  {
+    "id": "926140",
+    "title": "Regulation of Agricultural Marketing and Commodities",
+    "fullTitle": "926140 - Regulation of Agricultural Marketing and Commodities"
+  },
+  {
+    "id": "926150",
+    "title": "Regulation, Licensing, and Inspection of Miscellaneous Commercial Sectors",
+    "fullTitle": "926150 - Regulation, Licensing, and Inspection of Miscellaneous Commercial Sectors"
+  },
+  {
+    "id": "927110",
+    "title": "Space Research and Technology",
+    "fullTitle": "927110 - Space Research and Technology"
+  },
+  {
+    "id": "928110",
+    "title": "National Security",
+    "fullTitle": "928110 - National Security"
+  },
+  {
+    "id": "928120",
+    "title": "International Affairs",
+    "fullTitle": "928120 - International Affairs"
+  }
+]

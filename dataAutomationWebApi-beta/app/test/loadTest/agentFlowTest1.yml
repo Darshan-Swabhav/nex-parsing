@@ -1,0 +1,22 @@
+config:
+  payload:
+    # path is relative to the location of the test script
+    path: "users.csv"
+    fields:
+      - "token"
+  target: 'http://127.0.0.1:20100'
+  phases:
+    - duration: 60
+      arrivalRate: 10
+      maxVusers: 50
+scenarios:
+  - flow:
+    - get:
+        url: "/api/v1/jobLevel"
+        headers:
+          authorization: "{{ token }}"
+    - think: 5
+    - get:
+        url: "/api/v1/jobDepartment"
+        headers:
+          authorization: "{{ token }}"

@@ -1,0 +1,133 @@
+{
+  "settings": [
+    { "name": "jwtAudience", "value": "76BX9Ztg4ljbrI0mFzqYI6mN01mvoqRS" },
+    {
+      "name": "jwtURI",
+      "value": "https://innovation.auth0.com/.well-known/jwks.json"
+    },
+    { "name": "jwtIssuer", "value": "https://innovation.auth0.com/" },
+    { "name": "audience", "value": "76BX9Ztg4ljbrI0mFzqYI6mN01mvoqRS" },
+    { "name": "auth0Connection", "value": "Username-Password-Authentication" },
+    {
+      "name": "auth0ApiUrl",
+      "value": "https://innovation.auth0.com/api/v2/users"
+    },
+    {
+      "name": "auth0TokenUrl",
+      "value": "https://innovation.auth0.com/oauth/token"
+    },
+    {
+      "name": "auth0PwdTicketUrl",
+      "value": "https://innovation.auth0.com/api/v2/tickets/password-change"
+    },
+    { "name": "authExtAudience", "value": "urn:auth0-authz-api" },
+    {
+      "name": "authExtApiUrl",
+      "value": "https://innovation.us.webtask.io/adf6e2f2b84784b57522e3b19dfc9201/api/"
+    },
+    { "name": "appLoginUrl", "value": "" },
+    { "name": "appName", "value": "Data Automation" },
+    {
+      "name": "objectLabels",
+      "value": {
+        "SUPPRESSED": "Exact Suppressed",
+        "FUZZY_SUPPRESSED": "Fuzzy Suppressed",
+        "DUPLICATE": "duplicate",
+        "INCLUSION": "inclusion"
+      }
+    },
+    {
+      "name": "CONTACT_PREVIOUS_VALUE_PREFIX",
+      "value": "previous_"
+    },
+    {
+      "name": "contactSuppressionMatchCases",
+      "value": {
+        "FN_LN_PHONE": "FN+LN+PHONE",
+        "FN_LN_EMAIL_DOMAIN": "FN+LN+EMAIL_DOMAIN",
+        "FN_EMAIL_DOMAIN": "FN+EMAIL_DOMAIN",
+        "LN_EMAIL_DOMAIN": "LN+EMAIL_DOMAIN",
+        "FN_LN_COMPANY": "FN+LN+COMPANY",
+        "EMAIL": "EMAIL",
+        "NONE": "NONE"
+      }
+    },
+    {
+      "name": "contactDuplicateMatchCases",
+      "value": {
+        "FN_LN_PHONE": "FN+LN+PHONE",
+        "FN_LN_EMAIL_DOMAIN": "FN+LN+EMAIL_DOMAIN",
+        "FN_LN_COMPANY": "FN+LN+COMPANY",
+        "EMAIL": "EMAIL",
+        "NONE": "NONE"
+      }
+    },
+    {
+      "name": "accountSuppressionMatchCases",
+      "value": {
+        "WEBSITE_DOMAIN": "WEBSITE_DOMAIN",
+        "SCRUBBED_COMPANY_NAME": "SCRUBBED_COMPANY_NAME",
+        "COMPANY_ALIAS_NAME": "COMPANY_ALIAS_NAME",
+        "TOKENS": "TOKENS",
+        "NONE": "NONE"
+      }
+    },
+    {
+      "name": "accountDuplicateMatchCases",
+      "value": {
+        "WEBSITE_DOMAIN": "WEBSITE_DOMAIN",
+        "SCRUBBED_COMPANY_NAME": "SCRUBBED_COMPANY_NAME",
+        "COMPANY_ALIAS_NAME": "COMPANY_ALIAS_NAME",
+        "TOKENS": "TOKENS",
+        "NONE": "NONE"
+      }
+    },
+    {
+      "name": "dataTypesForDedupeGeneratorModule",
+      "value": {
+        "CONTACT": "contact",
+        "ACCOUNT": "account"
+      }
+    },
+    {
+      "name": "apiGwDeadline",
+      "value": 30.0
+    },
+    {
+      "name": "FILE_DOWNLOAD_ENDPOINT",
+      "value": "https://beta-da-evt-process-file-download-ymghawfbjq-uc.a.run.app"
+    },
+    {
+      "name": "MASTER_FILE_DOWNLOAD_ENDPOINT",
+      "value": "https://beta-da-evt-process-file-download-ymghawfbjq-uc.a.run.app/master"
+    },
+    {
+      "name": "DATA_INJECTOR_ENDPOINT",
+      "value": "https://beta-da-master-data-injector-ymghawfbjq-uc.a.run.app"
+    },
+    {
+      "name": "TASK_ALLOCATION_ENDPOINT",
+      "value": "https://beta-da-task-allocation-service-ymghawfbjq-uc.a.run.app/taskAllocation"
+    },
+    {
+      "name": "ACCOUNT_ALLOCATION_ENDPOINT",
+      "value": "https://beta-da-task-allocation-service-ymghawfbjq-uc.a.run.app/accountAllocation"
+    },
+    {
+      "name": "CONTACT_ALLOCATION_ENDPOINT",
+      "value": "https://beta-da-task-allocation-service-ymghawfbjq-uc.a.run.app/contactAllocation"
+    },
+    {
+      "name": "ALLOCATION_CONFIRMATION_ENDPOINT",
+      "value": "https://beta-da-task-allocation-service-ymghawfbjq-uc.a.run.app/allocationConfirmation"
+    },
+    {
+      "name": "SERVICE_ACCOUNT_EMAIL",
+      "value": "trigger-na0xhcju@da-tf-project-1-1b0f.iam.gserviceaccount.com"
+    },
+    {
+      "name": "TASK_QUEUE_PATH",
+      "value": "projects/da-tf-project-1-1b0f/locations/us-central1/queues/da-beta-task-queue"
+    }
+  ]
+}

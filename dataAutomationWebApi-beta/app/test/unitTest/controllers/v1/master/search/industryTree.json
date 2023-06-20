@@ -1,0 +1,895 @@
+[
+  {
+    "name": "aerospace & defense",
+    "children": [
+      {
+        "name": "aircraft engine & parts manufacturing"
+      },
+      {
+        "name": "guided missile & space vehicle manufacturing"
+      },
+      {
+        "name": "space research & technology"
+      },
+      {
+        "name": "weapons & ammunition manufacturing"
+      }
+    ]
+  },
+  {
+    "name": "agriculture, forestry & fishing",
+    "children": [
+      {
+        "name": "commercial fishing"
+      },
+      {
+        "name": "crop & animal production"
+      },
+      {
+        "name": "forestry & logging"
+      }
+    ]
+  },
+  {
+    "name": "automotive & transportation",
+    "children": [
+      {
+        "name": "air transportation services"
+      },
+      {
+        "name": "airlines"
+      },
+      {
+        "name": "mass transit & ground passenger transportation"
+      },
+      {
+        "name": "miscellaneous transportation equipment manufacturing"
+      },
+      {
+        "name": "miscellaneous transportation services"
+      },
+      {
+        "name": "motor vehicle manufacturing"
+      },
+      {
+        "name": "motor vehicle parts manufacturing"
+      },
+      {
+        "name": "pipeline transportation"
+      },
+      {
+        "name": "postal, shipping & messengers"
+      },
+      {
+        "name": "importers or exporters"
+      },
+      {
+        "name": "railroad transportation services"
+      },
+      {
+        "name": "road transportation services"
+      },
+      {
+        "name": "ship & boat building"
+      },
+      {
+        "name": "shipping & water transportation services"
+      },
+      {
+        "name": "storage & warehousing"
+      },
+      {
+        "name": "train & railroad equipment manufacturing"
+      },
+      {
+        "name": "transportation equipment wholesale"
+      },
+      {
+        "name": "trucking"
+      }
+    ]
+  },
+  {
+    "name": "banking & finance",
+    "children": [
+      {
+        "name": "banking"
+      },
+      {
+        "name": "commodities"
+      },
+      {
+        "name": "exchanges"
+      },
+      {
+        "name": "financial holding companies"
+      },
+      {
+        "name": "investment banking"
+      },
+      {
+        "name": "investment services"
+      },
+      {
+        "name": "mortgage & credit"
+      },
+      {
+        "name": "securities"
+      }
+    ]
+  },
+  {
+    "name": "biotechnology, pharmaceuticals & medicine",
+    "children": [
+      {
+        "name": "pharmaceutical manufacturing"
+      }
+    ]
+  },
+  {
+    "name": "business & management services",
+    "children": [
+      {
+        "name": "administrative services"
+      },
+      {
+        "name": "advertising & marketing services"
+      },
+      {
+        "name": "associations, civic & non-profit organizations"
+      },
+      {
+        "name": "building & dwelling services"
+      },
+      {
+        "name": "business support services"
+      },
+      {
+        "name": "commercial real estate leasing"
+      },
+      {
+        "name": "consulting services"
+      },
+      {
+        "name": "facilities management"
+      },
+      {
+        "name": "holding companies"
+      },
+      {
+        "name": "market research & opinion polling"
+      },
+      {
+        "name": "photographic services"
+      },
+      {
+        "name": "research & development services"
+      }
+    ]
+  },
+  {
+    "name": "computers",
+    "children": [
+      {
+        "name": "technology hardware"
+      },
+      {
+        "name": "computer & peripheral equipment manufacturing"
+      },
+      {
+        "name": "computer programming"
+      },
+      {
+        "name": "computer system design services"
+      },
+      {
+        "name": "internet & web services"
+      },
+      {
+        "name": "software & development"
+      }
+    ]
+  },
+  {
+    "name": "construction & building materials",
+    "children": [
+      {
+        "name": "cement & concrete product manufacturing"
+      },
+      {
+        "name": "civil engineering"
+      },
+      {
+        "name": "construction & hardware materials wholesale"
+      },
+      {
+        "name": "construction machinery manufacturing"
+      },
+      {
+        "name": "residential & commercial building construction"
+      },
+      {
+        "name": "specialty construction trade contractors"
+      }
+    ]
+  },
+  {
+    "name": "consumer services",
+    "children": [
+      {
+        "name": "consumer goods rental"
+      },
+      {
+        "name": "death care services"
+      },
+      {
+        "name": "hotels & accommodation"
+      },
+      {
+        "name": "laundry services"
+      },
+      {
+        "name": "miscellaneous personal services"
+      },
+      {
+        "name": "personal care services"
+      },
+      {
+        "name": "photofinishing"
+      },
+      {
+        "name": "residential real estate leasing"
+      },
+      {
+        "name": "travel & reservation services"
+      }
+    ]
+  },
+  {
+    "name": "education",
+    "children": [
+      {
+        "name": "child day care services"
+      },
+      {
+        "name": "colleges & universities"
+      },
+      {
+        "name": "miscellaneous educational services"
+      },
+      {
+        "name": "primary & secondary education"
+      },
+      {
+        "name": "professional & management training"
+      }
+    ]
+  },
+  {
+    "name": "electronics",
+    "children": [
+      {
+        "name": "appliance repair & maintenance"
+      },
+      {
+        "name": "audio & video equipment manufacturing"
+      },
+      {
+        "name": "electrical equipment & appliances manufacturing"
+      },
+      {
+        "name": "electromedical & control instruments manufacturing"
+      },
+      {
+        "name": "electronic equipment repair & maintenance"
+      },
+      {
+        "name": "electronics & appliances stores"
+      },
+      {
+        "name": "electronics wholesale"
+      },
+      {
+        "name": "magnetic & optical media manufacturing"
+      },
+      {
+        "name": "semiconductor & other electronic component manufacturing"
+      }
+    ]
+  },
+  {
+    "name": "hospitality",
+    "children": [
+      {
+        "name": "fitness & recreation centers"
+      },
+      {
+        "name": "gambling & casinos"
+      },
+      {
+        "name": "golf courses & country clubs"
+      },
+      {
+        "name": "hotels & accommodation"
+      },
+      {
+        "name": "miscellaneous amusement & recreation"
+      },
+      {
+        "name": "museums & historical sites"
+      },
+      {
+        "name": "performing arts"
+      },
+      {
+        "name": "entertainment & leisure"
+      },
+      {
+        "name": "restaurants & bars"
+      },
+      {
+        "name": "spectator sports"
+      }
+    ]
+  },
+  {
+    "name": "food & beverage",
+    "children": [
+      {
+        "name": "agricultural products & packaged foods & meats"
+      },
+      {
+        "name": "beverage manufacturing"
+      },
+      {
+        "name": "commercial fishing"
+      },
+      {
+        "name": "food manufacturing"
+      },
+      {
+        "name": "brewers"
+      }
+    ]
+  },
+  {
+    "name": "healthcare",
+    "children": [
+      {
+        "name": "fitness & recreation centers"
+      },
+      {
+        "name": "ambulatory services"
+      },
+      {
+        "name": "dentists"
+      },
+      {
+        "name": "diagnostic laboratories"
+      },
+      {
+        "name": "health & personal care"
+      },
+      {
+        "name": "home health care services"
+      },
+      {
+        "name": "hospitals"
+      },
+      {
+        "name": "medical equipment & supplies"
+      },
+      {
+        "name": "nursing & residential care"
+      },
+      {
+        "name": "outpatient care"
+      },
+      {
+        "name": "physicians & health practitioners"
+      },
+      {
+        "name": "social & rehabilitation services"
+      }
+    ]
+  },
+  {
+    "name": "high tech",
+    "children": [
+      {
+        "name": "communications equipment manufacturing"
+      },
+      {
+        "name": "computer & peripheral equipment manufacturing"
+      },
+      {
+        "name": "computer programming"
+      },
+      {
+        "name": "computer system design services"
+      },
+      {
+        "name": "diagnostic laboratories"
+      },
+      {
+        "name": "electrical equipment & appliances manufacturing"
+      },
+      {
+        "name": "electromedical & control instruments manufacturing"
+      },
+      {
+        "name": "guided missile & space vehicle manufacturing"
+      },
+      {
+        "name": "internet & web services"
+      },
+      {
+        "name": "research & development services"
+      },
+      {
+        "name": "it services / software"
+      },
+      {
+        "name": "wireless telecommunications carriers"
+      }
+    ]
+  },
+  {
+    "name": "insurance",
+    "children": [
+      {
+        "name": "insurance agents"
+      },
+      {
+        "name": "insurance services"
+      },
+      {
+        "name": "life & health insurance"
+      },
+      {
+        "name": "pensions & funds"
+      },
+      {
+        "name": "property & casualty insurance"
+      }
+    ]
+  },
+  {
+    "name": "manufacturing",
+    "children": [
+      {
+        "name": "agricultural chemical manufacturing"
+      },
+      {
+        "name": "basic chemical manufacturing"
+      },
+      {
+        "name": "miscellaneous chemical manufacturing"
+      },
+      {
+        "name": "synthetic chemical manufacturing"
+      },
+      {
+        "name": "aircraft engine & parts manufacturing"
+      },
+      {
+        "name": "aircraft manufacturing"
+      },
+      {
+        "name": "audio & video equipment manufacturing"
+      },
+      {
+        "name": "beverage manufacturing"
+      },
+      {
+        "name": "cement & concrete product manufacturing"
+      },
+      {
+        "name": "clothing & apparel manufacturing"
+      },
+      {
+        "name": "communications equipment manufacturing"
+      },
+      {
+        "name": "computer & peripheral equipment manufacturing"
+      },
+      {
+        "name": "construction machinery manufacturing"
+      },
+      {
+        "name": "electrical equipment & appliances manufacturing"
+      },
+      {
+        "name": "electromedical & control instruments manufacturing"
+      },
+      {
+        "name": "food manufacturing"
+      },
+      {
+        "name": "furniture manufacturing"
+      },
+      {
+        "name": "guided missile & space vehicle manufacturing"
+      },
+      {
+        "name": "machinery & equipment manufacturing"
+      },
+      {
+        "name": "magnetic & optical media manufacturing"
+      },
+      {
+        "name": "metal products manufacturing"
+      },
+      {
+        "name": "miscellaneous manufacturing"
+      },
+      {
+        "name": "miscellaneous transportation equipment manufacturing"
+      },
+      {
+        "name": "motor vehicle manufacturing"
+      },
+      {
+        "name": "motor vehicle parts manufacturing"
+      },
+      {
+        "name": "non-metallic mineral product manufacturing"
+      },
+      {
+        "name": "paint, coating, & adhesive manufacturing"
+      },
+      {
+        "name": "paper product manufacturing"
+      },
+      {
+        "name": "petroleum product manufacturing"
+      },
+      {
+        "name": "pharmaceutical manufacturing"
+      },
+      {
+        "name": "printing"
+      },
+      {
+        "name": "rubber & plastic product manufacturing"
+      },
+      {
+        "name": "semiconductor & other electronic component manufacturing"
+      },
+      {
+        "name": "ship & boat building"
+      },
+      {
+        "name": "textile manufacturing"
+      },
+      {
+        "name": "tobacco production"
+      },
+      {
+        "name": "train & railroad equipment manufacturing"
+      },
+      {
+        "name": "weapons & ammunition manufacturing"
+      },
+      {
+        "name": "wood product manufacturing"
+      }
+    ]
+  },
+  {
+    "name": "mining, quarrying & drilling",
+    "children": [
+      {
+        "name": "coal mining"
+      },
+      {
+        "name": "metals mining"
+      },
+      {
+        "name": "non-metallic minerals mining"
+      },
+      {
+        "name": "petroleum & natural gas (oil & gas) extraction"
+      },
+      {
+        "name": "support activities for mining"
+      }
+    ]
+  },
+  {
+    "name": "nonclassifiable establishments",
+    "children": [
+      {
+        "name": "nonclassifiable establishments"
+      }
+    ]
+  },
+  {
+    "name": "professional services",
+    "children": [
+      {
+        "name": "data processing"
+      },
+      {
+        "name": "miscellaneous professional services"
+      },
+      {
+        "name": "accounting & tax preparation"
+      },
+      {
+        "name": "architecture & engineering"
+      },
+      {
+        "name": "investigation & security services"
+      },
+      {
+        "name": "legal services"
+      },
+      {
+        "name": "specialized design services"
+      },
+      {
+        "name": "staffing & recruiting"
+      }
+    ]
+  },
+  {
+    "name": "public sector & government",
+    "children": [
+      {
+        "name": "administration of public programs"
+      },
+      {
+        "name": "courts, justice & public safety"
+      },
+      {
+        "name": "executive & legislature"
+      },
+      {
+        "name": "national security & international affairs"
+      },
+      {
+        "name": "space research & technology"
+      }
+    ]
+  },
+  {
+    "name": "real estate",
+    "children": [
+      {
+        "name": "commercial real estate leasing"
+      },
+      {
+        "name": "property managers"
+      },
+      {
+        "name": "real estate agents & brokers"
+      },
+      {
+        "name": "real estate services"
+      },
+      {
+        "name": "residential real estate leasing"
+      }
+    ]
+  },
+  {
+    "name": "rental & leasing",
+    "children": [
+      {
+        "name": "commercial & industrial rental"
+      },
+      {
+        "name": "commercial real estate leasing"
+      },
+      {
+        "name": "consumer goods rental"
+      },
+      {
+        "name": "miscellaneous rental"
+      },
+      {
+        "name": "motor vehicle rental"
+      },
+      {
+        "name": "residential real estate leasing"
+      }
+    ]
+  },
+  {
+    "name": "repair & maintenance",
+    "children": [
+      {
+        "name": "appliance repair & maintenance"
+      },
+      {
+        "name": "communication equipment repair & maintenance"
+      },
+      {
+        "name": "computer & office machine repair & maintenance"
+      },
+      {
+        "name": "consumer electronics repair & maintenance"
+      },
+      {
+        "name": "electronic equipment repair & maintenance"
+      },
+      {
+        "name": "industrial machinery repair & maintenance"
+      },
+      {
+        "name": "miscellaneous repair & maintenance"
+      },
+      {
+        "name": "motor vehicle repair & maintenance"
+      }
+    ]
+  },
+  {
+    "name": "retail",
+    "children": [
+      {
+        "name": "beer, wine, & liquor stores"
+      },
+      {
+        "name": "clothing & apparel stores"
+      },
+      {
+        "name": "department stores"
+      },
+      {
+        "name": "electronics & appliances stores"
+      },
+      {
+        "name": "gasoline stations & fuel dealers"
+      },
+      {
+        "name": "grocery stores"
+      },
+      {
+        "name": "home & garden retail"
+      },
+      {
+        "name": "home furnishings retail"
+      },
+      {
+        "name": "miscellaneous store retailers"
+      },
+      {
+        "name": "motor vehicle & parts dealers"
+      },
+      {
+        "name": "non-store retail"
+      },
+      {
+        "name": "pharmacies & personal care stores"
+      },
+      {
+        "name": "sporting goods & recreation stores"
+      }
+    ]
+  },
+  {
+    "name": "telecommunications & publishing",
+    "children": [
+      {
+        "name": "broadcasting & media"
+      },
+      {
+        "name": "cable & other program distribution"
+      },
+      {
+        "name": "communications equipment manufacturing"
+      },
+      {
+        "name": "internet & web services"
+      },
+      {
+        "name": "miscellaneous information services"
+      },
+      {
+        "name": "miscellaneous telecommunication services"
+      },
+      {
+        "name": "movies"
+      },
+      {
+        "name": "publishing"
+      },
+      {
+        "name": "telecommunications resellers"
+      },
+      {
+        "name": "wired telecommunications carriers"
+      },
+      {
+        "name": "wireless telecommunications carriers"
+      },
+      {
+        "name": "music"
+      }
+    ]
+  },
+  {
+    "name": "utilities & energy",
+    "children": [
+      {
+        "name": "oil & gas equipment & services"
+      },
+      {
+        "name": "environmental services"
+      },
+      {
+        "name": "electricity generation & distribution"
+      },
+      {
+        "name": "integrated oil & gas"
+      },
+      {
+        "name": "natural gas distribution"
+      },
+      {
+        "name": "waste management"
+      },
+      {
+        "name": "water & sewage services"
+      }
+    ]
+  },
+  {
+    "name": "wholesale",
+    "children": [
+      {
+        "name": "alcoholic beverage wholesale"
+      },
+      {
+        "name": "chemical wholesale"
+      },
+      {
+        "name": "clothing & apparel wholesale"
+      },
+      {
+        "name": "computer, office equipment & software merchant wholesalers"
+      },
+      {
+        "name": "construction & hardware materials wholesale"
+      },
+      {
+        "name": "electronics wholesale"
+      },
+      {
+        "name": "grocery wholesale"
+      },
+      {
+        "name": "health & personal care wholesale"
+      },
+      {
+        "name": "home furnishings wholesale"
+      },
+      {
+        "name": "machinery wholesale"
+      },
+      {
+        "name": "metals & minerals wholesale"
+      },
+      {
+        "name": "miscellaneous wholesale"
+      },
+      {
+        "name": "motor vehicle wholesale"
+      },
+      {
+        "name": "paper wholesale"
+      },
+      {
+        "name": "petroleum wholesale"
+      },
+      {
+        "name": "professional & commercial equipment wholesale"
+      },
+      {
+        "name": "transportation equipment wholesale"
+      }
+    ]
+  }
+]

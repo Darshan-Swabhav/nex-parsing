@@ -1,0 +1,767 @@
+config:
+  payload:
+    # path is relative to the location of the test script
+    path: "betaTestData.csv"
+    fields:
+      - "token"
+      - "userName"
+      - "projectId"
+      - "taskId"
+      - "accountId"
+  target: 'https://beta.da.rightleads.io/'
+  phases:
+    - duration: 900
+      arrivalRate: 5
+      maxVusers: 50
+scenarios:
+  - flow:
+    - get:
+        url: "/api/v1/taskStats?pageNo=0&pageSize=10"
+        headers:
+          authorization: "{{ token }}"
+    - think: 2
+    - get:
+        url: "/api/v1/projects/{{ projectId }}/tasks?pageNo=0&pageSize=10&filter=%7B%22status%22:[%22Overdue%22,%22Upcoming%22]%7D"
+        headers:
+          authorization: "{{ token }}"
+    - think: 2
+    - get:
+        url: "/api/v1/projects/{{ projectId }}/tasks/{{ taskId }}"
+        headers:
+          authorization: "{{ token }}"
+    - get:
+        url: "/api/v1/projects/{{ projectId }}/tasks/{{ taskId }}"
+        headers:
+          authorization: "{{ token }}"
+    - get:
+        url: "/api/v1/projects/{{ projectId }}/tasks?countOnly=true"
+        headers:
+          authorization: "{{ token }}"
+    - get:
+        url: "/api/v1/dispositions"
+        headers:
+          authorization: "{{ token }}"
+    - get:
+        url: "/api/v1/industry"
+        headers:
+          authorization: "{{ token }}"
+    - get:
+        url: "/api/v1/segmentTechnology"
+        headers:
+          authorization: "{{ token }}"
+    - get:
+        url: "/api/v1/projects/{{ projectId }}/accounts/{{ accountId }}/contacts?pageSize=100"
+        headers:
+          authorization: "{{ token }}"
+    - get:
+        url: "/api/v1/projects/{{ projectId }}/accounts/{{ accountId }}/contacts?pageSize=100"
+        headers:
+          authorization: "{{ token }}"
+    - get:
+        url: "/api/v1/project/{{ projectId }}/accounts/{{ accountId }}"
+        headers:
+          authorization: "{{ token }}"
+    - get:
+        url: "/api/v1/project/{{ projectId }}/specs/"
+        headers:
+          authorization: "{{ token }}"
+    - get:
+        url: "/api/v1/tasks/tasksLiveCounts?filter=%7B%22updatedAt%22:[%2211%2F29%2F2021%22,%2211%2F29%2F2021%22]%7D&projectId={{ projectId }}&accountId={{ accountId }}&countsToCalculate[]=contacts&countsToCalculate[]=accounts"
+        headers:
+          authorization: "{{ token }}"
+    - get:
+        url: "/api/v1/project/{{ projectId }}/setting"
+        headers:
+          authorization: "{{ token }}"
+    - get:
+        url: "/api/v1/projects/{{ projectId }}/tasks/{{ taskId }}"
+        headers:
+          authorization: "{{ token }}"
+    - get:
+        url: "/api/v1/jobLevel"
+        headers:
+          authorization: "{{ token }}"
+    - get:
+        url: "/api/v1/jobLevel"
+        headers:
+          authorization: "{{ token }}"
+    - get:
+        url: "/api/v1/jobDepartment"
+        headers:
+          authorization: "{{ token }}"
+    - get:
+        url: "/api/v1/jobDepartment"
+        headers:
+          authorization: "{{ token }}"
+    - think: 2
+    - get:
+        url: "/api/v1/dispositions"
+        headers:
+          authorization: "{{ token }}"
+    - get:
+        url: "/api/v1/jobFunction?departments[]=Sales"
+        headers:
+          authorization: "{{ token }}"
+    - think: 2
+    - post:
+        url: "/api/v1/projects/{{ projectId }}/contacts/check?checkSuppression=true&checkDuplicate=true"
+        headers:
+          authorization: "{{ token }}"
+        json:
+          {
+            "contact": {
+              "address": {
+                "street1": null,
+                "street2": null,
+                "city": null,
+                "state": null,
+                "country": null,
+                "zipCode": null
+              },
+              "companyName": "Update-1",
+              "firstName": "John",
+              "lastName": "Wick",
+              "previous_address": {
+                "street1": null,
+                "street2": null,
+                "city": null,
+                "state": null,
+                "country": null,
+                "zipCode": null
+              }
+            }
+          }
+    - think: 2
+    - post:
+        url: "/api/v1/projects/{{ projectId }}/accounts/{{ accountId }}/contacts"
+        headers:
+          authorization: "{{ token }}"
+        json:
+          {
+            "contact": {
+              "address": {
+                "street1": null,
+                "street2": null,
+                "city": null,
+                "state": null,
+                "country": null,
+                "zipCode": null
+              },
+              "firstName": "John",
+              "lastName": "Wick",
+              "previous_address": {
+                "street1": null,
+                "street2": null,
+                "city": null,
+                "state": null,
+                "country": null,
+                "zipCode": null
+              },
+              "disposeContact": false
+            }
+          }
+        capture:
+          json: "$.contactId"
+          as: "contactId"
+    - get:
+        url: "/api/v1/projects/{{ projectId }}/tasks/{{ taskId }}"
+        headers:
+          authorization: "{{ token }}"
+    - get:
+        url: "/api/v1/projects/{{ projectId }}/accounts/{{ accountId }}/contacts/{{ contactId }}"
+        headers:
+          authorization: "{{ token }}"
+    - get:
+        url: "/api/v1/projects/{{ projectId }}/accounts/{{ accountId }}/contacts?pageSize=100"
+        headers:
+          authorization: "{{ token }}"
+    - think: 2
+    - post:
+        url: "/api/v1/projects/{{ projectId }}/accounts/{{ accountId }}/contacts"
+        headers:
+          authorization: "{{ token }}"
+        json:
+          {
+            "contact": {
+                "Account": {
+                    "ProjectId": "{{ projectId }}",
+                    "id": "{{ accountId }}",
+                },
+                "AccountId": "{{ accountId }}",
+                "TaskLink": {
+                    "ObjectId": "{{ contactId }}",
+                    "TaskId": "{{ taskId }}",
+                    "comments": null,
+                    "createdAt": "2021-12-01T10:37:30.743Z",
+                    "disposition": "Contact Built",
+                    "linkType": "output",
+                    "objectType": "contact",
+                    "researchStatus": "QA",
+                    "updatedAt": "2021-12-01T10:37:30.743Z",
+                },
+                "address": {
+                    "street1": null,
+                    "street2": null,
+                    "city": null,
+                    "state": null,
+                    "country": null,
+                    "zipCode": null
+                },
+                "callingStatus": null,
+                "comments": "",
+                "companyDedupeKey": "johnwickupdate1",
+                "complianceComments": null,
+                "complianceStatus": null,
+                "contactCreator": {
+                    "userName": "agent4@nexsales.com",
+                    "firstName": "Agent4",
+                    "lastName": null
+                },
+                "contactUpdater": {
+                    "userName": "agent4@nexsales.com",
+                    "firstName": "Agent4",
+                    "lastName": null,
+                },
+                "createdAt": "2021-12-01T10:35:32.412Z",
+                "custom1": null,
+                "custom2": null,
+                "custom3": null,
+                "custom4": null,
+                "custom5": null,
+                "custom6": null,
+                "custom7": null,
+                "custom8": null,
+                "custom9": null,
+                "custom10": null,
+                "custom11": null,
+                "custom12": null,
+                "custom13": null,
+                "custom14": null,
+                "custom15": null,
+                "deliveryStatus": null,
+                "directPhone": null,
+                "disposition": "Contact Built",
+                "duplicateOf": "ed0165a1-bc75-452f-8d05-2c2cd64f8ce1",
+                "email": null,
+                "emailDedupeKey": null,
+                "firstName": "John",
+                "functions": null,
+                "genericEmail": null,
+                "gmailStatus": null,
+                "gmailStatusDateAndTime": null,
+                "handles": null,
+                "id": "{{ contactId }}",
+                "jobDepartment": null,
+                "jobLevel": null,
+                "jobTitle": null,
+                "label": "duplicate",
+                "lastName": "Wick",
+                "linkedInUrl": null,
+                "mailTesterStatus": null,
+                "middleName": null,
+                "nsId": null,
+                "phone": null,
+                "phoneDedupeKey": null,
+                "phoneExtension": null,
+                "prefix": null,
+                "previous_address": {
+                    "street1": null,
+                    "street2": null,
+                    "city": null,
+                    "state": null,
+                    "country": null,
+                    "zipCode": null
+                },
+                "previous_callingStatus": null,
+                "previous_comments": null,
+                "previous_companyDedupeKey": "johnwickupdate1",
+                "previous_complianceComments": null,
+                "previous_complianceStatus": null,
+                "previous_custom1": null,
+                "previous_custom2": null,
+                "previous_custom3": null,
+                "previous_custom4": null,
+                "previous_custom5": null,
+                "previous_custom6": null,
+                "previous_custom7": null,
+                "previous_custom8": null,
+                "previous_custom9": null,
+                "previous_custom10": null,
+                "previous_custom11": null,
+                "previous_custom12": null,
+                "previous_custom13": null,
+                "previous_custom14": null,
+                "previous_custom15": null,
+                "previous_deliveryStatus": null,
+                "previous_directPhone": null,
+                "previous_disposition": null,
+                "previous_email": null,
+                "previous_emailDedupeKey": null,
+                "previous_firstName": "John",
+                "previous_functions": null,
+                "previous_genericEmail": null,
+                "previous_gmailStatus": null,
+                "previous_gmailStatusDateAndTime": null,
+                "previous_handles": null,
+                "previous_jobDepartment": null,
+                "previous_jobLevel": null,
+                "previous_jobTitle": null,
+                "previous_label": "duplicate",
+                "previous_lastName": "Wick",
+                "previous_linkedInUrl": null,
+                "previous_mailTesterStatus": null,
+                "previous_middleName": null,
+                "previous_nsId": null,
+                "previous_phone": null,
+                "previous_phoneDedupeKey": null,
+                "previous_phoneExtension": null,
+                "previous_prefix": null,
+                "previous_researchStatus": "Pending",
+                "previous_screenshot": null,
+                "previous_source": null,
+                "previous_stage": "Pending",
+                "previous_website": null,
+                "previous_zb": null,
+                "previous_zbDateAndTime": null,
+                "previous_zoomInfoContactId": null,
+                "researchStatus": "QA",
+                "screenshot": null,
+                "source": null,
+                "stage": "Review",
+                "updatedAt": "2021-12-01T10:37:30.769Z",
+                "website": null,
+                "zb": null,
+                "zbDateAndTime": null,
+                "zoomInfoContactId": null
+            },
+            "disposeContact": true,
+            "taskLink": {
+                "TaskId": "{{ taskId }}",
+                "comments": "",
+                "disposition": "Contact Built",
+                "researchStatus": "QA"
+            }
+        }
+    - get:
+        url: "/api/v1/projects/{{ projectId }}/tasks/{{ taskId }}"
+        headers:
+          authorization: "{{ token }}"
+    - get:
+        url: "/api/v1/projects/{{ projectId }}/accounts/{{ accountId }}/contacts/{{ contactId }}"
+        headers:
+          authorization: "{{ token }}"
+    - get:
+        url: "/api/v1/projects/27054377-ed52-42a1-8f25-3f3019e508e0/accounts/53c76cee-eb60-46a2-8a89-c05901b8f741/contacts?pageSize=100"
+        headers:
+          authorization: "{{ token }}"
+    - get:
+        url: "/api/v1/tasks/tasksLiveCounts?filter=%7B%22updatedAt%22:[%2211%2F29%2F2021%22,%2211%2F29%2F2021%22]%7D&projectId={{ projectId }}&accountId={{ accountId }}&countsToCalculate[]=contacts&countsToCalculate[]=accounts"
+        headers:
+          authorization: "{{ token }}"
+    - get:
+        url: "/api/v1/project/{{ projectId }}/setting"
+        headers:
+          authorization: "{{ token }}"
+    - think: 3
+    - get:
+        url: "/api/v1/dispositions"
+        headers:
+          authorization: "{{ token }}"
+    - get:
+        url: "/api/v1/jobFunction?departments[]=Sales"
+        headers:
+          authorization: "{{ token }}"
+    - think: 2
+    - post:
+        url: "/api/v1/projects/{{ projectId }}/contacts/check?checkSuppression=true&checkDuplicate=true"
+        headers:
+          authorization: "{{ token }}"
+        json:
+          {
+            "contact": {
+              "address": {
+                "street1": null,
+                "street2": null,
+                "city": null,
+                "state": null,
+                "country": null,
+                "zipCode": null
+              },
+              "companyName": "Update-1",
+              "firstName": "John",
+              "lastName": "Wick",
+              "previous_address": {
+                "street1": null,
+                "street2": null,
+                "city": null,
+                "state": null,
+                "country": null,
+                "zipCode": null
+              }
+            }
+          }
+    - think: 2
+    - post:
+        url: "/api/v1/projects/{{ projectId }}/accounts/{{ accountId }}/contacts"
+        headers:
+          authorization: "{{ token }}"
+        json:
+          {
+            "contact": {
+              "address": {
+                "street1": null,
+                "street2": null,
+                "city": null,
+                "state": null,
+                "country": null,
+                "zipCode": null
+              },
+              "firstName": "John",
+              "lastName": "Wick",
+              "previous_address": {
+                "street1": null,
+                "street2": null,
+                "city": null,
+                "state": null,
+                "country": null,
+                "zipCode": null
+              },
+              "disposeContact": false
+            }
+          }
+        capture:
+          json: "$.contactId"
+          as: "contactId"
+    - get:
+        url: "/api/v1/projects/{{ projectId }}/tasks/{{ taskId }}"
+        headers:
+          authorization: "{{ token }}"
+    - get:
+        url: "/api/v1/projects/{{ projectId }}/accounts/{{ accountId }}/contacts/{{ contactId }}"
+        headers:
+          authorization: "{{ token }}"
+    - get:
+        url: "/api/v1/projects/{{ projectId }}/accounts/{{ accountId }}/contacts?pageSize=100"
+        headers:
+          authorization: "{{ token }}"
+    - think: 2
+    - post:
+        url: "/api/v1/projects/{{ projectId }}/accounts/{{ accountId }}/contacts"
+        headers:
+          authorization: "{{ token }}"
+        json:
+          {
+            "contact": {
+                "Account": {
+                    "ProjectId": "{{ projectId }}",
+                    "id": "{{ accountId }}",
+                },
+                "AccountId": "{{ accountId }}",
+                "TaskLink": {
+                    "ObjectId": "{{ contactId }}",
+                    "TaskId": "{{ taskId }}",
+                    "comments": null,
+                    "createdAt": "2021-12-01T10:37:30.743Z",
+                    "disposition": "Contact Built",
+                    "linkType": "output",
+                    "objectType": "contact",
+                    "researchStatus": "QA",
+                    "updatedAt": "2021-12-01T10:37:30.743Z",
+                },
+                "address": {
+                    "street1": null,
+                    "street2": null,
+                    "city": null,
+                    "state": null,
+                    "country": null,
+                    "zipCode": null
+                },
+                "callingStatus": null,
+                "comments": "",
+                "companyDedupeKey": "johnwickupdate1",
+                "complianceComments": null,
+                "complianceStatus": null,
+                "contactCreator": {
+                    "userName": "agent4@nexsales.com",
+                    "firstName": "Agent4",
+                    "lastName": null
+                },
+                "contactUpdater": {
+                    "userName": "agent4@nexsales.com",
+                    "firstName": "Agent4",
+                    "lastName": null,
+                },
+                "createdAt": "2021-12-01T10:35:32.412Z",
+                "custom1": null,
+                "custom2": null,
+                "custom3": null,
+                "custom4": null,
+                "custom5": null,
+                "custom6": null,
+                "custom7": null,
+                "custom8": null,
+                "custom9": null,
+                "custom10": null,
+                "custom11": null,
+                "custom12": null,
+                "custom13": null,
+                "custom14": null,
+                "custom15": null,
+                "deliveryStatus": null,
+                "directPhone": null,
+                "disposition": "Contact Built",
+                "duplicateOf": "ed0165a1-bc75-452f-8d05-2c2cd64f8ce1",
+                "email": null,
+                "emailDedupeKey": null,
+                "firstName": "John",
+                "functions": null,
+                "genericEmail": null,
+                "gmailStatus": null,
+                "gmailStatusDateAndTime": null,
+                "handles": null,
+                "id": "{{ contactId }}",
+                "jobDepartment": null,
+                "jobLevel": null,
+                "jobTitle": null,
+                "label": "duplicate",
+                "lastName": "Wick",
+                "linkedInUrl": null,
+                "mailTesterStatus": null,
+                "middleName": null,
+                "nsId": null,
+                "phone": null,
+                "phoneDedupeKey": null,
+                "phoneExtension": null,
+                "prefix": null,
+                "previous_address": {
+                    "street1": null,
+                    "street2": null,
+                    "city": null,
+                    "state": null,
+                    "country": null,
+                    "zipCode": null
+                },
+                "previous_callingStatus": null,
+                "previous_comments": null,
+                "previous_companyDedupeKey": "johnwickupdate1",
+                "previous_complianceComments": null,
+                "previous_complianceStatus": null,
+                "previous_custom1": null,
+                "previous_custom2": null,
+                "previous_custom3": null,
+                "previous_custom4": null,
+                "previous_custom5": null,
+                "previous_custom6": null,
+                "previous_custom7": null,
+                "previous_custom8": null,
+                "previous_custom9": null,
+                "previous_custom10": null,
+                "previous_custom11": null,
+                "previous_custom12": null,
+                "previous_custom13": null,
+                "previous_custom14": null,
+                "previous_custom15": null,
+                "previous_deliveryStatus": null,
+                "previous_directPhone": null,
+                "previous_disposition": null,
+                "previous_email": null,
+                "previous_emailDedupeKey": null,
+                "previous_firstName": "John",
+                "previous_functions": null,
+                "previous_genericEmail": null,
+                "previous_gmailStatus": null,
+                "previous_gmailStatusDateAndTime": null,
+                "previous_handles": null,
+                "previous_jobDepartment": null,
+                "previous_jobLevel": null,
+                "previous_jobTitle": null,
+                "previous_label": "duplicate",
+                "previous_lastName": "Wick",
+                "previous_linkedInUrl": null,
+                "previous_mailTesterStatus": null,
+                "previous_middleName": null,
+                "previous_nsId": null,
+                "previous_phone": null,
+                "previous_phoneDedupeKey": null,
+                "previous_phoneExtension": null,
+                "previous_prefix": null,
+                "previous_researchStatus": "Pending",
+                "previous_screenshot": null,
+                "previous_source": null,
+                "previous_stage": "Pending",
+                "previous_website": null,
+                "previous_zb": null,
+                "previous_zbDateAndTime": null,
+                "previous_zoomInfoContactId": null,
+                "researchStatus": "QA",
+                "screenshot": null,
+                "source": null,
+                "stage": "Review",
+                "updatedAt": "2021-12-01T10:37:30.769Z",
+                "website": null,
+                "zb": null,
+                "zbDateAndTime": null,
+                "zoomInfoContactId": null
+            },
+            "disposeContact": true,
+            "taskLink": {
+                "TaskId": "{{ taskId }}",
+                "comments": "",
+                "disposition": "Contact Built",
+                "researchStatus": "QA"
+            }
+        }
+    - get:
+        url: "/api/v1/projects/{{ projectId }}/tasks/{{ taskId }}"
+        headers:
+          authorization: "{{ token }}"
+    - get:
+        url: "/api/v1/projects/{{ projectId }}/accounts/{{ accountId }}/contacts/{{ contactId }}"
+        headers:
+          authorization: "{{ token }}"
+    - get:
+        url: "/api/v1/projects/27054377-ed52-42a1-8f25-3f3019e508e0/accounts/53c76cee-eb60-46a2-8a89-c05901b8f741/contacts?pageSize=100"
+        headers:
+          authorization: "{{ token }}"
+    - get:
+        url: "/api/v1/tasks/tasksLiveCounts?filter=%7B%22updatedAt%22:[%2211%2F29%2F2021%22,%2211%2F29%2F2021%22]%7D&projectId={{ projectId }}&accountId={{ accountId }}&countsToCalculate[]=contacts&countsToCalculate[]=accounts"
+        headers:
+          authorization: "{{ token }}"
+    - get:
+        url: "/api/v1/project/{{ projectId }}/setting"
+        headers:
+          authorization: "{{ token }}"
+    - think: 2
+    - put:
+        url: "/api/v1/project/{{ projectId }}/accounts/{{ accountId }}"
+        headers:
+          authorization: "{{ token }}"
+        json:
+          {
+            "ProjectId": "{{ projectId }}",
+            "addressHQ": {
+              "address1HQ": null,
+              "address2HQ": null,
+              "cityHQ": null,
+              "countryHQ": null,
+              "stateHQ": null,
+              "street1HQ": null,
+              "street2HQ": null,
+              "zipCodeHQ": null
+            },
+            "aliasName": null,
+            "callingStatus": null,
+            "comments": null,
+            "complianceComments": null,
+            "complianceStatus": null,
+            "createdAt": "2021-08-19T15:15:00.491Z",
+            "custom1": null,
+            "custom2": null,
+            "custom3": null,
+            "custom4": null,
+            "custom5": null,
+            "custom6": null,
+            "custom7": null,
+            "custom8": null,
+            "custom9": null,
+            "custom10": null,
+            "custom11": null,
+            "custom12": null,
+            "custom13": null,
+            "custom14": null,
+            "custom15": null,
+            "deliveryStatus": null,
+            "description": null,
+            "disposition": "Website Not Found",
+            "domain": "16xgenomics-1.com",
+            "duplicateOf": null,
+            "email": "nicolecnbx.wang@16xgenomics-1.com",
+            "emailDomain": "16xgenomics-1.com",
+            "employeeRangeLI": null,
+            "employeeSize": null,
+            "employeeSizeFinalBucket": null,
+            "employeeSizeLI": null,
+            "employeeSizeZ_plus": null,
+            "employeeSize_others": null,
+            "employeeSourceLI": null,
+            "employeeSourceZ_plus": null,
+            "id": "{{ accountId }}",
+            "industry": null,
+            "label": "inclusion",
+            "linkedInUrl": null,
+            "locationLI": null,
+            "lowerEmployeeSize": null,
+            "lowerRevenue": null,
+            "naicsCode": null,
+            "naicsDescription": null,
+            "name": "Update-1",
+            "nsId": null,
+            "phoneHQ": null,
+            "researchStatus": null,
+            "revenue": null,
+            "revenue_M_B_K": null,
+            "scrubbedName": "Update",
+            "sicCode": null,
+            "sicDescription": null,
+            "source": null,
+            "stage": null,
+            "subIndustry": null,
+            "tokens": "16x|genomics|1",
+            "updatedAt": "2021-12-01T09:24:40.068Z",
+            "upperEmployeeSize": null,
+            "upperRevenue": null,
+            "website": "update.com",
+            "zoomInfoContactId": null,
+            "zoomInfoName": "Update"
+          }
+    - think: 2
+    - post:
+        url: "/api/v1/project/{{ projectId }}/account/dispose "
+        headers:
+          authorization: "{{ token }}"
+        json:
+          {
+            "account": {
+              "id": "{{ accountId }}",
+              "disposition": "Website Not Found",
+              "comments": ""
+            },
+            "taskLink": {
+              "ObjectId": "{{ accountId }}",
+              "TaskId": "{{ taskId }}",
+              "comments": "",
+              "disposition": "Website Not Found"
+            }
+          }
+    - get:
+        url: "/api/v1/tasks/tasksLiveCounts?filter=%7B%22updatedAt%22:[%2211%2F29%2F2021%22,%2211%2F29%2F2021%22]%7D&projectId={{ projectId }}&accountId={{ accountId }}&countsToCalculate[]=contacts&countsToCalculate[]=accounts"
+        headers:
+          authorization: "{{ token }}"
+    - get:
+        url: "/api/v1/project/{{ projectId }}/setting"
+        headers:
+          authorization: "{{ token }}"
+    - get:
+        url: "/api/v1/projects/{{ projectId }}/tasks?pageNo=0&pageSize=10&filter=%7B%22status%22:[%22Completed%22]%7D"
+        headers:
+          authorization: "{{ token }}"
+    - think: 2
+    - get:
+        url: "/api/v1/agent/preview?pageNo=0&pageSize=10&sort=%7B%22updatedAt%22:%22desc%22%7D&filter=%7B%7D"
+        headers:
+          authorization: "{{ token }}"
+    - think: 1
+    - get:
+        url: "/api/v1/agent/preview?pageNo=0&pageSize=10&sort=%7B%22updatedAt%22:%22desc%22%7D&filter=%7B%7D"
+        headers:
+          authorization: "{{ token }}"
+    - think: 1
+    - get:
+        url: "/api/v1/agent/preview?pageNo=0&pageSize=10&sort=%7B%22updatedAt%22:%22desc%22%7D&filter=%7B%7D"
+        headers:
+          authorization: "{{ token }}"
+    - think: 2
+    - get:
+        url: "/api/v1/agent/preview?pageNo=0&pageSize=10&sort=%7B%22updatedAt%22:%22desc%22%7D&filter=%7B%7D"
+        headers:
+          authorization: "{{ token }}"

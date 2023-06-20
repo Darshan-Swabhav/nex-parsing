@@ -1,0 +1,184 @@
+version: '3.7'
+services:
+  backend-api:
+    container_name: backend-api
+    hostname: backend-api
+    build:
+      context: .
+      target: development
+    command: npm run develop
+    depends_on:
+      - postgres
+    env_file:
+      - .env.local
+    ports:
+      - '20100:20100'
+      - '9229:9229'
+    volumes:
+      - .:/srv/backend-api
+      - backend_api_modules:/srv/backend-api/node_modules
+
+  postgres:
+    container_name: postgres
+    hostname: postgres
+    image: postgres:13
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: trust
+    ports:
+      - '5431:5432'
+
+  master-postgres:
+    container_name: master-postgres
+    hostname: master-postgres
+    image: postgres:13
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: trust
+    ports:
+      - '5433:5432'
+
+  pgadmin:
+    container_name: pgadmin
+    hostname: pgadmin
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: root
+    depends_on:
+      - postgres
+    ports:
+      - '5050:80'
+
+  # da-client:
+  #   container_name: da-client
+  #   hostname: da-client
+  #   build:
+  #     context: ./../da-demo-client
+  #     target: development
+  #   command: npm run serve
+  #   ports:
+  #     - '8080:8080'
+  #   volumes:
+  #     - ./../da-demo-client:/usr/src/app/da-demo
+  #     - /usr/src/app/da-demo/node_modules
+
+  # nginx:
+  #   container_name: nginx
+  #   hostname: nginx
+  #   image: nginx
+  #   ports:
+  #     - 80:80
+  #     - 443:7080
+  #   volumes:
+  #     - ./nginx/config/conf.d:/etc/nginx/conf.d
+  #     - ./nginx/config/nginx.conf:/etc/nginx/nginx.conf
+  #     - ./nginx/certs:/etc/ssl/private
+  #   depends_on:
+  #     - da-client
+  #     - backend-api
+
+  # file-import:
+  #   container_name: file-import
+  #   hostname: file-import
+  #   build:
+  #     context: ./../da-evt-process-file-import
+  #     target: development
+  #   command: bash -c "npm test && npm run develop"
+  #   env_file:
+  #     - ./../da-evt-process-file-import/.env.local
+  #   ports:
+  #     - '30300:30300'
+  #     - '9228:9229'
+  #   depends_on:
+  #     - 'postgres'
+  #   volumes:
+  #     - ./../da-evt-process-file-import:/srv/da-evt-process-file-import
+  #     - file_import_modules:/srv/da-evt-process-file-import/node_modules
+
+  # file-download:
+  #   container_name: file-download
+  #   hostname: file-download
+  #   image: da-evt-processor-file-download:local
+  #   build:
+  #     context: ./../da-evt-process-file-download
+  #     target: development
+  #   command: npm run develop
+  #   env_file:
+  #     - ./../da-evt-process-file-download/.env.local
+  #   ports:
+  #     - '30500:30500'
+  #   depends_on:
+  #     - 'postgres'
+  #   volumes:
+  #     - ./../da-evt-process-file-download:/srv/da-evt-process-file-download
+  #     - file_download_modules:/srv/da-evt-process-file-download/node_modules
+
+  # da-task-allocation-service:
+  #   container_name: task-allocator
+  #   hostname: task-allocation-service
+  #   image: da-task-allocation-service:local
+  #   build:
+  #     context: ./../da-task-allocation-service
+  #     target: development
+  #   command: npm run develop
+  #   env_file:
+  #     - ./../da-task-allocation-service/.env.local
+  #   ports:
+  #     - '30600:30600'
+  #   volumes:
+  #     - ./../da-task-allocation-service:/srv/da-task-allocation-service
+  #     - task_allocation_service_modules:/srv/da-task-allocation-service/node_modules
+
+  # da-master-data-injector:
+  #   container_name: da-master-data-injector
+  #   hostname: da-master-data-injector
+  #   image: da-master-data-injector:local
+  #   build:
+  #     context: ./../da-master-data-injector
+  #     target: development
+  #   command: npm run develop
+  #   env_file:
+  #     - ./../da-master-data-injector/.env.local
+  #   ports:
+  #     - '30700:30700'
+  #     - '9230:9229'
+  #   volumes:
+  #     - ./../da-master-data-injector:/srv/da-master-data-injector
+  #     - da_master_data_injector_modules:/srv/da-master-data-injector/node_modules
+
+  # master-file-import:
+  #   container_name: master-file-import
+  #   hostname: master-file-import
+  #   build:
+  #     context: ./../../masterDB/da-evt-process-master-file-import
+  #     target: development
+  #   command: bash -c "npm test && npm run develop"
+  #   env_file:
+  #     - ./../../masterDB/da-evt-process-master-file-import/.env.local
+  #   ports:
+  #     - '30800:30800'
+  #     - '9228:9229'
+  #   depends_on:
+  #     - 'postgres'
+  #   volumes:
+  #     - ./../../masterDB/da-evt-process-master-file-import:/srv/da-evt-process-master-file-import
+  #     - master_file_import_modules:/srv/da-evt-process-master-file-import/node_modules
+
+volumes:
+  backend_api_modules: null
+  file_import_modules: null
+  file_download_modules: null
+  task_allocation_service_modules: null
+  da_master_data_injector_modules: null
+  master_file_import_modules: null
+  ## Services PORT ##
+  # 8080 - client
+  # 20100 - webAPI
+  # 30100 - file-watch
+  # 30200 - file-split
+  # 30300 - file-import
+  # 30400 - file-finalize
+  # 30500 - file-download
+  # 30600 - task-allocation-service
+  # 30700 - da-master-data-injector
+  # 30800 - master-file-import

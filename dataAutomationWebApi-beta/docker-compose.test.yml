@@ -1,0 +1,27 @@
+version: '3.7'
+
+services:
+  backend-api:
+    container_name: backend-api
+    hostname: backend-api
+    image: gcr.io/$PROJECT_ID/backend-api:$NODE_ENV
+    command: npm start
+    depends_on:
+      - postgres
+    env_file:
+        - .env.test
+    ports:
+      - '20100:20100'
+    volumes:
+      - .:/srv/backend-api
+      - backend_api_modules:/srv/backend-api/node_modules
+
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: trust
+    ports:
+      - '5432:5432'
+
+volumes:
+  backend_api_modules:

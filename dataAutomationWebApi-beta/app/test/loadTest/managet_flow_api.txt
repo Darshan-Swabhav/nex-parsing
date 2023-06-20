@@ -1,0 +1,2011 @@
+=====================================================
+Delete Project
+=====================================================
+Request (1)
+  URL: https://dev.da.rightleads.io/api/v1/project/76b19464-c32e-479c-8f28-b17865a2a8eb?projectName=TEST_PROJECT_NOV_29
+  Method: DELETE
+  * Query Param
+    projectName: TEST_PROJECT_NOV_29
+Response
+  {
+    "project": {
+      "jobError": [],
+      "job": [],
+      "contact": [],
+      "account": 0,
+      "contactSuppression": 0,
+      "accountSuppression": 0,
+      "fileChunk": [],
+      "file": 0,
+      "projectSetting": 1,
+      "projectSpec": 0,
+      "projectTask": 0,
+      "project": 1
+    }
+  }
+Request (2 - 5) - Open Project (Total Req: 4)
+
+=====================================================
+Display Projects
+=====================================================
+Request (1)
+  URL: https://dev.da.rightleads.io/api/v1/client
+  Method: GET
+Response
+  [{
+    "id": "5777dc463e5c26006f114f2t",
+    "name": "NSPL"
+  }, ...]
+
+Request (2)
+  URL: https://dev.da.rightleads.io/api/v1/project
+  Method: GET
+Response
+  {
+    "totalCount": 20,
+    "docs": [{
+      "id": "27054377-ed52-42a1-8f25-3f3019e508e0",
+      "name": "TEST_PROJECT_NOV_29",
+      "receivedDate": "2021-11-30T00:00:00.000Z",
+      "dueDate": "2021-12-15T00:00:00.000Z",
+      "startDate": null,
+      "deliveryDate": null,
+      "description": null,
+      "custom1": null,
+      "custom2": null,
+      "custom3": null,
+      "custom4": null,
+      "custom5": null,
+      "custom6": null,
+      "custom7": null,
+      "custom8": null,
+      "custom9": null,
+      "custom10": null,
+      "custom11": null,
+      "custom12": null,
+      "custom13": null,
+      "custom14": null,
+      "custom15": null,
+      "fieldLabelProject": null,
+      "fieldLabelAccount": null,
+      "fieldLabelContact": null,
+      "fieldLabelUser": null,
+      "createdAt": "2021-11-29T05:31:23.282Z",
+      "updatedAt": "2021-11-29T05:46:00.149Z",
+      "ClientId": "6087dc463e5c26006f114f2d",
+      "createdBy": "auth0|6135a6be81c014006ab78c7f",
+      "updatedBy": "auth0|6135a6be81c014006ab78c7f",
+      "ProjectTypeId": "01",
+      "ProjectSetting": {
+        "id": "e599a14f-994c-49b9-aa25-7b2a15ce3455",
+        "target": {
+          "contactTarget": "500",
+          "accountTarget": "100"
+        },
+        "deliveryFileMapping": null,
+        "contactsPerAccount": "5",
+        "clientPoc": null,
+        "priority": "Medium",
+        "status": "Yet to Start",
+        "createdAt": "2021-11-29T05:31:23.282Z",
+        "updatedAt": "2021-11-29T06:28:19.589Z",
+        "ProjectId": "27054377-ed52-42a1-8f25-3f3019e508e0",
+        "createdBy": "auth0|6135a6be81c014006ab78c7f",
+        "updatedBy": "auth0|6135a6be81c014006ab78c7f"
+      },
+      "ProjectType": {
+        "id": "01",
+        "type": "Contact Build (Named Account)",
+        "meta": {},
+        "createdAt": "2021-07-01T06:58:15.740Z",
+        "updatedAt": "2021-07-01T06:58:15.740Z",
+        "createdBy": "auth0|5c2f80fb26ed35696e845617",
+        "updatedBy": "auth0|5c2f80fb26ed35696e845617",
+        "TaskTypeId": "01"
+      },
+      "Client": {
+        "id": "6087dc463e5c26006f114f2d",
+        "name": "Nexsales Corp.",
+        "pseudonym": "New",
+        "createdAt": "2021-07-01T06:39:52.193Z",
+        "updatedAt": "2021-07-02T07:12:01.510Z",
+        "createdBy": "auth0|5c2f80fb26ed35696e845617",
+        "updatedBy": "auth0|5eb2b65754b14c0c127cd61c"
+      },
+      "Users": [{
+        "id": "auth0|6135a6be81c014006ab78c7f",
+        "userName": "dev.pmgr1@nexsales.com",
+        "firstName": "dev.pmgr1",
+        "lastName": "",
+        "role": "manager",
+        "gmailId": null,
+        "custom1": null,
+        "custom2": null,
+        "custom3": null,
+        "custom4": null,
+        "custom5": null,
+        "custom6": null,
+        "custom7": null,
+        "custom8": null,
+        "custom9": null,
+        "custom10": null,
+        "custom11": null,
+        "custom12": null,
+        "custom13": null,
+        "custom14": null,
+        "custom15": null,
+        "createdAt": "2021-09-06T08:46:19.364Z",
+        "updatedAt": "2021-09-06T08:46:19.364Z",
+        "createdBy": "auth0|5c2f80fb26ed35696e845617",
+        "updatedBy": "auth0|5c2f80fb26ed35696e845617",
+        "ProjectUser": {
+          "userLevel": "owner_main",
+          "createdAt": "2021-11-29T05:46:00.190Z",
+          "updatedAt": "2021-11-29T05:46:00.191Z",
+          "ProjectId": "27054377-ed52-42a1-8f25-3f3019e508e0",
+          "UserId": "auth0|6135a6be81c014006ab78c7f",
+          "createdBy": "auth0|6135a6be81c014006ab78c7f",
+          "updatedBy": "auth0|6135a6be81c014006ab78c7f"
+        }
+      }]
+    }, ...]
+  }
+
+Request (3)
+  URL: https://dev.da.rightleads.io/api/v1/projects/types
+  Method: GET
+Response
+  [{
+    "id": "01",
+    "type": "Contact Build (Named Account)"
+  }, ...]
+
+Request (4) // bug: Second time call
+  URL: https://dev.da.rightleads.io/api/v1/project?pageNo=0&pageSize=10&sortType=createdAt
+  Method: GET
+
+
+
+=====================================================
+Create Project
+=====================================================
+Request (1)
+  URL: https://dev.da.rightleads.io/api/v1/project
+  Method: POST
+  * Body
+    {
+      project: {
+        clientId: "5777dc463e5c26006f114f2t",
+        dueDate: "2021-12-31",
+        name: "TEST_PROJECT_NOV_29",
+        projectTypeId: "01"
+      }
+    }
+Response
+  {
+    "project": {
+      "id": "27054377-ed52-42a1-8f25-3f3019e508e0",
+      "ProjectTypeId": "01",
+      "name": "TEST_PROJECT_NOV_29",
+      "receivedDate": null,
+      "dueDate": "2021-12-31T00:00:00.000Z",
+      "createdAt": "2021-11-29T05:31:23.282Z",
+      "updatedAt": "2021-11-29T05:31:23.282Z",
+      "ClientId": "5777dc463e5c26006f114f2t",
+      "createdBy": "auth0|6135a6be81c014006ab78c7f",
+      "updatedBy": "auth0|6135a6be81c014006ab78c7f",
+      "startDate": null,
+      "deliveryDate": null,
+      "description": null,
+      "custom1": null,
+      "custom2": null,
+      "custom3": null,
+      "custom4": null,
+      "custom5": null,
+      "custom6": null,
+      "custom7": null,
+      "custom8": null,
+      "custom9": null,
+      "custom10": null,
+      "custom11": null,
+      "custom12": null,
+      "custom13": null,
+      "custom14": null,
+      "custom15": null,
+      "fieldLabelProject": null,
+      "fieldLabelAccount": null,
+      "fieldLabelContact": null,
+      "fieldLabelUser": null
+    },
+    "projectSetting": {
+      "id": "e599a14f-994c-49b9-aa25-7b2a15ce3455",
+      "target": null,
+      "contactsPerAccount": null,
+      "clientPoc": null,
+      "priority": "Medium",
+      "status": "Yet to Start",
+      "createdAt": "2021-11-29T05:31:23.282Z",
+      "updatedAt": "2021-11-29T05:31:23.309Z",
+      "createdBy": "auth0|6135a6be81c014006ab78c7f",
+      "updatedBy": "auth0|6135a6be81c014006ab78c7f",
+      "ProjectId": "27054377-ed52-42a1-8f25-3f3019e508e0",
+      "deliveryFileMapping": null
+    },
+    "projectUserCreated": {
+      "userLevel": "owner_main",
+      "createdAt": "2021-11-29T05:31:23.282Z",
+      "updatedAt": "2021-11-29T05:31:23.315Z",
+      "ProjectId": "27054377-ed52-42a1-8f25-3f3019e508e0",
+      "UserId": "auth0|6135a6be81c014006ab78c7f",
+      "createdBy": "auth0|6135a6be81c014006ab78c7f",
+      "updatedBy": "auth0|6135a6be81c014006ab78c7f"
+    }
+  }
+
+Request (2 - 15) - Open Project (Total Req: 14)
+
+
+=====================================================
+Open Project
+=====================================================
+Request (1)
+  URL: https://dev.da.rightleads.io/api/v1/project/27054377-ed52-42a1-8f25-3f3019e508e0
+  Method: GET
+Response
+  {
+    "id": "27054377-ed52-42a1-8f25-3f3019e508e0",
+    "name": "TEST_PROJECT_NOV_29",
+    "receivedDate": "2021-11-30T00:00:00.000Z",
+    "dueDate": "2021-12-15T00:00:00.000Z",
+    "startDate": null,
+    "deliveryDate": null,
+    "description": null,
+    "custom1": null,
+    "custom2": null,
+    "custom3": null,
+    "custom4": null,
+    "custom5": null,
+    "custom6": null,
+    "custom7": null,
+    "custom8": null,
+    "custom9": null,
+    "custom10": null,
+    "custom11": null,
+    "custom12": null,
+    "custom13": null,
+    "custom14": null,
+    "custom15": null,
+    "fieldLabelProject": null,
+    "fieldLabelAccount": null,
+    "fieldLabelContact": null,
+    "fieldLabelUser": null,
+    "createdAt": "2021-11-29T05:31:23.282Z",
+    "updatedAt": "2021-11-29T05:46:00.149Z",
+    "ClientId": "6087dc463e5c26006f114f2d",
+    "createdBy": "auth0|6135a6be81c014006ab78c7f",
+    "updatedBy": "auth0|6135a6be81c014006ab78c7f",
+    "ProjectTypeId": "01",
+    "ProjectSetting": {
+      "id": "e599a14f-994c-49b9-aa25-7b2a15ce3455",
+      "target": {
+        "contactTarget": "500",
+        "accountTarget": "100"
+      },
+      "deliveryFileMapping": null,
+      "contactsPerAccount": "5",
+      "clientPoc": null,
+      "priority": "Medium",
+      "status": "Yet to Start",
+      "createdAt": "2021-11-29T05:31:23.282Z",
+      "updatedAt": "2021-11-29T06:28:19.589Z",
+      "ProjectId": "27054377-ed52-42a1-8f25-3f3019e508e0",
+      "createdBy": "auth0|6135a6be81c014006ab78c7f",
+      "updatedBy": "auth0|6135a6be81c014006ab78c7f"
+    },
+    "ProjectType": {
+      "id": "01",
+      "type": "Contact Build (Named Account)",
+      "meta": {},
+      "createdAt": "2021-07-01T06:58:15.740Z",
+      "updatedAt": "2021-07-01T06:58:15.740Z",
+      "createdBy": "auth0|5c2f80fb26ed35696e845617",
+      "updatedBy": "auth0|5c2f80fb26ed35696e845617",
+      "TaskTypeId": "01"
+    },
+    "Users": [{
+      "id": "auth0|6135a6b59afcea0068b04ca3",
+      "userName": "dev.pmgr2@nexsales.com",
+      "firstName": "dev.pmgr2",
+      "lastName": "",
+      "role": "manager",
+      "gmailId": null,
+      "custom1": null,
+      "custom2": null,
+      "custom3": null,
+      "custom4": null,
+      "custom5": null,
+      "custom6": null,
+      "custom7": null,
+      "custom8": null,
+      "custom9": null,
+      "custom10": null,
+      "custom11": null,
+      "custom12": null,
+      "custom13": null,
+      "custom14": null,
+      "custom15": null,
+      "createdAt": "2021-09-06T08:46:19.364Z",
+      "updatedAt": "2021-09-06T08:46:19.364Z",
+      "createdBy": "auth0|5c2f80fb26ed35696e845617",
+      "updatedBy": "auth0|5c2f80fb26ed35696e845617",
+      "ProjectUser": {
+        "userLevel": "owner_assigned",
+        "createdAt": "2021-11-29T05:46:00.201Z",
+        "updatedAt": "2021-11-29T05:46:00.201Z",
+        "ProjectId": "27054377-ed52-42a1-8f25-3f3019e508e0",
+        "UserId": "auth0|6135a6b59afcea0068b04ca3",
+        "createdBy": "auth0|6135a6be81c014006ab78c7f",
+        "updatedBy": "auth0|6135a6be81c014006ab78c7f"
+      }
+    }, {
+      "id": "auth0|6135a6be81c014006ab78c7f",
+      "userName": "dev.pmgr1@nexsales.com",
+      "firstName": "dev.pmgr1",
+      "lastName": "",
+      "role": "manager",
+      "gmailId": null,
+      "custom1": null,
+      "custom2": null,
+      "custom3": null,
+      "custom4": null,
+      "custom5": null,
+      "custom6": null,
+      "custom7": null,
+      "custom8": null,
+      "custom9": null,
+      "custom10": null,
+      "custom11": null,
+      "custom12": null,
+      "custom13": null,
+      "custom14": null,
+      "custom15": null,
+      "createdAt": "2021-09-06T08:46:19.364Z",
+      "updatedAt": "2021-09-06T08:46:19.364Z",
+      "createdBy": "auth0|5c2f80fb26ed35696e845617",
+      "updatedBy": "auth0|5c2f80fb26ed35696e845617",
+      "ProjectUser": {
+        "userLevel": "owner_main",
+        "createdAt": "2021-11-29T05:46:00.190Z",
+        "updatedAt": "2021-11-29T05:46:00.191Z",
+        "ProjectId": "27054377-ed52-42a1-8f25-3f3019e508e0",
+        "UserId": "auth0|6135a6be81c014006ab78c7f",
+        "createdBy": "auth0|6135a6be81c014006ab78c7f",
+        "updatedBy": "auth0|6135a6be81c014006ab78c7f"
+      }
+    }],
+    "Client": {
+      "id": "6087dc463e5c26006f114f2d",
+      "name": "Nexsales Corp.",
+      "pseudonym": "New",
+      "createdAt": "2021-07-01T06:39:52.193Z",
+      "updatedAt": "2021-07-02T07:12:01.510Z",
+      "createdBy": "auth0|5c2f80fb26ed35696e845617",
+      "updatedBy": "auth0|5eb2b65754b14c0c127cd61c"
+    },
+    "Dispositions": []
+  }
+
+
+Request (2) // Bug: Second time call
+  URL: https://dev.da.rightleads.io/api/v1/project/27054377-ed52-42a1-8f25-3f3019e508e0
+  Method: GET
+
+
+Request (3)
+  URL: https://dev.da.rightleads.io/api/v1/project/27054377-ed52-42a1-8f25-3f3019e508e0/specs/
+  Method: GET
+Response
+  [{
+    "id": "e6a4c485-59bc-443a-a754-7e175f200b3f",
+    "name": "Gold Spec",
+    "values": {
+      "job_level": [],
+      "job_department": [],
+      "company_revenue": ["0-1M", "1M-10M"],
+      "industry": ["IT", "IT Security"],
+      "sub_industry": [],
+      "geography": null,
+      "employee_count": ["0-10", "10-50"],
+      "job_function": [],
+      "job_title": [],
+      "contacts_per_account": [],
+      "note": null
+    },
+    "comments": null,
+    "createdAt": "2021-11-29T06:23:44.908Z",
+    "updatedAt": "2021-11-29T06:28:19.602Z",
+    "ProjectId": "27054377-ed52-42a1-8f25-3f3019e508e0",
+    "createdBy": "auth0|6135a6be81c014006ab78c7f",
+    "updatedBy": "auth0|6135a6be81c014006ab78c7f"
+  }]
+
+Request (4)
+  URL: https://dev.da.rightleads.io/api/v1/project/27054377-ed52-42a1-8f25-3f3019e508e0/setting
+  Method: GET
+Response
+  {
+    "id": "e599a14f-994c-49b9-aa25-7b2a15ce3455",
+    "target": {
+      "contactTarget": "500",
+      "accountTarget": "100"
+    },
+    "deliveryFileMapping": null,
+    "contactsPerAccount": "5",
+    "clientPoc": null,
+    "priority": "Medium",
+    "status": "Yet to Start",
+    "createdAt": "2021-11-29T05:31:23.282Z",
+    "updatedAt": "2021-11-29T06:28:19.589Z",
+    "ProjectId": "27054377-ed52-42a1-8f25-3f3019e508e0",
+    "createdBy": "auth0|6135a6be81c014006ab78c7f",
+    "updatedBy": "auth0|6135a6be81c014006ab78c7f"
+  }
+
+
+Request (5)
+  URL: https://dev.da.rightleads.io/api/v1/files?projectId=27054377-ed52-42a1-8f25-3f3019e508e0
+  Method: GET
+  * Query Param
+    projectId: 27054377-ed52-42a1-8f25-3f3019e508e0
+Response
+  [{
+    "id": "33ac82eb-1f29-4b75-b174-b9952591a455",
+    "name": "account_compliance_1638169441086.csv",
+    "type": "Import",
+    "mapping": {
+      "id": "ObjectId",
+      "userName": "userName"
+    },
+    "ProjectId": "27054377-ed52-42a1-8f25-3f3019e508e0"
+  }, ...]
+
+Request (6) - Check File Upload Status
+  URL: https://dev.da.rightleads.io/api/v1/project/27054377-ed52-42a1-8f25-3f3019e508e0/jobs?sort=%7B%22createdAt%22:%22desc%22%7D
+  Method: GET
+  * Query Param
+    sort: {
+      "createdAt": "desc"
+    }
+Response
+
+
+Request (7, 8) - Display Accounts (Total Req: 2)
+  URL: https://dev.da.rightleads.io/api/v1/project/27054377-ed52-42a1-8f25-3f3019e508e0/accounts?pageNo=0&pageSize=10&filter=%7B%7D
+  Method: GET
+  * Query Param
+    pageNo: 0
+    pageSize: 10
+    filter: {}
+  URL: https://dev.da.rightleads.io/api/v1/project/27054377-ed52-42a1-8f25-3f3019e508e0/accounts/dispositions
+  Method: GET
+
+
+Request (9, 10) - Display Contacts (Total Req: 2)
+  URL: https://dev.da.rightleads.io/api/v1/project/27054377-ed52-42a1-8f25-3f3019e508e0/contacts?pageNo=0&pageSize=20&filter=%7B%7D
+  Method: GET
+  * Query Param
+    pageNo: 0
+    pageSize: 20
+    filter: {}
+  URL: https://dev.da.rightleads.io/api/v1/projects/27054377-ed52-42a1-8f25-3f3019e508e0/contacts/stats?filter=%7B%7D
+  Method: GET
+  * Query Param
+    filter: {}
+
+
+Request (11) // Bug: Third time call
+  URL: https://dev.da.rightleads.io/api/v1/project/27054377-ed52-42a1-8f25-3f3019e508e0
+  Method: GET
+Response
+
+
+Request (12)
+  URL: https://dev.da.rightleads.io/api/v1/client
+  Method: GET
+Response
+  [{
+    "id": "5777dc463e5c26006f114f2t",
+    "name": "NSPL"
+  }, ...]
+
+
+Request (13)
+  URL: https://dev.da.rightleads.io/api/v1/projects/types
+  Method: GET
+Response
+  [{
+    "id": "01",
+    "type": "Contact Build (Named Account)"
+  }, ...]
+
+
+Request (14) - Display Tasks
+  URL: https://dev.da.rightleads.io/api/v1/projects/27054377-ed52-42a1-8f25-3f3019e508e0/tasks?pageNo=0&pageSize=10&filter=%7B%22status%22:[]%7D
+  Method: GET
+  * Query Param
+    pageNo: 0
+    pageSize: 20
+    filter: {
+      "status": []
+    }
+
+=====================================================
+Edit Project (Setup Page)
+=====================================================
+Request
+  URL: https://dev.da.rightleads.io/api/v1/project/27054377-ed52-42a1-8f25-3f3019e508e0/setting
+  Method: PUT
+  * Body
+    {
+      projectSetting: {
+        clientId: "6087dc463e5c26006f114f2d",
+        clientPoc: null,
+        contactsPerAccount: null,
+        description: null,
+        dueDate: "2021-12-15",
+        name: "TEST_PROJECT_NOV_29",
+        priority: "Medium",
+        projectTypeId: "01",
+        receivedDate: "2021-11-30",
+        status: "Yet to Start",
+        target: null
+      },
+      users: {
+        {
+          compliance: [{
+            firstName: "dev.pmgr2",
+            fullName: "dev.pmgr2 ",
+            id: "auth0|6135a6b59afcea0068b04ca3",
+            lastName: ""
+          }],
+          owner_assigned: [{
+            firstName: "dev.pmgr2",
+            fullName: "dev.pmgr2 ",
+            id: "auth0|6135a6b59afcea0068b04ca3",
+            lastName: ""
+          }],
+          owner_main: [{
+            id: "auth0|6135a6be81c014006ab78c7f",
+            fullName: "dev.pmgr1 "
+          }]
+        }
+      }
+    }
+Response
+  {
+    "project": [1],
+    "projectSetting": [1],
+    "userCreatedArray": {
+      "owner_main": [{
+        "userLevel": "owner_main",
+        "createdAt": "2021-11-29T05:46:00.190Z",
+        "updatedAt": "2021-11-29T05:46:00.191Z",
+        "ProjectId": "27054377-ed52-42a1-8f25-3f3019e508e0",
+        "UserId": "auth0|6135a6be81c014006ab78c7f",
+        "createdBy": "auth0|6135a6be81c014006ab78c7f",
+        "updatedBy": "auth0|6135a6be81c014006ab78c7f"
+      }],
+      "owner_assigned": [{
+        "userLevel": "owner_assigned",
+        "createdAt": "2021-11-29T05:46:00.201Z",
+        "updatedAt": "2021-11-29T05:46:00.201Z",
+        "ProjectId": "27054377-ed52-42a1-8f25-3f3019e508e0",
+        "UserId": "auth0|6135a6b59afcea0068b04ca3",
+        "createdBy": "auth0|6135a6be81c014006ab78c7f",
+        "updatedBy": "auth0|6135a6be81c014006ab78c7f"
+      }],
+      "compliance": []
+    }
+  }
+
+
+Request (2)
+  URL: https://dev.da.rightleads.io/api/v1/project/27054377-ed52-42a1-8f25-3f3019e508e0
+  Method: GET
+Response
+  {
+    "id": "27054377-ed52-42a1-8f25-3f3019e508e0",
+    "name": "TEST_PROJECT_NOV_29",
+    "receivedDate": "2021-11-30T00:00:00.000Z",
+    "dueDate": "2021-12-15T00:00:00.000Z",
+    "startDate": null,
+    "deliveryDate": null,
+    "description": null,
+    "custom1": null,
+    "custom2": null,
+    "custom3": null,
+    "custom4": null,
+    "custom5": null,
+    "custom6": null,
+    "custom7": null,
+    "custom8": null,
+    "custom9": null,
+    "custom10": null,
+    "custom11": null,
+    "custom12": null,
+    "custom13": null,
+    "custom14": null,
+    "custom15": null,
+    "fieldLabelProject": null,
+    "fieldLabelAccount": null,
+    "fieldLabelContact": null,
+    "fieldLabelUser": null,
+    "createdAt": "2021-11-29T05:31:23.282Z",
+    "updatedAt": "2021-11-29T05:46:00.149Z",
+    "ClientId": "6087dc463e5c26006f114f2d",
+    "createdBy": "auth0|6135a6be81c014006ab78c7f",
+    "updatedBy": "auth0|6135a6be81c014006ab78c7f",
+    "ProjectTypeId": "01",
+    "ProjectSetting": {
+      "id": "e599a14f-994c-49b9-aa25-7b2a15ce3455",
+      "target": {
+        "contactTarget": "500",
+        "accountTarget": "100"
+      },
+      "deliveryFileMapping": null,
+      "contactsPerAccount": "5",
+      "clientPoc": null,
+      "priority": "Medium",
+      "status": "Yet to Start",
+      "createdAt": "2021-11-29T05:31:23.282Z",
+      "updatedAt": "2021-11-29T06:28:19.589Z",
+      "ProjectId": "27054377-ed52-42a1-8f25-3f3019e508e0",
+      "createdBy": "auth0|6135a6be81c014006ab78c7f",
+      "updatedBy": "auth0|6135a6be81c014006ab78c7f"
+    },
+    "ProjectType": {
+      "id": "01",
+      "type": "Contact Build (Named Account)",
+      "meta": {},
+      "createdAt": "2021-07-01T06:58:15.740Z",
+      "updatedAt": "2021-07-01T06:58:15.740Z",
+      "createdBy": "auth0|5c2f80fb26ed35696e845617",
+      "updatedBy": "auth0|5c2f80fb26ed35696e845617",
+      "TaskTypeId": "01"
+    },
+    "Users": [{
+      "id": "auth0|6135a6b59afcea0068b04ca3",
+      "userName": "dev.pmgr2@nexsales.com",
+      "firstName": "dev.pmgr2",
+      "lastName": "",
+      "role": "manager",
+      "gmailId": null,
+      "custom1": null,
+      "custom2": null,
+      "custom3": null,
+      "custom4": null,
+      "custom5": null,
+      "custom6": null,
+      "custom7": null,
+      "custom8": null,
+      "custom9": null,
+      "custom10": null,
+      "custom11": null,
+      "custom12": null,
+      "custom13": null,
+      "custom14": null,
+      "custom15": null,
+      "createdAt": "2021-09-06T08:46:19.364Z",
+      "updatedAt": "2021-09-06T08:46:19.364Z",
+      "createdBy": "auth0|5c2f80fb26ed35696e845617",
+      "updatedBy": "auth0|5c2f80fb26ed35696e845617",
+      "ProjectUser": {
+        "userLevel": "owner_assigned",
+        "createdAt": "2021-11-29T05:46:00.201Z",
+        "updatedAt": "2021-11-29T05:46:00.201Z",
+        "ProjectId": "27054377-ed52-42a1-8f25-3f3019e508e0",
+        "UserId": "auth0|6135a6b59afcea0068b04ca3",
+        "createdBy": "auth0|6135a6be81c014006ab78c7f",
+        "updatedBy": "auth0|6135a6be81c014006ab78c7f"
+      }
+    }, {
+      "id": "auth0|6135a6be81c014006ab78c7f",
+      "userName": "dev.pmgr1@nexsales.com",
+      "firstName": "dev.pmgr1",
+      "lastName": "",
+      "role": "manager",
+      "gmailId": null,
+      "custom1": null,
+      "custom2": null,
+      "custom3": null,
+      "custom4": null,
+      "custom5": null,
+      "custom6": null,
+      "custom7": null,
+      "custom8": null,
+      "custom9": null,
+      "custom10": null,
+      "custom11": null,
+      "custom12": null,
+      "custom13": null,
+      "custom14": null,
+      "custom15": null,
+      "createdAt": "2021-09-06T08:46:19.364Z",
+      "updatedAt": "2021-09-06T08:46:19.364Z",
+      "createdBy": "auth0|5c2f80fb26ed35696e845617",
+      "updatedBy": "auth0|5c2f80fb26ed35696e845617",
+      "ProjectUser": {
+        "userLevel": "owner_main",
+        "createdAt": "2021-11-29T05:46:00.190Z",
+        "updatedAt": "2021-11-29T05:46:00.191Z",
+        "ProjectId": "27054377-ed52-42a1-8f25-3f3019e508e0",
+        "UserId": "auth0|6135a6be81c014006ab78c7f",
+        "createdBy": "auth0|6135a6be81c014006ab78c7f",
+        "updatedBy": "auth0|6135a6be81c014006ab78c7f"
+      }
+    }],
+    "Client": {
+      "id": "6087dc463e5c26006f114f2d",
+      "name": "Nexsales Corp.",
+      "pseudonym": "New",
+      "createdAt": "2021-07-01T06:39:52.193Z",
+      "updatedAt": "2021-07-02T07:12:01.510Z",
+      "createdBy": "auth0|5c2f80fb26ed35696e845617",
+      "updatedBy": "auth0|5eb2b65754b14c0c127cd61c"
+    },
+    "Dispositions": []
+  }
+
+
+=====================================================
+Create Specifications (Specifications Page)
+=====================================================
+Request (1)
+  URL: https://dev.da.rightleads.io/api/v1/projects/27054377-ed52-42a1-8f25-3f3019e508e0/editSettings
+  Method: PUT
+  * Body
+    {
+      projectSetting: {
+      contactsPerAccount: "5",
+      priority: "Medium",
+      status: "Yet to Start",
+      target: {
+        contactTarget: "5000",
+        accountTarget: "1000"
+      }
+      users: [{
+        ProjectUser: {
+          ProjectId: "27054377-ed52-42a1-8f25-3f3019e508e0",
+          UserId: "auth0|6135a6b59afcea0068b04ca3",
+          createdAt: "2021-11-29T05:46:00.201Z",
+          createdBy: "auth0|6135a6be81c014006ab78c7f",
+          updatedAt: "2021-11-29T05:46:00.201Z",
+          updatedBy: "auth0|6135a6be81c014006ab78c7f",
+          userLevel: "owner_assigned"
+        }
+        createdAt: "2021-09-06T08:46:19.364Z",
+        createdBy: "auth0|5c2f80fb26ed35696e845617",
+        custom1: null,
+        custom2: null,
+        custom3: null,
+        custom4: null,
+        custom5: null,
+        custom6: null,
+        custom7: null,
+        custom8: null,
+        custom9: null,
+        custom10: null,
+        custom11: null,
+        custom12: null,
+        custom13: null,
+        custom14: null,
+        custom15: null,
+        firstName: "dev.pmgr2",
+        gmailId: null,
+        id: "auth0|6135a6b59afcea0068b04ca3",
+        lastName: "",
+        role: "manager",
+        updatedAt: "2021-09-06T08:46:19.364Z",
+        updatedBy: "auth0|5c2f80fb26ed35696e845617",
+        userName: "dev.pmgr2@nexsales.com"
+        },
+        {
+        ProjectUser: {
+          ProjectId: "27054377-ed52-42a1-8f25-3f3019e508e0",
+          UserId: "auth0|6135a6be81c014006ab78c7f",
+          createdAt: "2021-11-29T05:46:00.190Z",
+          createdBy: "auth0|6135a6be81c014006ab78c7f",
+          updatedAt: "2021-11-29T05:46:00.191Z",
+          updatedBy: "auth0|6135a6be81c014006ab78c7f",
+          userLevel: "owner_main",
+        }
+        createdAt: "2021-09-06T08:46:19.364Z",
+        createdBy: "auth0|5c2f80fb26ed35696e845617",
+        custom1: null,
+        custom2: null,
+        custom3: null,
+        custom4: null,
+        custom5: null,
+        custom6: null,
+        custom7: null,
+        custom8: null,
+        custom9: null,
+        custom10: null,
+        custom11: null,
+        custom12: null,
+        custom13: null,
+        custom14: null,
+        custom15: null,
+        firstName: "dev.pmgr1",
+        gmailId: null,
+        id: "auth0|6135a6be81c014006ab78c7f",
+        lastName: "",
+        role: "manager",
+        updatedAt: "2021-09-06T08:46:19.364Z",
+        updatedBy: "auth0|5c2f80fb26ed35696e845617",
+        userName: "dev.pmgr1@nexsales.com"
+        }
+      ]
+      }
+    }
+Response
+  {
+    "projectSetting": {
+      "target": {
+        "contactTarget": "5000",
+        "accountTarget": "1000"
+      },
+      "contactsPerAccount": "5",
+      "status": "Yet to Start",
+      "priority": "Medium",
+      "users": [{
+        "id": "auth0|6135a6b59afcea0068b04ca3",
+        "userName": "dev.pmgr2@nexsales.com",
+        "firstName": "dev.pmgr2",
+        "lastName": "",
+        "role": "manager",
+        "gmailId": null,
+        "custom1": null,
+        "custom2": null,
+        "custom3": null,
+        "custom4": null,
+        "custom5": null,
+        "custom6": null,
+        "custom7": null,
+        "custom8": null,
+        "custom9": null,
+        "custom10": null,
+        "custom11": null,
+        "custom12": null,
+        "custom13": null,
+        "custom14": null,
+        "custom15": null,
+        "createdAt": "2021-09-06T08:46:19.364Z",
+        "updatedAt": "2021-09-06T08:46:19.364Z",
+        "createdBy": "auth0|5c2f80fb26ed35696e845617",
+        "updatedBy": "auth0|5c2f80fb26ed35696e845617",
+        "ProjectUser": {
+          "userLevel": "owner_assigned",
+          "createdAt": "2021-11-29T05:46:00.201Z",
+          "updatedAt": "2021-11-29T05:46:00.201Z",
+          "ProjectId": "27054377-ed52-42a1-8f25-3f3019e508e0",
+          "UserId": "auth0|6135a6b59afcea0068b04ca3",
+          "createdBy": "auth0|6135a6be81c014006ab78c7f",
+          "updatedBy": "auth0|6135a6be81c014006ab78c7f"
+        }
+      }, {
+        "id": "auth0|6135a6be81c014006ab78c7f",
+        "userName": "dev.pmgr1@nexsales.com",
+        "firstName": "dev.pmgr1",
+        "lastName": "",
+        "role": "manager",
+        "gmailId": null,
+        "custom1": null,
+        "custom2": null,
+        "custom3": null,
+        "custom4": null,
+        "custom5": null,
+        "custom6": null,
+        "custom7": null,
+        "custom8": null,
+        "custom9": null,
+        "custom10": null,
+        "custom11": null,
+        "custom12": null,
+        "custom13": null,
+        "custom14": null,
+        "custom15": null,
+        "createdAt": "2021-09-06T08:46:19.364Z",
+        "updatedAt": "2021-09-06T08:46:19.364Z",
+        "createdBy": "auth0|5c2f80fb26ed35696e845617",
+        "updatedBy": "auth0|5c2f80fb26ed35696e845617",
+        "ProjectUser": {
+          "userLevel": "owner_main",
+          "createdAt": "2021-11-29T05:46:00.190Z",
+          "updatedAt": "2021-11-29T05:46:00.191Z",
+          "ProjectId": "27054377-ed52-42a1-8f25-3f3019e508e0",
+          "UserId": "auth0|6135a6be81c014006ab78c7f",
+          "createdBy": "auth0|6135a6be81c014006ab78c7f",
+          "updatedBy": "auth0|6135a6be81c014006ab78c7f"
+        }
+      }]
+    }
+  }
+
+Request (2)
+  URL: https://dev.da.rightleads.io/api/v1/project/27054377-ed52-42a1-8f25-3f3019e508e0/specs
+  Method: POST
+  * Body
+    {
+      "projectSpec": {
+        "invalid": false,
+        "name": "Gold Spec",
+        "values": {
+          "job_level": [],
+          "job_department": [],
+          "company_revenue": ["0-1M", "1M-10M"],
+          "industry": ["IT", "IT Security"],
+          "sub_industry": [],
+          "geography": null,
+          "employee_count": ["0-10", "10-50"],
+          "job_function": [],
+          "job_title": [],
+          "contacts_per_account": [],
+          "note": null
+        }
+      }
+    }
+Response
+  {
+    "id": "e6a4c485-59bc-443a-a754-7e175f200b3f",
+    "ProjectId": "27054377-ed52-42a1-8f25-3f3019e508e0",
+    "name": "Gold Spec",
+    "values": {
+      "job_level": [],
+      "job_department": [],
+      "company_revenue": ["0-1M", "1M-10M"],
+      "industry": ["IT", "IT Security"],
+      "sub_industry": [],
+      "geography": null,
+      "employee_count": ["0-10", "10-50"],
+      "job_function": [],
+      "job_title": [],
+      "contacts_per_account": [],
+      "note": null
+    },
+    "comments": null,
+    "createdAt": "2021-11-29T06:23:44.908Z",
+    "updatedAt": "2021-11-29T06:23:44.908Z",
+    "createdBy": "auth0|6135a6be81c014006ab78c7f",
+    "updatedBy": "auth0|6135a6be81c014006ab78c7f"
+  }
+
+
+
+=====================================================
+Edit Specifications (Specifications Page)
+=====================================================
+Request (1)
+  URL: https://dev.da.rightleads.io/api/v1/projects/27054377-ed52-42a1-8f25-3f3019e508e0/editSettings
+  Method: PUT
+  * Body
+    {
+      projectSetting: {
+      contactsPerAccount: "5",
+      priority: "Medium",
+      status: "Yet to Start",
+      target: {
+        contactTarget: "500",
+        accountTarget: "100"
+      }
+      users: [{
+        ProjectUser: {
+          ProjectId: "27054377-ed52-42a1-8f25-3f3019e508e0",
+          UserId: "auth0|6135a6b59afcea0068b04ca3",
+          createdAt: "2021-11-29T05:46:00.201Z",
+          createdBy: "auth0|6135a6be81c014006ab78c7f",
+          updatedAt: "2021-11-29T05:46:00.201Z",
+          updatedBy: "auth0|6135a6be81c014006ab78c7f",
+          userLevel: "owner_assigned"
+        }
+        createdAt: "2021-09-06T08:46:19.364Z",
+        createdBy: "auth0|5c2f80fb26ed35696e845617",
+        custom1: null,
+        custom2: null,
+        custom3: null,
+        custom4: null,
+        custom5: null,
+        custom6: null,
+        custom7: null,
+        custom8: null,
+        custom9: null,
+        custom10: null,
+        custom11: null,
+        custom12: null,
+        custom13: null,
+        custom14: null,
+        custom15: null,
+        firstName: "dev.pmgr2",
+        gmailId: null,
+        id: "auth0|6135a6b59afcea0068b04ca3",
+        lastName: "",
+        role: "manager",
+        updatedAt: "2021-09-06T08:46:19.364Z",
+        updatedBy: "auth0|5c2f80fb26ed35696e845617",
+        userName: "dev.pmgr2@nexsales.com"
+        },
+        {
+        ProjectUser: {
+          ProjectId: "27054377-ed52-42a1-8f25-3f3019e508e0",
+          UserId: "auth0|6135a6be81c014006ab78c7f",
+          createdAt: "2021-11-29T05:46:00.190Z",
+          createdBy: "auth0|6135a6be81c014006ab78c7f",
+          updatedAt: "2021-11-29T05:46:00.191Z",
+          updatedBy: "auth0|6135a6be81c014006ab78c7f",
+          userLevel: "owner_main",
+        }
+        createdAt: "2021-09-06T08:46:19.364Z",
+        createdBy: "auth0|5c2f80fb26ed35696e845617",
+        custom1: null,
+        custom2: null,
+        custom3: null,
+        custom4: null,
+        custom5: null,
+        custom6: null,
+        custom7: null,
+        custom8: null,
+        custom9: null,
+        custom10: null,
+        custom11: null,
+        custom12: null,
+        custom13: null,
+        custom14: null,
+        custom15: null,
+        firstName: "dev.pmgr1",
+        gmailId: null,
+        id: "auth0|6135a6be81c014006ab78c7f",
+        lastName: "",
+        role: "manager",
+        updatedAt: "2021-09-06T08:46:19.364Z",
+        updatedBy: "auth0|5c2f80fb26ed35696e845617",
+        userName: "dev.pmgr1@nexsales.com"
+        }
+      ]
+      }
+    }
+Response
+  {
+    "projectSetting": {
+      "target": {
+        "contactTarget": "500",
+        "accountTarget": "100"
+      },
+      "contactsPerAccount": "5",
+      "status": "Yet to Start",
+      "priority": "Medium",
+      "users": [{
+        "id": "auth0|6135a6b59afcea0068b04ca3",
+        "userName": "dev.pmgr2@nexsales.com",
+        "firstName": "dev.pmgr2",
+        "lastName": "",
+        "role": "manager",
+        "gmailId": null,
+        "custom1": null,
+        "custom2": null,
+        "custom3": null,
+        "custom4": null,
+        "custom5": null,
+        "custom6": null,
+        "custom7": null,
+        "custom8": null,
+        "custom9": null,
+        "custom10": null,
+        "custom11": null,
+        "custom12": null,
+        "custom13": null,
+        "custom14": null,
+        "custom15": null,
+        "createdAt": "2021-09-06T08:46:19.364Z",
+        "updatedAt": "2021-09-06T08:46:19.364Z",
+        "createdBy": "auth0|5c2f80fb26ed35696e845617",
+        "updatedBy": "auth0|5c2f80fb26ed35696e845617",
+        "ProjectUser": {
+          "userLevel": "owner_assigned",
+          "createdAt": "2021-11-29T05:46:00.201Z",
+          "updatedAt": "2021-11-29T05:46:00.201Z",
+          "ProjectId": "27054377-ed52-42a1-8f25-3f3019e508e0",
+          "UserId": "auth0|6135a6b59afcea0068b04ca3",
+          "createdBy": "auth0|6135a6be81c014006ab78c7f",
+          "updatedBy": "auth0|6135a6be81c014006ab78c7f"
+        }
+      }, {
+        "id": "auth0|6135a6be81c014006ab78c7f",
+        "userName": "dev.pmgr1@nexsales.com",
+        "firstName": "dev.pmgr1",
+        "lastName": "",
+        "role": "manager",
+        "gmailId": null,
+        "custom1": null,
+        "custom2": null,
+        "custom3": null,
+        "custom4": null,
+        "custom5": null,
+        "custom6": null,
+        "custom7": null,
+        "custom8": null,
+        "custom9": null,
+        "custom10": null,
+        "custom11": null,
+        "custom12": null,
+        "custom13": null,
+        "custom14": null,
+        "custom15": null,
+        "createdAt": "2021-09-06T08:46:19.364Z",
+        "updatedAt": "2021-09-06T08:46:19.364Z",
+        "createdBy": "auth0|5c2f80fb26ed35696e845617",
+        "updatedBy": "auth0|5c2f80fb26ed35696e845617",
+        "ProjectUser": {
+          "userLevel": "owner_main",
+          "createdAt": "2021-11-29T05:46:00.190Z",
+          "updatedAt": "2021-11-29T05:46:00.191Z",
+          "ProjectId": "27054377-ed52-42a1-8f25-3f3019e508e0",
+          "UserId": "auth0|6135a6be81c014006ab78c7f",
+          "createdBy": "auth0|6135a6be81c014006ab78c7f",
+          "updatedBy": "auth0|6135a6be81c014006ab78c7f"
+        }
+      }]
+    }
+  }
+
+Request (2)
+  URL: https://dev.da.rightleads.io/api/v1/project/27054377-ed52-42a1-8f25-3f3019e508e0/specs/e6a4c485-59bc-443a-a754-7e175f200b3f
+  Method: PUT
+  * Body
+    {
+      "projectSpec": {
+      "ProjectId": "27054377-ed52-42a1-8f25-3f3019e508e0",
+      "accountValueKeys": ["Company Revenue", "Industry", "Employee Count"],
+      "comments": null,
+      "contactValueKeys": [],
+      "createdAt": "2021-11-29T06:23:44.908Z",
+      "createdBy": "auth0|6135a6be81c014006ab78c7f",
+      "customValueKeys": [],
+      "id": "e6a4c485-59bc-443a-a754-7e175f200b3f",
+      "invalid": false,
+      "name": "Gold Spec",
+      "newValues": {
+        "Company Revenue": "0-1M, 1M-10M",
+        "Contacts Per Account": "",
+        "Employee Count": "0-10, 10-50",
+        "Geography": null,
+        "Industry": "IT, IT Security",
+        "Job Department": "",
+        "Job Function": "",
+        "Job Level": "",
+        "Job Title": "",
+        "Note": null,
+        "Sub Industry": ""
+      },
+      "updatedAt": "2021-11-29T06:23:44.908Z",
+      "updatedBy": "auth0|6135a6be81c014006ab78c7f",
+      "values": {
+        "company_revenue": ["0-1M", "1M-10M"],
+        "contacts_per_account": [],
+        "employee_count": ["0-10", "10-50"],
+        "geography": null,
+        "industry": ["IT", "IT Security"],
+        "job_department": [],
+        "job_function": [],
+        "job_level": [],
+        "job_title": [],
+        "note": null,
+        "sub_industry": []
+      },
+      "valuesKeys": [
+        "Job Level",
+        "Job Department",
+        "Company Revenue",
+        "Industry",
+        "Sub Industry",
+        "Geography",
+        "Employee Count",
+        "Job Function",
+        "Job Title",
+        "Contacts Per Account",
+        "Note"
+      ]
+      }
+    }
+Response
+  [1]
+
+
+
+
+=====================================================
+Upload File (Specifications Page)
+=====================================================
+Request (Account Suppresion)
+  URL: https://dev.da.rightleads.io/api/v1/files
+  Method: POST
+  * Form Data
+    file: (binary)
+    projectId: 27054377-ed52-42a1-8f25-3f3019e508e0
+    operationName: accountSuppression
+    mapping: {
+      "Name": "name",
+      "Company Name": "name",
+      "SFDC Company Name": "",
+      "match status": "",
+      "Level": "",
+      "Delivery Status": "",
+      "Update Status": "",
+      "phone": "",
+      "website": "website",
+      "auto index": ""
+    }
+    rowCount: 6
+    fileType: Suppression
+Response
+  {
+    "fileId": "9db565b6-8f07-431c-a51b-3ba5cd378a79",
+    "fileName": "accounts-06-suppression.csv",
+    "jobId": "30ab75ce-6394-4612-9be8-1574311df6c8"
+  }
+
+Request (Contact Suppresion)
+  URL: https://dev.da.rightleads.io/api/v1/files
+  Method: POST
+  * Form Data
+    file: (binary)
+    projectId: 27054377-ed52-42a1-8f25-3f3019e508e0
+    operationName: contactSuppression
+    mapping: {
+      "Name": "",
+      "Company Name": "companyName",
+      "SFDC Company Name": "",
+      "f_name": "",
+      "first name": "firstName",
+      "last name": "lastName",
+      "job title": "jobTitle",
+      "Department": "jobDepartment",
+      "match status": "",
+      "Level": "jobLevel",
+      "Delivery Status": "",
+      "Update Status": "",
+      "email": "email",
+      "phone": "phone",
+      "website": "website",
+      "auto index": ""
+    }
+    rowCount: 2
+    fileType: Suppression
+Response
+  {
+    "fileId": "01c7550a-67a2-4bb7-aaa0-99cca34f77cf",
+    "fileName": "contacts-02-suppression.csv",
+    "jobId": "4a3d0059-b19b-4a8e-b41b-4baaa159e062"
+  }
+
+Request (Account Inclusion)
+  URL: https://dev.da.rightleads.io/api/v1/files
+  Method: POST
+  * Form Data
+    file: (binary)
+    projectId: 27054377-ed52-42a1-8f25-3f3019e508e0
+    operationName: accountInclusion
+    mapping: {
+      "Name": "account.name",
+      "Company Name": "account.name",
+      "SFDC Company Name": "",
+      "match status": "",
+      "Level": "",
+      "Delivery Status": "",
+      "Update Status": "",
+      "phone": "",
+      "website": "account.website",
+      "auto index": ""
+    }
+    rowCount: 20
+    fileType: Inclusion
+Response
+  {
+    "fileId": "70d35635-70db-4498-8f38-9b1c20155740",
+    "fileName": "accounts-20.csv",
+    "jobId": "386cac00-e847-4fed-acec-705004eceefa"
+  }
+
+Request (Contact Inclusion)
+  URL: https://dev.da.rightleads.io/api/v1/files
+  Method: POST
+  * Form Data
+    file: (binary)
+    projectId: 27054377-ed52-42a1-8f25-3f3019e508e0
+    operationName: contactInclusion
+    mapping: {
+      "Name": "account.name",
+      "Company Name": "account.name",
+      "SFDC Company Name": "",
+      "f_name": "",
+      "first name": "contact.firstName",
+      "last name": "contact.lastName",
+      "job title": "contact.jobTitle",
+      "Department": "contact.jobDepartment",
+      "match status": "",
+      "Level": "contact.jobLevel",
+      "Delivery Status": "",
+      "Update Status": "",
+      "email": "contact.email",
+      "phone": "contact.phone",
+      "website": "contact.website",
+      "auto index": ""
+    }
+    rowCount: 20
+    fileType: Inclusion
+Response
+  {
+    "fileId": "98d47907-6915-4ad4-9d2c-499c966cf387",
+    "fileName": "contacts-20.csv",
+    "jobId": "199b73c7-8e69-486a-b5ef-e8e9b5bd9ff8"
+  }
+
+
+
+
+=====================================================
+Check File Upload Status (Upload Status Page)
+=====================================================
+Request
+  URL: https://dev.da.rightleads.io/api/v1/project/27054377-ed52-42a1-8f25-3f3019e508e0/jobs?sort=%7B%22createdAt%22:%22desc%22%7D
+  Method: GET
+  * Query Param
+    sort: {  // Default
+      "createdAt": "desc"
+    }
+Response
+  {
+    "totalCount": 4,
+    "docs": [{
+    "jobId": "199b73c7-8e69-486a-b5ef-e8e9b5bd9ff8",
+    "status": "Completed",
+    "operation_name": "contactInclusion",
+    "result_processed": "20",
+    "result_imported": "20",
+    "result_errored": "0",
+    "createdAt": "2021-11-29T06:45:09.853Z",
+    "updatedAt": "2021-11-29T06:45:15.897Z",
+    "row_count": "20",
+    "chunks": "1",
+    "fileId": "98d47907-6915-4ad4-9d2c-499c966cf387",
+    "fileName": "contacts-20.csv"
+    },...]
+  }
+
+
+=====================================================
+Display Accounts (Accounts Page)
+=====================================================
+Request (1)
+  URL: https://dev.da.rightleads.io/api/v1/project/27054377-ed52-42a1-8f25-3f3019e508e0/accounts?pageNo=0&pageSize=10&filter=%7B%7D
+  Method: GET
+  * Query Param
+    pageNo: 0
+    pageSize: 10
+    filter: {}
+Response
+  {
+    "totalCount": 40,
+    "docs": [{
+      "id": "53c76cee-eb60-46a2-8a89-c05901b8f741",
+      "name": "1030X Genomics-1",
+      "researchStatus": null,
+      "callingStatus": null,
+      "complianceStatus": null,
+      "deliveryStatus": null,
+      "stage": "Pending",
+      "complianceComments": null,
+      "zoomInfoName": null,
+      "domain": "1030xgenomics-1.com",
+      "emailDomain": null,
+      "website": "1030xgenomics-1.com",
+      "description": null,
+      "segment_technology": null,
+      "nsId": null,
+      "zoomInfoContactId": null,
+      "sicCode": null,
+      "naicsCode": null,
+      "sicDescription": null,
+      "naicsDescription": null,
+      "source": null,
+      "employeeSourceLI": null,
+      "employeeSourceZ_plus": null,
+      "phoneHQ": null,
+      "email": null,
+      "industry": null,
+      "subIndustry": null,
+      "locationLI": null,
+      "addressHQ": null,
+      "linkedInUrl": null,
+      "revenue": null,
+      "revenue_M_B_K": null,
+      "employeeSize": null,
+      "employeeSizeLI": null,
+      "employeeSizeZ_plus": null,
+      "employeeSizeFinalBucket": null,
+      "employeeSize_others": null,
+      "employeeRangeLI": null,
+      "disposition": "Pending",
+      "comments": null,
+      "upperRevenue": null,
+      "lowerRevenue": null,
+      "upperEmployeeSize": null,
+      "lowerEmployeeSize": null,
+      "scrubbedName": "1030xgenomics1",
+      "aliasName": null,
+      "tokens": "1030x|genomics|1",
+      "label": "suppressed",
+      "duplicateOf": null,
+      "custom1": null,
+      "custom2": null,
+      "custom3": null,
+      "custom4": null,
+      "custom5": null,
+      "custom6": null,
+      "custom7": null,
+      "custom8": null,
+      "custom9": null,
+      "custom10": null,
+      "custom11": null,
+      "custom12": null,
+      "custom13": null,
+      "custom14": null,
+      "custom15": null,
+      "createdAt": "2021-11-29T06:43:59.282Z",
+      "updatedAt": "2021-11-29T06:43:59.282Z",
+      "ProjectId": "27054377-ed52-42a1-8f25-3f3019e508e0",
+      "createdBy": "auth0|6135a6be81c014006ab78c7f",
+      "updatedBy": "auth0|6135a6be81c014006ab78c7f",
+      "accountCreator": {
+        "userName": "dev.pmgr1@nexsales.com",
+        "firstName": "dev.pmgr1",
+        "lastName": ""
+      },
+      "accountUpdater": {
+        "userName": "dev.pmgr1@nexsales.com",
+        "firstName": "dev.pmgr1",
+        "lastName": ""
+      }
+    }, ...]
+  }
+
+Request (2)
+  URL: https://dev.da.rightleads.io/api/v1/project/27054377-ed52-42a1-8f25-3f3019e508e0/accounts/dispositions
+  Method: GET
+Response
+  {
+    "stages": {
+      "stages": [{
+        "stage": "Pending",
+        "count": "40"
+      }],
+      "totalCount": 40
+    },
+    "dispositions": [{
+      "disposition": "Pending",
+      "count": "40"
+    }]
+  }
+
+
+
+
+=====================================================
+Display Contacts (Contacts Page)
+=====================================================
+Request (1)
+  URL: https://dev.da.rightleads.io/api/v1/project/27054377-ed52-42a1-8f25-3f3019e508e0/contacts?pageNo=0&pageSize=20&filter=%7B%7D
+  Method: GET
+  * Query Param
+    pageNo: 0
+    pageSize: 20
+    filter: {}
+Response
+  {
+    "totalCount": 20,
+    "docs": [{
+      "id": "5dd02d5b-f891-4615-8ab0-687a0a8e4afc",
+      "researchStatus": "Pending",
+      "callingStatus": null,
+      "complianceStatus": null,
+      "deliveryStatus": null,
+      "prefix": null,
+      "firstName": "Nicoleqpxw",
+      "middleName": null,
+      "lastName": "Wang",
+      "address": null,
+      "email": "nicoleqpxw.wang@1069xgenomics-1.com",
+      "genericEmail": null,
+      "phone": null,
+      "directPhone": null,
+      "jobTitle": "Director Business Development",
+      "jobLevel": "Director",
+      "jobDepartment": "Sales",
+      "nsId": null,
+      "zoomInfoContactId": null,
+      "linkedInUrl": null,
+      "screenshot": null,
+      "handles": null,
+      "website": "1069xgenomics-1.com",
+      "comments": null,
+      "source": null,
+      "stage": "Pending",
+      "functions": null,
+      "disposition": null,
+      "zb": null,
+      "zbDateAndTime": null,
+      "gmailStatus": null,
+      "complianceComments": null,
+      "previous_complianceComments": null,
+      "gmailStatusDateAndTime": null,
+      "mailTesterStatus": null,
+      "emailDedupeKey": "nicoleqpxwwang1069xgenomics1com",
+      "phoneDedupeKey": null,
+      "companyDedupeKey": "nicoleqpxwwang1069xgenomics1",
+      "phoneExtension": null,
+      "label": "inclusion",
+      "duplicateOf": null,
+      "custom1": null,
+      "custom2": null,
+      "custom3": null,
+      "custom4": null,
+      "custom5": null,
+      "custom6": null,
+      "custom7": null,
+      "custom8": null,
+      "custom9": null,
+      "custom10": null,
+      "custom11": null,
+      "custom12": null,
+      "custom13": null,
+      "custom14": null,
+      "custom15": null,
+      "previous_researchStatus": "Pending",
+      "previous_callingStatus": null,
+      "previous_complianceStatus": null,
+      "previous_deliveryStatus": null,
+      "previous_prefix": null,
+      "previous_firstName": "Nicoleqpxw",
+      "previous_middleName": null,
+      "previous_lastName": "Wang",
+      "previous_address": null,
+      "previous_email": "nicoleqpxw.wang@1069xgenomics-1.com",
+      "previous_genericEmail": null,
+      "previous_phone": null,
+      "previous_directPhone": null,
+      "previous_jobTitle": "Director Business Development",
+      "previous_jobLevel": "Director",
+      "previous_jobDepartment": "Sales",
+      "previous_nsId": null,
+      "previous_zoomInfoContactId": null,
+      "previous_linkedInUrl": null,
+      "previous_screenshot": null,
+      "previous_handles": null,
+      "previous_website": "1069xgenomics-1.com",
+      "previous_comments": null,
+      "previous_source": null,
+      "previous_stage": "Pending",
+      "previous_functions": null,
+      "previous_disposition": null,
+      "previous_zb": null,
+      "previous_zbDateAndTime": null,
+      "previous_gmailStatus": null,
+      "previous_gmailStatusDateAndTime": null,
+      "previous_mailTesterStatus": null,
+      "previous_emailDedupeKey": "nicoleqpxwwang1069xgenomics1com",
+      "previous_phoneDedupeKey": null,
+      "previous_companyDedupeKey": "nicoleqpxwwang1069xgenomics1",
+      "previous_phoneExtension": null,
+      "previous_label": "inclusion",
+      "previous_custom1": null,
+      "previous_custom2": null,
+      "previous_custom3": null,
+      "previous_custom4": null,
+      "previous_custom5": null,
+      "previous_custom6": null,
+      "previous_custom7": null,
+      "previous_custom8": null,
+      "previous_custom9": null,
+      "previous_custom10": null,
+      "previous_custom11": null,
+      "previous_custom12": null,
+      "previous_custom13": null,
+      "previous_custom14": null,
+      "previous_custom15": null,
+      "createdAt": "2021-11-29T06:45:15.731Z",
+      "updatedAt": "2021-11-29T06:45:15.731Z",
+      "AccountId": "0f2747ca-8e97-4c86-9470-2c99782286e8",
+      "createdBy": "auth0|6135a6be81c014006ab78c7f",
+      "updatedBy": "auth0|6135a6be81c014006ab78c7f",
+      "contactCreator": {
+        "userName": "dev.pmgr1@nexsales.com",
+        "firstName": "dev.pmgr1",
+        "lastName": ""
+      },
+      "contactUpdater": {
+        "userName": "dev.pmgr1@nexsales.com",
+        "firstName": "dev.pmgr1",
+        "lastName": ""
+      },
+      "Account": {
+        "id": "0f2747ca-8e97-4c86-9470-2c99782286e8",
+        "name": "1069X Genomics-1",
+        "researchStatus": null,
+        "callingStatus": null,
+        "complianceStatus": null,
+        "deliveryStatus": null,
+        "stage": "Pending",
+        "complianceComments": null,
+        "zoomInfoName": null,
+        "domain": null,
+        "emailDomain": null,
+        "website": null,
+        "description": null,
+        "segment_technology": null,
+        "nsId": null,
+        "zoomInfoContactId": null,
+        "sicCode": null,
+        "naicsCode": null,
+        "sicDescription": null,
+        "naicsDescription": null,
+        "source": null,
+        "employeeSourceLI": null,
+        "employeeSourceZ_plus": null,
+        "phoneHQ": null,
+        "email": null,
+        "industry": null,
+        "subIndustry": null,
+        "locationLI": null,
+        "addressHQ": null,
+        "linkedInUrl": null,
+        "revenue": null,
+        "revenue_M_B_K": null,
+        "employeeSize": null,
+        "employeeSizeLI": null,
+        "employeeSizeZ_plus": null,
+        "employeeSizeFinalBucket": null,
+        "employeeSize_others": null,
+        "employeeRangeLI": null,
+        "disposition": "Pending",
+        "comments": null,
+        "upperRevenue": null,
+        "lowerRevenue": null,
+        "upperEmployeeSize": null,
+        "lowerEmployeeSize": null,
+        "scrubbedName": "1069xgenomics1",
+        "aliasName": null,
+        "tokens": "1069x|genomics|1",
+        "label": "inclusion",
+        "duplicateOf": null,
+        "custom1": null,
+        "custom2": null,
+        "custom3": null,
+        "custom4": null,
+        "custom5": null,
+        "custom6": null,
+        "custom7": null,
+        "custom8": null,
+        "custom9": null,
+        "custom10": null,
+        "custom11": null,
+        "custom12": null,
+        "custom13": null,
+        "custom14": null,
+        "custom15": null,
+        "createdAt": "2021-11-29T06:45:15.685Z",
+        "updatedAt": "2021-11-29T06:45:15.685Z",
+        "ProjectId": "27054377-ed52-42a1-8f25-3f3019e508e0",
+        "createdBy": "auth0|6135a6be81c014006ab78c7f",
+        "updatedBy": "auth0|6135a6be81c014006ab78c7f",
+        "accountCreator": {
+          "userName": "dev.pmgr1@nexsales.com",
+          "firstName": "dev.pmgr1",
+          "lastName": ""
+        },
+        "accountUpdater": {
+          "userName": "dev.pmgr1@nexsales.com",
+          "firstName": "dev.pmgr1",
+          "lastName": ""
+        }
+      }
+    }, ...]
+  }
+
+Request (2)
+  URL: https://dev.da.rightleads.io/api/v1/projects/27054377-ed52-42a1-8f25-3f3019e508e0/contacts/stats?filter=%7B%7D
+  Method: GET
+  * Query Param
+    filter: {}
+Response
+  {
+    "researchStatus": [{
+      "researchStatus": "Pending",
+      "count": "20"
+    }],
+    "stage": {
+      "stages": [{
+        "stage": "Pending",
+        "count": "20"
+      }],
+      "totalCount": 20
+    }
+  }
+
+
+=====================================================
+Display Tasks (Tasks Page)
+=====================================================
+Request
+  URL: https://dev.da.rightleads.io/api/v1/projects/27054377-ed52-42a1-8f25-3f3019e508e0/tasks?pageNo=0&pageSize=10&filter=%7B%22status%22:[]%7D
+  Method: GET
+  * Query Param
+    pageNo: 0
+    pageSize: 20
+    filter: {
+      "status": []
+    }
+Response
+  {
+    "counts": [{
+      "status": "Total",
+      "count": 40
+    }, {
+      "status": "Completed",
+      "count": 0
+    }, {
+      "status": "Overdue",
+      "count": 0
+    }, {
+      "status": "Upcoming",
+      "count": 40
+    }],
+    "totalCount": 40,
+    "docs": [{
+      "id": "91aa3a13-6c65-4747-b221-021e536f321a",
+      "description": null,
+      "dueDate": "2021-11-29T07:11:24.196Z",
+      "status": "Pending",
+      "priority": "Standard",
+      "completedDate": null,
+      "createdAt": "2021-11-29T07:11:24.450Z",
+      "updatedAt": "2021-11-29T07:11:24.450Z",
+      "TaskType": {
+        "id": "01",
+        "type": "Contact Build (Named Account)"
+      },
+      "Project": {
+        "id": "27054377-ed52-42a1-8f25-3f3019e508e0",
+        "name": "TEST_PROJECT_NOV_29"
+      },
+      "Accounts": [{
+        "id": "53c76cee-eb60-46a2-8a89-c05901b8f741",
+        "name": "1030X Genomics-1",
+        "addressHQ": null,
+        "phoneHQ": null,
+        "website": "1030xgenomics-1.com",
+        "linkedInUrl": null,
+        "industry": null,
+        "revenue_M_B_K": null,
+        "employeeSizeLI": null,
+        "employeeSizeZ_plus": null,
+        "employeeSourceZ_plus": null,
+        "employeeSizeFinalBucket": null,
+        "employeeSize_others": null,
+        "email": null,
+        "source": null,
+        "disposition": "Pending",
+        "TaskLink": {
+          "disposition": null
+        }
+      }],
+      "Contacts": [],
+      "User": {
+        "id": "auth0|611107607d3995006a141a49",
+        "firstName": "agent4",
+        "lastName": "",
+        "userName": "agent4@nexsales.com"
+      }
+    }, ...]
+  }
+
+=====================================================
+Display Agents (Agent Page)
+=====================================================
+Request
+  URL: hhttps://dev.da.rightleads.io/api/v1/users?pageNo=0&pageSize=20&role=agent
+  Method: GET
+  * Query Param
+    pageNo: 0
+    pageSize: 20
+    role: agent
+Response
+  {
+    "totalCount": 10,
+    "docs": [{
+      "id": "auth0|611108012341c700699a41f0",
+      "userName": "agent10@nexsales.com",
+      "firstName": "agent10",
+      "lastName": "",
+      "role": "agent",
+      "gmailId": null
+    }, ...]
+  }
+
+
+=====================================================
+Download Accounts (Accounts Page)
+=====================================================
+Request
+  URL: https://dev.da.rightleads.io/api/v1/project/27054377-ed52-42a1-8f25-3f3019e508e0/accounts?download=true&filter=%7B%22dispositions%22:[],%22stage%22:%22%22%7D
+  Method: GET
+  * Query Param
+    download: true
+    filter: {
+      "dispositions": [],
+      "stage": ""
+    }
+Response
+  "Accounts Download"
+
+
+=====================================================
+Download Contacts (Contacts Page)
+=====================================================
+Request
+  URL: https://dev.da.rightleads.io/api/v1/project/27054377-ed52-42a1-8f25-3f3019e508e0/contacts?download=true&filter=%7B%22researchStatus%22:[],%22stage%22:%22%22%7D
+  Method: GET
+  * Query Param
+    download: true
+    filter: {
+      "researchStatus": [],
+      "stage": ""
+    }
+Response
+  "Contacts Download"
+
+
+=====================================================
+Download Tasks (Tasks Page)
+=====================================================
+Request
+  URL: https://dev.da.rightleads.io/api/v1/projects/27054377-ed52-42a1-8f25-3f3019e508e0/tasks?download=true&filter=%7B%22status%22:[],%22updatedAt%22:[%222021-11-29T09:20:25.326Z%22,%222021-11-29T09:20:25.326Z%22]%7D
+  Method: GET
+  * Query Param
+    download: true
+    filter: {
+      "status": [],
+      "updatedAt": ["2021-11-29T09:20:25.326Z", "2021-11-29T09:20:25.326Z"]
+    }
+Response
+  "Tasks Download"
+
+
+=====================================================
+Download Agents (Agents Page)
+=====================================================
+Request
+  URL: https://dev.da.rightleads.io/api/v1/users?role=agent&download=true
+  Method: GET
+  * Query Param
+    role: agent
+    download: true
+Response
+  "Agents Download"
+
+
+=====================================================
+Upload Tasks (Tasks Page)
+=====================================================
+Request
+  URL: https://dev.da.rightleads.io/api/v1/files
+  Method: POST
+  * Form Data
+    file: (binary)
+    projectId: 27054377-ed52-42a1-8f25-3f3019e508e0
+    operationName: taskImport
+    mapping: {
+      "id": "ObjectId",
+      "userName": "userName"
+    }
+    rowCount: 40
+    fileType: Import
+    taskTypeId: 01
+    objectType: account
+Response
+  {
+    "fileId": "33ac82eb-1f29-4b75-b174-b9952591a455",
+    "fileName": "account_compliance_1638169441086.csv",
+    "jobId": "b0a82e40-1f99-4b28-8bef-9cd6641196d1"
+  }
+
+
+=====================================================
+Display Clients (Clients Page)
+=====================================================
+Request
+  URL: https://dev.da.rightleads.io/api/v1/client?pageNo=0&pageSize=10&details=true
+  Method: GET
+  * Query Param
+    pageNo: 0
+    pageSize: 10
+    details: true
+Response
+  {
+    "totalCount": 12,
+    "docs": [{
+      "id": "41f52ef6-47f9-4bff-8588-28d505dbf94b",
+      "name": "Darshan",
+      "pseudonym": "Dr",
+      "createdAt": "2021-11-29T09:26:22.272Z",
+      "updatedAt": "2021-11-29T09:26:22.301Z",
+      "createdBy": "auth0|6135a6be81c014006ab78c7f",
+      "updatedBy": "auth0|6135a6be81c014006ab78c7f"
+    }, ...]
+  }
+
+
+=====================================================
+Create Client (Clients Page)
+=====================================================
+Request (1)
+  URL: https://dev.da.rightleads.io/api/v1/client
+  Method: POST
+  * Body
+    {
+      client: {
+        name: "Darshan",
+        pseudonym: "Dr"
+      }
+    }
+Response
+  {
+    "id": "41f52ef6-47f9-4bff-8588-28d505dbf94b",
+    "name": "Darshan",
+    "pseudonym": "Dr",
+    "createdBy": "auth0|6135a6be81c014006ab78c7f",
+    "updatedBy": "auth0|6135a6be81c014006ab78c7f",
+    "createdAt": "2021-11-29T09:26:22.272Z",
+    "updatedAt": "2021-11-29T09:26:22.301Z"
+  }
+
+Request (2) - Display Clients
+  URL: https://dev.da.rightleads.io/api/v1/client?pageNo=0&pageSize=10&details=true
+  Method: GET
+  * Query Param
+    pageNo: 0
+    pageSize: 10
+    details: true
+
+
+=====================================================
+Edit Client (Clients Page)
+=====================================================
+Request (1)
+  URL: https://dev.da.rightleads.io/api/v1/client/41f52ef6-47f9-4bff-8588-28d505dbf94b
+  Method: PUT
+  * Body
+    {
+      client: {
+        name: "Darshan",
+        pseudonym: "DR"
+      }
+    }
+Response
+  [1]
+
+Request (2) - Display Clients
+  URL: https://dev.da.rightleads.io/api/v1/client?pageNo=0&pageSize=10&details=true
+  Method: GET
+  * Query Param
+    pageNo: 0
+    pageSize: 10
+    details: true

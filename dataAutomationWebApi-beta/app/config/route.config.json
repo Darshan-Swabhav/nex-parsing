@@ -1,0 +1,759 @@
+{
+  "routes": [
+    {
+      "route": "/api/v1/bulkCreateDummyData",
+      "method": "POST",
+      "action": "bulkCreateDummyData",
+      "controller": "../controllers/v1/bulkCreateController.js"
+    },
+    {
+      "route": "/api/v1/rawQueries",
+      "method": "POST",
+      "action": "postRawQueries",
+      "controller": "../controllers/v1/rawQueriesController.js"
+    },
+    {
+      "route": "/api/v1/master/rawQueries",
+      "method": "POST",
+      "action": "postMasterRawQueries",
+      "controller": "../controllers/v1/master/masterRawQueriesController.js"
+    },
+    {
+      "route": "/api/v1/project",
+      "method": "GET",
+      "controller": "../controllers/v1/projects/projectController.js"
+    },
+    {
+      "route": "/api/v1/project/:id",
+      "method": "GET",
+      "action": "getProjectById",
+      "controller": "../controllers/v1/projects/projectController.js"
+    },
+    {
+      "route": "/api/v1/project",
+      "method": "POST",
+      "controller": "../controllers/v1/projects/projectController.js"
+    },
+    {
+      "route": "/api/v1/project/:id",
+      "method": "PUT",
+      "controller": "../controllers/v1/projects/projectController.js"
+    },
+    {
+      "route": "/api/v1/project/:id",
+      "method": "DELETE",
+      "controller": "../controllers/v1/projects/projectController.js"
+    },
+    {
+      "route": "/api/v1/project/:projectId/specs",
+      "method": "GET",
+      "controller": "../controllers/v1/projects/specs/specsController.js"
+    },
+    {
+      "route": "/api/v1/project/:projectId/specs/:id",
+      "method": "GET",
+      "action": "getSpecById",
+      "controller": "../controllers/v1/projects/specs/specsController.js"
+    },
+    {
+      "route": "/api/v1/project/:projectId/specs",
+      "method": "POST",
+      "controller": "../controllers/v1/projects/specs/specsController.js"
+    },
+    {
+      "route": "/api/v1/project/:projectId/specs/:id",
+      "method": "PUT",
+      "controller": "../controllers/v1/projects/specs/specsController.js"
+    },
+    {
+      "route": "/api/v1/project/:projectId/specs/:id",
+      "method": "DELETE",
+      "controller": "../controllers/v1/projects/specs/specsController.js"
+    },
+    {
+      "route": "/api/v1/project/:projectId/setting",
+      "method": "GET",
+      "controller": "../controllers/v1/projects/setting/settingController.js"
+    },
+    {
+      "route": "/api/v1/project/:projectId/setting",
+      "method": "PUT",
+      "controller": "../controllers/v1/projects/setting/settingController.js"
+    },
+    {
+      "route": "/api/v1/project/:projectId/masterImport/account",
+      "method": "POST",
+      "controller": "../controllers/v1/projects/masterImport/accounts/accountsController.js"
+    },
+    {
+      "route": "/api/v1/project/:projectId/masterImport/contact",
+      "method": "POST",
+      "controller": "../controllers/v1/projects/masterImport/contacts/contactsController.js"
+    },
+    {
+      "route": "/api/v1/project/:projectId/masterContact",
+      "method": "GET",
+      "controller": "../controllers/v1/projects/masterImport/contacts/contactsController.js"
+    },
+    {
+      "route": "/api/v1/project/:projectId/masterContact/contacts/:contactId",
+      "method": "POST",
+      "action": "insertTemporaryMasterContactToGoldMine",
+      "controller": "../controllers/v1/projects/masterImport/contacts/contactsController.js"
+    },
+    {
+      "route": "/api/v1/client",
+      "method": "GET",
+      "controller": "../controllers/v1/clients/clientController.js"
+    },
+    {
+      "route": "/api/v1/client/:id",
+      "method": "GET",
+      "action": "getClientById",
+      "controller": "../controllers/v1/clients/clientController.js"
+    },
+    {
+      "route": "/api/v1/client",
+      "method": "POST",
+      "controller": "../controllers/v1/clients/clientController.js"
+    },
+    {
+      "route": "/api/v1/client/:id",
+      "method": "PUT",
+      "controller": "../controllers/v1/clients/clientController.js"
+    },
+    {
+      "route": "/api/v1/project/:projectId/contacts",
+      "method": "GET",
+      "controller": "../controllers/v1/projects/contacts/contactsController.js"
+    },
+    {
+      "route": "/api/v1/project/:projectId/contacts/facets",
+      "method": "GET",
+      "action": "getContactUniqueFields",
+      "controller": "../controllers/v1/projects/contacts/contactsController.js"
+    },
+    {
+      "route": "/api/v1/projects/:projectId/contacts/stats",
+      "method": "GET",
+      "action": "getAllContactStats",
+      "controller": "../controllers/v1/projects/contacts/contactsController.js"
+    },
+    {
+      "route": "/api/v1/projects/:projectId/tasks/stats",
+      "method": "GET",
+      "action": "getAllTaskStatsOfAProject",
+      "controller": "../controllers/v1/projects/tasks/tasksController.js"
+    },
+    {
+      "route": "/api/v1/projects/:projectId/contacts/check",
+      "method": "POST",
+      "action": "checkContactSuppressionOrDuplicate",
+      "controller": "../controllers/v1/projects/contacts/contactsController.js"
+    },
+    {
+      "route": "/api/v1/project/:projectId/accounts",
+      "method": "GET",
+      "controller": "../controllers/v1/projects/accounts/accountsController.js"
+    },
+    {
+      "route": "/api/v1/project/:projectId/accounts/dispositions",
+      "method": "GET",
+      "action": "getAccountDispositions",
+      "controller": "../controllers/v1/projects/accounts/accountsController.js"
+    },
+    {
+      "route": "/api/v1/project/:projectId/accounts/:accountId",
+      "method": "PUT",
+      "controller": "../controllers/v1/projects/accounts/accountsController.js"
+    },
+    {
+      "route": "/api/v1/project/:projectId/accounts/:accountId",
+      "method": "GET",
+      "action": "getAccountById",
+      "controller": "../controllers/v1/projects/accounts/accountsController.js"
+    },
+    {
+      "route": "/api/v1/project/:projectId/account/dispose",
+      "method": "POST",
+      "action": "disposeAccount",
+      "controller": "../controllers/v1/projects/accounts/accountsController.js"
+    },
+    {
+      "route": "/api/v1/projects/:projectId/account/check",
+      "method": "POST",
+      "action": "checkAccountSuppressionOrDuplicate",
+      "controller": "../controllers/v1/projects/accounts/accountsController.js"
+    },
+    {
+      "route": "/api/v1/projects/:projectId/accounts/:accountId/contacts",
+      "method": "GET",
+      "controller": "../controllers/v1/projects/accounts/contacts/contactsController.js"
+    },
+    {
+      "route": "/api/v1/projects/:projectId/accounts/:accountId/contacts/:contactId",
+      "method": "GET",
+      "action": "getContactById",
+      "controller": "../controllers/v1/projects/accounts/contacts/contactsController.js"
+    },
+    {
+      "route": "/api/v1/projects/:projectId/accounts/:accountId/contacts",
+      "method": "POST",
+      "controller": "../controllers/v1/projects/accounts/contacts/contactsController.js"
+    },
+    {
+      "route": "/api/v1/projects/:projectId/accounts/:accountId/contacts/:contactId",
+      "method": "PUT",
+      "controller": "../controllers/v1/projects/accounts/contacts/contactsController.js"
+    },
+    {
+      "route": "/api/v1/projects/:projectId/accounts/stats",
+      "method": "GET",
+      "action": "getAccountStats",
+      "controller": "../controllers/v1/projects/accounts/accountsController.js"
+    },
+    {
+      "route": "/api/v1/jobTitle",
+      "method": "GET",
+      "controller": "../controllers/v1/search/jobTitleController.js"
+    },
+    {
+      "route": "/api/v1/projects/:projectId/excludedJobTitle",
+      "method": "GET",
+      "action": "getAllExcludedJobTitles",
+      "controller": "../controllers/v1/projects/jobTitles/jobTitleController.js"
+    },
+    {
+      "route": "/api/v1/jobLevel",
+      "method": "GET",
+      "controller": "../controllers/v1/search/jobLevelController.js"
+    },
+    {
+      "route": "/api/v1/jobFunction",
+      "method": "GET",
+      "controller": "../controllers/v1/search/jobFunctionController.js"
+    },
+    {
+      "route": "/api/v1/jobDepartment",
+      "method": "GET",
+      "controller": "../controllers/v1/search/jobDepartmentController.js"
+    },
+    {
+      "route": "/api/v1/employeeCount",
+      "method": "GET",
+      "controller": "../controllers/v1/search/employeeCountController.js"
+    },
+    {
+      "route": "/api/v1/segmentTechnology",
+      "method": "GET",
+      "controller": "../controllers/v1/search/segmentTechnologyController.js"
+    },
+    {
+      "route": "/api/v1/industry",
+      "method": "GET",
+      "controller": "../controllers/v1/search/industryController.js"
+    },
+    {
+      "route": "/api/v1/subIndustry",
+      "method": "GET",
+      "controller": "../controllers/v1/search/subIndustryController.js"
+    },
+    {
+      "route": "/api/v1/companyRevenue",
+      "method": "GET",
+      "controller": "../controllers/v1/search/companyRevenueController.js"
+    },
+    {
+      "route": "/api/v1/taskAllocationStrategies",
+      "method": "GET",
+      "controller": "../controllers/v1/search/taskAllocationStrategiesController.js"
+    },
+    {
+      "route": "/api/v1/users",
+      "method": "GET",
+      "controller": "../controllers/v1/users/usersController.js"
+    },
+    {
+      "route": "/api/v1/userSearch",
+      "method": "GET",
+      "controller": "../controllers/v1/search/userSearchController.js"
+    },
+    {
+      "route": "/api/v1/projects/status",
+      "method": "GET",
+      "action": "getStatus",
+      "controller": "../controllers/v1/projects/setting/settingController.js"
+    },
+    {
+      "route": "/api/v1/projects/priority",
+      "method": "GET",
+      "action": "getPriority",
+      "controller": "../controllers/v1/projects/setting/settingController.js"
+    },
+    {
+      "route": "/api/v1/projects/types",
+      "method": "GET",
+      "controller": "../controllers/v1/projects/type/typeController.js"
+    },
+    {
+      "route": "/api/v1/files",
+      "method": "GET",
+      "controller": "../controllers/v1/projects/files/fileController.js"
+    },
+    {
+      "route": "/api/v1/files/facets",
+      "method": "GET",
+      "action": "getFileFacets",
+      "controller": "../controllers/v1/projects/files/fileController.js"
+    },
+    {
+      "route": "/api/v1/files/:fileId",
+      "method": "GET",
+      "action": "getFileById",
+      "controller": "../controllers/v1/projects/files/fileController.js"
+    },
+    {
+      "route": "/api/v1/files",
+      "method": "POST",
+      "controller": "../controllers/v1/projects/files/fileController.js"
+    },
+    {
+      "route": "/api/v1/project/:projectId/jobs",
+      "method": "GET",
+      "controller": "../controllers/v1/projects/jobs/jobController.js"
+    },
+    {
+      "route": "/api/v1/project/:projectId/jobs/:jobId",
+      "method": "GET",
+      "action": "getJobById",
+      "controller": "../controllers/v1/projects/jobs/jobController.js"
+    },
+    {
+      "route": "/api/v1/project/:projectId/jobs/:jobId",
+      "method": "PUT",
+      "controller": "../controllers/v1/projects/jobs/jobController.js"
+    },
+    {
+      "route": "/api/v1/project/:projectId/jobs/:jobId/getSignedUrl",
+      "method": "GET",
+      "action": "getSignedURL",
+      "controller": "../controllers/v1/projects/jobs/jobController.js"
+    },
+    {
+      "route": "/api/v1/projects/:projectId/jobs/:jobId/taskAllocationTemps",
+      "method": "GET",
+      "controller": "../controllers/v1/projects/jobs/taskAllocationTemp/taskAllocationTempController.js"
+    },
+    {
+      "route": "/api/v1/projects/:projectId/jobs/:jobId/taskAllocationTemps/:taskAllocationTempId",
+      "method": "DELETE",
+      "controller": "../controllers/v1/projects/jobs/taskAllocationTemp/taskAllocationTempController.js"
+    },
+    {
+      "route": "/api/v1/projects/:projectId/jobs/:jobId/taskAllocationTemps/:taskAllocationTempId",
+      "method": "PUT",
+      "controller": "../controllers/v1/projects/jobs/taskAllocationTemp/taskAllocationTempController.js"
+    },
+    {
+      "route": "/api/v1/callbacks",
+      "method": "POST",
+      "controller": "../controllers/v1/callback/callback.js"
+    },
+    {
+      "route": "/api/v1/ping",
+      "method": "GET",
+      "controller": "../controllers/v1/ping/pingController.js"
+    },
+    {
+      "route": "/api/v1/suppresion",
+      "method": "POST",
+      "controller": "../controllers/v1/projects/files/suppresion/suppresionController.js"
+    },
+    {
+      "route": "/api/v1/projects/:projectId/editSettings",
+      "method": "PUT",
+      "action": "editSettings",
+      "controller": "../controllers/v1/projects/setting/settingController.js"
+    },
+    {
+      "route": "/api/v1/project/:projectId/jobs/:jobId/jobErrors",
+      "method": "GET",
+      "action": "getJobErrors",
+      "controller": "../controllers/v1/projects/jobs/jobController.js"
+    },
+    {
+      "route": "/api/v1/files/:fileId",
+      "method": "DELETE",
+      "controller": "../controllers/v1/projects/files/fileController.js"
+    },
+    {
+      "route": "/api/v1/projects/taskTypes",
+      "method": "GET",
+      "controller": "../controllers/v1/projects/taskType/taskTypeController.js"
+    },
+    {
+      "route": "/api/v1/project/:projectId/taskType",
+      "method": "GET",
+      "action": "getTaskTypeOfAProject",
+      "controller": "../controllers/v1/projects/taskType/taskTypeController.js"
+    },
+    {
+      "route": "/api/v1/projects/:projectId/tasks",
+      "method": "GET",
+      "controller": "../controllers/v1/projects/tasks/tasksController.js"
+    },
+    {
+      "route": "/api/v1/projects/:projectId/tasks/facets",
+      "method": "GET",
+      "action": "getTaskUniqueFields",
+      "controller": "../controllers/v1/projects/tasks/tasksController.js"
+    },
+    {
+      "route": "/api/v1/projects/:projectId/tasks",
+      "method": "POST",
+      "controller": "../controllers/v1/projects/tasks/tasksController.js"
+    },
+    {
+      "route": "/api/v1/projects/:projectId/tasks/:id",
+      "method": "GET",
+      "action": "getTaskById",
+      "controller": "../controllers/v1/projects/tasks/tasksController.js"
+    },
+    {
+      "route": "/api/v1/taskStats",
+      "method": "GET",
+      "action": "getTaskStats",
+      "controller": "../controllers/v1/projects/tasks/tasksController.js"
+    },
+    {
+      "route": "/api/v1/dispositions",
+      "method": "GET",
+      "controller": "../controllers/v1/dispositions/dispositionsController.js"
+    },
+    {
+      "route": "/api/v1/integrations/zb",
+      "method": "GET",
+      "controller": "../controllers/v1/integrations/zbController.js"
+    },
+    {
+      "route": "/api/v1/emailPattern",
+      "method": "POST",
+      "controller": "../controllers/v1/emailPattern/emailPatternController.js"
+    },
+    {
+      "route": "/api/v1/dynamicEmailPattern",
+      "method": "POST",
+      "action": "addDynamicEmailPattern",
+      "controller": "../controllers/v1/emailPattern/emailPatternController.js"
+    },
+    {
+      "route": "/api/v1/emailPattern",
+      "method": "GET",
+      "controller": "../controllers/v1/emailPattern/emailPatternController.js"
+    },
+    {
+      "route": "/api/v1/master/emailPattern",
+      "method": "POST",
+      "controller": "../controllers/v1/master/emailPattern/emailPatternController.js"
+    },
+    {
+      "route": "/api/v1/sicCode",
+      "method": "GET",
+      "controller": "../controllers/v1/search/sicCodeController.js"
+    },
+    {
+      "route": "/api/v1/naicsCode",
+      "method": "GET",
+      "controller": "../controllers/v1/search/naicsController.js"
+    },
+    {
+      "route": "/api/v1/tasks/tasksLiveCounts",
+      "method": "GET",
+      "action": "getTasksLiveCounts",
+      "controller": "../controllers/v1/projects/tasks/tasksController.js"
+    },
+    {
+      "route": "/api/v1/agent/preview",
+      "method": "GET",
+      "controller": "../controllers/v1/agent/previewController.js"
+    },
+    {
+      "route": "/api/v1/projects/templates",
+      "method": "GET",
+      "controller": "../controllers/v1/projects/templates/templateController.js"
+    },
+    {
+      "route": "/api/v1/projects/templates",
+      "method": "POST",
+      "controller": "../controllers/v1/projects/templates/templateController.js"
+    },
+    {
+      "route": "/api/v1/project/:projectId/template",
+      "method": "GET",
+      "action": "getTemplateOfAProject",
+      "controller": "../controllers/v1/projects/templates/templateController.js"
+    },
+    {
+      "route": "/api/v1/projects/templates/:templateId",
+      "method": "GET",
+      "action": "getTemplateById",
+      "controller": "../controllers/v1/projects/templates/templateController.js"
+    },
+    {
+      "route": "/api/v1/projects/templates/:templateId",
+      "method": "PUT",
+      "controller": "../controllers/v1/projects/templates/templateController.js"
+    },
+    {
+      "route": "/api/v1/projects/templates/:templateId/gridConfigs",
+      "method": "GET",
+      "action": "getTemplateGridConfig",
+      "controller": "../controllers/v1/projects/templates/templateController.js"
+    },
+    {
+      "route": "/api/v1/generateTask",
+      "method": "POST",
+      "controller": "../controllers/v1/taskGenerator.js"
+    },
+    {
+      "route": "/api/v1/clients/:clientId/projects/:projectId/sharedFiles/:sharedFileId",
+      "method": "DELETE",
+      "action": "unlinkFile",
+      "controller": "../controllers/v1/projects/sharedFiles/sharedFilesController.js"
+    },
+    {
+      "route": "/api/v1/clients/:clientId/projects/:projectId/sharedFiles",
+      "method": "GET",
+      "action": "getAllLinkableFiles",
+      "controller": "../controllers/v1/projects/sharedFiles/sharedFilesController.js"
+    },
+    {
+      "route": "/api/v1/clients/:clientId/projects/:projectId/sharedFiles",
+      "method": "POST",
+      "action": "linkFiles",
+      "controller": "../controllers/v1/projects/sharedFiles/sharedFilesController.js"
+    },
+    {
+      "route": "/api/v1/clients/:clientId/contacts/checkReuse",
+      "method": "POST",
+      "action": "checkContactReuse",
+      "controller": "../controllers/v1/clients/contacts/contactsController.js"
+    },
+    {
+      "route": "/api/v1/master/accounts/",
+      "method": "GET",
+      "controller": "../controllers/v1/master/accounts/accountsController.js"
+    },
+    {
+      "route": "/api/v1/master/domain",
+      "method": "GET",
+      "action": "getDomain",
+      "controller": "../controllers/v1/master/accounts/accountsController.js"
+    },
+    {
+      "route": "/api/v1/master/domain/validate",
+      "method": "GET",
+      "action": "validateDomain",
+      "controller": "../controllers/v1/master/accounts/accountsController.js"
+    },
+    {
+      "route": "/api/v1/master/jobs",
+      "method": "GET",
+      "controller": "../controllers/v1/master/jobs/jobsController.js"
+    },
+    {
+      "route": "/api/v1/master/jobs/:jobId/getSignedURL",
+      "method": "GET",
+      "action": "getSignedURL",
+      "controller": "../controllers/v1/master/jobs/jobsController.js"
+    },
+    {
+      "route": "/api/v1/master/jobs/:jobId/jobErrors",
+      "method": "GET",
+      "action": "getJobErrors",
+      "controller": "../controllers/v1/master/jobs/jobsController.js"
+    },
+    {
+      "route": "/api/v1/master/files/:fileId",
+      "method": "DELETE",
+      "controller": "../controllers/v1/master/files/filesController.js"
+    },
+    {
+      "route": "/api/v1/master/files",
+      "method": "POST",
+      "controller": "../controllers/v1/master/files/filesController.js"
+    },
+    {
+      "route": "/api/v1/master/industry",
+      "method": "GET",
+      "controller": "../controllers/v1/master/search/industryController.js"
+    },
+    {
+      "route": "/api/v1/master/subIndustry",
+      "method": "GET",
+      "controller": "../controllers/v1/master/search/subIndustryController.js"
+    },
+    {
+      "route": "/api/v1/master/sicCode",
+      "method": "GET",
+      "controller": "../controllers/v1/master/search/sicCodeController.js"
+    },
+    {
+      "route": "/api/v1/master/naicsCode",
+      "method": "GET",
+      "controller": "../controllers/v1/master/search/naicsCodeController.js"
+    },
+    {
+      "route": "/api/v1/master/verifyAccounts",
+      "method": "GET",
+      "controller": "../controllers/v1/master/verifyAccounts/verifyAccountsController.js"
+    },
+    {
+      "route": "/api/v1/master/verifyAccounts",
+      "method": "POST",
+      "controller": "../controllers/v1/master/verifyAccounts/verifyAccountsController.js"
+    },
+    {
+      "route": "/api/v1/master/verifyContacts",
+      "method": "GET",
+      "controller": "../controllers/v1/master/verifyContacts/verifyContactsController.js"
+    },
+    {
+      "route": "/api/v1/master/verifyContacts",
+      "method": "POST",
+      "controller": "../controllers/v1/master/verifyContacts/verifyContactsController.js"
+    },
+    {
+      "route": "/api/v1/master/account/:domain",
+      "method": "GET",
+      "action": "getAccountAndLocationByDomain",
+      "controller": "../controllers/v1/master/accounts/accountsController.js"
+    },
+    {
+      "route": "/api/v1/master/jobLevels",
+      "method": "GET",
+      "controller": "../controllers/v1/master/search/jobLevelController.js"
+    },
+    {
+      "route": "/api/v1/master/jobDepartments",
+      "method": "GET",
+      "controller": "../controllers/v1/master/search/jobDepartmentController.js"
+    },
+    {
+      "route": "/api/v1/master/contacts/",
+      "method": "GET",
+      "controller": "../controllers/v1/master/contacts/contactsController.js"
+    },
+    {
+      "route": "/api/v1/master/contacts/:contactId",
+      "method": "GET",
+      "action": "getContactById",
+      "controller": "../controllers/v1/master/contacts/contactsController.js"
+    },
+    {
+      "route": "/api/v1/master/importError/:importErrorType",
+      "method": "GET",
+      "action": "getImportError",
+      "controller": "../controllers/v1/master/importError/importErrorController.js"
+    },
+    {
+      "route": "/api/v1/master/importError/:importErrorType/files",
+      "method": "GET",
+      "action": "getAllErrorFiles",
+      "controller": "../controllers/v1/master/importError/importErrorController.js"
+    },
+    {
+      "route": "/api/v1/master/technology",
+      "method": "GET",
+      "controller": "../controllers/v1/master/technologies/technologyController.js"
+    },
+    {
+      "route": "/api/v1/master/locations",
+      "method": "GET",
+      "controller": "../controllers/v1/master/location/locationController.js"
+    },
+    {
+      "route": "/api/v1/master/dataProcessor/operators/:type",
+      "method": "GET",
+      "controller": "../controllers/v1/master/dataProcessor/operators/operators.js"
+    },
+    {
+      "route": "/api/v1/master/dataProcessor/employeeSizesMapping",
+      "method": "POST",
+      "action": "getEmployeeSizesMapping",
+      "controller": "../controllers/v1/master/dataProcessor/employeeSizes/employeeSizes.js"
+    },
+    {
+      "route": "/api/v1/master/dataProcessor/industriesMapping",
+      "method": "POST",
+      "action": "getIndustriesMapping",
+      "controller": "../controllers/v1/master/dataProcessor/industry/industry.js"
+    },
+    {
+      "route": "/api/v1/master/dataProcessor/industries",
+      "method": "POST",
+      "action": "postIndustries",
+      "controller": "../controllers/v1/master/dataProcessor/industry/industry.js"
+    },
+    {
+      "route": "/api/v1/master/dataProcessor/employeeSizes",
+      "method": "POST",
+      "action": "postEmployeeSizes",
+      "controller": "../controllers/v1/master/dataProcessor/employeeSizes/employeeSizes.js"
+    },
+    {
+      "route": "/api/v1/master/dataProcessor/revenue-range-employee-size-mapping",
+      "method": "GET",
+      "action": "getRevenueRangeEmployeeSizeMapping",
+      "controller": "../controllers/v1/master/dataProcessor/employeeSizes/employeeSizes.js"
+    },
+    {
+      "route": "/api/v1/master/dataProcessor/revenueMapping",
+      "method": "POST",
+      "action": "getRevenuesMapping",
+      "controller": "../controllers/v1/master/dataProcessor/revenues/revenues.js"
+    },
+    {
+      "route": "/api/v1/master/dataProcessor/employee-range-revenue-mapping",
+      "method": "GET",
+      "action": "getEmployeeRangeRevenueMapping",
+      "controller": "../controllers/v1/master/dataProcessor/revenues/revenues.js"
+    },
+    {
+      "route": "/api/v1/master/dataProcessor/revenues",
+      "method": "POST",
+      "action": "postRevenues",
+      "controller": "../controllers/v1/master/dataProcessor/revenues/revenues.js"
+    },
+    {
+      "route": "/api/v1/master/dataProcessor/stat",
+      "method": "POST",
+      "action": "postStats",
+      "controller": "../controllers/v1/master/dataProcessor/stats/stats.js"
+    },
+    {
+      "route": "/api/v1/master/dataProcessor/stats",
+      "method": "GET",
+      "action": "getStats",
+      "controller": "../controllers/v1/master/dataProcessor/stats/stats.js"
+    },
+    {
+      "route": "/api/v1/master/dataProcessor/stats/users",
+      "method": "GET",
+      "action": "getStatUsers",
+      "controller": "../controllers/v1/master/dataProcessor/stats/stats.js"
+    },
+    {
+      "route": "/api/v1/master/uploadReport/:type",
+      "method": "GET",
+      "action": "getUploadReports",
+      "controller": "../controllers/v1/master/uploadReport/uploadReport.js"
+    },
+    {
+      "route": "/api/v1/parser/",
+      "method": "POST",
+      "action": "postCsv",
+      "controller": "../controllers/v1/parser/CsvParser"
+    }
+  ]
+}

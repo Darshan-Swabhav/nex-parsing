@@ -1,0 +1,17 @@
+{
+  "branches": 20,
+  "lines": 30,
+  "functions": 30,
+  "statements": 30,
+  "check-coverage": true,
+  "reporter": [
+    "text"
+  ],
+  "report-dir": "/tmp/nyc/coverage",
+  "temp-dir": "/tmp/nyc/.nyc_output",
+  "include": "app",
+  "exclude": [
+    "app/test",
+    "app/config"
+  ]
+}

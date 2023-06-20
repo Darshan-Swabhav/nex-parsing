@@ -1,0 +1,42 @@
+[
+    {
+        "id": "01",
+        "type": "Contact Build (Named Account)",
+        "meta": {}
+    },
+    {
+        "id": "02",
+        "type": "Contact Build (Unnamed Accounts)",
+        "meta": {}
+    },
+    {
+        "id": "03",
+        "type": "Contact Append",
+        "meta": {}
+    },
+    {
+        "id": "04",
+        "type": "Contact Refresh/Validation",
+        "meta": {}
+    },
+    {
+        "id": "05",
+        "type": "Account Identification",
+        "meta": {}
+    },
+    {
+        "id": "06",
+        "type": "Account Profiling/Qualification",
+        "meta": {}
+    },
+    {
+        "id": "07",
+        "type": "Data Scrubbing",
+        "meta": {}
+    },
+    {
+        "id": "08",
+        "type": "Adhoc",
+        "meta": {}
+    }
+]

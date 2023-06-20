@@ -1,0 +1,23 @@
+config:
+  payload:
+    # path is relative to the location of the test script
+    path: "users.csv"
+    fields:
+      - "token"
+  target: 'http://127.0.0.1:20100'
+  phases:
+    - duration: 1
+      arrivalRate: 1
+scenarios:
+  - flow:
+    - get:
+        url: "/api/v1/taskStats?pageNo=0&pageSize=10"
+        headers:
+          authorization: "{{ token }}"
+        capture:
+          json: "$.docs[0].ProjectId"
+          as: "ProjectId"
+    - get:
+        url: "/api/v1/projects/{{ ProjectId }}/tasks?pageNo=0&pageSize=10&filter=%7B%22status%22:[%22Completed%22]%7D"
+        headers:
+          authorization: "{{ token }}"

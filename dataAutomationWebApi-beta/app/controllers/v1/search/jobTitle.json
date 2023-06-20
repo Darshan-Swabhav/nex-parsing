@@ -1,0 +1,507 @@
+{
+	"cio": {
+		"jobLevel": "C Level",
+		"jobDepartment": "IT",
+		"jobFunction": "Generic IT"
+	},
+	"chief information officer": {
+		"jobLevel": "C Level",
+		"jobDepartment": "IT",
+		"jobFunction": "Generic IT"
+	},
+	"cto": {
+		"jobLevel": "C Level",
+		"jobDepartment": "IT",
+		"jobFunction": "IT Technology"
+	},
+	"chief technology officer": {
+		"jobLevel": "C Level",
+		"jobDepartment": "IT",
+		"jobFunction": "IT Technology"
+	},
+	"vp information technology": {
+		"jobLevel": "VP",
+		"jobDepartment": "IT",
+		"jobFunction": "Generic IT"
+	},
+	"director information technology": {
+		"jobLevel": "Director",
+		"jobDepartment": "IT",
+		"jobFunction": "Generic IT"
+	},
+	"information technology manager": {
+		"jobLevel": "Manager",
+		"jobDepartment": "IT",
+		"jobFunction": "Generic IT"
+	},
+	"it manager": {
+		"jobLevel": "Manager",
+		"jobDepartment": "IT",
+		"jobFunction": "Generic IT"
+	},
+	"manager information technology": {
+		"jobLevel": "Manager",
+		"jobDepartment": "IT",
+		"jobFunction": "Generic IT"
+	},
+	"vp it": {
+		"jobLevel": "VP",
+		"jobDepartment": "IT",
+		"jobFunction": "Generic IT"
+	},
+	"director it": {
+		"jobLevel": "Director",
+		"jobDepartment": "IT",
+		"jobFunction": "Generic IT"
+	},
+	"manager it": {
+		"jobLevel": "Manager",
+		"jobDepartment": "IT",
+		"jobFunction": "Generic IT"
+	},
+	"vp technology": {
+		"jobLevel": "VP",
+		"jobDepartment": "IT",
+		"jobFunction": "IT Technology"
+	},
+	"director technology": {
+		"jobLevel": "Director",
+		"jobDepartment": "IT",
+		"jobFunction": "IT Technology"
+	},
+	"manager technology": {
+		"jobLevel": "Manager",
+		"jobDepartment": "IT",
+		"jobFunction": "IT Technology"
+	},
+	"technology director": {
+		"jobLevel": "Director",
+		"jobDepartment": "IT",
+		"jobFunction": "IT Technology"
+	},
+	"technology manager": {
+		"jobLevel": "Manager",
+		"jobDepartment": "IT",
+		"jobFunction": "IT Technology"
+	},
+	"ciso": {
+		"jobLevel": "C Level",
+		"jobDepartment": "IT Security",
+		"jobFunction": "Generic IT Security"
+	},
+	"chief information security officer": {
+		"jobLevel": "C Level",
+		"jobDepartment": "IT Security",
+		"jobFunction": "Generic IT Security"
+	},
+	"vp it security": {
+		"jobLevel": "VP",
+		"jobDepartment": "IT Security",
+		"jobFunction": "Generic IT Security"
+	},
+	"director it security": {
+		"jobLevel": "Director",
+		"jobDepartment": "IT Security",
+		"jobFunction": "Generic IT Security"
+	},
+	"manager it security": {
+		"jobLevel": "Manager",
+		"jobDepartment": "IT Security",
+		"jobFunction": "Generic IT Security"
+	},
+	"cfo": {
+		"jobLevel": "C Level",
+		"jobDepartment": "Finance",
+		"jobFunction": "Generic Finance"
+	},
+	"chief financial officer": {
+		"jobLevel": "C Level",
+		"jobDepartment": "Finance",
+		"jobFunction": "Generic Finance"
+	},
+	"vp finance": {
+		"jobLevel": "VP",
+		"jobDepartment": "Finance",
+		"jobFunction": "Generic Finance"
+	},
+	"director finance": {
+		"jobLevel": "Director",
+		"jobDepartment": "Finance",
+		"jobFunction": "Generic Finance"
+	},
+	"manager finance": {
+		"jobLevel": "Manager",
+		"jobDepartment": "Finance",
+		"jobFunction": "Generic Finance"
+	},
+	"finance director": {
+		"jobLevel": "Director",
+		"jobDepartment": "Finance",
+		"jobFunction": "Generic Finance"
+	},
+	"finance manager": {
+		"jobLevel": "Manager",
+		"jobDepartment": "Finance",
+		"jobFunction": "Generic Finance"
+	},
+	"cmo": {
+		"jobLevel": "C Level",
+		"jobDepartment": "Marketing",
+		"jobFunction": "Generic Marketing"
+	},
+	"chief marketing officer": {
+		"jobLevel": "C Level",
+		"jobDepartment": "Marketing",
+		"jobFunction": "Generic Marketing"
+	},
+	"vp marketing": {
+		"jobLevel": "VP",
+		"jobDepartment": "Marketing",
+		"jobFunction": "Generic Marketing"
+	},
+	"director marketing": {
+		"jobLevel": "Director",
+		"jobDepartment": "Marketing",
+		"jobFunction": "Generic Marketing"
+	},
+	"manager marketing": {
+		"jobLevel": "Manager",
+		"jobDepartment": "Marketing",
+		"jobFunction": "Generic Marketing"
+	},
+	"marketing director": {
+		"jobLevel": "Director",
+		"jobDepartment": "Marketing",
+		"jobFunction": "Generic Marketing"
+	},
+	"marketing manager": {
+		"jobLevel": "Manager",
+		"jobDepartment": "Marketing",
+		"jobFunction": "Generic Marketing"
+	},
+	"coo": {
+		"jobLevel": "C Level",
+		"jobDepartment": "Operations",
+		"jobFunction": "Generic Operations"
+	},
+	"chief operating officer": {
+		"jobLevel": "C Level",
+		"jobDepartment": "Operations",
+		"jobFunction": "Generic Operations"
+	},
+	"vp operations": {
+		"jobLevel": "VP",
+		"jobDepartment": "Operations",
+		"jobFunction": "Generic Operations"
+	},
+	"director operations": {
+		"jobLevel": "Director",
+		"jobDepartment": "Operations",
+		"jobFunction": "Generic Operations"
+	},
+	"manager operations": {
+		"jobLevel": "Manager",
+		"jobDepartment": "Operations",
+		"jobFunction": "Generic Operations"
+	},
+	"operations director": {
+		"jobLevel": "Director",
+		"jobDepartment": "Operations",
+		"jobFunction": "Generic Operations"
+	},
+	"operations manager": {
+		"jobLevel": "Manager",
+		"jobDepartment": "Operations",
+		"jobFunction": "Generic Operations"
+	},
+	"chro": {
+		"jobLevel": "C Level",
+		"jobDepartment": "HR",
+		"jobFunction": "Generalist / HR Operations"
+	},
+	"chief human resources officer": {
+		"jobLevel": "C Level",
+		"jobDepartment": "HR",
+		"jobFunction": "Generalist / HR Operations"
+	},
+	"vp hr": {
+		"jobLevel": "VP",
+		"jobDepartment": "HR",
+		"jobFunction": "Generalist / HR Operations"
+	},
+	"director hr": {
+		"jobLevel": "Director",
+		"jobDepartment": "HR",
+		"jobFunction": "Generalist / HR Operations"
+	},
+	"manager hr": {
+		"jobLevel": "Manager",
+		"jobDepartment": "HR",
+		"jobFunction": "Generalist / HR Operations"
+	},
+	"hr director": {
+		"jobLevel": "Director",
+		"jobDepartment": "HR",
+		"jobFunction": "Generalist / HR Operations"
+	},
+	"hr manager": {
+		"jobLevel": "Manager",
+		"jobDepartment": "HR",
+		"jobFunction": "Generalist / HR Operations"
+	},
+	"vp human resources": {
+		"jobLevel": "VP",
+		"jobDepartment": "HR",
+		"jobFunction": "Generalist / HR Operations"
+	},
+	"director human resources": {
+		"jobLevel": "Director",
+		"jobDepartment": "HR",
+		"jobFunction": "Generalist / HR Operations"
+	},
+	"manager human resources": {
+		"jobLevel": "Manager",
+		"jobDepartment": "HR",
+		"jobFunction": "Generalist / HR Operations"
+	},
+	"chief sales officer": {
+		"jobLevel": "C Level",
+		"jobDepartment": "Sales",
+		"jobFunction": "Generic Sales"
+	},
+	"vp sales": {
+		"jobLevel": "VP",
+		"jobDepartment": "Sales",
+		"jobFunction": "Generic Sales"
+	},
+	"director sales": {
+		"jobLevel": "Director",
+		"jobDepartment": "Sales",
+		"jobFunction": "Generic Sales"
+	},
+	"manager sales": {
+		"jobLevel": "Manager",
+		"jobDepartment": "Sales",
+		"jobFunction": "Generic Sales"
+	},
+	"sales director": {
+		"jobLevel": "Director",
+		"jobDepartment": "Sales",
+		"jobFunction": "Generic Sales"
+	},
+	"sales manager": {
+		"jobLevel": "Manager",
+		"jobDepartment": "Sales",
+		"jobFunction": "Generic Sales"
+	},
+	"owner": {
+		"jobLevel": "C Level",
+		"jobDepartment": "Executive",
+		"jobFunction": "Owner"
+	},
+	"principal": {
+		"jobLevel": "C Level",
+		"jobDepartment": "Executive",
+		"jobFunction": "Principal"
+	},
+	"president": {
+		"jobLevel": "C Level",
+		"jobDepartment": "Executive",
+		"jobFunction": "President"
+	},
+	"ceo": {
+		"jobLevel": "C Level",
+		"jobDepartment": "Executive",
+		"jobFunction": "CEO"
+	},
+	"vice president": {
+		"jobLevel": "VP",
+		"jobDepartment": "Executive",
+		"jobFunction": "Vice President"
+	},
+	"director": {
+		"jobLevel": "Director",
+		"jobDepartment": "Executive",
+		"jobFunction": "Director"
+	},
+	"superintendent": {
+		"jobLevel": "Director",
+		"jobDepartment": "Executive",
+		"jobFunction": "Superintendent"
+	},
+	"founder": {
+		"jobLevel": "C Level",
+		"jobDepartment": "Executive",
+		"jobFunction": "Founder"
+	},
+	"co-founder": {
+		"jobLevel": "C Level",
+		"jobDepartment": "Executive",
+		"jobFunction": "Co-Founder"
+	},
+	"chief business officer": {
+		"jobLevel": "C Level",
+		"jobDepartment": "Executive",
+		"jobFunction": "Chief Business Officer"
+	},
+	"chancellor": {
+		"jobLevel": "C Level",
+		"jobDepartment": "Executive",
+		"jobFunction": "Chancellor"
+	},
+	"chairman": {
+		"jobLevel": "C Level",
+		"jobDepartment": "Executive",
+		"jobFunction": "Chairman"
+	},
+	"mayor": {
+		"jobLevel": "C Level",
+		"jobDepartment": "Executive",
+		"jobFunction": "Mayor"
+	},
+	"general manager": {
+		"jobLevel": "VP",
+		"jobDepartment": "Executive",
+		"jobFunction": "General Manager"
+	},
+	"chief compliance officer": {
+		"jobLevel": "C Level",
+		"jobDepartment": "Regulatory/Corporate Compliance",
+		"jobFunction": "Generic Compliance"
+	},
+	"vp compliance": {
+		"jobLevel": "VP",
+		"jobDepartment": "Regulatory/Corporate Compliance",
+		"jobFunction": "Generic Compliance"
+	},
+	"director compliance": {
+		"jobLevel": "Director",
+		"jobDepartment": "Regulatory/Corporate Compliance",
+		"jobFunction": "Generic Compliance"
+	},
+	"manager compliance": {
+		"jobLevel": "Manager",
+		"jobDepartment": "Regulatory/Corporate Compliance",
+		"jobFunction": "Generic Compliance"
+	},
+	"compliance director": {
+		"jobLevel": "Director",
+		"jobDepartment": "Regulatory/Corporate Compliance",
+		"jobFunction": "Generic Compliance"
+	},
+	"compliance manager": {
+		"jobLevel": "Manager",
+		"jobDepartment": "Regulatory/Corporate Compliance",
+		"jobFunction": "Generic Compliance"
+	},
+	"chief legal officer": {
+		"jobLevel": "C Level",
+		"jobDepartment": "Legal",
+		"jobFunction": "Generic Legal"
+	},
+	"vp legal": {
+		"jobLevel": "VP",
+		"jobDepartment": "Legal",
+		"jobFunction": "Generic Legal"
+	},
+	"director legal": {
+		"jobLevel": "Director",
+		"jobDepartment": "Legal",
+		"jobFunction": "Generic Legal"
+	},
+	"manager legal": {
+		"jobLevel": "Manager",
+		"jobDepartment": "Legal",
+		"jobFunction": "Generic Legal"
+	},
+	"legal director": {
+		"jobLevel": "Director",
+		"jobDepartment": "Legal",
+		"jobFunction": "Generic Legal"
+	},
+	"legal manager": {
+		"jobLevel": "Manager",
+		"jobDepartment": "Legal",
+		"jobFunction": "Generic Legal"
+	},
+	"general counsel": {
+		"jobLevel": "C Level",
+		"jobDepartment": "Legal",
+		"jobFunction": "General Counsel"
+	},
+	"legal counsel": {
+		"jobLevel": "C Level",
+		"jobDepartment": "Legal",
+		"jobFunction": "Legal Counsel"
+	},
+	"vp engineering": {
+		"jobLevel": "VP",
+		"jobDepartment": "Engineering ",
+		"jobFunction": "Generic Engineering"
+	},
+	"director engineering": {
+		"jobLevel": "Director",
+		"jobDepartment": "Engineering ",
+		"jobFunction": "Generic Engineering"
+	},
+	"manager engineering": {
+		"jobLevel": "Manager",
+		"jobDepartment": "Engineering ",
+		"jobFunction": "Generic Engineering"
+	},
+	"engineering director": {
+		"jobLevel": "Director",
+		"jobDepartment": "Engineering ",
+		"jobFunction": "Generic Engineering"
+	},
+	"engineering manager": {
+		"jobLevel": "Manager",
+		"jobDepartment": "Engineering ",
+		"jobFunction": "Generic Engineering"
+	},
+	"enterprise architect": {
+		"jobLevel": "Director",
+		"jobDepartment": "IT",
+		"jobFunction": "Generic IT"
+	},
+	"chief architect": {
+		"jobLevel": "Director",
+		"jobDepartment": "IT",
+		"jobFunction": "Generic IT"
+	},
+	"architect": {
+		"jobLevel": "Manager",
+		"jobDepartment": "IT",
+		"jobFunction": "Generic IT"
+	},
+	"treasurer": {
+		"jobLevel": "VP",
+		"jobDepartment": "Finance",
+		"jobFunction": "Generic Finance"
+	},
+	"controller": {
+		"jobLevel": "VP",
+		"jobDepartment": "Finance",
+		"jobFunction": "Generic Finance"
+	},
+	"engineer": {
+		"jobLevel": "Manager",
+		"jobDepartment": "IT",
+		"jobFunction": "Generic IT"
+	},
+	"administrator": {
+		"jobLevel": "Staff",
+		"jobDepartment": "IT",
+		"jobFunction": "Generic IT"
+	},
+	"web developer": {
+		"jobLevel": "Staff",
+		"jobDepartment": "IT",
+		"jobFunction": "Generic IT"
+	},
+	"it analyst": {
+		"jobLevel": "Staff",
+		"jobDepartment": "IT",
+		"jobFunction": "Generic IT"
+	}
+}
