@@ -35,7 +35,7 @@ function UploadForm() {
     // const [companySize, setCompanySize] = useState(0);
     // let rejectedObjects = [["yash"]]
     const [rejectedObjects, setRejectedObjects] = useState([])
-
+    let processReqCount = 0
     const [globalCounter, setGlobalCounter] = useState(0);
     let count = 0
     const [totalRequests, setTotalRequests] = useState(0);
@@ -127,15 +127,40 @@ function UploadForm() {
     };
 
     useEffect(() => {
-        //console.log("write reject oject", csvObject);
-        writeRejectedObject()
+
+        console.log("inside use effect", csvObject);
+        if (totalRequests == globalCounter && totalRequests > 0) {
+            writeRejectedObject()
+        }
     }, [totalRequests, globalCounter])
+
+
+    const checkForRepeatHeaders = () => {
+        let numbers = []
+        let count = 0
+        numbers.push(companyName, website, industry, subIndustry, revenue, companySize)
+        for (let i = 0; i < numbers.length; i++) {
+            for (let j = 0; j < numbers.length; j++) {
+                //console.log("comparing", numbers[i], numbers[j]);
+                if (numbers[i] == numbers[j]) {
+
+                    count++
+                    //console.log("count", count);
+                }
+            }
+        }
+        if (count > numbers.length) {
+            return false
+        } else {
+            return true
+        }
+
+    }
 
     const filterData = (chunk) => {
 
         let filteredArray = []
         for (let i = 0; i < chunk.length - 1; i++) {
-            //console.log("inside filter data", i);
             const singletonData = chunk[i]
             if (singletonData[companyName] == undefined || singletonData[website] == undefined ||
                 singletonData[industry] == undefined || singletonData[revenue] == undefined ||
@@ -170,91 +195,44 @@ function UploadForm() {
         return filteredArray
     }
 
-    const checkForRepeatHeaders = () => {
-        let numbers = []
-        let count = 0
-        numbers.push(companyName, website, industry, subIndustry, revenue, companySize)
-        for (let i = 0; i < numbers.length; i++) {
-            for (let j = 0; j < numbers.length; j++) {
-                //console.log("comparing", numbers[i], numbers[j]);
-                if (numbers[i] == numbers[j]) {
-
-                    count++
-                    //console.log("count", count);
-                }
-            }
-        }
-        if (count > numbers.length) {
-            return false
-        } else {
-            return true
-        }
-
-    }
 
     const parseData = async (e) => {
-        e.preventDefault()
-        setGlobalCounter(0)
-        const dataCheck = checkForRepeatHeaders()
+        setGlobalCounter(0);
+        const dataCheck = checkForRepeatHeaders();
 
-        if (dataCheck == true) {
-            handleClose()
-            setIsParse(true)
-            count = 0
-            // rejectedObjects = []
-            setRejectedObjects([])
-            // //console.log("totalRequests:", totalRequests);
+        if (dataCheck) {
+            handleClose();
+            setIsParse(true);
+            let count = 0;
+            setRejectedObjects([]);
+
             const currTime = new Date().toLocaleTimeString();
             console.log("time start", currTime);
 
-
-
-            
-
+            const promises = [];
             for (let i = 1; i < data.length; i += chunkSize) {
-                // //console.log("inside for loop of for in parsing data", data.length);
-
                 const chunk = data.slice(i, i + chunkSize);
-                const filteredChunk = filterData(chunk)
-                await addEntries(filteredChunk)
+                const filteredChunk = filterData(chunk);
+
+                const chunkPromises = addEntries(filteredChunk);
+                promises.push(chunkPromises);
+
+                // Limit the number of concurrent requests to 5
+                if (promises.length >= 20) {
+                    console.log("before await");
+                    await Promise.all(promises);
+                    console.log("after await");
+                    promises.length = 0;
+                }
             }
+
+            // Wait for any remaining promises to resolve
+            await Promise.all(promises);
         } else {
-            alert("headers cannot be same")
+            alert("Headers cannot be the same");
         }
+    };
 
-    }
-    const writeRejectedObject = () => {
-
-        // let csvReport = {
-        //     data: rejectedObjects,
-        //     headers: fixedHeaders,
-        //     filename: 'RejectedData.csv'
-        // };
-
-        //console.log("rejectedObjectswriteRejectedObject >>>>>>>>>>>>>>>>>>", rejectedObjects)
-        // setCsvObject((prev) => {
-        //     //console.log("rejectedObjects>>>>>>>>>>>>>>>>>>>>", rejectedObjects)
-        //     //console.log("prev.data>>>>>>>>>>", prev.data)
-        //     prev.data = rejectedObjects
-        //     return prev
-        // })
-        setCsvObject(prev => {
-            //console.log("rejectedObjects>>>>>>>>>>>>>>>>>>>>", rejectedObjects)
-            //console.log("prev.data>>>>>>>>>>", prev.data)
-            return {
-                ...prev,
-                data: rejectedObjects
-            };
-        });
-        const currTime = new Date().toLocaleTimeString();
-        console.log("time end", currTime);
-
-    }
-
-
-    const test = (e) => {
-
-    }
 
 
     const addEntries = async (chunk) => {
@@ -271,19 +249,39 @@ function UploadForm() {
                 )
                 // rejectedObjects.push(...response.data)
             }
-            // console.log("time print", currTime, "total rejected objects:", rejectedObjects);
+            console.log("time print", currTime, count);
             setGlobalCounter(count)
         } catch (error) {
             alert(error.response)
         }
     };
 
+    const writeRejectedObject = () => {
+        console.log("writing csv object");
+        setCsvObject(prev => {
+
+            return {
+                ...prev,
+                data: rejectedObjects
+            };
+        });
+        const currTime = new Date().toLocaleTimeString();
+        console.log("time end", currTime);
+
+    }
+
+
+    const test = (e) => {
+
+    }
+
+
     return (
         <div className="container px-2 py-2" >
             <>
                 <Form>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>Email address</Form.Label>
+                        <Form.Label>Select file</Form.Label>
                         <Form.Control type="file" accept=".csv" onChange={handleFileUpload} />
                         {/* onChange={setFile.bind(this)} */}
                     </Form.Group>
