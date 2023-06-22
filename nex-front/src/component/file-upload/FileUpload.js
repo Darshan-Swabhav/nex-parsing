@@ -13,6 +13,7 @@ function UploadForm() {
     const [data, setData] = useState([])
     const [filteredData, setFilteredData] = useState([])
     const fixedHeaders = [
+        { label: "Error", key: "error" },
         { label: "Name", key: "name" },
         { label: "Website", key: "website" },
         { label: "Industry", key: "industry" },
@@ -46,7 +47,7 @@ function UploadForm() {
         filename: 'RejectedData.csv'
     })
 
-    const chunkSize = 500
+    const chunkSize = 10000
     const [showMapper, setShowMapper] = useState(false);
     const form = useRef()
 
@@ -160,6 +161,7 @@ function UploadForm() {
     const filterData = (chunk) => {
 
         let filteredArray = []
+        let rejectedObjects = []
         for (let i = 0; i < chunk.length - 1; i++) {
             const singletonData = chunk[i]
             if (singletonData[companyName] == undefined || singletonData[website] == undefined ||
@@ -174,11 +176,11 @@ function UploadForm() {
                     subIndustry: singletonData[subIndustry],
                     revenue: singletonData[revenue],
                     size: singletonData[companySize],
+                    error: "incomplete data"
                 }
-                setRejectedObjects(prev =>
-                    [...prev, rejectedObject]
-                )
-                // rejectedObjects.push(rejectedObject)
+
+
+                rejectedObjects.push(rejectedObject)
             } else {
                 let filteredObject
                 filteredObject = {
@@ -192,6 +194,11 @@ function UploadForm() {
                 filteredArray.push(filteredObject)
             }
         }
+
+        setRejectedObjects(prev =>
+            [...prev, ...rejectedObjects]
+        )
+
         return filteredArray
     }
 
@@ -214,20 +221,22 @@ function UploadForm() {
                 const chunk = data.slice(i, i + chunkSize);
                 const filteredChunk = filterData(chunk);
 
-                const chunkPromises = addEntries(filteredChunk);
-                promises.push(chunkPromises);
+                addEntries(filteredChunk);
+                // addEntries(filteredChunk)
+                // const chunkPromises = addEntries(filteredChunk);
+                // promises.push(chunkPromises);
 
                 // Limit the number of concurrent requests to 5
-                if (promises.length >= 20) {
-                    console.log("before await");
-                    await Promise.all(promises);
-                    console.log("after await");
-                    promises.length = 0;
-                }
+                // if (promises.length >= 15) {
+                //     console.log("before await");
+                //     await Promise.all(promises);
+                //     console.log("after await");
+                //     promises.length = 0;
+                // }
             }
 
             // Wait for any remaining promises to resolve
-            await Promise.all(promises);
+            // await Promise.all(promises);
         } else {
             alert("Headers cannot be the same");
         }
