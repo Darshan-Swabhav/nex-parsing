@@ -2,7 +2,7 @@
 const settingsConfig = require('../../config/settings/settings-config');
 const db = require('../../../models');
 const url = require('url');
-const { getDomain } =require('tldjs') ;
+const { getDomain } = require('tldjs');
 const subIndustryList = {
     "aerospace & defense": [
         "aircraft engine & parts manufacturing",
@@ -349,26 +349,26 @@ function CsvParserService() {
 
 const regexPattern = /^'(\d+(?:,\d+)?)\s*-\s*(\$?\d+(?:,\d+)?[MK]?)'$/;
 
-
-const sizePattern = /^(\d+)-(\d+)|(\d+)\+|(\d+)$/;
+const sizePattern = /^(\d+(?:,\d+)?)\s*-\s*(\d+(?:,\d+)?)$|^(\d+(?:,\d+)?)\s*\+$/;
 
 function sizeParser(inputRange) {
     const match = inputRange.match(sizePattern);
 
     if (match) {
         if (match[1] && match[2]) {
-            const lower = parseInt(match[1]);
-            const upper = parseInt(match[2]);
+            const lower = parseInt(match[1].replace(/,/g, ''));
+            const upper = parseInt(match[2].replace(/,/g, ''));
             return (lower + upper) / 2;
         } else if (match[3]) {
-            return parseInt(match[3]) + 1;
-        } else if (match[4]) {
-            return parseInt(match[4]);
+            return parseInt(match[3].replace(/,/g, '')) + 1;
         }
+    } else if (!isNaN(parseInt(inputRange)) || /^\d+\s*\-\s*\d+$/.test(inputRange)) {
+        return null;
     }
 
     return null;
 }
+
 
 function parseRevenue(input) {
     const pattern = /^\$?(\d+\.?\d*)([M|B]?)(?:\s*-\s*\$?(\d+\.?\d*)([M|B]?))?$/;
@@ -407,7 +407,7 @@ function checkUrl(dirtyUrl) {
 
 
     const hostname = getDomain(dirtyUrl)
-    console.log("data in get domain:", hostname);
+    // console.log("data in get domain:", hostname);
 
     return hostname;
 
@@ -418,7 +418,7 @@ async function checkUrlExist(url) {
     if (website === null) {
         return false
     } else {
-        console.log(website);
+        // console.log(website);
         return true // 'My Title'
     }
 }
@@ -446,7 +446,7 @@ async function createCompany(chunk) {
                 let sizeRange;
 
                 const revenue = parseRevenue(chunk[i].revenue);
-                console.log("log revenue:", revenue);
+                // console.log("log revenue:", revenue);
                 if (revenue == null) {
                     throw new Error("Invalid revenue ");
                 }
@@ -460,9 +460,11 @@ async function createCompany(chunk) {
                     const subIndustryArray = subIndustryList[chunk[i].industry];
 
                     if (subIndustryArray && subIndustryArray.includes(chunk[i].subIndustry)) {
-
                         subIndustry = chunk[i].subIndustry
+                    } else if (chunk[i].subIndustry != "") {
+                        throw new Error("Invalid subIndustry ");
                     }
+
                 } else {
                     throw new Error("Invalid industry ");
                 }
@@ -491,7 +493,7 @@ async function createCompany(chunk) {
 
                 const size = sizeParser(chunk[i].size);
                 if (size == null) {
-                    throw new Error("Invalid revenue ");
+                    throw new Error("Invalid size range ");
                 }
                 if (size > 0 && size <= 10) {
                     sizeRange = '0 - 10';
@@ -522,7 +524,7 @@ async function createCompany(chunk) {
                 if (urlExist) {
                     throw new Error(" Url exists");
                 }
-                console.log("final data", count, " ##", chunk[i].name, " ##", hostUrl, " ##", industry, " ##", subIndustry, " ##", revenueRange, " ##", sizeRange);
+                // console.log("final data", count, " ##", chunk[i].name, " ##", hostUrl, " ##", industry, " ##", subIndustry, " ##", revenueRange, " ##", sizeRange);
 
                 await db.Company.create({
                     name: chunk[i].name,
@@ -535,7 +537,8 @@ async function createCompany(chunk) {
             }
 
         } catch (error) {
-            console.log("inside error", error);
+            // console.log("inside error", error);
+            chunk[i].error = error.message
             unparsedChunk.push(chunk[i]);
         }
     }
