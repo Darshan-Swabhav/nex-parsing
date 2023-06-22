@@ -20,20 +20,13 @@ const LinearProgressWithLabel = (props) => {
 }
 
 LinearProgressWithLabel.propTypes = {
-    /**
-     * The value of the progress indicator for the determinate and buffer variants.
-     * Value between 0 and 100.
-     */
     value: PropTypes.number.isRequired,
 };
 
 const Loading = ({ totalRequests, globalCounter }) => {
     const [progress, setProgress] = React.useState(10);
-
     useEffect(() => {
         setProgress(globalCounter / totalRequests * 100);
-        console.log("useEffect in loading", totalRequests, globalCounter);
-
     }, [totalRequests, globalCounter])
 
     return (

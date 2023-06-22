@@ -1,4 +1,3 @@
-
 const settingsConfig = require('../../config/settings/settings-config');
 const db = require('../../../models');
 const url = require('url');
@@ -341,19 +340,14 @@ const industryList = ["aerospace & defense",
 
 function CsvParserService() {
     const config = settingsConfig.settings || {};
-
-    // reasonable defaults for values
     this.config = config;
     this.logger = settingsConfig.logger || console;
 }
 
-const regexPattern = /^'(\d+(?:,\d+)?)\s*-\s*(\$?\d+(?:,\d+)?[MK]?)'$/;
-
-const sizePattern = /^(\d+(?:,\d+)?)\s*-\s*(\d+(?:,\d+)?)$|^(\d+(?:,\d+)?)\s*\+$/;
-
 function sizeParser(inputRange) {
-    const match = inputRange.match(sizePattern);
+    const sizePattern = /^(\d+(?:,\d+)?)\s*-\s*(\d+(?:,\d+)?)$|^(\d+(?:,\d+)?)\s*\+$/;
 
+    const match = inputRange.match(sizePattern);
     if (match) {
         if (match[1] && match[2]) {
             const lower = parseInt(match[1].replace(/,/g, ''));
@@ -365,10 +359,8 @@ function sizeParser(inputRange) {
     } else if (!isNaN(parseInt(inputRange)) || /^\d+\s*\-\s*\d+$/.test(inputRange)) {
         return null;
     }
-
     return null;
 }
-
 
 function parseRevenue(input) {
     const pattern = /^\$?(\d+\.?\d*)([M|B]?)(?:\s*-\s*\$?(\d+\.?\d*)([M|B]?))?$/;
@@ -377,13 +369,11 @@ function parseRevenue(input) {
     const match = input.toString().match(pattern);
     if (match) {
         if (match[4]) {
-            // Range values
             const startValue = parseValue(match[1], match[2]);
             const endValue = parseValue(match[3], match[4]);
             const value = (startValue + endValue) / 2;
             result = value
         } else {
-            // Single value
             const value = parseValue(match[1], match[2]);
             result = value
         }
@@ -401,34 +391,19 @@ function parseValue(value, unit) {
     return parsedValue;
 }
 
-
-function checkUrl(dirtyUrl) {
-    let urlstr = dirtyUrl.toString();
-
-
-    const hostname = getDomain(dirtyUrl)
-    // console.log("data in get domain:", hostname);
-
-    return hostname;
-
-}
-
 async function checkUrlExist(url) {
     const website = await db.Company.findOne({ where: { website: url } });
     if (website === null) {
         return false
     } else {
-        // console.log(website);
-        return true // 'My Title'
+        return true
     }
 }
 
 async function createCompany(chunk) {
     let unparsedChunk = [];
-    let count = 0;
 
     for (let i = 0; i < chunk.length; i++) {
-        console.log("count", ++count, chunk[i].name, chunk[i].website, chunk[i].industry, chunk[i].revenue, chunk[i].size);
 
         try {
             if (
@@ -441,12 +416,10 @@ async function createCompany(chunk) {
                 unparsedChunk.push(chunk[i]);
             } else {
 
-
                 let revenueRange;
                 let sizeRange;
 
                 const revenue = parseRevenue(chunk[i].revenue);
-                // console.log("log revenue:", revenue);
                 if (revenue == null) {
                     throw new Error("Invalid revenue ");
                 }
@@ -464,7 +437,6 @@ async function createCompany(chunk) {
                     } else if (chunk[i].subIndustry != "") {
                         throw new Error("Invalid subIndustry ");
                     }
-
                 } else {
                     throw new Error("Invalid industry ");
                 }
@@ -515,7 +487,7 @@ async function createCompany(chunk) {
                     throw new Error("Invalid size range");
                 }
 
-                const hostUrl = checkUrl(chunk[i].website)
+                const hostUrl = getDomain(dirtyUrl)
                 if (hostUrl == "") {
                     throw new Error("Invalid host url");
                 }
@@ -524,7 +496,6 @@ async function createCompany(chunk) {
                 if (urlExist) {
                     throw new Error(" Url exists");
                 }
-                // console.log("final data", count, " ##", chunk[i].name, " ##", hostUrl, " ##", industry, " ##", subIndustry, " ##", revenueRange, " ##", sizeRange);
 
                 await db.Company.create({
                     name: chunk[i].name,
@@ -537,7 +508,6 @@ async function createCompany(chunk) {
             }
 
         } catch (error) {
-            // console.log("inside error", error);
             chunk[i].error = error.message
             unparsedChunk.push(chunk[i]);
         }

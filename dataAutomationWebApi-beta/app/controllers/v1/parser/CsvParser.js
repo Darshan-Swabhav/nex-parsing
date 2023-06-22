@@ -1,25 +1,52 @@
-/* eslint-disable prettier/prettier */
-/* eslint-disable no-unused-vars */
-// const errors = require('throw.js');
-// const errorMessages = require('../../../config/error.config.json');
-var fs = require('fs');
-var Papa = require('papaparse');
-var file = '../dummyData.csv';
+/**
+*
+* @openapi
+*
+*   definitions:
+*  Company:
+*    type: object
+*    properties:
+*      name:
+*        type: string
+*      website:
+*        type: string
+*      industry:
+*        type: string
+*      subIndustry:
+*        type: string
+*      revenue:
+*        type: string
+*      size:
+*        type: string
+*      error:
+*        type: string
+*
+* /parser:
+*   post:
+*     security:
+*        - auth0_jwk: []
+*     operationId: postCsv
+*     tags:
+*       - PARSE
+*     description: A route proxy to CsvParser's validation route
+*     produces:
+*       - application/json
+*     responses:
+*       '200':
+*         description: returns rejected data
+*/
 
 
 
 function CsvParserController() {
     const CsvParserService = require('../../../services/parser/csvParser');
     this.csvParserService = new CsvParserService();
-
 }
+
 async function postCsv(settingsConfig, req, res, next) {
-
     let data = req.body.data
-
     const unParsedData = await this.csvParserService.createCompany(data);
-
-    return res.status(200).send( unParsedData );
+    return res.status(200).send(unParsedData);
 }
 
 CsvParserController.prototype = {
@@ -27,14 +54,7 @@ CsvParserController.prototype = {
 };
 
 const csvParserController = new CsvParserController();
-
 module.exports = csvParserController;
-
-
-
-
-
-
 
 // Papa.parse(readstream, {
 //     header: false,

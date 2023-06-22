@@ -7,11 +7,6 @@ import axios from 'axios';
 import Loading from '../loding/Loading';
 import { CSVLink } from "react-csv";
 function UploadForm() {
-
-    const [rowCount, setRowCount] = useState(0);
-    const [headers, setHeaders] = useState([]);
-    const [data, setData] = useState([])
-    const [filteredData, setFilteredData] = useState([])
     const fixedHeaders = [
         { label: "Error", key: "error" },
         { label: "Name", key: "name" },
@@ -21,39 +16,31 @@ function UploadForm() {
         { label: "Revenue", key: "revenue" },
         { label: "CompanySize", key: "size" }
     ]
-    const [dataReady, setDataReady] = useState(true)
-    const [companyName, setCompanyName] = useState(1);
-    const [website, setWebsite] = useState(2);
-    const [industry, setIndustry] = useState(3);
-    const [subIndustry, setSubIndustry] = useState(4);
-    const [revenue, setRevenue] = useState(5);
-    const [companySize, setCompanySize] = useState(6);
-    // const [companyName, setCompanyName] = useState(0);
-    // const [website, setWebsite] = useState(0);
-    // const [industry, setIndustry] = useState(0);
-    // const [subIndustry, setSubIndustry] = useState(0);
-    // const [revenue, setRevenue] = useState(0);
-    // const [companySize, setCompanySize] = useState(0);
-    // let rejectedObjects = [["yash"]]
-    const [rejectedObjects, setRejectedObjects] = useState([])
-    let processReqCount = 0
-    const [globalCounter, setGlobalCounter] = useState(0);
     let count = 0
+    const chunkSize = 10000
+    const [rowCount, setRowCount] = useState(0);
+    const [headers, setHeaders] = useState([]);
+    const [data, setData] = useState([])
+    const [dataReady, setDataReady] = useState(true)
+    const [companyName, setCompanyName] = useState(0);
+    const [website, setWebsite] = useState(0);
+    const [industry, setIndustry] = useState(0);
+    const [subIndustry, setSubIndustry] = useState(0);
+    const [revenue, setRevenue] = useState(0);
+    const [companySize, setCompanySize] = useState(0);
+    const [rejectedObjects, setRejectedObjects] = useState([])
+    const [globalCounter, setGlobalCounter] = useState(0);
     const [totalRequests, setTotalRequests] = useState(0);
     const [isParse, setIsParse] = useState(false);
+    const [showMapper, setShowMapper] = useState(false);
     const [csvObject, setCsvObject] = useState({
         data: [],
         headers: fixedHeaders,
         filename: 'RejectedData.csv'
     })
-
-    const chunkSize = 10000
-    const [showMapper, setShowMapper] = useState(false);
     const form = useRef()
-
     const handleClose = () => { setShowMapper(false); }
     const handleShow = () => { setShowMapper(true); }
-
 
     const handleFileUpload = (event) => {
         setGlobalCounter(0)
@@ -62,16 +49,13 @@ function UploadForm() {
         setIsParse(false)
 
         const file = event.target.files[0];
-
         if (file) {
-
             countRowsInCSV(file)
                 .then(({ headers, count, data }) => {
                     if (data) {
                         delete data[0];
                     }
                     setHeaders(headers)
-                    //console.log("data in then", headers);
                     setRowCount(count);
                     setData(data)
                     setTotalRequests(Math.floor(data.length / chunkSize) + 1)
@@ -82,19 +66,14 @@ function UploadForm() {
                     console.error('Error parsing CSV:', error);
                 });
         }
-
     };
 
     const setHeadersArray = () => {
-
         const defaultOption = <option key="default" value="">Select</option>;
-
         const header = headers.map((header, index = 0) => (
             <  option key={index} value={index}>{header}</option>
         ));
-
         return [defaultOption, ...header];
-
     }
 
     const countRowsInCSV = (file) => {
@@ -106,15 +85,11 @@ function UploadForm() {
                 const csvData = event.target.result;
                 console.time("time")
                 Papa.parse(csvData, {
-                    // worker: true, // Enable Web Worker for better performance
                     complete: (results) => {
                         const headers = results.data[0];
                         const totalRows = count;
                         const data = results.data
-                        //console.log("Total Rows: ", headers);
-                        //console.log("Data Count: ", data.length);
                         console.timeEnd("time")
-
                         resolve({ headers, totalRows, data });
                     },
                     error: (error) => {
@@ -122,19 +97,15 @@ function UploadForm() {
                     }
                 });
             };
-
             reader.readAsText(file);
         });
     };
 
     useEffect(() => {
-
-        console.log("inside use effect", csvObject);
         if (totalRequests == globalCounter && totalRequests > 0) {
             writeRejectedObject()
         }
     }, [totalRequests, globalCounter])
-
 
     const checkForRepeatHeaders = () => {
         let numbers = []
@@ -142,11 +113,8 @@ function UploadForm() {
         numbers.push(companyName, website, industry, subIndustry, revenue, companySize)
         for (let i = 0; i < numbers.length; i++) {
             for (let j = 0; j < numbers.length; j++) {
-                //console.log("comparing", numbers[i], numbers[j]);
                 if (numbers[i] == numbers[j]) {
-
                     count++
-                    //console.log("count", count);
                 }
             }
         }
@@ -155,14 +123,13 @@ function UploadForm() {
         } else {
             return true
         }
-
     }
 
     const filterData = (chunk) => {
-
         let filteredArray = []
         let rejectedObjects = []
         for (let i = 0; i < chunk.length - 1; i++) {
+
             const singletonData = chunk[i]
             if (singletonData[companyName] == undefined || singletonData[website] == undefined ||
                 singletonData[industry] == undefined || singletonData[revenue] == undefined ||
@@ -178,9 +145,8 @@ function UploadForm() {
                     size: singletonData[companySize],
                     error: "incomplete data"
                 }
-
-
                 rejectedObjects.push(rejectedObject)
+
             } else {
                 let filteredObject
                 filteredObject = {
@@ -202,7 +168,6 @@ function UploadForm() {
         return filteredArray
     }
 
-
     const parseData = async (e) => {
         setGlobalCounter(0);
         const dataCheck = checkForRepeatHeaders();
@@ -210,45 +175,25 @@ function UploadForm() {
         if (dataCheck) {
             handleClose();
             setIsParse(true);
-            let count = 0;
             setRejectedObjects([]);
 
             const currTime = new Date().toLocaleTimeString();
             console.log("time start", currTime);
 
-            const promises = [];
             for (let i = 1; i < data.length; i += chunkSize) {
                 const chunk = data.slice(i, i + chunkSize);
                 const filteredChunk = filterData(chunk);
-
                 addEntries(filteredChunk);
-                // addEntries(filteredChunk)
-                // const chunkPromises = addEntries(filteredChunk);
-                // promises.push(chunkPromises);
-
-                // Limit the number of concurrent requests to 5
-                // if (promises.length >= 15) {
-                //     console.log("before await");
-                //     await Promise.all(promises);
-                //     console.log("after await");
-                //     promises.length = 0;
-                // }
             }
-
-            // Wait for any remaining promises to resolve
-            // await Promise.all(promises);
         } else {
             alert("Headers cannot be the same");
         }
     };
 
-
-
     const addEntries = async (chunk) => {
 
         try {
             const response = await axios.post('http://127.0.0.1:20100/api/v1/parser', { data: chunk });
-            //console.log("entries done", response.data);
             const currTime = new Date().toLocaleTimeString();
             count++
 
@@ -256,7 +201,6 @@ function UploadForm() {
                 setRejectedObjects(prev =>
                     [...prev, ...response.data]
                 )
-                // rejectedObjects.push(...response.data)
             }
             console.log("time print", currTime, count);
             setGlobalCounter(count)
@@ -266,9 +210,7 @@ function UploadForm() {
     };
 
     const writeRejectedObject = () => {
-        console.log("writing csv object");
         setCsvObject(prev => {
-
             return {
                 ...prev,
                 data: rejectedObjects
@@ -279,12 +221,6 @@ function UploadForm() {
 
     }
 
-
-    const test = (e) => {
-
-    }
-
-
     return (
         <div className="container px-2 py-2" >
             <>
@@ -292,14 +228,11 @@ function UploadForm() {
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Select file</Form.Label>
                         <Form.Control type="file" accept=".csv" onChange={handleFileUpload} />
-                        {/* onChange={setFile.bind(this)} */}
                     </Form.Group>
                     <Button variant="primary" disabled={dataReady} onClick={handleShow} >
                         Submit
                     </Button>
                 </Form>
-
-                <p>Number of rows: {rowCount}</p>
                 {showMapper && (
                     <div >
                         <Modal
@@ -352,7 +285,6 @@ function UploadForm() {
                                             {setHeadersArray()}
                                         </Form.Select>
                                     </Form.Group>
-
                                 </Form>
                             </Modal.Body>
                             <Modal.Footer>
@@ -361,8 +293,6 @@ function UploadForm() {
                                 </Button>
                                 <div>
                                     <Button variant="primary" onClick={parseData}>Parse </Button>
-
-
                                 </div>
                             </Modal.Footer>
                         </Modal>
@@ -379,14 +309,10 @@ function UploadForm() {
                         <CSVLink {...csvObject}>Export to CSV</CSVLink>
                     </div>)
                     }
-
                 </div>
-
             </>
-
         </div>
     )
-
 }
 
 export default UploadForm;
